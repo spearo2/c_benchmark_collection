@@ -1,2 +1,2 @@
-libjasper/base/jas_image.o.i
-libjasper/jpc/jpc_dec.o.i
+appl/imageinfo.o.i
+appl/.libs/*.o

@@ -1,1 +1,2 @@
-libjasper/jpc/*
+appl/imageinfo.o.i
+appl/.libs/*.o

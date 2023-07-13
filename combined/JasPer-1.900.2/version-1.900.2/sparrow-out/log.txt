@@ -1,0 +1,116 @@
+jasper.c
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+
+Front-end completes: 0.410225
+
+
+
+--------------------------------------------------------------------------------
+Graph construction begins...
+--------------------------------------------------------------------------------
+WARN: too large global array initialization (3144) @ jas_iccdata.c:65
+
+Graph construction completes: 0.668054
+
+
+
+--------------------------------------------------------------------------------
+Pre-processing begins...
+--------------------------------------------------------------------------------
+
+Pre-processing completes: 0.047119
+To inline : []
+Excluded variable-arguments functions : []
+Excluded recursive functions : []
+Excluded too large functions : []
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis begins...
+--------------------------------------------------------------------------------
+#iteration : 23
+mem size : 9646
+
+
+Pre-analysis completes: 4.174046
+#Procs : 781
+#Nodes : 44083
+
+
+
+--------------------------------------------------------------------------------
+Itv Sparse Analysis begins...
+--------------------------------------------------------------------------------
+live memory : 189 MB
+#global variables = 833 (8.7%)
+#local variables  = 7655 (79.1%)
+#allocsite        = 1196 (12.4%)
+#fields           = 668 (6.9%)
+#total abstract locations  = 9684
+#flow-sensitive abstract locations  = 9684
+Access Analysis begins...
+Access Analysis completes: 0.609720
+Def-use graph construction begins...
+draw intra-procedural edges
+draw inter-procedural edges
+Def-use graph construction completes: 2.009717
+live memory : 379 MB
+#Nodes in def-use graph : 34843
+#Locs on def-use graph : 961604
+Workorder computation begins...
+Workorder computation completes: 51.104064
+Fixpoint iteration with widening begins...
+
+#iteration in widening : 295793
+Fixpoint iteration with widening completes: 11.324258
+
+
+
+--------------------------------------------------------------------------------
+Generate Alarm Report begins...
+--------------------------------------------------------------------------------
+
+Generate Alarm Report completes: 0.088810
+
+Itv Sparse Analysis completes: 107.847829
+
+
+
+--------------------------------------------------------------------------------
+Taint Sparse Analysis begins...
+--------------------------------------------------------------------------------
+#total abstract locations  = 9684
+#flow-sensitive abstract locations  = 9684
+Access Analysis begins...
+Access Analysis completes: 0.352676
+Def-use graph construction begins...
+draw intra-procedural edges
+draw inter-procedural edges
+Def-use graph construction completes: 1.272044
+live memory : 377 MB
+#Nodes in def-use graph : 20844
+#Locs on def-use graph : 596210
+Workorder computation begins...
+Workorder computation completes: 16.887833
+Fixpoint iteration with widening begins...
+
+#iteration in widening : 20859
+Fixpoint iteration with widening completes: 0.282590
+
+
+
+--------------------------------------------------------------------------------
+Generate Alarm Report begins...
+--------------------------------------------------------------------------------
+
+Generate Alarm Report completes: 0.056910
+
+Taint Sparse Analysis completes: 49.660001
+Finished properly.
+165.438856

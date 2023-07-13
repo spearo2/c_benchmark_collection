@@ -1,0 +1,15 @@
+{
+    "id": "patchweave-19",
+    "project": "jasper",
+    "version": "version-1.900.2",
+    "type": "int-overflow",
+    "CVE": "none",
+    "src": {
+        "file": "mif_cod.c",
+        "line": 176
+    },
+    "sink": {
+        "file": "jpc_dec.c",
+        "line": 1238
+    }
+}

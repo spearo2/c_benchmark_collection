@@ -1,0 +1,15 @@
+{
+    "id": "patchweave-9",
+    "project": "jasper",
+    "version": "e546362",
+    "type": "unsigned-int-overflow",
+    "CVE": "CVE-2016-9387",
+    "src": {
+        "file": "mif_cod.c",
+        "line": 176
+    },
+    "sink": {
+        "file": "jpc_dec.c",
+        "line": 1244
+    }
+}

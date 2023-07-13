@@ -1,1 +1,0 @@
-~/tmp/sparrow-incubator/bin/sparrow

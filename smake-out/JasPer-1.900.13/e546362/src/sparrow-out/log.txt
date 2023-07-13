@@ -1,0 +1,1137 @@
+appl/.libs/imginfo/35.34.ras_enc.o.i appl/.libs/imginfo/34.33.ras_dec.o.i appl/.libs/imginfo/33.32.ras_cod.o.i appl/.libs/imginfo/32.31.pnm_enc.o.i appl/.libs/imginfo/31.30.pnm_dec.o.i appl/.libs/imginfo/30.2f.pnm_cod.o.i appl/.libs/imginfo/2f.2e.pgx_enc.o.i appl/.libs/imginfo/2e.2d.pgx_dec.o.i appl/.libs/imginfo/2d.2c.pgx_cod.o.i appl/.libs/imginfo/2c.2b.mif_cod.o.i appl/.libs/imginfo/2b.2a.jpg_val.o.i appl/.libs/imginfo/2a.29.jpg_enc.o.i appl/.libs/imginfo/29.28.jpg_dec.o.i appl/.libs/imginfo/28.27.jpc_util.o.i appl/.libs/imginfo/27.26.jpc_tsfb.o.i appl/.libs/imginfo/26.25.jpc_tagtree.o.i appl/.libs/imginfo/25.24.jpc_t2enc.o.i appl/.libs/imginfo/24.23.jpc_t2dec.o.i appl/.libs/imginfo/23.22.jpc_t2cod.o.i appl/.libs/imginfo/22.21.jpc_t1enc.o.i appl/.libs/imginfo/21.20.jpc_t1dec.o.i appl/.libs/imginfo/20.1f.jpc_t1cod.o.i appl/.libs/imginfo/1f.1e.jpc_qmfb.o.i appl/.libs/imginfo/1e.1d.jpc_mqenc.o.i appl/.libs/imginfo/1d.1c.jpc_mqdec.o.i appl/.libs/imginfo/1c.1b.jpc_mqcod.o.i appl/.libs/imginfo/1b.1a.jpc_mct.o.i appl/.libs/imginfo/1a.19.jpc_math.o.i appl/.libs/imginfo/19.18.jpc_enc.o.i appl/.libs/imginfo/18.17.jpc_dec.o.i appl/.libs/imginfo/17.16.jpc_cs.o.i appl/.libs/imginfo/16.15.jpc_bs.o.i appl/.libs/imginfo/15.14.jp2_enc.o.i appl/.libs/imginfo/14.13.jp2_dec.o.i appl/.libs/imginfo/13.12.jp2_cod.o.i appl/.libs/imginfo/12.11.bmp_enc.o.i appl/.libs/imginfo/11.10.bmp_dec.o.i appl/.libs/imginfo/10.0f.bmp_cod.o.i appl/.libs/imginfo/0f.0e.jas_version.o.i appl/.libs/imginfo/0e.0d.jas_tvp.o.i appl/.libs/imginfo/0d.0c.jas_tmr.o.i appl/.libs/imginfo/0c.0b.jas_string.o.i appl/.libs/imginfo/0b.0a.jas_stream.o.i appl/.libs/imginfo/0a.09.jas_seq.o.i appl/.libs/imginfo/09.08.jas_malloc.o.i appl/.libs/imginfo/08.07.jas_init.o.i appl/.libs/imginfo/07.06.jas_image.o.i appl/.libs/imginfo/06.05.jas_iccdata.o.i appl/.libs/imginfo/05.04.jas_icc.o.i appl/.libs/imginfo/04.03.jas_getopt.o.i appl/.libs/imginfo/03.02.jas_debug.o.i appl/.libs/imginfo/02.01.jas_cm.o.i appl/.libs/imginfo/01.00.dummy.o.i appl/.libs/imginfo/00.imginfo.o.i appl/imginfo.o.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+WARN: type not found
+WARN: type not found
+Invalid lhs at jas_math.h:122
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr  jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at ras_enc.c:233
+WARN: type not found
+WARN: type not found
+ ras_enc.c:233
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+ jas_math.h:152
+Warning: stmtexpr 
+ras_dec.c:191
+Invalid lhs at ras_dec.c:191
+Warning: stmtexpr Invalid lhs at ras_dec.c:263
+WARN: type not found
+WARN: type not found
+ ras_dec.c:263
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+WARN: type not found
+WARN: type not found
+ jas_math.h:152
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+ jas_math.h:152
+Warning: stmtexpr 
+pnm_dec.c:178
+Invalid lhs at pnm_dec.c:178
+Warning: stmtexpr Invalid lhs at pnm_dec.c:280
+WARN: type not found
+WARN: type not found
+ pnm_dec.c:280
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+WARN: type not found
+WARN: type not found
+ jas_math.h:152
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+WARN: type not found
+WARN: type not found
+ jas_math.h:152
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+ jas_math.h:152
+Warning: stmtexpr 
+pgx_dec.c:156
+Invalid lhs at pgx_dec.c:156
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at mif_cod.c:374
+ mif_cod.c:374
+Warning: stmtexpr 
+mif_cod.c:445
+Invalid lhs at mif_cod.c:445
+Warning: stmtexpr Invalid lhs at mif_cod.c:664
+ mif_cod.c:664
+Warning: stmtexpr 
+mif_cod.c:705
+Invalid lhs at mif_cod.c:705
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at jpg_val.c:84
+WARN: type not found
+WARN: type not found
+ jpg_val.c:84
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+ jas_math.h:152
+Warning: stmtexpr 
+jpg_enc.c:299
+Invalid lhs at jpg_enc.c:299
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at jpg_dec.c:339
+WARN: type not found
+WARN: type not found
+ jpg_dec.c:339
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+ jas_math.h:152
+Warning: stmtexpr 
+jpc_util.c:178
+Invalid lhs at jpc_util.c:178
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jpc_tagtree.c:109
+ jpc_tagtree.c:109
+Warning: stmtexpr 
+jpc_tagtree.c:206
+Invalid lhs at jpc_tagtree.c:206
+Warning: stmtexpr Invalid lhs at jpc_tagtree.c:250
+ jpc_tagtree.c:250
+Warning: stmtexpr 
+jpc_tagtree.c:279
+Invalid lhs at jpc_tagtree.c:279
+Warning: stmtexpr Invalid lhs at jpc_tagtree.c:280
+ jpc_tagtree.c:280
+Warning: stmtexpr 
+jpc_tagtree.c:303
+Invalid lhs at jpc_tagtree.c:303
+Warning: stmtexpr Invalid lhs at jpc_tagtree.c:310
+ jpc_tagtree.c:310
+Warning: stmtexpr 
+jpc_tagtree.c:340
+Invalid lhs at jpc_tagtree.c:340
+Warning: stmtexpr Invalid lhs at jpc_tagtree.c:358
+WARN: type not found
+WARN: type not found
+ jpc_tagtree.c:358
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+ jas_math.h:152
+Warning: stmtexpr 
+jpc_t2enc.c:96
+Invalid lhs at jpc_t2enc.c:96
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:99
+ jpc_t2enc.c:99
+Warning: stmtexpr 
+jpc_t2enc.c:103
+Invalid lhs at jpc_t2enc.c:103
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:116
+ jpc_t2enc.c:116
+Warning: stmtexpr 
+jpc_t2enc.c:148
+Invalid lhs at jpc_t2enc.c:148
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:148
+ jpc_t2enc.c:148
+Warning: stmtexpr 
+jpc_t2enc.c:148
+Invalid lhs at jpc_t2enc.c:148
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:148
+ jpc_t2enc.c:148
+Warning: stmtexpr 
+jpc_t2enc.c:207
+Invalid lhs at jpc_t2enc.c:207
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:209
+ jpc_t2enc.c:209
+Warning: stmtexpr 
+jpc_t2enc.c:236
+Invalid lhs at jpc_t2enc.c:236
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:255
+ jpc_t2enc.c:255
+Warning: stmtexpr 
+jpc_t2enc.c:275
+Invalid lhs at jpc_t2enc.c:275
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:318
+ jpc_t2enc.c:318
+Warning: stmtexpr 
+jpc_t2enc.c:363
+Invalid lhs at jpc_t2enc.c:363
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:377
+ jpc_t2enc.c:377
+Warning: stmtexpr 
+jpc_t2enc.c:528
+Invalid lhs at jpc_t2enc.c:528
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:534
+WARN: type not found
+WARN: type not found
+ jpc_t2enc.c:534
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+ jas_math.h:152
+Warning: stmtexpr 
+jpc_t2dec.c:114
+Invalid lhs at jpc_t2dec.c:114
+Warning: stmtexpr Invalid lhs at jpc_t2dec.c:133
+ jpc_t2dec.c:133
+Warning: stmtexpr 
+jpc_t2dec.c:134
+Invalid lhs at jpc_t2dec.c:134
+Warning: stmtexpr Invalid lhs at jpc_t2dec.c:227
+ jpc_t2dec.c:227
+Warning: stmtexpr 
+jpc_t2dec.c:258
+Invalid lhs at jpc_t2dec.c:258
+Warning: stmtexpr Invalid lhs at jpc_t2dec.c:449
+ jpc_t2dec.c:449
+Warning: stmtexpr 
+jpc_t2dec.c:449
+Invalid lhs at jpc_t2dec.c:449
+Warning: stmtexpr Invalid lhs at jpc_t2dec.c:449
+ jpc_t2dec.c:449
+Warning: stmtexpr 
+jpc_t2dec.c:449
+Invalid lhs at jpc_t2dec.c:449
+Warning: stmtexpr Invalid lhs at jpc_t2dec.c:449
+ jpc_t2dec.c:449
+Warning: stmtexpr 
+jpc_t2dec.c:454
+Invalid lhs at jpc_t2dec.c:454
+Warning: stmtexpr Invalid lhs at jpc_t2dec.c:454
+ jpc_t2dec.c:454
+Warning: stmtexpr 
+jpc_t2dec.c:454
+Invalid lhs at jpc_t2dec.c:454
+Warning: stmtexpr Invalid lhs at jpc_t2dec.c:454
+WARN: type not found
+WARN: type not found
+ jpc_t2dec.c:454
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+ jas_math.h:152
+Warning: stmtexpr 
+jpc_t2cod.c:190
+Invalid lhs at jpc_t2cod.c:190
+Warning: stmtexpr Invalid lhs at jpc_t2cod.c:297
+ jpc_t2cod.c:297
+Warning: stmtexpr 
+jpc_t2cod.c:391
+Invalid lhs at jpc_t2cod.c:391
+Warning: stmtexpr Invalid lhs at jpc_t2cod.c:477
+ jpc_t2cod.c:477
+Warning: stmtexpr 
+jpc_t2cod.c:595
+Invalid lhs at jpc_t2cod.c:595
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:165
+ jpc_t1enc.c:165
+Warning: stmtexpr 
+jpc_t1enc.c:185
+Invalid lhs at jpc_t1enc.c:185
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:215
+ jpc_t1enc.c:215
+Warning: stmtexpr 
+jpc_t1enc.c:217
+Invalid lhs at jpc_t1enc.c:217
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:223
+ jpc_t1enc.c:223
+Warning: stmtexpr 
+jpc_t1enc.c:235
+Invalid lhs at jpc_t1enc.c:235
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:242
+ jpc_t1enc.c:242
+Warning: stmtexpr 
+jpc_t1enc.c:253
+Invalid lhs at jpc_t1enc.c:253
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:256
+ jpc_t1enc.c:256
+Warning: stmtexpr 
+jpc_t1enc.c:269
+Invalid lhs at jpc_t1enc.c:269
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:294
+ jpc_t1enc.c:294
+Warning: stmtexpr 
+jpc_t1enc.c:300
+Invalid lhs at jpc_t1enc.c:300
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:571
+ jpc_t1enc.c:571
+Warning: stmtexpr 
+jpc_t1enc.c:571
+Invalid lhs at jpc_t1enc.c:571
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:579
+ jpc_t1enc.c:579
+Warning: stmtexpr 
+jpc_t1enc.c:579
+Invalid lhs at jpc_t1enc.c:579
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:587
+ jpc_t1enc.c:587
+Warning: stmtexpr 
+jpc_t1enc.c:587
+Invalid lhs at jpc_t1enc.c:587
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:595
+ jpc_t1enc.c:595
+Warning: stmtexpr 
+jpc_t1enc.c:595
+Invalid lhs at jpc_t1enc.c:595
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:766
+ jpc_t1enc.c:766
+Warning: stmtexpr 
+jpc_t1enc.c:773
+Invalid lhs at jpc_t1enc.c:773
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:780
+ jpc_t1enc.c:780
+Warning: stmtexpr 
+jpc_t1enc.c:787
+Invalid lhs at jpc_t1enc.c:787
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:217
+ jpc_t1dec.c:217
+Warning: stmtexpr 
+jpc_t1dec.c:218
+Invalid lhs at jpc_t1dec.c:218
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:231
+ jpc_t1dec.c:231
+Warning: stmtexpr 
+jpc_t1dec.c:234
+Invalid lhs at jpc_t1dec.c:234
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:261
+ jpc_t1dec.c:261
+Warning: stmtexpr 
+jpc_t1dec.c:282
+Invalid lhs at jpc_t1dec.c:282
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:308
+ jpc_t1dec.c:308
+Warning: stmtexpr 
+jpc_t1dec.c:332
+Invalid lhs at jpc_t1dec.c:332
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:518
+ jpc_t1dec.c:518
+Warning: stmtexpr 
+jpc_t1dec.c:518
+Invalid lhs at jpc_t1dec.c:518
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:527
+ jpc_t1dec.c:527
+Warning: stmtexpr 
+jpc_t1dec.c:527
+Invalid lhs at jpc_t1dec.c:527
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:536
+ jpc_t1dec.c:536
+Warning: stmtexpr 
+jpc_t1dec.c:536
+Invalid lhs at jpc_t1dec.c:536
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:545
+ jpc_t1dec.c:545
+Warning: stmtexpr 
+jpc_t1dec.c:545
+Invalid lhs at jpc_t1dec.c:545
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:719
+ jpc_t1dec.c:719
+Warning: stmtexpr 
+jpc_t1dec.c:728
+Invalid lhs at jpc_t1dec.c:728
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:736
+ jpc_t1dec.c:736
+Warning: stmtexpr 
+jpc_t1dec.c:744
+Invalid lhs at jpc_t1dec.c:744
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at jpc_t1cod.c:130
+ jpc_t1cod.c:130
+Warning: stmtexpr 
+jpc_t1cod.c:144
+Invalid lhs at jpc_t1cod.c:144
+Warning: stmtexpr Invalid lhs at jpc_t1cod.c:146
+ jpc_t1cod.c:146
+Warning: stmtexpr 
+jpc_t1cod.c:206
+Invalid lhs at jpc_t1cod.c:206
+Warning: stmtexpr Invalid lhs at jpc_t1cod.c:290
+ jpc_t1cod.c:290
+Warning: stmtexpr 
+jpc_t1cod.c:374
+Invalid lhs at jpc_t1cod.c:374
+Warning: stmtexpr Invalid lhs at jpc_t1cod.c:411
+ jpc_t1cod.c:411
+Warning: stmtexpr 
+jpc_t1cod.c:433
+Invalid lhs at jpc_t1cod.c:433
+Warning: stmtexpr Invalid lhs at jpc_t1cod.c:447
+WARN: type not found
+WARN: type not found
+ jpc_t1cod.c:447
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+WARN: type not found
+WARN: type not found
+ jas_math.h:152
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+WARN: type not found
+WARN: type not found
+ jas_math.h:152
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+ jas_math.h:152
+Warning: stmtexpr 
+jpc_mqdec.c:113
+Invalid lhs at jpc_mqdec.c:113
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at jpc_mct.c:101
+ jpc_mct.c:101
+Warning: stmtexpr 
+jpc_mct.c:145
+Invalid lhs at jpc_mct.c:145
+Warning: stmtexpr Invalid lhs at jpc_mct.c:190
+ jpc_mct.c:190
+Warning: stmtexpr 
+jpc_mct.c:192
+Invalid lhs at jpc_mct.c:192
+Warning: stmtexpr Invalid lhs at jpc_mct.c:231
+ jpc_mct.c:231
+Warning: stmtexpr 
+jpc_mct.c:233
+Invalid lhs at jpc_mct.c:233
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jpc_math.c:94
+ jpc_math.c:94
+Warning: stmtexpr 
+jpc_math.c:113
+Invalid lhs at jpc_math.c:113
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at jpc_enc.c:186
+ jpc_enc.c:186
+Warning: stmtexpr 
+jpc_enc.c:186
+Invalid lhs at jpc_enc.c:186
+Warning: stmtexpr Invalid lhs at jpc_enc.c:943
+ jpc_enc.c:943
+Warning: stmtexpr 
+jpc_enc.c:1174
+Invalid lhs at jpc_enc.c:1174
+Warning: stmtexpr Invalid lhs at jpc_enc.c:1179
+ jpc_enc.c:1179
+Warning: stmtexpr 
+jpc_enc.c:1259
+Invalid lhs at jpc_enc.c:1259
+Warning: stmtexpr Invalid lhs at jpc_enc.c:1457
+ jpc_enc.c:1457
+Warning: stmtexpr 
+jpc_enc.c:1546
+Invalid lhs at jpc_enc.c:1546
+Warning: stmtexpr Invalid lhs at jpc_enc.c:1731
+ jpc_enc.c:1731
+Warning: stmtexpr 
+jpc_enc.c:1742
+Invalid lhs at jpc_enc.c:1742
+Warning: stmtexpr Invalid lhs at jpc_enc.c:1804
+ jpc_enc.c:1804
+Warning: stmtexpr 
+jpc_enc.c:2103
+Invalid lhs at jpc_enc.c:2103
+Warning: stmtexpr Invalid lhs at jpc_enc.c:2533
+WARN: type not found
+WARN: type not found
+ jpc_enc.c:2533
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+ jas_math.h:152
+Warning: stmtexpr 
+jpc_dec.c:379
+Invalid lhs at jpc_dec.c:379
+Warning: stmtexpr Invalid lhs at jpc_dec.c:520
+ jpc_dec.c:520
+Warning: stmtexpr 
+jpc_dec.c:805
+Invalid lhs at jpc_dec.c:805
+Warning: stmtexpr Invalid lhs at jpc_dec.c:841
+ jpc_dec.c:841
+Warning: stmtexpr 
+jpc_dec.c:918
+Invalid lhs at jpc_dec.c:918
+Warning: stmtexpr Invalid lhs at jpc_dec.c:1647
+ jpc_dec.c:1647
+Warning: stmtexpr 
+jpc_dec.c:1647
+Invalid lhs at jpc_dec.c:1647
+Warning: stmtexpr Invalid lhs at jpc_dec.c:1828
+ jpc_dec.c:1828
+Warning: stmtexpr 
+jpc_dec.c:2056
+Invalid lhs at jpc_dec.c:2056
+Warning: stmtexpr Invalid lhs at jpc_dec.c:2059
+ jpc_dec.c:2059
+Warning: stmtexpr 
+jpc_dec.c:2068
+Invalid lhs at jpc_dec.c:2068
+Warning: stmtexpr Invalid lhs at jpc_dec.c:2074
+ jpc_dec.c:2074
+Warning: stmtexpr 
+jpc_dec.c:2086
+Invalid lhs at jpc_dec.c:2086
+Warning: stmtexpr Invalid lhs at jpc_dec.c:2094
+ jpc_dec.c:2094
+Warning: stmtexpr 
+jpc_dec.c:2198
+Invalid lhs at jpc_dec.c:2198
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at jpc_cs.c:549
+ jpc_cs.c:549
+Warning: stmtexpr 
+jpc_cs.c:632
+Invalid lhs at jpc_cs.c:632
+Warning: stmtexpr Invalid lhs at jpc_cs.c:633
+ jpc_cs.c:633
+Warning: stmtexpr Invalid lhs at jpc_cs.c:709
+
+jpc_cs.c:709
+Warning: stmtexpr Invalid lhs at jpc_cs.c:800
+ jpc_cs.c:800
+Warning: stmtexpr 
+jpc_cs.c:1039
+Invalid lhs at jpc_cs.c:1039
+Warning: stmtexpr Invalid lhs at jpc_cs.c:1660
+ jpc_cs.c:1660
+Warning: stmtexpr 
+jpc_cs.c:1670
+Invalid lhs at jpc_cs.c:1670
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at jpc_bs.c:174
+ jpc_bs.c:174
+Warning: stmtexpr 
+jpc_bs.c:184
+Invalid lhs at jpc_bs.c:184
+Warning: stmtexpr Invalid lhs at jpc_bs.c:205
+ jpc_bs.c:205
+Warning: stmtexpr Invalid lhs at jpc_bs.c:225
+
+jpc_bs.c:225
+Warning: stmtexpr Invalid lhs at jpc_bs.c:230
+ jpc_bs.c:230
+Warning: stmtexpr Invalid lhs at jpc_bs.c:247
+
+jpc_bs.c:247
+Warning: stmtexpr Invalid lhs at jpc_bs.c:248
+ jpc_bs.c:248
+Warning: stmtexpr Invalid lhs at jpc_bs.c:300
+
+jpc_bs.c:300
+Warning: stmtexpr Invalid lhs at jpc_bs.c:401
+ jpc_bs.c:401
+Warning: stmtexpr Invalid lhs at jpc_bs.c:407
+
+jpc_bs.c:407
+Warning: stmtexpr Invalid lhs at jpc_bs.c:433
+ jpc_bs.c:433
+Warning: stmtexpr Invalid lhs at jpc_bs.c:434
+WARN: type not found
+WARN: type not found
+
+jpc_bs.c:434
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at jp2_enc.c:229
+ jp2_enc.c:229
+Warning: stmtexpr 
+jp2_enc.c:231
+Invalid lhs at jp2_enc.c:231
+Warning: stmtexpr Invalid lhs at jp2_enc.c:238
+WARN: type not found
+WARN: type not found
+ jp2_enc.c:238
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+ jas_math.h:152
+Warning: stmtexpr 
+jp2_dec.c:305
+Invalid lhs at jp2_dec.c:305
+Warning: stmtexpr Invalid lhs at jp2_dec.c:463
+WARN: type not found
+WARN: type not found
+ jp2_dec.c:463
+Warning: stmtexpr 
+jp2_cod.c:331
+Invalid lhs at jp2_cod.c:331
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at bmp_enc.c:238
+ bmp_enc.c:238
+Warning: stmtexpr 
+bmp_enc.c:389
+Invalid lhs at bmp_enc.c:389
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at bmp_dec.c:246
+ bmp_dec.c:246
+Warning: stmtexpr 
+bmp_dec.c:366
+Invalid lhs at bmp_dec.c:366
+Warning: stmtexpr Invalid lhs at bmp_dec.c:367
+WARN: type not found
+WARN: type not found
+ bmp_dec.c:367
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ jas_math.h:152
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+ jas_math.h:152
+Warning: stmtexpr 
+jas_stream.c:482
+Invalid lhs at jas_stream.c:482
+Warning: stmtexpr Invalid lhs at jas_stream.c:489
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ jas_stream.c:489
+Warning: stmtexpr 
+jas_stream.c:580
+Invalid lhs at jas_stream.c:580
+Warning: stmtexpr Invalid lhs at jas_stream.c:648
+ jas_stream.c:648
+Warning: stmtexpr 
+jas_stream.c:704
+Invalid lhs at jas_stream.c:704
+Warning: stmtexpr Invalid lhs at jas_stream.c:725
+ jas_stream.c:725
+Warning: stmtexpr 
+jas_stream.c:732
+Invalid lhs at jas_stream.c:732
+Warning: stmtexpr Invalid lhs at jas_stream.c:772
+ jas_stream.c:772
+Warning: stmtexpr 
+jas_stream.c:774
+Invalid lhs at jas_stream.c:774
+Warning: stmtexpr Invalid lhs at jas_stream.c:792
+ jas_stream.c:792
+Warning: stmtexpr 
+jas_stream.c:815
+Invalid lhs at jas_stream.c:815
+Warning: stmtexpr Invalid lhs at jas_stream.c:835
+ jas_stream.c:835
+Warning: stmtexpr 
+jas_stream.c:985
+Invalid lhs at jas_stream.c:985
+Warning: stmtexpr Invalid lhs at jas_stream.c:986
+ jas_stream.c:986
+Warning: stmtexpr 
+jas_stream.c:1000
+Invalid lhs at jas_stream.c:1000
+Warning: stmtexpr Invalid lhs at jas_stream.c:1018
+ jas_stream.c:1018
+Warning: stmtexpr 
+jas_stream.c:1019
+Invalid lhs at jas_stream.c:1019
+Warning: stmtexpr Invalid lhs at jas_stream.c:1025
+ jas_stream.c:1025
+Warning: stmtexpr 
+jas_stream.c:1053
+Invalid lhs at jas_stream.c:1053
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at jas_seq.c:90
+ jas_seq.c:90
+Warning: stmtexpr 
+jas_seq.c:169
+Invalid lhs at jas_seq.c:169
+Warning: stmtexpr Invalid lhs at jas_seq.c:187
+ jas_seq.c:187
+Warning: stmtexpr 
+jas_seq.c:294
+Invalid lhs at jas_seq.c:294
+Warning: stmtexpr Invalid lhs at jas_seq.c:317
+ jas_seq.c:317
+Warning: stmtexpr 
+jas_seq.c:343
+Invalid lhs at jas_seq.c:343
+Warning: stmtexpr Invalid lhs at jas_seq.c:345
+ jas_seq.c:345
+Warning: stmtexpr 
+jas_seq.c:367
+Invalid lhs at jas_seq.c:367
+Warning: stmtexpr Invalid lhs at jas_seq.c:413
+WARN: type not found
+WARN: type not found
+ jas_seq.c:413
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+WARN: type not found
+WARN: type not found
+ jas_math.h:152
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+WARN: type not found
+WARN: type not found
+ jas_math.h:152
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+ jas_math.h:152
+Warning: stmtexpr 
+jas_image.c:572
+Invalid lhs at jas_image.c:572
+Warning: stmtexpr Invalid lhs at jas_image.c:714
+ jas_image.c:714
+Warning: stmtexpr 
+jas_image.c:1120
+Invalid lhs at jas_image.c:1120
+Warning: stmtexpr Invalid lhs at jas_image.c:1122
+ jas_image.c:1122
+Warning: stmtexpr 
+jas_image.c:1169
+Invalid lhs at jas_image.c:1169
+Warning: stmtexpr Invalid lhs at jas_image.c:1256
+ jas_image.c:1256
+Warning: stmtexpr 
+jas_image.c:1266
+Invalid lhs at jas_image.c:1266
+Warning: stmtexpr Invalid lhs at jas_image.c:1284
+ jas_image.c:1284
+Warning: stmtexpr 
+jas_image.c:1307
+Invalid lhs at jas_image.c:1307
+Warning: stmtexpr Invalid lhs at jas_image.c:1311
+ jas_image.c:1311
+Warning: stmtexpr 
+jas_image.c:1339
+Invalid lhs at jas_image.c:1339
+Warning: stmtexpr Invalid lhs at jas_image.c:1345
+ jas_image.c:1345
+Warning: stmtexpr 
+jas_image.c:1461
+Invalid lhs at jas_image.c:1461
+Warning: stmtexpr Invalid lhs at jas_image.c:1478
+ jas_image.c:1478
+Warning: stmtexpr 
+jas_image.c:1496
+Invalid lhs at jas_image.c:1496
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_icc.c:235
+ jas_icc.c:235
+Warning: stmtexpr 
+jas_icc.c:387
+Invalid lhs at jas_icc.c:387
+Warning: stmtexpr Invalid lhs at jas_icc.c:422
+ jas_icc.c:422
+Warning: stmtexpr 
+jas_icc.c:439
+Invalid lhs at jas_icc.c:439
+Warning: stmtexpr Invalid lhs at jas_icc.c:747
+ jas_icc.c:747
+Warning: stmtexpr 
+jas_icc.c:768
+Invalid lhs at jas_icc.c:768
+Invalid lhs at jas_icc.c:1682
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_math.h:122
+ jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at jas_cm.c:188
+ jas_cm.c:188
+Warning: stmtexpr 
+jas_cm.c:189
+Invalid lhs at jas_cm.c:189
+Warning: stmtexpr Invalid lhs at jas_cm.c:416
+ jas_cm.c:416
+Warning: stmtexpr Invalid lhs at jas_cm.c:524
+
+jas_cm.c:524
+Warning: stmtexpr Invalid lhs at jas_cm.c:638
+ jas_cm.c:638
+Warning: stmtexpr Invalid lhs at jas_cm.c:665
+
+jas_cm.c:665
+Warning: stmtexpr Invalid lhs at jas_cm.c:671
+ jas_cm.c:671
+Warning: stmtexpr Invalid lhs at jas_cm.c:713
+
+jas_cm.c:713
+Warning: stmtexpr Invalid lhs at jas_cm.c:853
+ jas_cm.c:853
+Warning: stmtexpr Invalid lhs at jas_cm.c:951
+
+jas_cm.c:951
+Warning: stmtexpr Invalid lhs at jas_cm.c:959
+WARN: type not found
+WARN: type not found
+ jas_cm.c:959
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+WARN: type not found
+WARN: type not found
+ jas_math.h:152
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+
+jas_math.h:152
+
+Front-end completes: 1.840004
