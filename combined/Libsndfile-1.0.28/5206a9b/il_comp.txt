@@ -1,0 +1,3 @@
+src/common.o.i 
+src/libsndfile_la-flac.o.i
+src/libsndfile_la-sndfile.o.i

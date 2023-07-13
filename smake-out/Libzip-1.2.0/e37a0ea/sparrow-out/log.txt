@@ -1,0 +1,20 @@
+src/hole.o.i src/ziptool.o.i lib/libzip_la-zip_buffer.o.i lib/libzip_la-zip_add_dir.o.i lib/libzip_la-zip_open.o.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Invalid lhs at ziptool.c:849
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+
+Front-end completes: 0.171342

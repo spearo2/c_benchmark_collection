@@ -1,0 +1,19 @@
+libopenjpeg/libopenjpeg_la-tcd.o.i libopenjpeg/libopenjpeg_la-jp2.o.i libopenjpeg/libopenjpeg_la-j2k_lib.o.i libopenjpeg/libopenjpeg_la-j2k.o.i libopenjpeg/libopenjpeg_la-cio.o.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+
+Front-end completes: 0.217232

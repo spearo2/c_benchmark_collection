@@ -1,0 +1,2 @@
+examples/cwebp-cwebp.o.i 
+src/enc/libwebpencode_la-picture_*

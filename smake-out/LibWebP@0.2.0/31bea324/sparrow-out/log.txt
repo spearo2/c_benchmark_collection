@@ -1,0 +1,11 @@
+src/enc/libwebpencode_la-picture_tools_enc.o.i src/enc/libwebpencode_la-picture_rescale_enc.o.i src/enc/libwebpencode_la-picture_psnr_enc.o.i src/enc/libwebpencode_la-picture_enc.o.i src/enc/libwebpencode_la-picture_csp_enc.o.i examples/cwebp-cwebp.o.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+WARN: type not found
+WARN: type not found
+
+Front-end completes: 0.210101

@@ -1,0 +1,89 @@
+src/libsndfile_la-sndfile.o.i src/libsndfile_la-flac.o.i src/common.o.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+Warning: stmtexpr  sndfile.c:328
+Warning: stmtexpr 
+sndfile.c:1372
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+Invalid lhs at sndfile.c:328
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ sndfile.c:2627
+Warning: stmtexpr 
+common.c:63
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+UnexposedExpr at common.c:158
+UnexposedExpr at common.c:173
+UnexposedExpr at common.c:226
+UnexposedExpr at common.c:259
+UnexposedExpr at common.c:303
+UnexposedExpr at common.c:309
+UnexposedExpr at common.c:337
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+UnexposedExpr at common.c:589
+UnexposedExpr at common.c:595
+UnexposedExpr at common.c:601
+UnexposedExpr at common.c:612
+UnexposedExpr at common.c:623
+UnexposedExpr at common.c:634
+UnexposedExpr at common.c:657
+UnexposedExpr at common.c:667
+UnexposedExpr at common.c:678
+UnexposedExpr at common.c:700
+UnexposedExpr at common.c:718
+UnexposedExpr at common.c:733
+UnexposedExpr at common.c:734
+UnexposedExpr at common.c:745
+UnexposedExpr at common.c:759
+UnexposedExpr at common.c:766
+UnexposedExpr at common.c:776
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+UnexposedExpr at common.c:978
+UnexposedExpr at common.c:986
+UnexposedExpr at common.c:999
+UnexposedExpr at common.c:1005
+UnexposedExpr at common.c:1016
+UnexposedExpr at common.c:1026
+UnexposedExpr at common.c:1037
+UnexposedExpr at common.c:1048
+UnexposedExpr at common.c:1058
+UnexposedExpr at common.c:1081
+UnexposedExpr at common.c:1082
+UnexposedExpr at common.c:1088
+UnexposedExpr at common.c:1089
+UnexposedExpr at common.c:1111
+UnexposedExpr at common.c:1117
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+
+common.c:1268
+
+Front-end completes: 0.245617

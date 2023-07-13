@@ -1,0 +1,20 @@
+libopenjpeg/libopenjpeg_la-j2k.o.i libopenjpeg/libopenjpeg_la-j2k_lib.o.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+WARN: type not found
+WARN: type not found
+Invalid lhs at j2k.c:433
+Invalid lhs at j2k.c:435
+Warning: stmtexpr  j2k.c:433
+Warning: stmtexpr  j2k.c:435
+Warning: stmtexpr 
+j2k.c:1687
+Invalid lhs at j2k.c:1687
+WARN: type not found
+WARN: type not found
+
+Front-end completes: 0.103665

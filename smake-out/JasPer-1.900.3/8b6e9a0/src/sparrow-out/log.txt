@@ -1,0 +1,35 @@
+libjasper/ras/ras_enc.o.i libjasper/ras/ras_dec.o.i libjasper/ras/ras_cod.o.i libjasper/mif/mif_cod.o.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+WARN: type not found
+WARN: type not found
+Invalid lhs at ras_enc.c:235
+WARN: type not found
+WARN: type not found
+Invalid lhs at ras_dec.c:191
+Warning: stmtexpr  ras_enc.c:235
+Warning: stmtexpr 
+ras_dec.c:191
+Warning: stmtexpr Invalid lhs at ras_dec.c:262
+ ras_dec.c:262
+Warning: stmtexpr 
+ras_dec.c:327
+Invalid lhs at ras_dec.c:327
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at mif_cod.c:372
+ mif_cod.c:372
+Warning: stmtexpr 
+mif_cod.c:440
+Invalid lhs at mif_cod.c:440
+Warning: stmtexpr Invalid lhs at mif_cod.c:624
+ mif_cod.c:624
+Warning: stmtexpr 
+mif_cod.c:665
+Invalid lhs at mif_cod.c:665
+
+Front-end completes: 0.110527

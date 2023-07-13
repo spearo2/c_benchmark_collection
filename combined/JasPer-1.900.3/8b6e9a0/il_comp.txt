@@ -1,0 +1,2 @@
+libjasper/mif/*.i
+libjasper/ras/*.i

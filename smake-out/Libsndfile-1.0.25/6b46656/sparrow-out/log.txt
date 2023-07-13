@@ -1,0 +1,222 @@
+src/xi.o.i src/wve.o.i src/windows.o.i src/wav_w64.o.i src/wav.o.i src/w64.o.i src/vox_adpcm.o.i src/voc.o.i src/ulaw.o.i src/txw.o.i src/svx.o.i src/strings.o.i src/sndfile.o.i src/sds.o.i src/sd2.o.i src/rx2.o.i src/rf64.o.i src/raw.o.i src/pvf.o.i src/pcm.o.i src/paf.o.i src/ogg_vorbis.o.i src/ogg_speex.o.i src/ogg_pcm.o.i src/ogg_opus.o.i src/ogg.o.i src/nist.o.i src/ms_adpcm.o.i src/mpc2k.o.i src/mat5.o.i src/mat4.o.i src/macos.o.i src/macbinary3.o.i src/ircam.o.i src/interleave.o.i src/ima_oki_adpcm.o.i src/ima_adpcm.o.i src/id3.o.i src/htk.o.i src/gsm610.o.i src/g72x.o.i src/float32.o.i src/flac.o.i src/file_io.o.i src/dwvw.o.i src/dwd.o.i src/double64.o.i src/dither.o.i src/common.o.i src/command.o.i src/chunk.o.i src/chanmap.o.i src/cart.o.i src/caf.o.i src/broadcast.o.i src/avr.o.i src/audio_detect.o.i src/au.o.i src/alaw.o.i src/alac.o.i src/aiff.o.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Invalid lhs at sndfile.c:320
+Warning: stmtexpr  wav.c:2042
+Warning: stmtexpr 
+sndfile.c:320
+Warning: stmtexpr  sndfile.c:1306
+Warning: stmtexpr 
+sndfile.c:2382
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr  sd2.c:570
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+
+sd2.c:588
+Warning: stmtexpr  ima_oki_adpcm.c:95
+Warning: stmtexpr 
+ima_oki_adpcm.c:113
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+UnexposedExpr at common.c:113
+UnexposedExpr at common.c:127
+UnexposedExpr at common.c:180
+UnexposedExpr at common.c:213
+UnexposedExpr at common.c:257
+UnexposedExpr at common.c:263
+UnexposedExpr at common.c:291
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+UnexposedExpr at common.c:588
+UnexposedExpr at common.c:594
+UnexposedExpr at common.c:600
+UnexposedExpr at common.c:611
+UnexposedExpr at common.c:622
+UnexposedExpr at common.c:633
+UnexposedExpr at common.c:656
+UnexposedExpr at common.c:666
+UnexposedExpr at common.c:677
+UnexposedExpr at common.c:695
+UnexposedExpr at common.c:709
+UnexposedExpr at common.c:710
+UnexposedExpr at common.c:717
+UnexposedExpr at common.c:727
+UnexposedExpr at common.c:734
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+UnexposedExpr at common.c:939
+UnexposedExpr at common.c:946
+UnexposedExpr at common.c:958
+UnexposedExpr at common.c:964
+UnexposedExpr at common.c:975
+UnexposedExpr at common.c:985
+UnexposedExpr at common.c:996
+UnexposedExpr at common.c:1007
+UnexposedExpr at common.c:1017
+UnexposedExpr at common.c:1040
+UnexposedExpr at common.c:1041
+UnexposedExpr at common.c:1047
+UnexposedExpr at common.c:1048
+UnexposedExpr at common.c:1067
+UnexposedExpr at common.c:1074
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+
+command.c:372
+Unknown expr OffsetOfExpr at cart.c:36
+Unknown expr OffsetOfExpr at cart.c:70
+Unknown expr OffsetOfExpr at cart.c:71
+Warning: stmtexpr 
+cart.c:94
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+
+caf.c:798
+Unknown expr OffsetOfExpr at broadcast.c:36
+Unknown expr OffsetOfExpr at broadcast.c:69
+Unknown expr OffsetOfExpr at broadcast.c:71
+Warning: stmtexpr 
+broadcast.c:103
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr  aiff.c:949
+Warning: stmtexpr 
+aiff.c:1772
+
+Front-end completes: 3.421603

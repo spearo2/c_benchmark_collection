@@ -1,0 +1,4 @@
+libopenjpeg/libopenjpeg_la-cio.o.i 
+libopenjpeg/libopenjpeg_la-j2k* 
+libopenjpeg/libopenjpeg_la-jp2.o.i 
+libopenjpeg/libopenjpeg_la-tcd.o.i

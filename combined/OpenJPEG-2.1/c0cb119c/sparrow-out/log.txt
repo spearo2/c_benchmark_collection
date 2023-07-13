@@ -1,0 +1,82 @@
+bio.c
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+
+Front-end completes: 0.149655
+
+
+
+--------------------------------------------------------------------------------
+Graph construction begins...
+--------------------------------------------------------------------------------
+
+Graph construction completes: 0.133792
+
+
+
+--------------------------------------------------------------------------------
+Pre-processing begins...
+--------------------------------------------------------------------------------
+
+Pre-processing completes: 0.005987
+To inline : []
+Excluded variable-arguments functions : []
+Excluded recursive functions : []
+Excluded too large functions : []
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis begins...
+--------------------------------------------------------------------------------
+#iteration : 9
+mem size : 1432
+
+
+Pre-analysis completes: 0.234799
+#Procs : 213
+#Nodes : 11453
+
+
+
+--------------------------------------------------------------------------------
+Itv Sparse Analysis begins...
+--------------------------------------------------------------------------------
+live memory : 45 MB
+#global variables = 220 (15.0%)
+#local variables  = 1187 (80.8%)
+#allocsite        = 63 (4.3%)
+#fields           = 21 (1.5%)
+#total abstract locations  = 1470
+#flow-sensitive abstract locations  = 1470
+Access Analysis begins...
+Access Analysis completes: 0.073834
+Def-use graph construction begins...
+draw intra-procedural edges
+draw inter-procedural edges
+Def-use graph construction completes: 0.111000
+live memory : 41 MB
+#Nodes in def-use graph : 6526
+#Locs on def-use graph : 21747
+Workorder computation begins...
+Workorder computation completes: 0.558066
+Fixpoint iteration with widening begins...
+
+#iteration in widening : 7933
+Fixpoint iteration with widening completes: 0.080347
+
+
+
+--------------------------------------------------------------------------------
+Generate Alarm Report begins...
+--------------------------------------------------------------------------------
+
+Generate Alarm Report completes: 0.010446
+
+Itv Sparse Analysis completes: 0.855318
+Finished properly.
+1.573307

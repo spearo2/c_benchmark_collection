@@ -1,0 +1,1 @@
+libopenjpeg/libopenjpeg_la-j2k*

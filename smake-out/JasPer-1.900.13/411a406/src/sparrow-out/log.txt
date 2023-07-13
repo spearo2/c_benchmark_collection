@@ -1,0 +1,93 @@
+libjasper/jpc/jpc_dec.o.i libjasper/base/jas_image.o.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+WARN: type not found
+WARN: type not found
+Invalid lhs at jas_math.h:122
+Invalid lhs at jas_math.h:132
+Warning: stmtexpr  jas_math.h:122
+Warning: stmtexpr 
+jas_math.h:132
+Warning: stmtexpr Invalid lhs at jas_math.h:142
+ jas_math.h:142
+Warning: stmtexpr 
+jas_math.h:152
+Invalid lhs at jas_math.h:152
+Warning: stmtexpr Invalid lhs at jpc_dec.c:379
+ jpc_dec.c:379
+Warning: stmtexpr 
+jpc_dec.c:520
+Invalid lhs at jpc_dec.c:520
+Warning: stmtexpr Invalid lhs at jpc_dec.c:805
+ jpc_dec.c:805
+Warning: stmtexpr 
+jpc_dec.c:841
+Invalid lhs at jpc_dec.c:841
+Warning: stmtexpr Invalid lhs at jpc_dec.c:916
+ jpc_dec.c:916
+Warning: stmtexpr 
+jpc_dec.c:1636
+Invalid lhs at jpc_dec.c:1636
+Warning: stmtexpr Invalid lhs at jpc_dec.c:1636
+ jpc_dec.c:1636
+Warning: stmtexpr 
+jpc_dec.c:1817
+Invalid lhs at jpc_dec.c:1817
+Warning: stmtexpr Invalid lhs at jpc_dec.c:2167
+WARN: type not found
+WARN: type not found
+ jpc_dec.c:2167
+Warning: stmtexpr 
+jas_math.h:122
+Invalid lhs at jas_math.h:122
+Warning: stmtexpr Invalid lhs at jas_math.h:132
+ jas_math.h:132
+Warning: stmtexpr 
+jas_math.h:142
+Invalid lhs at jas_math.h:142
+Warning: stmtexpr Invalid lhs at jas_math.h:152
+ jas_math.h:152
+Warning: stmtexpr 
+jas_image.c:571
+Invalid lhs at jas_image.c:571
+Warning: stmtexpr Invalid lhs at jas_image.c:695
+ jas_image.c:695
+Warning: stmtexpr 
+jas_image.c:1101
+Invalid lhs at jas_image.c:1101
+Warning: stmtexpr Invalid lhs at jas_image.c:1103
+ jas_image.c:1103
+Warning: stmtexpr 
+jas_image.c:1150
+Invalid lhs at jas_image.c:1150
+Warning: stmtexpr Invalid lhs at jas_image.c:1237
+ jas_image.c:1237
+Warning: stmtexpr 
+jas_image.c:1247
+Invalid lhs at jas_image.c:1247
+Warning: stmtexpr Invalid lhs at jas_image.c:1265
+ jas_image.c:1265
+Warning: stmtexpr 
+jas_image.c:1288
+Invalid lhs at jas_image.c:1288
+Warning: stmtexpr Invalid lhs at jas_image.c:1292
+ jas_image.c:1292
+Warning: stmtexpr 
+jas_image.c:1320
+Invalid lhs at jas_image.c:1320
+Warning: stmtexpr Invalid lhs at jas_image.c:1326
+ jas_image.c:1326
+Warning: stmtexpr 
+jas_image.c:1442
+Invalid lhs at jas_image.c:1442
+Warning: stmtexpr Invalid lhs at jas_image.c:1459
+ jas_image.c:1459
+Warning: stmtexpr 
+jas_image.c:1477
+Invalid lhs at jas_image.c:1477
+
+Front-end completes: 0.125066

@@ -1,0 +1,2 @@
+libjasper/base/jas_image.o.i
+libjasper/jpc/jpc_dec.o.i

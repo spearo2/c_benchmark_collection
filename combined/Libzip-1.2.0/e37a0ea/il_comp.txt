@@ -1,0 +1,5 @@
+lib/libzip_la-zip_open.o.i 
+lib/libzip_la-zip_add_dir.o.i 
+lib/libzip_la-zip_buffer.o.i 
+src/ziptool.o.i 
+src/hole.o.i

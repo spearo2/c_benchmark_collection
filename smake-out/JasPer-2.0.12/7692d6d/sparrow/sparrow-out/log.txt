@@ -1,0 +1,85 @@
+jp2_cod.i jas_stream.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+Warning: stmtexpr  jp2_cod.c:331
+Warning: stmtexpr 
+jas_math.h:130
+Warning: stmtexpr Invalid lhs at jp2_cod.c:331
+Invalid lhs at jas_math.h:130
+Invalid lhs at jas_math.h:131
+ jas_math.h:131
+Warning: stmtexpr 
+jas_math.h:143
+Invalid lhs at jas_math.h:143
+Warning: stmtexpr Invalid lhs at jas_math.h:144
+ jas_math.h:144
+Warning: stmtexpr 
+jas_math.h:156
+Invalid lhs at jas_math.h:156
+Warning: stmtexpr Invalid lhs at jas_math.h:157
+ jas_math.h:157
+Warning: stmtexpr 
+jas_math.h:169
+Invalid lhs at jas_math.h:169
+Warning: stmtexpr Invalid lhs at jas_math.h:170
+ jas_math.h:170
+Warning: stmtexpr 
+jas_stream.c:270
+Invalid lhs at jas_stream.c:270
+Warning: stmtexpr Invalid lhs at jas_stream.c:639
+ jas_stream.c:639
+Warning: stmtexpr 
+jas_stream.c:646
+Invalid lhs at jas_stream.c:646
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_stream.c:749
+ jas_stream.c:749
+Warning: stmtexpr 
+jas_stream.c:835
+Invalid lhs at jas_stream.c:835
+Warning: stmtexpr Invalid lhs at jas_stream.c:893
+ jas_stream.c:893
+Warning: stmtexpr 
+jas_stream.c:914
+Invalid lhs at jas_stream.c:914
+Warning: stmtexpr Invalid lhs at jas_stream.c:921
+ jas_stream.c:921
+Warning: stmtexpr 
+jas_stream.c:961
+Invalid lhs at jas_stream.c:961
+Warning: stmtexpr Invalid lhs at jas_stream.c:963
+ jas_stream.c:963
+Warning: stmtexpr 
+jas_stream.c:981
+Invalid lhs at jas_stream.c:981
+Warning: stmtexpr Invalid lhs at jas_stream.c:1004
+ jas_stream.c:1004
+Warning: stmtexpr 
+jas_stream.c:1024
+Invalid lhs at jas_stream.c:1024
+Warning: stmtexpr Invalid lhs at jas_stream.c:1174
+ jas_stream.c:1174
+Warning: stmtexpr 
+jas_stream.c:1175
+Invalid lhs at jas_stream.c:1175
+Warning: stmtexpr Invalid lhs at jas_stream.c:1220
+ jas_stream.c:1220
+Warning: stmtexpr 
+jas_stream.c:1221
+Invalid lhs at jas_stream.c:1221
+Warning: stmtexpr Invalid lhs at jas_stream.c:1236
+ jas_stream.c:1236
+Warning: stmtexpr 
+jas_stream.c:1263
+Invalid lhs at jas_stream.c:1263
+
+Front-end completes: 0.060897
