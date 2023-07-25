@@ -1,0 +1,99 @@
+jasper.c
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+
+Front-end completes: 0.416522
+
+
+
+--------------------------------------------------------------------------------
+Graph construction begins...
+--------------------------------------------------------------------------------
+WARN: too large global array initialization (3144) @ jas_iccdata.c:65
+
+#nodes all    : 45963
+#unreachable  : 1071
+
+Graph construction completes: 0.741616
+
+
+
+--------------------------------------------------------------------------------
+Pre-processing begins...
+--------------------------------------------------------------------------------
+#functions all  : 746
+#referred       : 662
+{JPC_ISTERMINATED,JPC_NOMINALGAIN,JPC_PASSTYPE,JPC_SEGPASSCNT,JPC_SEGTYPE,_G_,band_create,band_destroy,bitstoint,bmp_dec_parseopts,bmp_decode,bmp_encode,bmp_getdata,bmp_gethdr,bmp_getinfo,bmp_getint16,bmp_getint32,bmp_gobble,bmp_info_create,bmp_info_destroy,bmp_isgrayscalepal,bmp_numcmpts,bmp_putdata,bmp_puthdr,bmp_putinfo,bmp_putint16,bmp_putint32,bmp_validate,calcrdslopes,calcstepsizes,cblk_create,cblk_destroy,clrspctojp2,cmdinfo,cp_create,dec_rawrefpass,dec_rawsigpass,dec_refpass,dec_sigpass,dump_layeringinfo,file_close,file_read,file_seek,file_write,fromiccpcs,gammafn,getthebyte,icctoclrspc,inttobits,jas_alloc2,jas_alloc3,jas_cleanup,jas_clrspc_numchans,jas_cmprof_create,jas_cmprof_createfromclrspc,jas_cmprof_createfromiccprof,jas_cmprof_createsycc,jas_cmprof_destroy,jas_cmpxform_copy,jas_cmpxform_create0,jas_cmpxform_createshapmat,jas_cmpxform_destroy,jas_cmpxformseq_create,jas_cmpxformseq_delete,jas_cmpxformseq_destroy,jas_cmpxformseq_insertpxform,jas_cmpxformseq_resize,jas_cmshapmat_apply,jas_cmshapmat_destroy,jas_cmshapmat_invmat,jas_cmshapmatlut_cleanup,jas_cmshapmatlut_init,jas_cmshapmatlut_invert,jas_cmshapmatlut_lookup,jas_cmshapmatlut_set,jas_deprecated,jas_eprintf,jas_fast32_asl,jas_fast32_asr,jas_free,jas_getdbglevel,jas_getopt,jas_getversion,jas_iccattrtab_add,jas_iccattrtab_copy,jas_iccattrtab_create,jas_iccattrtab_delete,jas_iccattrtab_destroy,jas_iccattrtab_get,jas_iccattrtab_lookup,jas_iccattrtab_replace,jas_iccattrtab_resize,jas_iccattrval_clone,jas_iccattrval_create,jas_iccattrval_create0,jas_iccattrval_destroy,jas_iccattrvalinfo_lookup,jas_icccurv_copy,jas_icccurv_destroy,jas_icccurv_dump,jas_icccurv_getsize,jas_icccurv_input,jas_icccurv_output,jas_iccgetsint32,jas_iccgettime,jas_iccgetuint,jas_iccgetuint16,jas_iccgetuint32,jas_iccgetuint64,jas_iccgetuint8,jas_iccgetxyz,jas_icclut16_copy,jas_icclut16_destroy,jas_icclut16_dump,jas_icclut16_getsize,jas_icclut16_input,jas_icclut16_output,jas_icclut8_copy,jas_icclut8_destroy,jas_icclut8_dump,jas_icclut8_getsize,jas_icclut8_input,jas_icclut8_output,jas_iccpadtomult,jas_iccpowi,jas_iccprof_copy,jas_iccprof_create,jas_iccprof_createfrombuf,jas_iccprof_createfromclrspc,jas_iccprof_createfromcmprof,jas_iccprof_destroy,jas_iccprof_getattr,jas_iccprof_gethdr,jas_iccprof_gettagtab,jas_iccprof_load,jas_iccprof_puttagtab,jas_iccprof_readhdr,jas_iccprof_save,jas_iccprof_setattr,jas_iccprof_sorttagtab,jas_iccprof_writehdr,jas_iccputsint,jas_iccputtime,jas_iccputuint,jas_iccputxyz,jas_icctagtabent_cmp,jas_icctxt_copy,jas_icctxt_destroy,jas_icctxt_dump,jas_icctxt_getsize,jas_icctxt_input,jas_icctxt_output,jas_icctxtdesc_copy,jas_icctxtdesc_destroy,jas_icctxtdesc_dump,jas_icctxtdesc_getsize,jas_icctxtdesc_input,jas_icctxtdesc_output,jas_iccxyz_dump,jas_iccxyz_getsize,jas_iccxyz_input,jas_iccxyz_output,jas_image_addcmpt,jas_image_addfmt,jas_image_clearfmts,jas_image_cmpt_create,jas_image_cmpt_destroy,jas_image_cmpt_domains_same,jas_image_create,jas_image_create0,jas_image_decode,jas_image_delcmpt,jas_image_depalettize,jas_image_destroy,jas_image_encode,jas_image_fmttostr,jas_image_getcmptbytype,jas_image_getfmt,jas_image_growcmpts,jas_image_lookupfmtbyid,jas_image_lookupfmtbyname,jas_image_rawsize,jas_image_readcmpt,jas_image_readcmptsample,jas_image_setbbox,jas_image_strtofmt,jas_image_writecmpt,jas_image_writecmptsample,jas_init,jas_malloc,jas_matrix_asl,jas_matrix_bindsub,jas_matrix_clip,jas_matrix_create,jas_matrix_destroy,jas_matrix_divpow2,jas_matrix_resize,jas_memdump,jas_optlookup,jas_realloc,jas_realloc2,jas_safe_intfast32_add,jas_safe_intfast32_mul,jas_safe_intfast32_mul3,jas_safe_size_add,jas_safe_size_mul,jas_safe_size_mul3,jas_seq2d_bindsub,jas_seq2d_create,jas_setdbglevel,jas_strdup,jas_stream_close,jas_stream_copy,jas_stream_create,jas_stream_destroy,jas_stream_fdopen,jas_stream_fillbuf,jas_stream_flush,jas_stream_flushbuf,jas_stream_fopen,jas_stream_gobble,jas_stream_initbuf,jas_stream_memopen,jas_stream_memopen2,jas_stream_pad,jas_stream_printf,jas_stream_puts,jas_stream_read,jas_stream_rewind,jas_stream_seek,jas_stream_setrwcount,jas_stream_tell,jas_stream_tmpfile,jas_stream_ungetc,jas_stream_write,jas_strtoopenmode,jas_tvparser_create,jas_tvparser_destroy,jas_tvparser_gettag,jas_tvparser_getval,jas_tvparser_next,jp2_box_create,jp2_box_destroy,jp2_box_dump,jp2_box_get,jp2_box_put,jp2_boxinfolookup,jp2_bpcc_destroy,jp2_bpcc_getdata,jp2_bpcc_putdata,jp2_cdef_destroy,jp2_cdef_dumpdata,jp2_cdef_getdata,jp2_cdef_putdata,jp2_cmap_destroy,jp2_cmap_dumpdata,jp2_cmap_getdata,jp2_cmap_putdata,jp2_colr_destroy,jp2_colr_dumpdata,jp2_colr_getdata,jp2_colr_putdata,jp2_dec_create,jp2_dec_destroy,jp2_decode,jp2_encode,jp2_ftyp_getdata,jp2_ftyp_putdata,jp2_getcs,jp2_getct,jp2_getint,jp2_gettypeasoc,jp2_getuint16,jp2_getuint32,jp2_getuint64,jp2_getuint8,jp2_ihdr_getdata,jp2_ihdr_putdata,jp2_jp_getdata,jp2_jp_putdata,jp2_pclr_destroy,jp2_pclr_dumpdata,jp2_pclr_getdata,jp2_pclr_putdata,jp2_putuint16,jp2_putuint32,jp2_putuint64,jp2_putuint8,jp2_validate,jpc_abstorelstepsize,jpc_atoaf,jpc_bitstream_align,jpc_bitstream_alloc,jpc_bitstream_close,jpc_bitstream_fillbuf,jpc_bitstream_getbits,jpc_bitstream_inalign,jpc_bitstream_outalign,jpc_bitstream_pending,jpc_bitstream_putbits,jpc_bitstream_sopen,jpc_calcabsstepsize,jpc_coc_destroyparms,jpc_coc_dumpparms,jpc_coc_getparms,jpc_coc_putparms,jpc_cod_destroyparms,jpc_cod_dumpparms,jpc_cod_getparms,jpc_cod_gettsfb,jpc_cod_putparms,jpc_com_destroyparms,jpc_com_dumpparms,jpc_com_getparms,jpc_com_putparms,jpc_cox_destroycompparms,jpc_cox_getcompparms,jpc_cox_putcompparms,jpc_crg_destroyparms,jpc_crg_dumpparms,jpc_crg_getparms,jpc_crg_putparms,jpc_cstate_create,jpc_cstate_destroy,jpc_dec_cp_copy,jpc_dec_cp_create,jpc_dec_cp_destroy,jpc_dec_cp_isvalid,jpc_dec_cp_prepare,jpc_dec_cp_resetflags,jpc_dec_cp_setfromcoc,jpc_dec_cp_setfromcod,jpc_dec_cp_setfromcox,jpc_dec_cp_setfrompoc,jpc_dec_cp_setfromqcc,jpc_dec_cp_setfromqcd,jpc_dec_cp_setfromqcx,jpc_dec_cp_setfromrgn,jpc_dec_create,jpc_dec_decode,jpc_dec_decodecblk,jpc_dec_decodecblks,jpc_dec_decodepkt,jpc_dec_decodepkts,jpc_dec_destroy,jpc_dec_dump,jpc_dec_lookahead,jpc_dec_mstab_lookup,jpc_dec_opts_create,jpc_dec_opts_destroy,jpc_dec_pi_create,jpc_dec_process_coc,jpc_dec_process_cod,jpc_dec_process_com,jpc_dec_process_crg,jpc_dec_process_eoc,jpc_dec_process_poc,jpc_dec_process_ppm,jpc_dec_process_ppt,jpc_dec_process_qcc,jpc_dec_process_qcd,jpc_dec_process_rgn,jpc_dec_process_siz,jpc_dec_process_soc,jpc_dec_process_sod,jpc_dec_process_sot,jpc_dec_process_unk,jpc_dec_tiledecode,jpc_dec_tilefini,jpc_dec_tileinit,jpc_decode,jpc_dequantize,jpc_enc_cp_destroy,jpc_enc_create,jpc_enc_destroy,jpc_enc_dump,jpc_enc_enccblk,jpc_enc_enccblks,jpc_enc_encodemainbody,jpc_enc_encodemainhdr,jpc_enc_encodetiledata,jpc_enc_encpkt,jpc_enc_encpkts,jpc_enc_pi_create,jpc_enc_tile_create,jpc_enc_tile_destroy,jpc_encode,jpc_encrawrefpass,jpc_encrawsigpass,jpc_encrefpass,jpc_encsigpass,jpc_firstone,jpc_floorlog2,jpc_ft_analyze,jpc_ft_fwdlift_colgrp,jpc_ft_fwdlift_colres,jpc_ft_fwdlift_row,jpc_ft_invlift_colgrp,jpc_ft_invlift_colres,jpc_ft_invlift_row,jpc_ft_synthesize,jpc_getcommacode,jpc_getdata,jpc_getmagctxno,jpc_getms,jpc_getnumnewpasses,jpc_getscctxno,jpc_getspb,jpc_getuint16,jpc_getuint32,jpc_getuint8,jpc_getzcctxno,jpc_iict,jpc_init_t2state,jpc_initctxs,jpc_initluts,jpc_initmqctxs,jpc_irct,jpc_mct_getsynweight,jpc_mqdec_bytein,jpc_mqdec_create,jpc_mqdec_destroy,jpc_mqdec_init,jpc_mqdec_lpsexchrenormd,jpc_mqdec_mpsexchrenormd,jpc_mqdec_setctxs,jpc_mqdec_setinput,jpc_mqenc_codelps,jpc_mqenc_codemps2,jpc_mqenc_create,jpc_mqenc_destroy,jpc_mqenc_flush,jpc_mqenc_getstate,jpc_mqenc_init,jpc_mqenc_setbits,jpc_mqenc_setctxs,jpc_ms_create,jpc_ms_destroy,jpc_ms_dump,jpc_mstab_lookup,jpc_ns_analyze,jpc_ns_fwdlift_colgrp,jpc_ns_fwdlift_colres,jpc_ns_fwdlift_row,jpc_ns_invlift_colgrp,jpc_ns_invlift_colres,jpc_ns_invlift_row,jpc_ns_synthesize,jpc_pchg_copy,jpc_pchg_destroy,jpc_pchglist_copy,jpc_pchglist_create,jpc_pchglist_destroy,jpc_pchglist_get,jpc_pchglist_insert,jpc_pchglist_numpchgs,jpc_pchglist_remove,jpc_pi_addpchg,jpc_pi_addpchgfrompoc,jpc_pi_create0,jpc_pi_destroy,jpc_pi_init,jpc_pi_next,jpc_pi_nextcprl,jpc_pi_nextlrcp,jpc_pi_nextpcrl,jpc_pi_nextrlcp,jpc_pi_nextrpcl,jpc_picomp_destroy,jpc_poc_destroyparms,jpc_poc_dumpparms,jpc_poc_getparms,jpc_poc_putparms,jpc_pow2i,jpc_ppm_destroyparms,jpc_ppm_dumpparms,jpc_ppm_getparms,jpc_ppm_putparms,jpc_ppmstabtostreams,jpc_ppt_destroyparms,jpc_ppt_dumpparms,jpc_ppt_getparms,jpc_ppt_putparms,jpc_pptstabwrite,jpc_ppxstab_create,jpc_ppxstab_destroy,jpc_ppxstab_grow,jpc_ppxstab_insert,jpc_ppxstabent_create,jpc_ppxstabent_destroy,jpc_putcommacode,jpc_putdata,jpc_putms,jpc_putnumnewpasses,jpc_putuint16,jpc_putuint32,jpc_putuint8,jpc_qcc_destroyparms,jpc_qcc_dumpparms,jpc_qcc_getparms,jpc_qcc_putparms,jpc_qcd_destroyparms,jpc_qcd_dumpparms,jpc_qcd_getparms,jpc_qcd_putparms,jpc_qcx_destroycompparms,jpc_qcx_getcompparms,jpc_qcx_putcompparms,jpc_qmfb_join_colgrp,jpc_qmfb_join_colres,jpc_qmfb_join_row,jpc_qmfb_split_colgrp,jpc_qmfb_split_colres,jpc_qmfb_split_row,jpc_quantize,jpc_restore_t2state,jpc_rgn_dumpparms,jpc_rgn_getparms,jpc_rgn_putparms,jpc_save_t2state,jpc_seg_alloc,jpc_seg_destroy,jpc_seglist_insert,jpc_seglist_remove,jpc_siz_destroyparms,jpc_siz_dumpparms,jpc_siz_getparms,jpc_siz_putparms,jpc_sop_dumpparms,jpc_sop_getparms,jpc_sop_putparms,jpc_sot_dumpparms,jpc_sot_getparms,jpc_sot_putparms,jpc_streamlist_create,jpc_streamlist_destroy,jpc_streamlist_insert,jpc_streamlist_numstreams,jpc_streamlist_remove,jpc_tagtree_alloc,jpc_tagtree_copy,jpc_tagtree_create,jpc_tagtree_decode,jpc_tagtree_destroy,jpc_tagtree_encode,jpc_tagtree_getleaf,jpc_tagtree_reset,jpc_tagtree_setvalue,jpc_tsfb_analyze,jpc_tsfb_analyze2,jpc_tsfb_destroy,jpc_tsfb_getbands,jpc_tsfb_getbands2,jpc_tsfb_synthesize,jpc_tsfb_synthesize2,jpc_undo_roi,jpc_unk_destroyparms,jpc_unk_dumpparms,jpc_unk_getparms,jpc_unk_putparms,jpc_validate,jpg_copyfiletostream,jpg_copystreamtofile,jpg_dec_parseopts,jpg_decode,jpg_encode,jpg_finish_input,jpg_finish_output,jpg_get_pixel_rows,jpg_mkimage,jpg_parseencopts,jpg_put_pixel_rows,jpg_start_input,jpg_start_output,jpg_validate,main,mem_close,mem_read,mem_resize,mem_seek,mem_write,mif_cmpt_create,mif_cmpt_destroy,mif_decode,mif_encode,mif_getc,mif_getline,mif_hdr_addcmpt,mif_hdr_create,mif_hdr_destroy,mif_hdr_get,mif_hdr_growcmpts,mif_hdr_put,mif_makehdrfromimage,mif_process_cmpt,mif_validate,mono,pass_destroy,pgx_dec_parseopts,pgx_decode,pgx_dumphdr,pgx_encode,pgx_getbyteorder,pgx_getc,pgx_getdata,pgx_gethdr,pgx_getsgnd,pgx_getuint32,pgx_getword,pgx_inttoword,pgx_putdata,pgx_puthdr,pgx_putword,pgx_validate,pgx_wordtoint,pirlvl_destroy,pnm_dec_parseopts,pnm_decode,pnm_encode,pnm_fmt,pnm_getbitstr,pnm_getc,pnm_getdata,pnm_gethdr,pnm_getint16,pnm_getsint,pnm_getsintstr,pnm_getuint,pnm_getuintstr,pnm_maxvaltodepth,pnm_parseencopts,pnm_putdata,pnm_puthdr,pnm_putsint,pnm_putuint,pnm_putuint16,pnm_type,pnm_validate,prc_create,prc_destroy,ras_dec_parseopts,ras_decode,ras_encode,ras_getcmap,ras_getdata,ras_getdatastd,ras_gethdr,ras_getint,ras_putdata,ras_putdatastd,ras_puthdr,ras_putint,ras_validate,rateallocate,ratestrtosize,rlvl_create,rlvl_destroy,tcmpt_create,tcmpt_destroy,tojpgcs,triclr,usage}
+#unreferred     : 84
+{convert,dec_clnpass,decode_twos_comp,downtomult,dump_passes,encode_twos_comp,getint,jas_calloc,jas_cmgetint,jas_cmprof_copy,jas_cmputint,jas_cmpxformseq_append,jas_cmpxformseq_appendcnvt,jas_cmpxformseq_copy,jas_cmxform_apply,jas_cmxform_create,jas_cmxform_destroy,jas_iccattrtab_dump,jas_iccattrval_allowmodify,jas_iccattrval_dump,jas_iccprof_dump,jas_iccprof_sethdr,jas_iccsigtostr,jas_image_calcbbox2,jas_image_chclrspc,jas_image_cmpt_copy,jas_image_cmpt_create0,jas_image_copy,jas_image_copycmpt,jas_image_dump,jas_image_fmtfromname,jas_image_ishomosamp,jas_image_readcmpt2,jas_image_sampcmpt,jas_image_writecmpt2,jas_matrix_asr,jas_matrix_cmp,jas_matrix_copy,jas_matrix_setall,jas_seq2d_copy,jas_seq2d_input,jas_seq2d_output,jas_stream_display,jas_stream_freopen,jas_stream_getc_func,jas_stream_gets,jas_stream_isseekable,jas_stream_length,jas_stream_putc_func,jas_taginfo_nonull,jas_taginfos_lookup,jas_tmr_get,jas_tmr_start,jas_tmr_stop,jp2_cdef_lookup,jpc_bitstream_getbit_func,jpc_bitstream_needalign,jpc_bitstream_putbit_func,jpc_encclnpass,jpc_ft_fwdlift_col,jpc_ft_invlift_col,jpc_getsignmsedec_func,jpc_ict,jpc_mqdec_dump,jpc_mqdec_getbit_func,jpc_mqdec_setctx,jpc_mqenc_dump,jpc_mqenc_putbit_func,jpc_ns_fwdlift_col,jpc_ns_invlift_col,jpc_qmfb_join_col,jpc_qmfb_split_col,jpc_rct,jpc_seq_conv,jpc_seq_norm,jpc_seq_upsample,jpc_streamlist_get,jpc_tagtree_dump,putint,sfile_close,sfile_read,sfile_seek,sfile_write,uptomult}
+#recursive      : 42
+{jas_cmprof_createfromclrspc,jas_cmprof_createsycc,jas_icccurv_copy,jas_icccurv_dump,jas_icccurv_getsize,jas_icclut16_copy,jas_icclut16_dump,jas_icclut8_copy,jas_icclut8_dump,jas_icctagtabent_cmp,jas_icctxt_dump,jas_icctxt_getsize,jas_icctxtdesc_copy,jas_icctxtdesc_dump,jas_icctxtdesc_getsize,jas_iccxyz_dump,jas_iccxyz_getsize,jas_stream_fillbuf,jas_stream_flushbuf,jp2_cdef_dumpdata,jp2_cmap_dumpdata,jp2_cmap_putdata,jp2_pclr_dumpdata,jp2_pclr_putdata,jpc_coc_dumpparms,jpc_com_dumpparms,jpc_crg_dumpparms,jpc_dec_process_com,jpc_dec_process_crg,jpc_dec_process_soc,jpc_poc_dumpparms,jpc_qcc_dumpparms,jpc_qcd_dumpparms,jpc_rgn_dumpparms,jpc_siz_dumpparms,jpc_sop_dumpparms,jpc_sot_dumpparms,jpc_tsfb_analyze2,jpc_tsfb_getbands2,jpc_tsfb_synthesize2,jpc_unk_dumpparms,jpc_unk_putparms}
+
+Pre-processing completes: 0.110164
+To inline : []
+Excluded variable-arguments functions : []
+Excluded recursive functions : []
+Excluded too large functions : []
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis begins...
+--------------------------------------------------------------------------------
+#iteration : 23
+mem size : 9313
+
+#functions all  : 662
+#reachable      : 472
+#unreachable    : 190
+{JPC_ISTERMINATED,band_create,band_destroy,bmp_encode,bmp_putdata,bmp_puthdr,bmp_putinfo,bmp_putint16,bmp_putint32,calcrdslopes,cblk_create,cblk_destroy,clrspctojp2,cp_create,dump_layeringinfo,getthebyte,jas_cleanup,jas_cmshapmat_apply,jas_cmshapmatlut_lookup,jas_getversion,jas_iccattrtab_get,jas_icccurv_copy,jas_icccurv_dump,jas_icccurv_getsize,jas_icccurv_output,jas_icclut16_copy,jas_icclut16_dump,jas_icclut16_getsize,jas_icclut16_output,jas_icclut8_copy,jas_icclut8_dump,jas_icclut8_getsize,jas_icclut8_output,jas_iccpadtomult,jas_iccprof_createfromcmprof,jas_iccprof_puttagtab,jas_iccprof_save,jas_iccprof_writehdr,jas_iccputsint,jas_iccputtime,jas_iccputuint,jas_iccputxyz,jas_icctagtabent_cmp,jas_icctxt_copy,jas_icctxt_dump,jas_icctxt_getsize,jas_icctxt_output,jas_icctxtdesc_copy,jas_icctxtdesc_dump,jas_icctxtdesc_getsize,jas_icctxtdesc_output,jas_iccxyz_dump,jas_iccxyz_getsize,jas_iccxyz_output,jas_image_encode,jas_image_getcmptbytype,jas_image_lookupfmtbyname,jas_image_strtofmt,jas_matrix_divpow2,jas_stream_pad,jas_stream_printf,jas_stream_puts,jp2_box_create,jp2_box_put,jp2_bpcc_putdata,jp2_cdef_putdata,jp2_cmap_putdata,jp2_colr_putdata,jp2_encode,jp2_ftyp_putdata,jp2_gettypeasoc,jp2_ihdr_putdata,jp2_jp_putdata,jp2_pclr_putdata,jp2_putuint16,jp2_putuint32,jp2_putuint64,jp2_putuint8,jpc_abstorelstepsize,jpc_atoaf,jpc_bitstream_pending,jpc_coc_putparms,jpc_cod_putparms,jpc_com_putparms,jpc_cox_putcompparms,jpc_crg_putparms,jpc_enc_cp_destroy,jpc_enc_create,jpc_enc_destroy,jpc_enc_dump,jpc_enc_enccblk,jpc_enc_enccblks,jpc_enc_encodemainbody,jpc_enc_encodemainhdr,jpc_enc_encodetiledata,jpc_enc_encpkt,jpc_enc_encpkts,jpc_enc_pi_create,jpc_enc_tile_create,jpc_enc_tile_destroy,jpc_encode,jpc_encrawrefpass,jpc_encrawsigpass,jpc_encrefpass,jpc_encsigpass,jpc_firstone,jpc_ft_analyze,jpc_ft_fwdlift_colgrp,jpc_ft_fwdlift_colres,jpc_ft_fwdlift_row,jpc_init_t2state,jpc_mct_getsynweight,jpc_mqenc_codelps,jpc_mqenc_codemps2,jpc_mqenc_create,jpc_mqenc_destroy,jpc_mqenc_flush,jpc_mqenc_getstate,jpc_mqenc_init,jpc_mqenc_setbits,jpc_mqenc_setctxs,jpc_ns_analyze,jpc_ns_fwdlift_colgrp,jpc_ns_fwdlift_colres,jpc_ns_fwdlift_row,jpc_poc_putparms,jpc_ppm_putparms,jpc_ppt_putparms,jpc_putcommacode,jpc_putdata,jpc_putms,jpc_putnumnewpasses,jpc_putuint16,jpc_putuint32,jpc_putuint8,jpc_qcc_putparms,jpc_qcd_putparms,jpc_qcx_putcompparms,jpc_qmfb_split_colgrp,jpc_qmfb_split_colres,jpc_qmfb_split_row,jpc_quantize,jpc_restore_t2state,jpc_rgn_putparms,jpc_save_t2state,jpc_siz_putparms,jpc_sop_putparms,jpc_sot_putparms,jpc_tagtree_copy,jpc_tagtree_encode,jpc_tagtree_setvalue,jpc_tsfb_analyze,jpc_tsfb_analyze2,jpc_unk_putparms,jpg_copyfiletostream,jpg_encode,jpg_finish_input,jpg_get_pixel_rows,jpg_parseencopts,jpg_start_input,mif_encode,mif_hdr_put,mif_makehdrfromimage,pass_destroy,pgx_encode,pgx_inttoword,pgx_putdata,pgx_puthdr,pgx_putword,pnm_encode,pnm_parseencopts,pnm_putdata,pnm_puthdr,pnm_putsint,pnm_putuint,pnm_putuint16,prc_create,prc_destroy,ras_encode,ras_putdata,ras_putdatastd,ras_puthdr,ras_putint,rateallocate,ratestrtosize,rlvl_create,rlvl_destroy,tcmpt_create,tcmpt_destroy,tojpgcs}
+#recursive      : 8
+{jas_cmprof_createfromclrspc,jas_cmprof_createsycc,jas_image_decode,jas_stream_fillbuf,jas_stream_flushbuf,jpc_tsfb_getbands2,jpc_tsfb_synthesize2,mif_decode}
+
+Pre-analysis completes: 4.206008
+#Procs : 472
+#Nodes : 24109
+
+
+
+--------------------------------------------------------------------------------
+Itv Sparse Analysis begins...
+--------------------------------------------------------------------------------
+live memory : 149 MB
+#global variables = 792 (8.5%)
+#local variables  = 7246 (77.6%)
+#allocsite        = 1309 (14.1%)
+#fields           = 626 (6.7%)
+#total abstract locations  = 9347
+#flow-sensitive abstract locations  = 9347
+Access Analysis begins...
+Access Analysis completes: 0.383187
+Def-use graph construction begins...
+draw intra-procedural edges
+draw inter-procedural edges
+Def-use graph construction completes: 1.162595
+live memory : 266 MB
+#Nodes in def-use graph : 19941
+#Locs on def-use graph : 525512
+Workorder computation begins...
+Workorder computation completes: 19.367453
+Fixpoint iteration with widening begins...
+
+#iteration in widening : 327687
+Fixpoint iteration with widening completes: 15.266810
+
+
+
+--------------------------------------------------------------------------------
+Generate Alarm Report begins...
+--------------------------------------------------------------------------------
+
+Generate Alarm Report completes: 0.104596
+
+Itv Sparse Analysis completes: 63.518621
+Finished properly.
+70.076396

@@ -1,0 +1,77 @@
+1f.016.libwavpack_la-unpack_dsd.o.i 1e.015.libwavpack_la-pack_dsd.o.i 1d.014.libwavpack_la-write_words.o.i 1c.013.libwavpack_la-unpack_utils.o.i 1b.012.libwavpack_la-unpack_seek.o.i 1a.011.libwavpack_la-unpack_floats.o.i 19.010.libwavpack_la-unpack.o.i 18.00f.libwavpack_la-tag_utils.o.i 17.00e.libwavpack_la-tags.o.i 16.00d.libwavpack_la-read_words.o.i 15.00c.libwavpack_la-pack_utils.o.i 14.00b.libwavpack_la-pack_floats.o.i 13.00a.libwavpack_la-pack_dns.o.i 12.009.libwavpack_la-pack.o.i 11.008.libwavpack_la-open_raw.o.i 10.007.libwavpack_la-open_legacy.o.i 0f.006.libwavpack_la-open_filename.o.i 0e.005.libwavpack_la-open_utils.o.i 0d.004.libwavpack_la-extra2.o.i 0c.003.libwavpack_la-extra1.o.i 0b.002.libwavpack_la-entropy_utils.o.i 0a.001.libwavpack_la-decorr_utils.o.i 09.000.libwavpack_la-common_utils.o.i 08.wavpack-import_id3.o.i 07.wavpack-md5.o.i 06.wavpack-utils.o.i 05.wavpack-dsf.o.i 04.wavpack-dsdiff.o.i 03.wavpack-caff.o.i 02.wavpack-wave64.o.i 01.wavpack-riff.o.i 00.wavpack-wavpack.o.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+
+Front-end completes: 1.030947

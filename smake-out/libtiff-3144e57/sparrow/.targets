@@ -1,0 +1,4 @@
+contrib/dbs/.libs/tiff-bi
+contrib/dbs/.libs/tiff-grayscale
+contrib/dbs/.libs/tiff-palette
+contrib/iptcutil/.libs/iptcutil

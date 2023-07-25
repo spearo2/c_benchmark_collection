@@ -1,0 +1,13 @@
+contrib/addtiffo/.libs/addtiffo
+contrib/dbs/.libs/tiff-bi
+contrib/dbs/.libs/tiff-grayscale
+contrib/dbs/.libs/tiff-palette
+contrib/iptcutil/.libs/iptcutil
+tools/.libs/tiff2pdf
+tools/.libs/tiff2ps
+tools/.libs/tiffcrop
+tools/.libs/tiffdither
+tools/.libs/tiffdump
+tools/.libs/tiffmedian
+tools/.libs/tiffset
+tools/.libs/tiffsplit

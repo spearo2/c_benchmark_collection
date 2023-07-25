@@ -1,0 +1,6 @@
+.libs/libarchive.a
+.libs/libarchive.so.13.2.0
+.libs/libarchive_fe.a
+bsdcat
+bsdcpio
+bsdtar

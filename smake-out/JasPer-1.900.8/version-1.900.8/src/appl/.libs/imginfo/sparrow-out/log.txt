@@ -1,0 +1,712 @@
+35.34.ras_enc.o.i 34.33.ras_dec.o.i 33.32.ras_cod.o.i 32.31.pnm_enc.o.i 31.30.pnm_dec.o.i 30.2f.pnm_cod.o.i 2f.2e.pgx_enc.o.i 2e.2d.pgx_dec.o.i 2d.2c.pgx_cod.o.i 2c.2b.mif_cod.o.i 2b.2a.jpg_val.o.i 2a.29.jpg_enc.o.i 29.28.jpg_dec.o.i 28.27.jpc_util.o.i 27.26.jpc_tsfb.o.i 26.25.jpc_tagtree.o.i 25.24.jpc_t2enc.o.i 24.23.jpc_t2dec.o.i 23.22.jpc_t2cod.o.i 22.21.jpc_t1enc.o.i 21.20.jpc_t1dec.o.i 20.1f.jpc_t1cod.o.i 1f.1e.jpc_qmfb.o.i 1e.1d.jpc_mqenc.o.i 1d.1c.jpc_mqdec.o.i 1c.1b.jpc_mqcod.o.i 1b.1a.jpc_mct.o.i 1a.19.jpc_math.o.i 19.18.jpc_enc.o.i 18.17.jpc_dec.o.i 17.16.jpc_cs.o.i 16.15.jpc_bs.o.i 15.14.jp2_enc.o.i 14.13.jp2_dec.o.i 13.12.jp2_cod.o.i 12.11.bmp_enc.o.i 11.10.bmp_dec.o.i 10.0f.bmp_cod.o.i 0f.0e.jas_version.o.i 0e.0d.jas_tvp.o.i 0d.0c.jas_tmr.o.i 0c.0b.jas_string.o.i 0b.0a.jas_stream.o.i 0a.09.jas_seq.o.i 09.08.jas_malloc.o.i 08.07.jas_init.o.i 07.06.jas_image.o.i 06.05.jas_iccdata.o.i 05.04.jas_icc.o.i 04.03.jas_getopt.o.i 03.02.jas_debug.o.i 02.01.jas_cm.o.i 01.00.dummy.o.i 00.imginfo.o.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+WARN: type not found
+WARN: type not found
+Invalid lhs at ras_enc.c:235
+WARN: type not found
+WARN: type not found
+Invalid lhs at ras_dec.c:191
+Warning: stmtexpr  ras_enc.c:235
+Warning: stmtexpr 
+ras_dec.c:191
+Warning: stmtexpr Invalid lhs at ras_dec.c:265
+ ras_dec.c:265
+Warning: stmtexpr 
+ras_dec.c:330
+Invalid lhs at ras_dec.c:330
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at pnm_dec.c:177
+ pnm_dec.c:177
+Warning: stmtexpr 
+pnm_dec.c:396
+Invalid lhs at pnm_dec.c:396
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at pgx_dec.c:156
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ pgx_dec.c:156
+Warning: stmtexpr 
+mif_cod.c:372
+Invalid lhs at mif_cod.c:372
+Warning: stmtexpr Invalid lhs at mif_cod.c:443
+ mif_cod.c:443
+Warning: stmtexpr 
+mif_cod.c:627
+Invalid lhs at mif_cod.c:627
+Warning: stmtexpr Invalid lhs at mif_cod.c:668
+WARN: type not found
+WARN: type not found
+ mif_cod.c:668
+Warning: stmtexpr 
+jpg_val.c:84
+Invalid lhs at jpg_val.c:84
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jpg_enc.c:299
+WARN: type not found
+WARN: type not found
+ jpg_enc.c:299
+Warning: stmtexpr 
+jpg_dec.c:339
+Invalid lhs at jpg_dec.c:339
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jpc_util.c:178
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ jpc_util.c:178
+Warning: stmtexpr 
+jpc_tagtree.c:109
+Invalid lhs at jpc_tagtree.c:109
+Warning: stmtexpr Invalid lhs at jpc_tagtree.c:206
+ jpc_tagtree.c:206
+Warning: stmtexpr 
+jpc_tagtree.c:250
+Invalid lhs at jpc_tagtree.c:250
+Warning: stmtexpr Invalid lhs at jpc_tagtree.c:279
+ jpc_tagtree.c:279
+Warning: stmtexpr 
+jpc_tagtree.c:280
+Invalid lhs at jpc_tagtree.c:280
+Warning: stmtexpr Invalid lhs at jpc_tagtree.c:303
+ jpc_tagtree.c:303
+Warning: stmtexpr 
+jpc_tagtree.c:310
+Invalid lhs at jpc_tagtree.c:310
+Warning: stmtexpr Invalid lhs at jpc_tagtree.c:340
+ jpc_tagtree.c:340
+Warning: stmtexpr 
+jpc_tagtree.c:358
+Invalid lhs at jpc_tagtree.c:358
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:96
+ jpc_t2enc.c:96
+Warning: stmtexpr 
+jpc_t2enc.c:99
+Invalid lhs at jpc_t2enc.c:99
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:103
+ jpc_t2enc.c:103
+Warning: stmtexpr 
+jpc_t2enc.c:116
+Invalid lhs at jpc_t2enc.c:116
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:148
+ jpc_t2enc.c:148
+Warning: stmtexpr 
+jpc_t2enc.c:148
+Invalid lhs at jpc_t2enc.c:148
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:148
+ jpc_t2enc.c:148
+Warning: stmtexpr 
+jpc_t2enc.c:148
+Invalid lhs at jpc_t2enc.c:148
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:207
+ jpc_t2enc.c:207
+Warning: stmtexpr 
+jpc_t2enc.c:209
+Invalid lhs at jpc_t2enc.c:209
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:236
+ jpc_t2enc.c:236
+Warning: stmtexpr 
+jpc_t2enc.c:255
+Invalid lhs at jpc_t2enc.c:255
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:275
+ jpc_t2enc.c:275
+Warning: stmtexpr 
+jpc_t2enc.c:318
+Invalid lhs at jpc_t2enc.c:318
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:363
+ jpc_t2enc.c:363
+Warning: stmtexpr 
+jpc_t2enc.c:377
+Invalid lhs at jpc_t2enc.c:377
+Warning: stmtexpr Invalid lhs at jpc_t2enc.c:528
+ jpc_t2enc.c:528
+Warning: stmtexpr 
+jpc_t2enc.c:534
+Invalid lhs at jpc_t2enc.c:534
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jpc_t2dec.c:114
+ jpc_t2dec.c:114
+Warning: stmtexpr 
+jpc_t2dec.c:133
+Invalid lhs at jpc_t2dec.c:133
+Warning: stmtexpr Invalid lhs at jpc_t2dec.c:134
+ jpc_t2dec.c:134
+Warning: stmtexpr 
+jpc_t2dec.c:227
+Invalid lhs at jpc_t2dec.c:227
+Warning: stmtexpr Invalid lhs at jpc_t2dec.c:258
+ jpc_t2dec.c:258
+Warning: stmtexpr 
+jpc_t2dec.c:449
+Invalid lhs at jpc_t2dec.c:449
+Warning: stmtexpr Invalid lhs at jpc_t2dec.c:449
+ jpc_t2dec.c:449
+Warning: stmtexpr 
+jpc_t2dec.c:449
+Invalid lhs at jpc_t2dec.c:449
+Warning: stmtexpr Invalid lhs at jpc_t2dec.c:449
+ jpc_t2dec.c:449
+Warning: stmtexpr 
+jpc_t2dec.c:449
+Invalid lhs at jpc_t2dec.c:449
+Warning: stmtexpr Invalid lhs at jpc_t2dec.c:454
+ jpc_t2dec.c:454
+Warning: stmtexpr 
+jpc_t2dec.c:454
+Invalid lhs at jpc_t2dec.c:454
+Warning: stmtexpr Invalid lhs at jpc_t2dec.c:454
+ jpc_t2dec.c:454
+Warning: stmtexpr 
+jpc_t2dec.c:454
+Invalid lhs at jpc_t2dec.c:454
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jpc_t2cod.c:190
+ jpc_t2cod.c:190
+Warning: stmtexpr 
+jpc_t2cod.c:297
+Invalid lhs at jpc_t2cod.c:297
+Warning: stmtexpr Invalid lhs at jpc_t2cod.c:391
+ jpc_t2cod.c:391
+Warning: stmtexpr 
+jpc_t2cod.c:477
+Invalid lhs at jpc_t2cod.c:477
+Warning: stmtexpr Invalid lhs at jpc_t2cod.c:595
+WARN: type not found
+WARN: type not found
+ jpc_t2cod.c:595
+Warning: stmtexpr 
+jpc_t1enc.c:165
+Invalid lhs at jpc_t1enc.c:165
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:185
+ jpc_t1enc.c:185
+Warning: stmtexpr 
+jpc_t1enc.c:215
+Invalid lhs at jpc_t1enc.c:215
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:217
+ jpc_t1enc.c:217
+Warning: stmtexpr 
+jpc_t1enc.c:223
+Invalid lhs at jpc_t1enc.c:223
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:235
+ jpc_t1enc.c:235
+Warning: stmtexpr 
+jpc_t1enc.c:242
+Invalid lhs at jpc_t1enc.c:242
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:253
+ jpc_t1enc.c:253
+Warning: stmtexpr 
+jpc_t1enc.c:256
+Invalid lhs at jpc_t1enc.c:256
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:269
+ jpc_t1enc.c:269
+Warning: stmtexpr 
+jpc_t1enc.c:294
+Invalid lhs at jpc_t1enc.c:294
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:300
+ jpc_t1enc.c:300
+Warning: stmtexpr 
+jpc_t1enc.c:571
+Invalid lhs at jpc_t1enc.c:571
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:571
+ jpc_t1enc.c:571
+Warning: stmtexpr 
+jpc_t1enc.c:579
+Invalid lhs at jpc_t1enc.c:579
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:579
+ jpc_t1enc.c:579
+Warning: stmtexpr 
+jpc_t1enc.c:587
+Invalid lhs at jpc_t1enc.c:587
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:587
+ jpc_t1enc.c:587
+Warning: stmtexpr 
+jpc_t1enc.c:595
+Invalid lhs at jpc_t1enc.c:595
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:595
+ jpc_t1enc.c:595
+Warning: stmtexpr 
+jpc_t1enc.c:766
+Invalid lhs at jpc_t1enc.c:766
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:773
+ jpc_t1enc.c:773
+Warning: stmtexpr 
+jpc_t1enc.c:780
+Invalid lhs at jpc_t1enc.c:780
+Warning: stmtexpr Invalid lhs at jpc_t1enc.c:787
+WARN: type not found
+WARN: type not found
+ jpc_t1enc.c:787
+Warning: stmtexpr 
+jpc_t1dec.c:216
+Invalid lhs at jpc_t1dec.c:216
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:217
+ jpc_t1dec.c:217
+Warning: stmtexpr 
+jpc_t1dec.c:230
+Invalid lhs at jpc_t1dec.c:230
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:233
+ jpc_t1dec.c:233
+Warning: stmtexpr 
+jpc_t1dec.c:260
+Invalid lhs at jpc_t1dec.c:260
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:281
+ jpc_t1dec.c:281
+Warning: stmtexpr 
+jpc_t1dec.c:307
+Invalid lhs at jpc_t1dec.c:307
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:331
+ jpc_t1dec.c:331
+Warning: stmtexpr 
+jpc_t1dec.c:517
+Invalid lhs at jpc_t1dec.c:517
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:517
+ jpc_t1dec.c:517
+Warning: stmtexpr 
+jpc_t1dec.c:526
+Invalid lhs at jpc_t1dec.c:526
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:526
+ jpc_t1dec.c:526
+Warning: stmtexpr 
+jpc_t1dec.c:535
+Invalid lhs at jpc_t1dec.c:535
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:535
+ jpc_t1dec.c:535
+Warning: stmtexpr 
+jpc_t1dec.c:544
+Invalid lhs at jpc_t1dec.c:544
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:544
+ jpc_t1dec.c:544
+Warning: stmtexpr 
+jpc_t1dec.c:718
+Invalid lhs at jpc_t1dec.c:718
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:727
+ jpc_t1dec.c:727
+Warning: stmtexpr 
+jpc_t1dec.c:735
+Invalid lhs at jpc_t1dec.c:735
+Warning: stmtexpr Invalid lhs at jpc_t1dec.c:743
+WARN: type not found
+WARN: type not found
+ jpc_t1dec.c:743
+Warning: stmtexpr 
+jpc_t1cod.c:130
+Invalid lhs at jpc_t1cod.c:130
+Warning: stmtexpr Invalid lhs at jpc_t1cod.c:144
+ jpc_t1cod.c:144
+Warning: stmtexpr 
+jpc_t1cod.c:146
+Invalid lhs at jpc_t1cod.c:146
+Warning: stmtexpr Invalid lhs at jpc_t1cod.c:206
+ jpc_t1cod.c:206
+Warning: stmtexpr 
+jpc_t1cod.c:290
+Invalid lhs at jpc_t1cod.c:290
+Warning: stmtexpr Invalid lhs at jpc_t1cod.c:374
+ jpc_t1cod.c:374
+Warning: stmtexpr 
+jpc_t1cod.c:411
+Invalid lhs at jpc_t1cod.c:411
+Warning: stmtexpr Invalid lhs at jpc_t1cod.c:433
+ jpc_t1cod.c:433
+Warning: stmtexpr 
+jpc_t1cod.c:447
+Invalid lhs at jpc_t1cod.c:447
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jpc_mqdec.c:112
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ jpc_mqdec.c:112
+Warning: stmtexpr 
+jpc_mct.c:101
+Invalid lhs at jpc_mct.c:101
+Warning: stmtexpr Invalid lhs at jpc_mct.c:144
+ jpc_mct.c:144
+Warning: stmtexpr 
+jpc_mct.c:188
+Invalid lhs at jpc_mct.c:188
+Warning: stmtexpr Invalid lhs at jpc_mct.c:190
+ jpc_mct.c:190
+Warning: stmtexpr 
+jpc_mct.c:229
+Invalid lhs at jpc_mct.c:229
+Warning: stmtexpr Invalid lhs at jpc_mct.c:231
+WARN: type not found
+WARN: type not found
+ jpc_mct.c:231
+Warning: stmtexpr 
+jpc_math.c:94
+Invalid lhs at jpc_math.c:94
+Warning: stmtexpr Invalid lhs at jpc_math.c:113
+WARN: type not found
+WARN: type not found
+ jpc_math.c:113
+Warning: stmtexpr 
+jpc_enc.c:186
+Invalid lhs at jpc_enc.c:186
+Warning: stmtexpr Invalid lhs at jpc_enc.c:186
+ jpc_enc.c:186
+Warning: stmtexpr 
+jpc_enc.c:943
+Invalid lhs at jpc_enc.c:943
+Warning: stmtexpr Invalid lhs at jpc_enc.c:1174
+ jpc_enc.c:1174
+Warning: stmtexpr 
+jpc_enc.c:1179
+Invalid lhs at jpc_enc.c:1179
+Warning: stmtexpr Invalid lhs at jpc_enc.c:1259
+ jpc_enc.c:1259
+Warning: stmtexpr 
+jpc_enc.c:1457
+Invalid lhs at jpc_enc.c:1457
+Warning: stmtexpr Invalid lhs at jpc_enc.c:1546
+ jpc_enc.c:1546
+Warning: stmtexpr 
+jpc_enc.c:1731
+Invalid lhs at jpc_enc.c:1731
+Warning: stmtexpr Invalid lhs at jpc_enc.c:1742
+ jpc_enc.c:1742
+Warning: stmtexpr 
+jpc_enc.c:1804
+Invalid lhs at jpc_enc.c:1804
+Warning: stmtexpr Invalid lhs at jpc_enc.c:2103
+ jpc_enc.c:2103
+Warning: stmtexpr 
+jpc_enc.c:2533
+Invalid lhs at jpc_enc.c:2533
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jpc_dec.c:378
+ jpc_dec.c:378
+Warning: stmtexpr 
+jpc_dec.c:519
+Invalid lhs at jpc_dec.c:519
+Warning: stmtexpr Invalid lhs at jpc_dec.c:804
+ jpc_dec.c:804
+Warning: stmtexpr 
+jpc_dec.c:840
+Invalid lhs at jpc_dec.c:840
+Warning: stmtexpr Invalid lhs at jpc_dec.c:915
+ jpc_dec.c:915
+Warning: stmtexpr 
+jpc_dec.c:1631
+Invalid lhs at jpc_dec.c:1631
+Warning: stmtexpr Invalid lhs at jpc_dec.c:1631
+ jpc_dec.c:1631
+Warning: stmtexpr 
+jpc_dec.c:1812
+Invalid lhs at jpc_dec.c:1812
+Warning: stmtexpr Invalid lhs at jpc_dec.c:2155
+WARN: type not found
+WARN: type not found
+ jpc_dec.c:2155
+Warning: stmtexpr 
+jpc_cs.c:547
+Invalid lhs at jpc_cs.c:547
+Warning: stmtexpr Invalid lhs at jpc_cs.c:630
+ jpc_cs.c:630
+Warning: stmtexpr Invalid lhs at jpc_cs.c:631
+
+jpc_cs.c:631
+Warning: stmtexpr Invalid lhs at jpc_cs.c:707
+ jpc_cs.c:707
+Warning: stmtexpr Invalid lhs at jpc_cs.c:798
+
+jpc_cs.c:798
+Warning: stmtexpr Invalid lhs at jpc_cs.c:1037
+ jpc_cs.c:1037
+Warning: stmtexpr 
+jpc_cs.c:1658
+Invalid lhs at jpc_cs.c:1658
+Warning: stmtexpr Invalid lhs at jpc_cs.c:1668
+WARN: type not found
+WARN: type not found
+ jpc_cs.c:1668
+Warning: stmtexpr 
+jpc_bs.c:102
+Invalid lhs at jpc_bs.c:102
+Warning: stmtexpr Invalid lhs at jpc_bs.c:175
+ jpc_bs.c:175
+Warning: stmtexpr Invalid lhs at jpc_bs.c:185
+
+jpc_bs.c:185
+Warning: stmtexpr Invalid lhs at jpc_bs.c:198
+ jpc_bs.c:198
+Warning: stmtexpr Invalid lhs at jpc_bs.c:203
+
+jpc_bs.c:203
+Warning: stmtexpr Invalid lhs at jpc_bs.c:218
+ jpc_bs.c:218
+Warning: stmtexpr Invalid lhs at jpc_bs.c:220
+
+jpc_bs.c:220
+Warning: stmtexpr Invalid lhs at jpc_bs.c:225
+ jpc_bs.c:225
+Warning: stmtexpr Invalid lhs at jpc_bs.c:242
+
+jpc_bs.c:242
+Warning: stmtexpr Invalid lhs at jpc_bs.c:243
+ jpc_bs.c:243
+Warning: stmtexpr Invalid lhs at jpc_bs.c:295
+
+jpc_bs.c:295
+Warning: stmtexpr Invalid lhs at jpc_bs.c:396
+ jpc_bs.c:396
+Warning: stmtexpr Invalid lhs at jpc_bs.c:402
+
+jpc_bs.c:402
+Warning: stmtexpr Invalid lhs at jpc_bs.c:428
+ jpc_bs.c:428
+Warning: stmtexpr Invalid lhs at jpc_bs.c:429
+WARN: type not found
+WARN: type not found
+
+jpc_bs.c:429
+Warning: stmtexpr Invalid lhs at jp2_enc.c:229
+ jp2_enc.c:229
+Warning: stmtexpr 
+jp2_enc.c:231
+Invalid lhs at jp2_enc.c:231
+Warning: stmtexpr Invalid lhs at jp2_enc.c:238
+WARN: type not found
+WARN: type not found
+ jp2_enc.c:238
+Warning: stmtexpr 
+jp2_dec.c:302
+Invalid lhs at jp2_dec.c:302
+Warning: stmtexpr Invalid lhs at jp2_dec.c:453
+WARN: type not found
+WARN: type not found
+ jp2_dec.c:453
+Warning: stmtexpr 
+jp2_cod.c:319
+Invalid lhs at jp2_cod.c:319
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at bmp_enc.c:238
+ bmp_enc.c:238
+Warning: stmtexpr 
+bmp_enc.c:389
+Invalid lhs at bmp_enc.c:389
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at bmp_dec.c:218
+ bmp_dec.c:218
+Warning: stmtexpr 
+bmp_dec.c:338
+Invalid lhs at bmp_dec.c:338
+Warning: stmtexpr Invalid lhs at bmp_dec.c:339
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ bmp_dec.c:339
+Warning: stmtexpr 
+jas_stream.c:479
+Invalid lhs at jas_stream.c:479
+Warning: stmtexpr Invalid lhs at jas_stream.c:486
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ jas_stream.c:486
+Warning: stmtexpr 
+jas_stream.c:577
+Invalid lhs at jas_stream.c:577
+Warning: stmtexpr Invalid lhs at jas_stream.c:645
+ jas_stream.c:645
+Warning: stmtexpr 
+jas_stream.c:701
+Invalid lhs at jas_stream.c:701
+Warning: stmtexpr Invalid lhs at jas_stream.c:722
+ jas_stream.c:722
+Warning: stmtexpr 
+jas_stream.c:729
+Invalid lhs at jas_stream.c:729
+Warning: stmtexpr Invalid lhs at jas_stream.c:769
+ jas_stream.c:769
+Warning: stmtexpr 
+jas_stream.c:771
+Invalid lhs at jas_stream.c:771
+Warning: stmtexpr Invalid lhs at jas_stream.c:789
+ jas_stream.c:789
+Warning: stmtexpr 
+jas_stream.c:812
+Invalid lhs at jas_stream.c:812
+Warning: stmtexpr Invalid lhs at jas_stream.c:832
+ jas_stream.c:832
+Warning: stmtexpr 
+jas_stream.c:982
+Invalid lhs at jas_stream.c:982
+Warning: stmtexpr Invalid lhs at jas_stream.c:983
+ jas_stream.c:983
+Warning: stmtexpr 
+jas_stream.c:996
+Invalid lhs at jas_stream.c:996
+Warning: stmtexpr Invalid lhs at jas_stream.c:997
+ jas_stream.c:997
+Warning: stmtexpr 
+jas_stream.c:1014
+Invalid lhs at jas_stream.c:1014
+Warning: stmtexpr Invalid lhs at jas_stream.c:1015
+ jas_stream.c:1015
+Warning: stmtexpr 
+jas_stream.c:1021
+Invalid lhs at jas_stream.c:1021
+Warning: stmtexpr Invalid lhs at jas_stream.c:1049
+WARN: type not found
+WARN: type not found
+ jas_stream.c:1049
+Warning: stmtexpr 
+jas_seq.c:89
+Invalid lhs at jas_seq.c:89
+Warning: stmtexpr Invalid lhs at jas_seq.c:151
+ jas_seq.c:151
+Warning: stmtexpr 
+jas_seq.c:169
+Invalid lhs at jas_seq.c:169
+Warning: stmtexpr Invalid lhs at jas_seq.c:276
+ jas_seq.c:276
+Warning: stmtexpr 
+jas_seq.c:299
+Invalid lhs at jas_seq.c:299
+Warning: stmtexpr Invalid lhs at jas_seq.c:325
+ jas_seq.c:325
+Warning: stmtexpr 
+jas_seq.c:327
+Invalid lhs at jas_seq.c:327
+Warning: stmtexpr Invalid lhs at jas_seq.c:348
+ jas_seq.c:348
+Warning: stmtexpr 
+jas_seq.c:393
+Invalid lhs at jas_seq.c:393
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at jas_image.c:567
+ jas_image.c:567
+Warning: stmtexpr 
+jas_image.c:691
+Invalid lhs at jas_image.c:691
+Warning: stmtexpr Invalid lhs at jas_image.c:1097
+ jas_image.c:1097
+Warning: stmtexpr 
+jas_image.c:1099
+Invalid lhs at jas_image.c:1099
+Warning: stmtexpr Invalid lhs at jas_image.c:1146
+ jas_image.c:1146
+Warning: stmtexpr 
+jas_image.c:1289
+Invalid lhs at jas_image.c:1289
+Warning: stmtexpr Invalid lhs at jas_image.c:1295
+ jas_image.c:1295
+Warning: stmtexpr 
+jas_image.c:1366
+Invalid lhs at jas_image.c:1366
+Warning: stmtexpr Invalid lhs at jas_image.c:1403
+ jas_image.c:1403
+Warning: stmtexpr 
+jas_image.c:1418
+Invalid lhs at jas_image.c:1418
+Warning: stmtexpr Invalid lhs at jas_image.c:1436
+WARN: type not found
+WARN: type not found
+ jas_image.c:1436
+Warning: stmtexpr 
+jas_icc.c:233
+Invalid lhs at jas_icc.c:233
+Warning: stmtexpr Invalid lhs at jas_icc.c:385
+ jas_icc.c:385
+Warning: stmtexpr 
+jas_icc.c:420
+Invalid lhs at jas_icc.c:420
+Warning: stmtexpr Invalid lhs at jas_icc.c:437
+ jas_icc.c:437
+Warning: stmtexpr 
+jas_icc.c:745
+Invalid lhs at jas_icc.c:745
+Warning: stmtexpr Invalid lhs at jas_icc.c:766
+Invalid lhs at jas_icc.c:1679
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ jas_icc.c:766
+Warning: stmtexpr 
+jas_cm.c:187
+Invalid lhs at jas_cm.c:187
+Warning: stmtexpr Invalid lhs at jas_cm.c:188
+ jas_cm.c:188
+Warning: stmtexpr Invalid lhs at jas_cm.c:415
+
+jas_cm.c:415
+Warning: stmtexpr Invalid lhs at jas_cm.c:523
+ jas_cm.c:523
+Warning: stmtexpr Invalid lhs at jas_cm.c:637
+
+jas_cm.c:637
+Warning: stmtexpr Invalid lhs at jas_cm.c:664
+ jas_cm.c:664
+Warning: stmtexpr Invalid lhs at jas_cm.c:670
+
+jas_cm.c:670
+Warning: stmtexpr Invalid lhs at jas_cm.c:712
+ jas_cm.c:712
+Warning: stmtexpr Invalid lhs at jas_cm.c:852
+
+jas_cm.c:852
+Warning: stmtexpr Invalid lhs at jas_cm.c:950
+ jas_cm.c:950
+Warning: stmtexpr Invalid lhs at jas_cm.c:958
+WARN: type not found
+WARN: type not found
+
+jas_cm.c:958
+
+Front-end completes: 1.870874

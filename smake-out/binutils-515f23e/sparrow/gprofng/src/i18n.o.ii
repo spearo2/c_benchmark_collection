@@ -1,0 +1,119 @@
+# 1 "/doner/binutils/binutils-515f23e/gprofng/src/i18n.cc"
+# 1 "/doner/binutils/binutils-515f23e/gprofng/src//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+# 1 "<command-line>" 2
+# 1 "/doner/binutils/binutils-515f23e/gprofng/src/i18n.cc"
+# 21 "/doner/binutils/binutils-515f23e/gprofng/src/i18n.cc"
+# 1 "../config.h" 1
+# 22 "/doner/binutils/binutils-515f23e/gprofng/src/i18n.cc" 2
+# 1 "/doner/binutils/binutils-515f23e/gprofng/src/i18n.h" 1
+# 24 "/doner/binutils/binutils-515f23e/gprofng/src/i18n.h"
+# 1 "/usr/include/libintl.h" 1 3 4
+# 23 "/usr/include/libintl.h" 3 4
+# 1 "/usr/include/features.h" 1 3 4
+# 461 "/usr/include/features.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 1 3 4
+# 452 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 453 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/long-double.h" 1 3 4
+# 454 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 2 3 4
+# 462 "/usr/include/features.h" 2 3 4
+# 485 "/usr/include/features.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 1 3 4
+# 10 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/gnu/stubs-64.h" 1 3 4
+# 11 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 2 3 4
+# 486 "/usr/include/features.h" 2 3 4
+# 24 "/usr/include/libintl.h" 2 3 4
+# 34 "/usr/include/libintl.h" 3 4
+
+# 34 "/usr/include/libintl.h" 3 4
+extern "C" {
+
+
+
+
+extern char *gettext (const char *__msgid)
+     throw () __attribute__ ((__format_arg__ (1)));
+
+
+
+extern char *dgettext (const char *__domainname, const char *__msgid)
+     throw () __attribute__ ((__format_arg__ (2)));
+extern char *__dgettext (const char *__domainname, const char *__msgid)
+     throw () __attribute__ ((__format_arg__ (2)));
+
+
+
+extern char *dcgettext (const char *__domainname,
+   const char *__msgid, int __category)
+     throw () __attribute__ ((__format_arg__ (2)));
+extern char *__dcgettext (const char *__domainname,
+     const char *__msgid, int __category)
+     throw () __attribute__ ((__format_arg__ (2)));
+
+
+
+
+extern char *ngettext (const char *__msgid1, const char *__msgid2,
+         unsigned long int __n)
+     throw () __attribute__ ((__format_arg__ (1))) __attribute__ ((__format_arg__ (2)));
+
+
+
+extern char *dngettext (const char *__domainname, const char *__msgid1,
+   const char *__msgid2, unsigned long int __n)
+     throw () __attribute__ ((__format_arg__ (2))) __attribute__ ((__format_arg__ (3)));
+
+
+
+extern char *dcngettext (const char *__domainname, const char *__msgid1,
+    const char *__msgid2, unsigned long int __n,
+    int __category)
+     throw () __attribute__ ((__format_arg__ (2))) __attribute__ ((__format_arg__ (3)));
+
+
+
+
+
+extern char *textdomain (const char *__domainname) throw ();
+
+
+
+extern char *bindtextdomain (const char *__domainname,
+        const char *__dirname) throw ();
+
+
+
+extern char *bind_textdomain_codeset (const char *__domainname,
+          const char *__codeset) throw ();
+# 121 "/usr/include/libintl.h" 3 4
+}
+# 25 "/doner/binutils/binutils-515f23e/gprofng/src/i18n.h" 2
+
+
+
+
+
+
+
+
+# 32 "/doner/binutils/binutils-515f23e/gprofng/src/i18n.h"
+extern "C"
+{
+
+  void init_locale (char *Path);
+
+}
+# 23 "/doner/binutils/binutils-515f23e/gprofng/src/i18n.cc" 2
+
+extern "C"
+void
+init_locale (char *Path)
+{
+  bindtextdomain ("gprofng", "/usr/local/share/locale");
+  textdomain ("gprofng");
+}

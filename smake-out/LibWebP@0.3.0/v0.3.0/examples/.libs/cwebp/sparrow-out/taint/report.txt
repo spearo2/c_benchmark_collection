@@ -1,0 +1,21 @@
+= Alarms =
+1. cwebp.c:167 {AllocExtraInfo} UnProven
+  malloc(SizeOf(uint8_t )*((unsigned long )(mb_w*mb_h))) @AllocExtraInfo-18921:  size = [0, +oo], source = main-19585 @ cwebp.c:651 UnProven
+2. alpha.c:189 {EncodeAlpha} UnProven
+  malloc(data_size) @EncodeAlpha-10653:  size = [0, +oo], source = main-19585 @ cwebp.c:651 UnProven
+3. alpha.c:228 {EncodeAlpha} UnProven
+  malloc(data_size) @EncodeAlpha-10654:  size = [0, +oo], source = main-19585 @ cwebp.c:651 UnProven
+4. bit_writer.c:39 {BitWriterResize} UnProven
+  malloc(new_size) @BitWriterResize-1470:  size = [1024, +oo], source = main-19585 @ cwebp.c:651 UnProven
+5. bit_writer.c:212 {VP8LBitWriterResize} UnProven
+  malloc(allocated_size) @VP8LBitWriterResize-1614:  size = [-oo, +oo], source = main-19585 @ cwebp.c:651 UnProven
+6. utils.c:34 {WebPSafeMalloc} UnProven
+  malloc(nmemb*size) @WebPSafeMalloc-165:  size = [0, +oo], source = main-19585 @ cwebp.c:651 UnProven
+7. utils.c:40 {WebPSafeCalloc} UnProven
+  malloc(nmemb*size) @WebPSafeCalloc-171:  size = [0, +oo], source = main-19585 @ cwebp.c:651 UnProven
+
+#queries                 : 7
+#queries mod alarm point : 7
+#proven                  : 0
+#unproven                : 7
+#bot-involved            : 0

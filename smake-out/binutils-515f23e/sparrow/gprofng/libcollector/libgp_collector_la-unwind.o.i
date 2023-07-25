@@ -1,0 +1,19854 @@
+# 1 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+# 1 "/doner/binutils/binutils-515f23e/gprofng/libcollector//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+# 1 "<command-line>" 2
+# 1 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+# 21 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+# 1 "../config.h" 1
+# 22 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 2
+# 1 "/usr/include/alloca.h" 1 3 4
+# 21 "/usr/include/alloca.h" 3 4
+# 1 "/usr/include/features.h" 1 3 4
+# 461 "/usr/include/features.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 1 3 4
+# 452 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 453 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/long-double.h" 1 3 4
+# 454 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 2 3 4
+# 462 "/usr/include/features.h" 2 3 4
+# 485 "/usr/include/features.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 1 3 4
+# 10 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/gnu/stubs-64.h" 1 3 4
+# 11 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 2 3 4
+# 486 "/usr/include/features.h" 2 3 4
+# 22 "/usr/include/alloca.h" 2 3 4
+
+
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 1 3 4
+# 209 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 3 4
+
+# 209 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 3 4
+typedef long unsigned int size_t;
+# 25 "/usr/include/alloca.h" 2 3 4
+
+
+
+
+
+
+
+extern void *alloca (size_t __size) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+# 23 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 2
+# 1 "/usr/include/dlfcn.h" 1 3 4
+# 24 "/usr/include/dlfcn.h" 3 4
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 1 3 4
+# 25 "/usr/include/dlfcn.h" 2 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/dlfcn.h" 1 3 4
+# 57 "/usr/include/x86_64-linux-gnu/bits/dlfcn.h" 3 4
+
+
+
+extern void _dl_mcount_wrapper_check (void *__selfpc) __attribute__ ((__nothrow__ , __leaf__));
+
+
+# 28 "/usr/include/dlfcn.h" 2 3 4
+# 44 "/usr/include/dlfcn.h" 3 4
+typedef long int Lmid_t;
+
+
+
+
+
+
+
+
+
+
+
+extern void *dlopen (const char *__file, int __mode) __attribute__ ((__nothrow__));
+
+
+
+extern int dlclose (void *__handle) __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern void *dlsym (void *__restrict __handle,
+      const char *__restrict __name) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+extern void *dlmopen (Lmid_t __nsid, const char *__file, int __mode) __attribute__ ((__nothrow__));
+
+
+
+extern void *dlvsym (void *__restrict __handle,
+       const char *__restrict __name,
+       const char *__restrict __version)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+
+
+
+
+
+extern char *dlerror (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+typedef struct
+{
+  const char *dli_fname;
+  void *dli_fbase;
+  const char *dli_sname;
+  void *dli_saddr;
+} Dl_info;
+
+
+
+extern int dladdr (const void *__address, Dl_info *__info)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+extern int dladdr1 (const void *__address, Dl_info *__info,
+      void **__extra_info, int __flags) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+
+enum
+  {
+
+    RTLD_DL_SYMENT = 1,
+
+
+    RTLD_DL_LINKMAP = 2
+  };
+
+
+
+
+
+
+
+extern int dlinfo (void *__restrict __handle,
+     int __request, void *__restrict __arg)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 3)));
+
+
+enum
+  {
+
+    RTLD_DI_LMID = 1,
+
+
+
+    RTLD_DI_LINKMAP = 2,
+
+    RTLD_DI_CONFIGADDR = 3,
+
+
+
+
+
+
+    RTLD_DI_SERINFO = 4,
+    RTLD_DI_SERINFOSIZE = 5,
+
+
+
+    RTLD_DI_ORIGIN = 6,
+
+    RTLD_DI_PROFILENAME = 7,
+    RTLD_DI_PROFILEOUT = 8,
+
+
+
+
+    RTLD_DI_TLS_MODID = 9,
+
+
+
+
+
+    RTLD_DI_TLS_DATA = 10,
+
+    RTLD_DI_MAX = 10
+  };
+
+
+
+
+typedef struct
+{
+  char *dls_name;
+  unsigned int dls_flags;
+} Dl_serpath;
+
+
+
+typedef struct
+{
+  size_t dls_size;
+  unsigned int dls_cnt;
+
+
+
+
+
+  __extension__ union
+  {
+    Dl_serpath dls_serpath[0];
+    Dl_serpath __dls_serpath_pad[1];
+  };
+
+
+
+} Dl_serinfo;
+
+
+
+
+# 24 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 2
+# 1 "/usr/include/stdlib.h" 1 3 4
+# 25 "/usr/include/stdlib.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
+# 26 "/usr/include/stdlib.h" 2 3 4
+
+
+
+
+
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 1 3 4
+# 321 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 3 4
+typedef int wchar_t;
+# 32 "/usr/include/stdlib.h" 2 3 4
+
+
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/waitflags.h" 1 3 4
+# 52 "/usr/include/x86_64-linux-gnu/bits/waitflags.h" 3 4
+typedef enum
+{
+  P_ALL,
+  P_PID,
+  P_PGID
+} idtype_t;
+# 40 "/usr/include/stdlib.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/waitstatus.h" 1 3 4
+# 41 "/usr/include/stdlib.h" 2 3 4
+# 55 "/usr/include/stdlib.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 1 3 4
+# 120 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 1 3 4
+# 24 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/long-double.h" 1 3 4
+# 25 "/usr/include/x86_64-linux-gnu/bits/floatn-common.h" 2 3 4
+# 121 "/usr/include/x86_64-linux-gnu/bits/floatn.h" 2 3 4
+# 56 "/usr/include/stdlib.h" 2 3 4
+
+
+typedef struct
+  {
+    int quot;
+    int rem;
+  } div_t;
+
+
+
+typedef struct
+  {
+    long int quot;
+    long int rem;
+  } ldiv_t;
+
+
+
+
+
+__extension__ typedef struct
+  {
+    long long int quot;
+    long long int rem;
+  } lldiv_t;
+# 97 "/usr/include/stdlib.h" 3 4
+extern size_t __ctype_get_mb_cur_max (void) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+extern double atof (const char *__nptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+extern int atoi (const char *__nptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+extern long int atol (const char *__nptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+__extension__ extern long long int atoll (const char *__nptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+extern double strtod (const char *__restrict __nptr,
+        char **__restrict __endptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern float strtof (const char *__restrict __nptr,
+       char **__restrict __endptr) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+extern long double strtold (const char *__restrict __nptr,
+       char **__restrict __endptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 140 "/usr/include/stdlib.h" 3 4
+extern _Float32 strtof32 (const char *__restrict __nptr,
+     char **__restrict __endptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern _Float64 strtof64 (const char *__restrict __nptr,
+     char **__restrict __endptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern _Float128 strtof128 (const char *__restrict __nptr,
+       char **__restrict __endptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern _Float32x strtof32x (const char *__restrict __nptr,
+       char **__restrict __endptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern _Float64x strtof64x (const char *__restrict __nptr,
+       char **__restrict __endptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 176 "/usr/include/stdlib.h" 3 4
+extern long int strtol (const char *__restrict __nptr,
+   char **__restrict __endptr, int __base)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+extern unsigned long int strtoul (const char *__restrict __nptr,
+      char **__restrict __endptr, int __base)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+__extension__
+extern long long int strtoq (const char *__restrict __nptr,
+        char **__restrict __endptr, int __base)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+__extension__
+extern unsigned long long int strtouq (const char *__restrict __nptr,
+           char **__restrict __endptr, int __base)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+__extension__
+extern long long int strtoll (const char *__restrict __nptr,
+         char **__restrict __endptr, int __base)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+__extension__
+extern unsigned long long int strtoull (const char *__restrict __nptr,
+     char **__restrict __endptr, int __base)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+extern int strfromd (char *__dest, size_t __size, const char *__format,
+       double __f)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+
+extern int strfromf (char *__dest, size_t __size, const char *__format,
+       float __f)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+
+extern int strfroml (char *__dest, size_t __size, const char *__format,
+       long double __f)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+# 232 "/usr/include/stdlib.h" 3 4
+extern int strfromf32 (char *__dest, size_t __size, const char * __format,
+         _Float32 __f)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+
+
+
+extern int strfromf64 (char *__dest, size_t __size, const char * __format,
+         _Float64 __f)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+
+
+
+extern int strfromf128 (char *__dest, size_t __size, const char * __format,
+   _Float128 __f)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+
+
+
+extern int strfromf32x (char *__dest, size_t __size, const char * __format,
+   _Float32x __f)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+
+
+
+extern int strfromf64x (char *__dest, size_t __size, const char * __format,
+   _Float64x __f)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+# 272 "/usr/include/stdlib.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h" 1 3 4
+# 28 "/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h" 3 4
+struct __locale_struct
+{
+
+  struct __locale_data *__locales[13];
+
+
+  const unsigned short int *__ctype_b;
+  const int *__ctype_tolower;
+  const int *__ctype_toupper;
+
+
+  const char *__names[13];
+};
+
+typedef struct __locale_struct *__locale_t;
+# 23 "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h" 2 3 4
+
+typedef __locale_t locale_t;
+# 273 "/usr/include/stdlib.h" 2 3 4
+
+extern long int strtol_l (const char *__restrict __nptr,
+     char **__restrict __endptr, int __base,
+     locale_t __loc) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 4)));
+
+extern unsigned long int strtoul_l (const char *__restrict __nptr,
+        char **__restrict __endptr,
+        int __base, locale_t __loc)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 4)));
+
+__extension__
+extern long long int strtoll_l (const char *__restrict __nptr,
+    char **__restrict __endptr, int __base,
+    locale_t __loc)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 4)));
+
+__extension__
+extern unsigned long long int strtoull_l (const char *__restrict __nptr,
+       char **__restrict __endptr,
+       int __base, locale_t __loc)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 4)));
+
+extern double strtod_l (const char *__restrict __nptr,
+   char **__restrict __endptr, locale_t __loc)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 3)));
+
+extern float strtof_l (const char *__restrict __nptr,
+         char **__restrict __endptr, locale_t __loc)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 3)));
+
+extern long double strtold_l (const char *__restrict __nptr,
+         char **__restrict __endptr,
+         locale_t __loc)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 3)));
+# 316 "/usr/include/stdlib.h" 3 4
+extern _Float32 strtof32_l (const char *__restrict __nptr,
+       char **__restrict __endptr,
+       locale_t __loc)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+extern _Float64 strtof64_l (const char *__restrict __nptr,
+       char **__restrict __endptr,
+       locale_t __loc)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+extern _Float128 strtof128_l (const char *__restrict __nptr,
+         char **__restrict __endptr,
+         locale_t __loc)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+extern _Float32x strtof32x_l (const char *__restrict __nptr,
+         char **__restrict __endptr,
+         locale_t __loc)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+extern _Float64x strtof64x_l (const char *__restrict __nptr,
+         char **__restrict __endptr,
+         locale_t __loc)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 3)));
+# 385 "/usr/include/stdlib.h" 3 4
+extern char *l64a (long int __n) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+extern long int a64l (const char *__s)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/sys/types.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/bits/types.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 28 "/usr/include/x86_64-linux-gnu/bits/types.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/timesize.h" 1 3 4
+# 29 "/usr/include/x86_64-linux-gnu/bits/types.h" 2 3 4
+
+
+typedef unsigned char __u_char;
+typedef unsigned short int __u_short;
+typedef unsigned int __u_int;
+typedef unsigned long int __u_long;
+
+
+typedef signed char __int8_t;
+typedef unsigned char __uint8_t;
+typedef signed short int __int16_t;
+typedef unsigned short int __uint16_t;
+typedef signed int __int32_t;
+typedef unsigned int __uint32_t;
+
+typedef signed long int __int64_t;
+typedef unsigned long int __uint64_t;
+
+
+
+
+
+
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
+
+
+
+typedef long int __quad_t;
+typedef unsigned long int __u_quad_t;
+
+
+
+
+
+
+
+typedef long int __intmax_t;
+typedef unsigned long int __uintmax_t;
+# 141 "/usr/include/x86_64-linux-gnu/bits/types.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/typesizes.h" 1 3 4
+# 142 "/usr/include/x86_64-linux-gnu/bits/types.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/time64.h" 1 3 4
+# 143 "/usr/include/x86_64-linux-gnu/bits/types.h" 2 3 4
+
+
+typedef unsigned long int __dev_t;
+typedef unsigned int __uid_t;
+typedef unsigned int __gid_t;
+typedef unsigned long int __ino_t;
+typedef unsigned long int __ino64_t;
+typedef unsigned int __mode_t;
+typedef unsigned long int __nlink_t;
+typedef long int __off_t;
+typedef long int __off64_t;
+typedef int __pid_t;
+typedef struct { int __val[2]; } __fsid_t;
+typedef long int __clock_t;
+typedef unsigned long int __rlim_t;
+typedef unsigned long int __rlim64_t;
+typedef unsigned int __id_t;
+typedef long int __time_t;
+typedef unsigned int __useconds_t;
+typedef long int __suseconds_t;
+
+typedef int __daddr_t;
+typedef int __key_t;
+
+
+typedef int __clockid_t;
+
+
+typedef void * __timer_t;
+
+
+typedef long int __blksize_t;
+
+
+
+
+typedef long int __blkcnt_t;
+typedef long int __blkcnt64_t;
+
+
+typedef unsigned long int __fsblkcnt_t;
+typedef unsigned long int __fsblkcnt64_t;
+
+
+typedef unsigned long int __fsfilcnt_t;
+typedef unsigned long int __fsfilcnt64_t;
+
+
+typedef long int __fsword_t;
+
+typedef long int __ssize_t;
+
+
+typedef long int __syscall_slong_t;
+
+typedef unsigned long int __syscall_ulong_t;
+
+
+
+typedef __off64_t __loff_t;
+typedef char *__caddr_t;
+
+
+typedef long int __intptr_t;
+
+
+typedef unsigned int __socklen_t;
+
+
+
+
+typedef int __sig_atomic_t;
+# 30 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+
+typedef __u_char u_char;
+typedef __u_short u_short;
+typedef __u_int u_int;
+typedef __u_long u_long;
+typedef __quad_t quad_t;
+typedef __u_quad_t u_quad_t;
+typedef __fsid_t fsid_t;
+
+
+typedef __loff_t loff_t;
+
+
+
+
+typedef __ino_t ino_t;
+
+
+
+
+
+
+typedef __ino64_t ino64_t;
+
+
+
+
+typedef __dev_t dev_t;
+
+
+
+
+typedef __gid_t gid_t;
+
+
+
+
+typedef __mode_t mode_t;
+
+
+
+
+typedef __nlink_t nlink_t;
+
+
+
+
+typedef __uid_t uid_t;
+
+
+
+
+
+typedef __off_t off_t;
+
+
+
+
+
+
+typedef __off64_t off64_t;
+
+
+
+
+typedef __pid_t pid_t;
+
+
+
+
+
+typedef __id_t id_t;
+
+
+
+
+typedef __ssize_t ssize_t;
+
+
+
+
+
+typedef __daddr_t daddr_t;
+typedef __caddr_t caddr_t;
+
+
+
+
+
+typedef __key_t key_t;
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/clock_t.h" 1 3 4
+
+
+
+
+
+
+typedef __clock_t clock_t;
+# 127 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h" 1 3 4
+
+
+
+
+
+
+typedef __clockid_t clockid_t;
+# 129 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/time_t.h" 1 3 4
+
+
+
+
+
+
+typedef __time_t time_t;
+# 130 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/timer_t.h" 1 3 4
+
+
+
+
+
+
+typedef __timer_t timer_t;
+# 131 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+
+typedef __useconds_t useconds_t;
+
+
+
+typedef __suseconds_t suseconds_t;
+
+
+
+
+
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 1 3 4
+# 145 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+
+typedef unsigned long int ulong;
+typedef unsigned short int ushort;
+typedef unsigned int uint;
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/stdint-intn.h" 1 3 4
+# 24 "/usr/include/x86_64-linux-gnu/bits/stdint-intn.h" 3 4
+typedef __int8_t int8_t;
+typedef __int16_t int16_t;
+typedef __int32_t int32_t;
+typedef __int64_t int64_t;
+# 156 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+typedef __uint8_t u_int8_t;
+typedef __uint16_t u_int16_t;
+typedef __uint32_t u_int32_t;
+typedef __uint64_t u_int64_t;
+
+
+typedef int register_t __attribute__ ((__mode__ (__word__)));
+# 176 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+# 1 "/usr/include/endian.h" 1 3 4
+# 24 "/usr/include/endian.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/endian.h" 1 3 4
+# 35 "/usr/include/x86_64-linux-gnu/bits/endian.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/endianness.h" 1 3 4
+# 36 "/usr/include/x86_64-linux-gnu/bits/endian.h" 2 3 4
+# 25 "/usr/include/endian.h" 2 3 4
+# 35 "/usr/include/endian.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 1 3 4
+# 33 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 3 4
+static __inline __uint16_t
+__bswap_16 (__uint16_t __bsx)
+{
+
+  return __builtin_bswap16 (__bsx);
+
+
+
+}
+
+
+
+
+
+
+static __inline __uint32_t
+__bswap_32 (__uint32_t __bsx)
+{
+
+  return __builtin_bswap32 (__bsx);
+
+
+
+}
+# 69 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 3 4
+__extension__ static __inline __uint64_t
+__bswap_64 (__uint64_t __bsx)
+{
+
+  return __builtin_bswap64 (__bsx);
+
+
+
+}
+# 36 "/usr/include/endian.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/uintn-identity.h" 1 3 4
+# 32 "/usr/include/x86_64-linux-gnu/bits/uintn-identity.h" 3 4
+static __inline __uint16_t
+__uint16_identity (__uint16_t __x)
+{
+  return __x;
+}
+
+static __inline __uint32_t
+__uint32_identity (__uint32_t __x)
+{
+  return __x;
+}
+
+static __inline __uint64_t
+__uint64_identity (__uint64_t __x)
+{
+  return __x;
+}
+# 37 "/usr/include/endian.h" 2 3 4
+# 177 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/sys/select.h" 1 3 4
+# 30 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/select.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/select.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 23 "/usr/include/x86_64-linux-gnu/bits/select.h" 2 3 4
+# 31 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h" 1 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h" 1 3 4
+
+
+
+
+typedef struct
+{
+  unsigned long int __val[(1024 / (8 * sizeof (unsigned long int)))];
+} __sigset_t;
+# 5 "/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h" 2 3 4
+
+
+typedef __sigset_t sigset_t;
+# 34 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h" 1 3 4
+
+
+
+
+
+
+
+struct timeval
+{
+  __time_t tv_sec;
+  __suseconds_t tv_usec;
+};
+# 38 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h" 1 3 4
+# 10 "/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h" 3 4
+struct timespec
+{
+  __time_t tv_sec;
+
+
+
+  __syscall_slong_t tv_nsec;
+# 26 "/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h" 3 4
+};
+# 40 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4
+# 49 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+typedef long int __fd_mask;
+# 59 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+typedef struct
+  {
+
+
+
+    __fd_mask fds_bits[1024 / (8 * (int) sizeof (__fd_mask))];
+
+
+
+
+
+  } fd_set;
+
+
+
+
+
+
+typedef __fd_mask fd_mask;
+# 91 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+
+# 101 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+extern int select (int __nfds, fd_set *__restrict __readfds,
+     fd_set *__restrict __writefds,
+     fd_set *__restrict __exceptfds,
+     struct timeval *__restrict __timeout);
+# 113 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+extern int pselect (int __nfds, fd_set *__restrict __readfds,
+      fd_set *__restrict __writefds,
+      fd_set *__restrict __exceptfds,
+      const struct timespec *__restrict __timeout,
+      const __sigset_t *__restrict __sigmask);
+# 126 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+
+# 180 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+
+
+
+typedef __blksize_t blksize_t;
+
+
+
+
+
+
+typedef __blkcnt_t blkcnt_t;
+
+
+
+typedef __fsblkcnt_t fsblkcnt_t;
+
+
+
+typedef __fsfilcnt_t fsfilcnt_t;
+# 219 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+typedef __blkcnt64_t blkcnt64_t;
+typedef __fsblkcnt64_t fsblkcnt64_t;
+typedef __fsfilcnt64_t fsfilcnt64_t;
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 1 3 4
+# 23 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 1 3 4
+# 44 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h" 1 3 4
+# 21 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h" 2 3 4
+# 45 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 2 3 4
+
+
+
+
+typedef struct __pthread_internal_list
+{
+  struct __pthread_internal_list *__prev;
+  struct __pthread_internal_list *__next;
+} __pthread_list_t;
+
+typedef struct __pthread_internal_slist
+{
+  struct __pthread_internal_slist *__next;
+} __pthread_slist_t;
+# 74 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/struct_mutex.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/struct_mutex.h" 3 4
+struct __pthread_mutex_s
+{
+  int __lock;
+  unsigned int __count;
+  int __owner;
+
+  unsigned int __nusers;
+
+
+
+  int __kind;
+
+  short __spins;
+  short __elision;
+  __pthread_list_t __list;
+# 53 "/usr/include/x86_64-linux-gnu/bits/struct_mutex.h" 3 4
+};
+# 75 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 2 3 4
+# 87 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h" 1 3 4
+# 23 "/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h" 3 4
+struct __pthread_rwlock_arch_t
+{
+  unsigned int __readers;
+  unsigned int __writers;
+  unsigned int __wrphase_futex;
+  unsigned int __writers_futex;
+  unsigned int __pad3;
+  unsigned int __pad4;
+
+  int __cur_writer;
+  int __shared;
+  signed char __rwelision;
+
+
+
+
+  unsigned char __pad1[7];
+
+
+  unsigned long int __pad2;
+
+
+  unsigned int __flags;
+# 55 "/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h" 3 4
+};
+# 88 "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h" 2 3 4
+
+
+
+
+struct __pthread_cond_s
+{
+  __extension__ union
+  {
+    __extension__ unsigned long long int __wseq;
+    struct
+    {
+      unsigned int __low;
+      unsigned int __high;
+    } __wseq32;
+  };
+  __extension__ union
+  {
+    __extension__ unsigned long long int __g1_start;
+    struct
+    {
+      unsigned int __low;
+      unsigned int __high;
+    } __g1_start32;
+  };
+  unsigned int __g_refs[2] ;
+  unsigned int __g_size[2];
+  unsigned int __g1_orig_size;
+  unsigned int __wrefs;
+  unsigned int __g_signals[2];
+};
+# 24 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 2 3 4
+
+
+
+typedef unsigned long int pthread_t;
+
+
+
+
+typedef union
+{
+  char __size[4];
+  int __align;
+} pthread_mutexattr_t;
+
+
+
+
+typedef union
+{
+  char __size[4];
+  int __align;
+} pthread_condattr_t;
+
+
+
+typedef unsigned int pthread_key_t;
+
+
+
+typedef int pthread_once_t;
+
+
+union pthread_attr_t
+{
+  char __size[56];
+  long int __align;
+};
+
+typedef union pthread_attr_t pthread_attr_t;
+
+
+
+
+typedef union
+{
+  struct __pthread_mutex_s __data;
+  char __size[40];
+  long int __align;
+} pthread_mutex_t;
+
+
+typedef union
+{
+  struct __pthread_cond_s __data;
+  char __size[48];
+  __extension__ long long int __align;
+} pthread_cond_t;
+
+
+
+
+
+typedef union
+{
+  struct __pthread_rwlock_arch_t __data;
+  char __size[56];
+  long int __align;
+} pthread_rwlock_t;
+
+typedef union
+{
+  char __size[8];
+  long int __align;
+} pthread_rwlockattr_t;
+
+
+
+
+
+typedef volatile int pthread_spinlock_t;
+
+
+
+
+typedef union
+{
+  char __size[32];
+  long int __align;
+} pthread_barrier_t;
+
+typedef union
+{
+  char __size[4];
+  int __align;
+} pthread_barrierattr_t;
+# 228 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+
+# 395 "/usr/include/stdlib.h" 2 3 4
+
+
+
+
+
+
+extern long int random (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern void srandom (unsigned int __seed) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern char *initstate (unsigned int __seed, char *__statebuf,
+   size_t __statelen) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+extern char *setstate (char *__statebuf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+
+struct random_data
+  {
+    int32_t *fptr;
+    int32_t *rptr;
+    int32_t *state;
+    int rand_type;
+    int rand_deg;
+    int rand_sep;
+    int32_t *end_ptr;
+  };
+
+extern int random_r (struct random_data *__restrict __buf,
+       int32_t *__restrict __result) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern int srandom_r (unsigned int __seed, struct random_data *__buf)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+extern int initstate_r (unsigned int __seed, char *__restrict __statebuf,
+   size_t __statelen,
+   struct random_data *__restrict __buf)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+
+extern int setstate_r (char *__restrict __statebuf,
+         struct random_data *__restrict __buf)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+extern int rand (void) __attribute__ ((__nothrow__ , __leaf__));
+
+extern void srand (unsigned int __seed) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int rand_r (unsigned int *__seed) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+extern double drand48 (void) __attribute__ ((__nothrow__ , __leaf__));
+extern double erand48 (unsigned short int __xsubi[3]) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern long int lrand48 (void) __attribute__ ((__nothrow__ , __leaf__));
+extern long int nrand48 (unsigned short int __xsubi[3])
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern long int mrand48 (void) __attribute__ ((__nothrow__ , __leaf__));
+extern long int jrand48 (unsigned short int __xsubi[3])
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern void srand48 (long int __seedval) __attribute__ ((__nothrow__ , __leaf__));
+extern unsigned short int *seed48 (unsigned short int __seed16v[3])
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+extern void lcong48 (unsigned short int __param[7]) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+struct drand48_data
+  {
+    unsigned short int __x[3];
+    unsigned short int __old_x[3];
+    unsigned short int __c;
+    unsigned short int __init;
+    __extension__ unsigned long long int __a;
+
+  };
+
+
+extern int drand48_r (struct drand48_data *__restrict __buffer,
+        double *__restrict __result) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+extern int erand48_r (unsigned short int __xsubi[3],
+        struct drand48_data *__restrict __buffer,
+        double *__restrict __result) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int lrand48_r (struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+extern int nrand48_r (unsigned short int __xsubi[3],
+        struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int mrand48_r (struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+extern int jrand48_r (unsigned short int __xsubi[3],
+        struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int srand48_r (long int __seedval, struct drand48_data *__buffer)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+extern int seed48_r (unsigned short int __seed16v[3],
+       struct drand48_data *__buffer) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern int lcong48_r (unsigned short int __param[7],
+        struct drand48_data *__buffer)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern void *malloc (size_t __size) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__))
+     __attribute__ ((__alloc_size__ (1))) ;
+
+extern void *calloc (size_t __nmemb, size_t __size)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__)) __attribute__ ((__alloc_size__ (1, 2))) ;
+
+
+
+
+
+
+extern void *realloc (void *__ptr, size_t __size)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__warn_unused_result__)) __attribute__ ((__alloc_size__ (2)));
+
+
+
+
+
+
+
+extern void *reallocarray (void *__ptr, size_t __nmemb, size_t __size)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__warn_unused_result__))
+     __attribute__ ((__alloc_size__ (2, 3)));
+
+
+
+extern void free (void *__ptr) __attribute__ ((__nothrow__ , __leaf__));
+# 574 "/usr/include/stdlib.h" 3 4
+extern void *valloc (size_t __size) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__))
+     __attribute__ ((__alloc_size__ (1))) ;
+
+
+
+
+extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+extern void *aligned_alloc (size_t __alignment, size_t __size)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__)) __attribute__ ((__alloc_size__ (2))) ;
+
+
+
+extern void abort (void) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));
+
+
+
+extern int atexit (void (*__func) (void)) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+
+extern int at_quick_exit (void (*__func) (void)) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern int on_exit (void (*__func) (int __status, void *__arg), void *__arg)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern void exit (int __status) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));
+
+
+
+
+
+extern void quick_exit (int __status) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));
+
+
+
+
+
+extern void _Exit (int __status) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));
+
+
+
+
+extern char *getenv (const char *__name) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+extern char *secure_getenv (const char *__name)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+
+
+extern int putenv (char *__string) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern int setenv (const char *__name, const char *__value, int __replace)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+extern int unsetenv (const char *__name) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern int clearenv (void) __attribute__ ((__nothrow__ , __leaf__));
+# 675 "/usr/include/stdlib.h" 3 4
+extern char *mktemp (char *__template) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 688 "/usr/include/stdlib.h" 3 4
+extern int mkstemp (char *__template) __attribute__ ((__nonnull__ (1))) ;
+# 698 "/usr/include/stdlib.h" 3 4
+extern int mkstemp64 (char *__template) __attribute__ ((__nonnull__ (1))) ;
+# 710 "/usr/include/stdlib.h" 3 4
+extern int mkstemps (char *__template, int __suffixlen) __attribute__ ((__nonnull__ (1))) ;
+# 720 "/usr/include/stdlib.h" 3 4
+extern int mkstemps64 (char *__template, int __suffixlen)
+     __attribute__ ((__nonnull__ (1))) ;
+# 731 "/usr/include/stdlib.h" 3 4
+extern char *mkdtemp (char *__template) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+# 742 "/usr/include/stdlib.h" 3 4
+extern int mkostemp (char *__template, int __flags) __attribute__ ((__nonnull__ (1))) ;
+# 752 "/usr/include/stdlib.h" 3 4
+extern int mkostemp64 (char *__template, int __flags) __attribute__ ((__nonnull__ (1))) ;
+# 762 "/usr/include/stdlib.h" 3 4
+extern int mkostemps (char *__template, int __suffixlen, int __flags)
+     __attribute__ ((__nonnull__ (1))) ;
+# 774 "/usr/include/stdlib.h" 3 4
+extern int mkostemps64 (char *__template, int __suffixlen, int __flags)
+     __attribute__ ((__nonnull__ (1))) ;
+# 784 "/usr/include/stdlib.h" 3 4
+extern int system (const char *__command) ;
+
+
+
+
+
+extern char *canonicalize_file_name (const char *__name)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+# 800 "/usr/include/stdlib.h" 3 4
+extern char *realpath (const char *__restrict __name,
+         char *__restrict __resolved) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+
+
+typedef int (*__compar_fn_t) (const void *, const void *);
+
+
+typedef __compar_fn_t comparison_fn_t;
+
+
+
+typedef int (*__compar_d_fn_t) (const void *, const void *, void *);
+
+
+
+
+extern void *bsearch (const void *__key, const void *__base,
+        size_t __nmemb, size_t __size, __compar_fn_t __compar)
+     __attribute__ ((__nonnull__ (1, 2, 5))) ;
+
+
+
+
+
+
+
+extern void qsort (void *__base, size_t __nmemb, size_t __size,
+     __compar_fn_t __compar) __attribute__ ((__nonnull__ (1, 4)));
+
+extern void qsort_r (void *__base, size_t __nmemb, size_t __size,
+       __compar_d_fn_t __compar, void *__arg)
+  __attribute__ ((__nonnull__ (1, 4)));
+
+
+
+
+extern int abs (int __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)) ;
+extern long int labs (long int __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)) ;
+
+
+__extension__ extern long long int llabs (long long int __x)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)) ;
+
+
+
+
+
+
+extern div_t div (int __numer, int __denom)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)) ;
+extern ldiv_t ldiv (long int __numer, long int __denom)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)) ;
+
+
+__extension__ extern lldiv_t lldiv (long long int __numer,
+        long long int __denom)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)) ;
+# 872 "/usr/include/stdlib.h" 3 4
+extern char *ecvt (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4))) ;
+
+
+
+
+extern char *fcvt (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4))) ;
+
+
+
+
+extern char *gcvt (double __value, int __ndigit, char *__buf)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3))) ;
+
+
+
+
+extern char *qecvt (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4))) ;
+extern char *qfcvt (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4))) ;
+extern char *qgcvt (long double __value, int __ndigit, char *__buf)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3))) ;
+
+
+
+
+extern int ecvt_r (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign, char *__restrict __buf,
+     size_t __len) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4, 5)));
+extern int fcvt_r (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign, char *__restrict __buf,
+     size_t __len) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4, 5)));
+
+extern int qecvt_r (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign,
+      char *__restrict __buf, size_t __len)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4, 5)));
+extern int qfcvt_r (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign,
+      char *__restrict __buf, size_t __len)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4, 5)));
+
+
+
+
+
+extern int mblen (const char *__s, size_t __n) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int mbtowc (wchar_t *__restrict __pwc,
+     const char *__restrict __s, size_t __n) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int wctomb (char *__s, wchar_t __wchar) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern size_t mbstowcs (wchar_t *__restrict __pwcs,
+   const char *__restrict __s, size_t __n) __attribute__ ((__nothrow__ , __leaf__));
+
+extern size_t wcstombs (char *__restrict __s,
+   const wchar_t *__restrict __pwcs, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+extern int rpmatch (const char *__response) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+# 957 "/usr/include/stdlib.h" 3 4
+extern int getsubopt (char **__restrict __optionp,
+        char *const *__restrict __tokens,
+        char **__restrict __valuep)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2, 3))) ;
+
+
+
+
+
+
+
+extern int posix_openpt (int __oflag) ;
+
+
+
+
+
+
+
+extern int grantpt (int __fd) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int unlockpt (int __fd) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern char *ptsname (int __fd) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+
+
+extern int ptsname_r (int __fd, char *__buf, size_t __buflen)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+extern int getpt (void);
+
+
+
+
+
+
+extern int getloadavg (double __loadavg[], int __nelem)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 1013 "/usr/include/stdlib.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 1 3 4
+# 1014 "/usr/include/stdlib.h" 2 3 4
+# 1023 "/usr/include/stdlib.h" 3 4
+
+# 25 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 2
+# 1 "/usr/include/signal.h" 1 3 4
+# 27 "/usr/include/signal.h" 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/signum.h" 1 3 4
+# 26 "/usr/include/x86_64-linux-gnu/bits/signum.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/signum-generic.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/bits/signum.h" 2 3 4
+# 31 "/usr/include/signal.h" 2 3 4
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h" 1 3 4
+
+
+
+
+
+
+
+typedef __sig_atomic_t sig_atomic_t;
+# 33 "/usr/include/signal.h" 2 3 4
+# 57 "/usr/include/signal.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 1 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 5 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 2 3 4
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h" 1 3 4
+# 24 "/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h" 3 4
+union sigval
+{
+  int sival_int;
+  void *sival_ptr;
+};
+
+typedef union sigval __sigval_t;
+# 7 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 2 3 4
+# 16 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h" 1 3 4
+# 17 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 2 3 4
+# 36 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3 4
+typedef struct
+  {
+    int si_signo;
+
+    int si_errno;
+
+    int si_code;
+
+
+
+
+
+    int __pad0;
+
+
+    union
+      {
+ int _pad[((128 / sizeof (int)) - 4)];
+
+
+ struct
+   {
+     __pid_t si_pid;
+     __uid_t si_uid;
+   } _kill;
+
+
+ struct
+   {
+     int si_tid;
+     int si_overrun;
+     __sigval_t si_sigval;
+   } _timer;
+
+
+ struct
+   {
+     __pid_t si_pid;
+     __uid_t si_uid;
+     __sigval_t si_sigval;
+   } _rt;
+
+
+ struct
+   {
+     __pid_t si_pid;
+     __uid_t si_uid;
+     int si_status;
+     __clock_t si_utime;
+     __clock_t si_stime;
+   } _sigchld;
+
+
+ struct
+   {
+     void *si_addr;
+    
+     short int si_addr_lsb;
+     union
+       {
+
+  struct
+    {
+      void *_lower;
+      void *_upper;
+    } _addr_bnd;
+
+  __uint32_t _pkey;
+       } _bounds;
+   } _sigfault;
+
+
+ struct
+   {
+     long int si_band;
+     int si_fd;
+   } _sigpoll;
+
+
+
+ struct
+   {
+     void *_call_addr;
+     int _syscall;
+     unsigned int _arch;
+   } _sigsys;
+
+      } _sifields;
+  } siginfo_t ;
+# 58 "/usr/include/signal.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 1 3 4
+# 35 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3 4
+enum
+{
+  SI_ASYNCNL = -60,
+  SI_DETHREAD = -7,
+
+  SI_TKILL,
+  SI_SIGIO,
+
+  SI_ASYNCIO,
+  SI_MESGQ,
+  SI_TIMER,
+
+
+
+
+
+  SI_QUEUE,
+  SI_USER,
+  SI_KERNEL = 0x80
+# 66 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3 4
+};
+
+
+
+
+enum
+{
+  ILL_ILLOPC = 1,
+
+  ILL_ILLOPN,
+
+  ILL_ILLADR,
+
+  ILL_ILLTRP,
+
+  ILL_PRVOPC,
+
+  ILL_PRVREG,
+
+  ILL_COPROC,
+
+  ILL_BADSTK,
+
+  ILL_BADIADDR
+
+};
+
+
+enum
+{
+  FPE_INTDIV = 1,
+
+  FPE_INTOVF,
+
+  FPE_FLTDIV,
+
+  FPE_FLTOVF,
+
+  FPE_FLTUND,
+
+  FPE_FLTRES,
+
+  FPE_FLTINV,
+
+  FPE_FLTSUB,
+
+  FPE_FLTUNK = 14,
+
+  FPE_CONDTRAP
+
+};
+
+
+enum
+{
+  SEGV_MAPERR = 1,
+
+  SEGV_ACCERR,
+
+  SEGV_BNDERR,
+
+  SEGV_PKUERR,
+
+  SEGV_ACCADI,
+
+  SEGV_ADIDERR,
+
+  SEGV_ADIPERR
+
+};
+
+
+enum
+{
+  BUS_ADRALN = 1,
+
+  BUS_ADRERR,
+
+  BUS_OBJERR,
+
+  BUS_MCEERR_AR,
+
+  BUS_MCEERR_AO
+
+};
+
+
+
+
+enum
+{
+  TRAP_BRKPT = 1,
+
+  TRAP_TRACE,
+
+  TRAP_BRANCH,
+
+  TRAP_HWBKPT,
+
+  TRAP_UNK
+
+};
+
+
+
+
+enum
+{
+  CLD_EXITED = 1,
+
+  CLD_KILLED,
+
+  CLD_DUMPED,
+
+  CLD_TRAPPED,
+
+  CLD_STOPPED,
+
+  CLD_CONTINUED
+
+};
+
+
+enum
+{
+  POLL_IN = 1,
+
+  POLL_OUT,
+
+  POLL_MSG,
+
+  POLL_ERR,
+
+  POLL_PRI,
+
+  POLL_HUP
+
+};
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h" 1 3 4
+# 210 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 2 3 4
+# 59 "/usr/include/signal.h" 2 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h" 1 3 4
+# 16 "/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h" 3 4
+typedef __sigval_t sigval_t;
+# 63 "/usr/include/signal.h" 2 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 1 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 5 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 2 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3 4
+typedef struct sigevent
+  {
+    __sigval_t sigev_value;
+    int sigev_signo;
+    int sigev_notify;
+
+    union
+      {
+ int _pad[((64 / sizeof (int)) - 4)];
+
+
+
+ __pid_t _tid;
+
+ struct
+   {
+     void (*_function) (__sigval_t);
+     pthread_attr_t *_attribute;
+   } _sigev_thread;
+      } _sigev_un;
+  } sigevent_t;
+# 67 "/usr/include/signal.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h" 3 4
+enum
+{
+  SIGEV_SIGNAL = 0,
+
+  SIGEV_NONE,
+
+  SIGEV_THREAD,
+
+
+  SIGEV_THREAD_ID = 4
+
+
+};
+# 68 "/usr/include/signal.h" 2 3 4
+
+
+
+
+typedef void (*__sighandler_t) (int);
+
+
+
+
+extern __sighandler_t __sysv_signal (int __sig, __sighandler_t __handler)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+extern __sighandler_t sysv_signal (int __sig, __sighandler_t __handler)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern __sighandler_t signal (int __sig, __sighandler_t __handler)
+     __attribute__ ((__nothrow__ , __leaf__));
+# 112 "/usr/include/signal.h" 3 4
+extern int kill (__pid_t __pid, int __sig) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern int killpg (__pid_t __pgrp, int __sig) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int raise (int __sig) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern __sighandler_t ssignal (int __sig, __sighandler_t __handler)
+     __attribute__ ((__nothrow__ , __leaf__));
+extern int gsignal (int __sig) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern void psignal (int __sig, const char *__s);
+
+
+extern void psiginfo (const siginfo_t *__pinfo, const char *__s);
+# 151 "/usr/include/signal.h" 3 4
+extern int sigpause (int __sig) __asm__ ("__xpg_sigpause");
+# 170 "/usr/include/signal.h" 3 4
+extern int sigblock (int __mask) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__deprecated__));
+
+
+extern int sigsetmask (int __mask) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__deprecated__));
+
+
+extern int siggetmask (void) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__deprecated__));
+# 185 "/usr/include/signal.h" 3 4
+typedef __sighandler_t sighandler_t;
+
+
+
+
+typedef __sighandler_t sig_t;
+
+
+
+
+
+extern int sigemptyset (sigset_t *__set) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int sigfillset (sigset_t *__set) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int sigaddset (sigset_t *__set, int __signo) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int sigdelset (sigset_t *__set, int __signo) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int sigismember (const sigset_t *__set, int __signo)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int sigisemptyset (const sigset_t *__set) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int sigandset (sigset_t *__set, const sigset_t *__left,
+        const sigset_t *__right) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2, 3)));
+
+
+extern int sigorset (sigset_t *__set, const sigset_t *__left,
+       const sigset_t *__right) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2, 3)));
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3 4
+struct sigaction
+  {
+
+
+    union
+      {
+
+ __sighandler_t sa_handler;
+
+ void (*sa_sigaction) (int, siginfo_t *, void *);
+      }
+    __sigaction_handler;
+
+
+
+
+
+
+
+    __sigset_t sa_mask;
+
+
+    int sa_flags;
+
+
+    void (*sa_restorer) (void);
+  };
+# 227 "/usr/include/signal.h" 2 3 4
+
+
+extern int sigprocmask (int __how, const sigset_t *__restrict __set,
+   sigset_t *__restrict __oset) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern int sigsuspend (const sigset_t *__set) __attribute__ ((__nonnull__ (1)));
+
+
+extern int sigaction (int __sig, const struct sigaction *__restrict __act,
+        struct sigaction *__restrict __oact) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int sigpending (sigset_t *__set) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+
+extern int sigwait (const sigset_t *__restrict __set, int *__restrict __sig)
+     __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+
+
+extern int sigwaitinfo (const sigset_t *__restrict __set,
+   siginfo_t *__restrict __info) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern int sigtimedwait (const sigset_t *__restrict __set,
+    siginfo_t *__restrict __info,
+    const struct timespec *__restrict __timeout)
+     __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int sigqueue (__pid_t __pid, int __sig, const union sigval __val)
+     __attribute__ ((__nothrow__ , __leaf__));
+# 286 "/usr/include/signal.h" 3 4
+extern const char *const _sys_siglist[(64 + 1)];
+extern const char *const sys_siglist[(64 + 1)];
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 1 3 4
+# 31 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3 4
+struct _fpx_sw_bytes
+{
+  __uint32_t magic1;
+  __uint32_t extended_size;
+  __uint64_t xstate_bv;
+  __uint32_t xstate_size;
+  __uint32_t __glibc_reserved1[7];
+};
+
+struct _fpreg
+{
+  unsigned short significand[4];
+  unsigned short exponent;
+};
+
+struct _fpxreg
+{
+  unsigned short significand[4];
+  unsigned short exponent;
+  unsigned short __glibc_reserved1[3];
+};
+
+struct _xmmreg
+{
+  __uint32_t element[4];
+};
+# 123 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3 4
+struct _fpstate
+{
+
+  __uint16_t cwd;
+  __uint16_t swd;
+  __uint16_t ftw;
+  __uint16_t fop;
+  __uint64_t rip;
+  __uint64_t rdp;
+  __uint32_t mxcsr;
+  __uint32_t mxcr_mask;
+  struct _fpxreg _st[8];
+  struct _xmmreg _xmm[16];
+  __uint32_t __glibc_reserved1[24];
+};
+
+struct sigcontext
+{
+  __uint64_t r8;
+  __uint64_t r9;
+  __uint64_t r10;
+  __uint64_t r11;
+  __uint64_t r12;
+  __uint64_t r13;
+  __uint64_t r14;
+  __uint64_t r15;
+  __uint64_t rdi;
+  __uint64_t rsi;
+  __uint64_t rbp;
+  __uint64_t rbx;
+  __uint64_t rdx;
+  __uint64_t rax;
+  __uint64_t rcx;
+  __uint64_t rsp;
+  __uint64_t rip;
+  __uint64_t eflags;
+  unsigned short cs;
+  unsigned short gs;
+  unsigned short fs;
+  unsigned short __pad0;
+  __uint64_t err;
+  __uint64_t trapno;
+  __uint64_t oldmask;
+  __uint64_t cr2;
+  __extension__ union
+    {
+      struct _fpstate * fpstate;
+      __uint64_t __fpstate_word;
+    };
+  __uint64_t __reserved1 [8];
+};
+
+
+
+struct _xsave_hdr
+{
+  __uint64_t xstate_bv;
+  __uint64_t __glibc_reserved1[2];
+  __uint64_t __glibc_reserved2[5];
+};
+
+struct _ymmh_state
+{
+  __uint32_t ymmh_space[64];
+};
+
+struct _xstate
+{
+  struct _fpstate fpstate;
+  struct _xsave_hdr xstate_hdr;
+  struct _ymmh_state ymmh;
+};
+# 292 "/usr/include/signal.h" 2 3 4
+
+
+extern int sigreturn (struct sigcontext *__scp) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 1 3 4
+# 302 "/usr/include/signal.h" 2 3 4
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 1 3 4
+# 23 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 3 4
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 1 3 4
+# 24 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 2 3 4
+
+
+typedef struct
+  {
+    void *ss_sp;
+    int ss_flags;
+    size_t ss_size;
+  } stack_t;
+# 304 "/usr/include/signal.h" 2 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 1 3 4
+# 37 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3 4
+__extension__ typedef long long int greg_t;
+# 46 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3 4
+typedef greg_t gregset_t[23];
+
+
+
+enum
+{
+  REG_R8 = 0,
+
+  REG_R9,
+
+  REG_R10,
+
+  REG_R11,
+
+  REG_R12,
+
+  REG_R13,
+
+  REG_R14,
+
+  REG_R15,
+
+  REG_RDI,
+
+  REG_RSI,
+
+  REG_RBP,
+
+  REG_RBX,
+
+  REG_RDX,
+
+  REG_RAX,
+
+  REG_RCX,
+
+  REG_RSP,
+
+  REG_RIP,
+
+  REG_EFL,
+
+  REG_CSGSFS,
+
+  REG_ERR,
+
+  REG_TRAPNO,
+
+  REG_OLDMASK,
+
+  REG_CR2
+
+};
+
+
+struct _libc_fpxreg
+{
+  unsigned short int significand[4];
+  unsigned short int exponent;
+  unsigned short int __glibc_reserved1[3];
+};
+
+struct _libc_xmmreg
+{
+  __uint32_t element[4];
+};
+
+struct _libc_fpstate
+{
+
+  __uint16_t cwd;
+  __uint16_t swd;
+  __uint16_t ftw;
+  __uint16_t fop;
+  __uint64_t rip;
+  __uint64_t rdp;
+  __uint32_t mxcsr;
+  __uint32_t mxcr_mask;
+  struct _libc_fpxreg _st[8];
+  struct _libc_xmmreg _xmm[16];
+  __uint32_t __glibc_reserved1[24];
+};
+
+
+typedef struct _libc_fpstate *fpregset_t;
+
+
+typedef struct
+  {
+    gregset_t gregs;
+
+    fpregset_t fpregs;
+    __extension__ unsigned long long __reserved1 [8];
+} mcontext_t;
+
+
+typedef struct ucontext_t
+  {
+    unsigned long int uc_flags;
+    struct ucontext_t *uc_link;
+    stack_t uc_stack;
+    mcontext_t uc_mcontext;
+    sigset_t uc_sigmask;
+    struct _libc_fpstate __fpregs_mem;
+    __extension__ unsigned long long int __ssp[4];
+  } ucontext_t;
+# 307 "/usr/include/signal.h" 2 3 4
+
+
+
+
+
+
+
+extern int siginterrupt (int __sig, int __interrupt) __attribute__ ((__nothrow__ , __leaf__));
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/sigstack.h" 1 3 4
+# 317 "/usr/include/signal.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/ss_flags.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/bits/ss_flags.h" 3 4
+enum
+{
+  SS_ONSTACK = 1,
+
+  SS_DISABLE
+
+};
+# 318 "/usr/include/signal.h" 2 3 4
+
+
+
+extern int sigaltstack (const stack_t *__restrict __ss,
+   stack_t *__restrict __oss) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h" 1 3 4
+# 23 "/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h" 3 4
+struct sigstack
+  {
+    void *ss_sp;
+    int ss_onstack;
+  };
+# 328 "/usr/include/signal.h" 2 3 4
+
+
+
+
+
+
+
+extern int sigstack (struct sigstack *__ss, struct sigstack *__oss)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__deprecated__));
+
+
+
+
+
+
+extern int sighold (int __sig) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int sigrelse (int __sig) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int sigignore (int __sig) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern __sighandler_t sigset (int __sig, __sighandler_t __disp) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/sigthread.h" 1 3 4
+# 31 "/usr/include/x86_64-linux-gnu/bits/sigthread.h" 3 4
+extern int pthread_sigmask (int __how,
+       const __sigset_t *__restrict __newmask,
+       __sigset_t *__restrict __oldmask)__attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int pthread_kill (pthread_t __threadid, int __signo) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int pthread_sigqueue (pthread_t __threadid, int __signo,
+        const union sigval __value) __attribute__ ((__nothrow__ , __leaf__));
+# 360 "/usr/include/signal.h" 2 3 4
+
+
+
+
+
+
+extern int __libc_current_sigrtmin (void) __attribute__ ((__nothrow__ , __leaf__));
+
+extern int __libc_current_sigrtmax (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/signal_ext.h" 1 3 4
+# 29 "/usr/include/x86_64-linux-gnu/bits/signal_ext.h" 3 4
+extern int tgkill (__pid_t __tgid, __pid_t __tid, int __signal);
+# 375 "/usr/include/signal.h" 2 3 4
+
+
+# 26 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 2
+# 1 "/usr/include/unistd.h" 1 3 4
+# 27 "/usr/include/unistd.h" 3 4
+
+# 202 "/usr/include/unistd.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/posix_opt.h" 1 3 4
+# 203 "/usr/include/unistd.h" 2 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/environments.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/environments.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 23 "/usr/include/x86_64-linux-gnu/bits/environments.h" 2 3 4
+# 207 "/usr/include/unistd.h" 2 3 4
+# 226 "/usr/include/unistd.h" 3 4
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 1 3 4
+# 227 "/usr/include/unistd.h" 2 3 4
+# 267 "/usr/include/unistd.h" 3 4
+typedef __intptr_t intptr_t;
+
+
+
+
+
+
+typedef __socklen_t socklen_t;
+# 287 "/usr/include/unistd.h" 3 4
+extern int access (const char *__name, int __type) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+extern int euidaccess (const char *__name, int __type)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int eaccess (const char *__name, int __type)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern int faccessat (int __fd, const char *__file, int __type, int __flag)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2))) ;
+# 334 "/usr/include/unistd.h" 3 4
+extern __off_t lseek (int __fd, __off_t __offset, int __whence) __attribute__ ((__nothrow__ , __leaf__));
+# 345 "/usr/include/unistd.h" 3 4
+extern __off64_t lseek64 (int __fd, __off64_t __offset, int __whence)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern int close (int __fd);
+
+
+
+
+
+
+extern ssize_t read (int __fd, void *__buf, size_t __nbytes) ;
+
+
+
+
+
+extern ssize_t write (int __fd, const void *__buf, size_t __n) ;
+# 376 "/usr/include/unistd.h" 3 4
+extern ssize_t pread (int __fd, void *__buf, size_t __nbytes,
+        __off_t __offset) ;
+
+
+
+
+
+
+extern ssize_t pwrite (int __fd, const void *__buf, size_t __n,
+         __off_t __offset) ;
+# 404 "/usr/include/unistd.h" 3 4
+extern ssize_t pread64 (int __fd, void *__buf, size_t __nbytes,
+   __off64_t __offset) ;
+
+
+extern ssize_t pwrite64 (int __fd, const void *__buf, size_t __n,
+    __off64_t __offset) ;
+
+
+
+
+
+
+
+extern int pipe (int __pipedes[2]) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern int pipe2 (int __pipedes[2], int __flags) __attribute__ ((__nothrow__ , __leaf__)) ;
+# 432 "/usr/include/unistd.h" 3 4
+extern unsigned int alarm (unsigned int __seconds) __attribute__ ((__nothrow__ , __leaf__));
+# 444 "/usr/include/unistd.h" 3 4
+extern unsigned int sleep (unsigned int __seconds);
+
+
+
+
+
+
+
+extern __useconds_t ualarm (__useconds_t __value, __useconds_t __interval)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern int usleep (__useconds_t __useconds);
+# 469 "/usr/include/unistd.h" 3 4
+extern int pause (void);
+
+
+
+extern int chown (const char *__file, __uid_t __owner, __gid_t __group)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+extern int fchown (int __fd, __uid_t __owner, __gid_t __group) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern int lchown (const char *__file, __uid_t __owner, __gid_t __group)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+
+
+extern int fchownat (int __fd, const char *__file, __uid_t __owner,
+       __gid_t __group, int __flag)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2))) ;
+
+
+
+extern int chdir (const char *__path) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+extern int fchdir (int __fd) __attribute__ ((__nothrow__ , __leaf__)) ;
+# 511 "/usr/include/unistd.h" 3 4
+extern char *getcwd (char *__buf, size_t __size) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+
+extern char *get_current_dir_name (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+extern char *getwd (char *__buf)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) __attribute__ ((__deprecated__)) ;
+
+
+
+
+extern int dup (int __fd) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+extern int dup2 (int __fd, int __fd2) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern int dup3 (int __fd, int __fd2, int __flags) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern char **__environ;
+
+extern char **environ;
+
+
+
+
+
+extern int execve (const char *__path, char *const __argv[],
+     char *const __envp[]) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern int fexecve (int __fd, char *const __argv[], char *const __envp[])
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+
+extern int execv (const char *__path, char *const __argv[])
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int execle (const char *__path, const char *__arg, ...)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int execl (const char *__path, const char *__arg, ...)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int execvp (const char *__file, char *const __argv[])
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern int execlp (const char *__file, const char *__arg, ...)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern int execvpe (const char *__file, char *const __argv[],
+      char *const __envp[])
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+extern int nice (int __inc) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern void _exit (int __status) __attribute__ ((__noreturn__));
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/confname.h" 1 3 4
+# 24 "/usr/include/x86_64-linux-gnu/bits/confname.h" 3 4
+enum
+  {
+    _PC_LINK_MAX,
+
+    _PC_MAX_CANON,
+
+    _PC_MAX_INPUT,
+
+    _PC_NAME_MAX,
+
+    _PC_PATH_MAX,
+
+    _PC_PIPE_BUF,
+
+    _PC_CHOWN_RESTRICTED,
+
+    _PC_NO_TRUNC,
+
+    _PC_VDISABLE,
+
+    _PC_SYNC_IO,
+
+    _PC_ASYNC_IO,
+
+    _PC_PRIO_IO,
+
+    _PC_SOCK_MAXBUF,
+
+    _PC_FILESIZEBITS,
+
+    _PC_REC_INCR_XFER_SIZE,
+
+    _PC_REC_MAX_XFER_SIZE,
+
+    _PC_REC_MIN_XFER_SIZE,
+
+    _PC_REC_XFER_ALIGN,
+
+    _PC_ALLOC_SIZE_MIN,
+
+    _PC_SYMLINK_MAX,
+
+    _PC_2_SYMLINKS
+
+  };
+
+
+enum
+  {
+    _SC_ARG_MAX,
+
+    _SC_CHILD_MAX,
+
+    _SC_CLK_TCK,
+
+    _SC_NGROUPS_MAX,
+
+    _SC_OPEN_MAX,
+
+    _SC_STREAM_MAX,
+
+    _SC_TZNAME_MAX,
+
+    _SC_JOB_CONTROL,
+
+    _SC_SAVED_IDS,
+
+    _SC_REALTIME_SIGNALS,
+
+    _SC_PRIORITY_SCHEDULING,
+
+    _SC_TIMERS,
+
+    _SC_ASYNCHRONOUS_IO,
+
+    _SC_PRIORITIZED_IO,
+
+    _SC_SYNCHRONIZED_IO,
+
+    _SC_FSYNC,
+
+    _SC_MAPPED_FILES,
+
+    _SC_MEMLOCK,
+
+    _SC_MEMLOCK_RANGE,
+
+    _SC_MEMORY_PROTECTION,
+
+    _SC_MESSAGE_PASSING,
+
+    _SC_SEMAPHORES,
+
+    _SC_SHARED_MEMORY_OBJECTS,
+
+    _SC_AIO_LISTIO_MAX,
+
+    _SC_AIO_MAX,
+
+    _SC_AIO_PRIO_DELTA_MAX,
+
+    _SC_DELAYTIMER_MAX,
+
+    _SC_MQ_OPEN_MAX,
+
+    _SC_MQ_PRIO_MAX,
+
+    _SC_VERSION,
+
+    _SC_PAGESIZE,
+
+
+    _SC_RTSIG_MAX,
+
+    _SC_SEM_NSEMS_MAX,
+
+    _SC_SEM_VALUE_MAX,
+
+    _SC_SIGQUEUE_MAX,
+
+    _SC_TIMER_MAX,
+
+
+
+
+    _SC_BC_BASE_MAX,
+
+    _SC_BC_DIM_MAX,
+
+    _SC_BC_SCALE_MAX,
+
+    _SC_BC_STRING_MAX,
+
+    _SC_COLL_WEIGHTS_MAX,
+
+    _SC_EQUIV_CLASS_MAX,
+
+    _SC_EXPR_NEST_MAX,
+
+    _SC_LINE_MAX,
+
+    _SC_RE_DUP_MAX,
+
+    _SC_CHARCLASS_NAME_MAX,
+
+
+    _SC_2_VERSION,
+
+    _SC_2_C_BIND,
+
+    _SC_2_C_DEV,
+
+    _SC_2_FORT_DEV,
+
+    _SC_2_FORT_RUN,
+
+    _SC_2_SW_DEV,
+
+    _SC_2_LOCALEDEF,
+
+
+    _SC_PII,
+
+    _SC_PII_XTI,
+
+    _SC_PII_SOCKET,
+
+    _SC_PII_INTERNET,
+
+    _SC_PII_OSI,
+
+    _SC_POLL,
+
+    _SC_SELECT,
+
+    _SC_UIO_MAXIOV,
+
+    _SC_IOV_MAX = _SC_UIO_MAXIOV,
+
+    _SC_PII_INTERNET_STREAM,
+
+    _SC_PII_INTERNET_DGRAM,
+
+    _SC_PII_OSI_COTS,
+
+    _SC_PII_OSI_CLTS,
+
+    _SC_PII_OSI_M,
+
+    _SC_T_IOV_MAX,
+
+
+
+    _SC_THREADS,
+
+    _SC_THREAD_SAFE_FUNCTIONS,
+
+    _SC_GETGR_R_SIZE_MAX,
+
+    _SC_GETPW_R_SIZE_MAX,
+
+    _SC_LOGIN_NAME_MAX,
+
+    _SC_TTY_NAME_MAX,
+
+    _SC_THREAD_DESTRUCTOR_ITERATIONS,
+
+    _SC_THREAD_KEYS_MAX,
+
+    _SC_THREAD_STACK_MIN,
+
+    _SC_THREAD_THREADS_MAX,
+
+    _SC_THREAD_ATTR_STACKADDR,
+
+    _SC_THREAD_ATTR_STACKSIZE,
+
+    _SC_THREAD_PRIORITY_SCHEDULING,
+
+    _SC_THREAD_PRIO_INHERIT,
+
+    _SC_THREAD_PRIO_PROTECT,
+
+    _SC_THREAD_PROCESS_SHARED,
+
+
+    _SC_NPROCESSORS_CONF,
+
+    _SC_NPROCESSORS_ONLN,
+
+    _SC_PHYS_PAGES,
+
+    _SC_AVPHYS_PAGES,
+
+    _SC_ATEXIT_MAX,
+
+    _SC_PASS_MAX,
+
+
+    _SC_XOPEN_VERSION,
+
+    _SC_XOPEN_XCU_VERSION,
+
+    _SC_XOPEN_UNIX,
+
+    _SC_XOPEN_CRYPT,
+
+    _SC_XOPEN_ENH_I18N,
+
+    _SC_XOPEN_SHM,
+
+
+    _SC_2_CHAR_TERM,
+
+    _SC_2_C_VERSION,
+
+    _SC_2_UPE,
+
+
+    _SC_XOPEN_XPG2,
+
+    _SC_XOPEN_XPG3,
+
+    _SC_XOPEN_XPG4,
+
+
+    _SC_CHAR_BIT,
+
+    _SC_CHAR_MAX,
+
+    _SC_CHAR_MIN,
+
+    _SC_INT_MAX,
+
+    _SC_INT_MIN,
+
+    _SC_LONG_BIT,
+
+    _SC_WORD_BIT,
+
+    _SC_MB_LEN_MAX,
+
+    _SC_NZERO,
+
+    _SC_SSIZE_MAX,
+
+    _SC_SCHAR_MAX,
+
+    _SC_SCHAR_MIN,
+
+    _SC_SHRT_MAX,
+
+    _SC_SHRT_MIN,
+
+    _SC_UCHAR_MAX,
+
+    _SC_UINT_MAX,
+
+    _SC_ULONG_MAX,
+
+    _SC_USHRT_MAX,
+
+
+    _SC_NL_ARGMAX,
+
+    _SC_NL_LANGMAX,
+
+    _SC_NL_MSGMAX,
+
+    _SC_NL_NMAX,
+
+    _SC_NL_SETMAX,
+
+    _SC_NL_TEXTMAX,
+
+
+    _SC_XBS5_ILP32_OFF32,
+
+    _SC_XBS5_ILP32_OFFBIG,
+
+    _SC_XBS5_LP64_OFF64,
+
+    _SC_XBS5_LPBIG_OFFBIG,
+
+
+    _SC_XOPEN_LEGACY,
+
+    _SC_XOPEN_REALTIME,
+
+    _SC_XOPEN_REALTIME_THREADS,
+
+
+    _SC_ADVISORY_INFO,
+
+    _SC_BARRIERS,
+
+    _SC_BASE,
+
+    _SC_C_LANG_SUPPORT,
+
+    _SC_C_LANG_SUPPORT_R,
+
+    _SC_CLOCK_SELECTION,
+
+    _SC_CPUTIME,
+
+    _SC_THREAD_CPUTIME,
+
+    _SC_DEVICE_IO,
+
+    _SC_DEVICE_SPECIFIC,
+
+    _SC_DEVICE_SPECIFIC_R,
+
+    _SC_FD_MGMT,
+
+    _SC_FIFO,
+
+    _SC_PIPE,
+
+    _SC_FILE_ATTRIBUTES,
+
+    _SC_FILE_LOCKING,
+
+    _SC_FILE_SYSTEM,
+
+    _SC_MONOTONIC_CLOCK,
+
+    _SC_MULTI_PROCESS,
+
+    _SC_SINGLE_PROCESS,
+
+    _SC_NETWORKING,
+
+    _SC_READER_WRITER_LOCKS,
+
+    _SC_SPIN_LOCKS,
+
+    _SC_REGEXP,
+
+    _SC_REGEX_VERSION,
+
+    _SC_SHELL,
+
+    _SC_SIGNALS,
+
+    _SC_SPAWN,
+
+    _SC_SPORADIC_SERVER,
+
+    _SC_THREAD_SPORADIC_SERVER,
+
+    _SC_SYSTEM_DATABASE,
+
+    _SC_SYSTEM_DATABASE_R,
+
+    _SC_TIMEOUTS,
+
+    _SC_TYPED_MEMORY_OBJECTS,
+
+    _SC_USER_GROUPS,
+
+    _SC_USER_GROUPS_R,
+
+    _SC_2_PBS,
+
+    _SC_2_PBS_ACCOUNTING,
+
+    _SC_2_PBS_LOCATE,
+
+    _SC_2_PBS_MESSAGE,
+
+    _SC_2_PBS_TRACK,
+
+    _SC_SYMLOOP_MAX,
+
+    _SC_STREAMS,
+
+    _SC_2_PBS_CHECKPOINT,
+
+
+    _SC_V6_ILP32_OFF32,
+
+    _SC_V6_ILP32_OFFBIG,
+
+    _SC_V6_LP64_OFF64,
+
+    _SC_V6_LPBIG_OFFBIG,
+
+
+    _SC_HOST_NAME_MAX,
+
+    _SC_TRACE,
+
+    _SC_TRACE_EVENT_FILTER,
+
+    _SC_TRACE_INHERIT,
+
+    _SC_TRACE_LOG,
+
+
+    _SC_LEVEL1_ICACHE_SIZE,
+
+    _SC_LEVEL1_ICACHE_ASSOC,
+
+    _SC_LEVEL1_ICACHE_LINESIZE,
+
+    _SC_LEVEL1_DCACHE_SIZE,
+
+    _SC_LEVEL1_DCACHE_ASSOC,
+
+    _SC_LEVEL1_DCACHE_LINESIZE,
+
+    _SC_LEVEL2_CACHE_SIZE,
+
+    _SC_LEVEL2_CACHE_ASSOC,
+
+    _SC_LEVEL2_CACHE_LINESIZE,
+
+    _SC_LEVEL3_CACHE_SIZE,
+
+    _SC_LEVEL3_CACHE_ASSOC,
+
+    _SC_LEVEL3_CACHE_LINESIZE,
+
+    _SC_LEVEL4_CACHE_SIZE,
+
+    _SC_LEVEL4_CACHE_ASSOC,
+
+    _SC_LEVEL4_CACHE_LINESIZE,
+
+
+
+    _SC_IPV6 = _SC_LEVEL1_ICACHE_SIZE + 50,
+
+    _SC_RAW_SOCKETS,
+
+
+    _SC_V7_ILP32_OFF32,
+
+    _SC_V7_ILP32_OFFBIG,
+
+    _SC_V7_LP64_OFF64,
+
+    _SC_V7_LPBIG_OFFBIG,
+
+
+    _SC_SS_REPL_MAX,
+
+
+    _SC_TRACE_EVENT_NAME_MAX,
+
+    _SC_TRACE_NAME_MAX,
+
+    _SC_TRACE_SYS_MAX,
+
+    _SC_TRACE_USER_EVENT_MAX,
+
+
+    _SC_XOPEN_STREAMS,
+
+
+    _SC_THREAD_ROBUST_PRIO_INHERIT,
+
+    _SC_THREAD_ROBUST_PRIO_PROTECT
+
+  };
+
+
+enum
+  {
+    _CS_PATH,
+
+
+    _CS_V6_WIDTH_RESTRICTED_ENVS,
+
+
+
+    _CS_GNU_LIBC_VERSION,
+
+    _CS_GNU_LIBPTHREAD_VERSION,
+
+
+    _CS_V5_WIDTH_RESTRICTED_ENVS,
+
+
+
+    _CS_V7_WIDTH_RESTRICTED_ENVS,
+
+
+
+    _CS_LFS_CFLAGS = 1000,
+
+    _CS_LFS_LDFLAGS,
+
+    _CS_LFS_LIBS,
+
+    _CS_LFS_LINTFLAGS,
+
+    _CS_LFS64_CFLAGS,
+
+    _CS_LFS64_LDFLAGS,
+
+    _CS_LFS64_LIBS,
+
+    _CS_LFS64_LINTFLAGS,
+
+
+    _CS_XBS5_ILP32_OFF32_CFLAGS = 1100,
+
+    _CS_XBS5_ILP32_OFF32_LDFLAGS,
+
+    _CS_XBS5_ILP32_OFF32_LIBS,
+
+    _CS_XBS5_ILP32_OFF32_LINTFLAGS,
+
+    _CS_XBS5_ILP32_OFFBIG_CFLAGS,
+
+    _CS_XBS5_ILP32_OFFBIG_LDFLAGS,
+
+    _CS_XBS5_ILP32_OFFBIG_LIBS,
+
+    _CS_XBS5_ILP32_OFFBIG_LINTFLAGS,
+
+    _CS_XBS5_LP64_OFF64_CFLAGS,
+
+    _CS_XBS5_LP64_OFF64_LDFLAGS,
+
+    _CS_XBS5_LP64_OFF64_LIBS,
+
+    _CS_XBS5_LP64_OFF64_LINTFLAGS,
+
+    _CS_XBS5_LPBIG_OFFBIG_CFLAGS,
+
+    _CS_XBS5_LPBIG_OFFBIG_LDFLAGS,
+
+    _CS_XBS5_LPBIG_OFFBIG_LIBS,
+
+    _CS_XBS5_LPBIG_OFFBIG_LINTFLAGS,
+
+
+    _CS_POSIX_V6_ILP32_OFF32_CFLAGS,
+
+    _CS_POSIX_V6_ILP32_OFF32_LDFLAGS,
+
+    _CS_POSIX_V6_ILP32_OFF32_LIBS,
+
+    _CS_POSIX_V6_ILP32_OFF32_LINTFLAGS,
+
+    _CS_POSIX_V6_ILP32_OFFBIG_CFLAGS,
+
+    _CS_POSIX_V6_ILP32_OFFBIG_LDFLAGS,
+
+    _CS_POSIX_V6_ILP32_OFFBIG_LIBS,
+
+    _CS_POSIX_V6_ILP32_OFFBIG_LINTFLAGS,
+
+    _CS_POSIX_V6_LP64_OFF64_CFLAGS,
+
+    _CS_POSIX_V6_LP64_OFF64_LDFLAGS,
+
+    _CS_POSIX_V6_LP64_OFF64_LIBS,
+
+    _CS_POSIX_V6_LP64_OFF64_LINTFLAGS,
+
+    _CS_POSIX_V6_LPBIG_OFFBIG_CFLAGS,
+
+    _CS_POSIX_V6_LPBIG_OFFBIG_LDFLAGS,
+
+    _CS_POSIX_V6_LPBIG_OFFBIG_LIBS,
+
+    _CS_POSIX_V6_LPBIG_OFFBIG_LINTFLAGS,
+
+
+    _CS_POSIX_V7_ILP32_OFF32_CFLAGS,
+
+    _CS_POSIX_V7_ILP32_OFF32_LDFLAGS,
+
+    _CS_POSIX_V7_ILP32_OFF32_LIBS,
+
+    _CS_POSIX_V7_ILP32_OFF32_LINTFLAGS,
+
+    _CS_POSIX_V7_ILP32_OFFBIG_CFLAGS,
+
+    _CS_POSIX_V7_ILP32_OFFBIG_LDFLAGS,
+
+    _CS_POSIX_V7_ILP32_OFFBIG_LIBS,
+
+    _CS_POSIX_V7_ILP32_OFFBIG_LINTFLAGS,
+
+    _CS_POSIX_V7_LP64_OFF64_CFLAGS,
+
+    _CS_POSIX_V7_LP64_OFF64_LDFLAGS,
+
+    _CS_POSIX_V7_LP64_OFF64_LIBS,
+
+    _CS_POSIX_V7_LP64_OFF64_LINTFLAGS,
+
+    _CS_POSIX_V7_LPBIG_OFFBIG_CFLAGS,
+
+    _CS_POSIX_V7_LPBIG_OFFBIG_LDFLAGS,
+
+    _CS_POSIX_V7_LPBIG_OFFBIG_LIBS,
+
+    _CS_POSIX_V7_LPBIG_OFFBIG_LINTFLAGS,
+
+
+    _CS_V6_ENV,
+
+    _CS_V7_ENV
+
+  };
+# 610 "/usr/include/unistd.h" 2 3 4
+
+
+extern long int pathconf (const char *__path, int __name)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern long int fpathconf (int __fd, int __name) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern long int sysconf (int __name) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern size_t confstr (int __name, char *__buf, size_t __len) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern __pid_t getpid (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern __pid_t getppid (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern __pid_t getpgrp (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern __pid_t __getpgid (__pid_t __pid) __attribute__ ((__nothrow__ , __leaf__));
+
+extern __pid_t getpgid (__pid_t __pid) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern int setpgid (__pid_t __pid, __pid_t __pgid) __attribute__ ((__nothrow__ , __leaf__));
+# 660 "/usr/include/unistd.h" 3 4
+extern int setpgrp (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern __pid_t setsid (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern __pid_t getsid (__pid_t __pid) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern __uid_t getuid (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern __uid_t geteuid (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern __gid_t getgid (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern __gid_t getegid (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern int getgroups (int __size, __gid_t __list[]) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+extern int group_member (__gid_t __gid) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern int setuid (__uid_t __uid) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern int setreuid (__uid_t __ruid, __uid_t __euid) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern int seteuid (__uid_t __uid) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+
+
+extern int setgid (__gid_t __gid) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern int setregid (__gid_t __rgid, __gid_t __egid) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern int setegid (__gid_t __gid) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+
+extern int getresuid (__uid_t *__ruid, __uid_t *__euid, __uid_t *__suid)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int getresgid (__gid_t *__rgid, __gid_t *__egid, __gid_t *__sgid)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int setresuid (__uid_t __ruid, __uid_t __euid, __uid_t __suid)
+     __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+extern int setresgid (__gid_t __rgid, __gid_t __egid, __gid_t __sgid)
+     __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+
+
+extern __pid_t fork (void) __attribute__ ((__nothrow__));
+
+
+
+
+
+
+
+extern __pid_t vfork (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern char *ttyname (int __fd) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int ttyname_r (int __fd, char *__buf, size_t __buflen)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2))) ;
+
+
+
+extern int isatty (int __fd) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern int ttyslot (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern int link (const char *__from, const char *__to)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2))) ;
+
+
+
+
+extern int linkat (int __fromfd, const char *__from, int __tofd,
+     const char *__to, int __flags)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4))) ;
+
+
+
+
+extern int symlink (const char *__from, const char *__to)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2))) ;
+
+
+
+
+extern ssize_t readlink (const char *__restrict __path,
+    char *__restrict __buf, size_t __len)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2))) ;
+
+
+
+
+extern int symlinkat (const char *__from, int __tofd,
+        const char *__to) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 3))) ;
+
+
+extern ssize_t readlinkat (int __fd, const char *__restrict __path,
+      char *__restrict __buf, size_t __len)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3))) ;
+
+
+
+extern int unlink (const char *__name) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int unlinkat (int __fd, const char *__name, int __flag)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+extern int rmdir (const char *__path) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern __pid_t tcgetpgrp (int __fd) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int tcsetpgrp (int __fd, __pid_t __pgrp_id) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern char *getlogin (void);
+
+
+
+
+
+
+
+extern int getlogin_r (char *__name, size_t __name_len) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+extern int setlogin (const char *__name) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/getopt_posix.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/bits/getopt_posix.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/getopt_core.h" 1 3 4
+# 28 "/usr/include/x86_64-linux-gnu/bits/getopt_core.h" 3 4
+
+
+
+
+
+
+
+
+extern char *optarg;
+# 50 "/usr/include/x86_64-linux-gnu/bits/getopt_core.h" 3 4
+extern int optind;
+
+
+
+
+extern int opterr;
+
+
+
+extern int optopt;
+# 91 "/usr/include/x86_64-linux-gnu/bits/getopt_core.h" 3 4
+extern int getopt (int ___argc, char *const *___argv, const char *__shortopts)
+       __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+
+
+# 28 "/usr/include/x86_64-linux-gnu/bits/getopt_posix.h" 2 3 4
+
+
+# 49 "/usr/include/x86_64-linux-gnu/bits/getopt_posix.h" 3 4
+
+# 870 "/usr/include/unistd.h" 2 3 4
+
+
+
+
+
+
+
+extern int gethostname (char *__name, size_t __len) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern int sethostname (const char *__name, size_t __len)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+extern int sethostid (long int __id) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+
+extern int getdomainname (char *__name, size_t __len)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+extern int setdomainname (const char *__name, size_t __len)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+
+extern int vhangup (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int revoke (const char *__file) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+
+
+
+extern int profil (unsigned short int *__sample_buffer, size_t __size,
+     size_t __offset, unsigned int __scale)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern int acct (const char *__name) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern char *getusershell (void) __attribute__ ((__nothrow__ , __leaf__));
+extern void endusershell (void) __attribute__ ((__nothrow__ , __leaf__));
+extern void setusershell (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern int daemon (int __nochdir, int __noclose) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+
+
+extern int chroot (const char *__path) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+extern char *getpass (const char *__prompt) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+
+extern int fsync (int __fd);
+
+
+
+
+
+extern int syncfs (int __fd) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern long int gethostid (void);
+
+
+extern void sync (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern int getpagesize (void) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+
+
+extern int getdtablesize (void) __attribute__ ((__nothrow__ , __leaf__));
+# 991 "/usr/include/unistd.h" 3 4
+extern int truncate (const char *__file, __off_t __length)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+# 1003 "/usr/include/unistd.h" 3 4
+extern int truncate64 (const char *__file, __off64_t __length)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+# 1014 "/usr/include/unistd.h" 3 4
+extern int ftruncate (int __fd, __off_t __length) __attribute__ ((__nothrow__ , __leaf__)) ;
+# 1024 "/usr/include/unistd.h" 3 4
+extern int ftruncate64 (int __fd, __off64_t __length) __attribute__ ((__nothrow__ , __leaf__)) ;
+# 1035 "/usr/include/unistd.h" 3 4
+extern int brk (void *__addr) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+
+extern void *sbrk (intptr_t __delta) __attribute__ ((__nothrow__ , __leaf__));
+# 1056 "/usr/include/unistd.h" 3 4
+extern long int syscall (long int __sysno, ...) __attribute__ ((__nothrow__ , __leaf__));
+# 1079 "/usr/include/unistd.h" 3 4
+extern int lockf (int __fd, int __cmd, __off_t __len) ;
+# 1089 "/usr/include/unistd.h" 3 4
+extern int lockf64 (int __fd, int __cmd, __off64_t __len) ;
+# 1107 "/usr/include/unistd.h" 3 4
+ssize_t copy_file_range (int __infd, __off64_t *__pinoff,
+    int __outfd, __off64_t *__poutoff,
+    size_t __length, unsigned int __flags);
+
+
+
+
+
+extern int fdatasync (int __fildes);
+# 1124 "/usr/include/unistd.h" 3 4
+extern char *crypt (const char *__key, const char *__salt)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+
+
+extern void swab (const void *__restrict __from, void *__restrict __to,
+    ssize_t __n) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+# 1161 "/usr/include/unistd.h" 3 4
+int getentropy (void *__buffer, size_t __length) ;
+# 1170 "/usr/include/unistd.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/unistd_ext.h" 1 3 4
+# 34 "/usr/include/x86_64-linux-gnu/bits/unistd_ext.h" 3 4
+extern __pid_t gettid (void) __attribute__ ((__nothrow__ , __leaf__));
+# 1171 "/usr/include/unistd.h" 2 3 4
+
+
+# 27 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 2
+# 1 "/usr/include/pthread.h" 1 3 4
+# 22 "/usr/include/pthread.h" 3 4
+# 1 "/usr/include/sched.h" 1 3 4
+# 29 "/usr/include/sched.h" 3 4
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 1 3 4
+# 30 "/usr/include/sched.h" 2 3 4
+# 43 "/usr/include/sched.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/sched.h" 1 3 4
+# 76 "/usr/include/x86_64-linux-gnu/bits/sched.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h" 1 3 4
+# 23 "/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h" 3 4
+struct sched_param
+{
+  int sched_priority;
+};
+# 77 "/usr/include/x86_64-linux-gnu/bits/sched.h" 2 3 4
+
+
+
+
+
+extern int clone (int (*__fn) (void *__arg), void *__child_stack,
+    int __flags, void *__arg, ...) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int unshare (int __flags) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int sched_getcpu (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int getcpu (unsigned int *, unsigned int *) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int setns (int __fd, int __nstype) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+# 44 "/usr/include/sched.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/cpu-set.h" 1 3 4
+# 32 "/usr/include/x86_64-linux-gnu/bits/cpu-set.h" 3 4
+typedef unsigned long int __cpu_mask;
+
+
+
+
+
+
+typedef struct
+{
+  __cpu_mask __bits[1024 / (8 * sizeof (__cpu_mask))];
+} cpu_set_t;
+# 115 "/usr/include/x86_64-linux-gnu/bits/cpu-set.h" 3 4
+
+
+extern int __sched_cpucount (size_t __setsize, const cpu_set_t *__setp)
+     __attribute__ ((__nothrow__ , __leaf__));
+extern cpu_set_t *__sched_cpualloc (size_t __count) __attribute__ ((__nothrow__ , __leaf__)) ;
+extern void __sched_cpufree (cpu_set_t *__set) __attribute__ ((__nothrow__ , __leaf__));
+
+
+# 45 "/usr/include/sched.h" 2 3 4
+
+
+
+
+
+
+
+
+
+extern int sched_setparam (__pid_t __pid, const struct sched_param *__param)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int sched_getparam (__pid_t __pid, struct sched_param *__param) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int sched_setscheduler (__pid_t __pid, int __policy,
+          const struct sched_param *__param) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int sched_getscheduler (__pid_t __pid) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int sched_yield (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int sched_get_priority_max (int __algorithm) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int sched_get_priority_min (int __algorithm) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int sched_rr_get_interval (__pid_t __pid, struct timespec *__t) __attribute__ ((__nothrow__ , __leaf__));
+# 121 "/usr/include/sched.h" 3 4
+extern int sched_setaffinity (__pid_t __pid, size_t __cpusetsize,
+         const cpu_set_t *__cpuset) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int sched_getaffinity (__pid_t __pid, size_t __cpusetsize,
+         cpu_set_t *__cpuset) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+# 23 "/usr/include/pthread.h" 2 3 4
+# 1 "/usr/include/time.h" 1 3 4
+# 29 "/usr/include/time.h" 3 4
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 1 3 4
+# 30 "/usr/include/time.h" 2 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/time.h" 1 3 4
+# 73 "/usr/include/x86_64-linux-gnu/bits/time.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/timex.h" 1 3 4
+# 26 "/usr/include/x86_64-linux-gnu/bits/timex.h" 3 4
+struct timex
+{
+  unsigned int modes;
+  __syscall_slong_t offset;
+  __syscall_slong_t freq;
+  __syscall_slong_t maxerror;
+  __syscall_slong_t esterror;
+  int status;
+  __syscall_slong_t constant;
+  __syscall_slong_t precision;
+  __syscall_slong_t tolerance;
+  struct timeval time;
+  __syscall_slong_t tick;
+  __syscall_slong_t ppsfreq;
+  __syscall_slong_t jitter;
+  int shift;
+  __syscall_slong_t stabil;
+  __syscall_slong_t jitcnt;
+  __syscall_slong_t calcnt;
+  __syscall_slong_t errcnt;
+  __syscall_slong_t stbcnt;
+
+  int tai;
+
+
+  int :32; int :32; int :32; int :32;
+  int :32; int :32; int :32; int :32;
+  int :32; int :32; int :32;
+};
+# 74 "/usr/include/x86_64-linux-gnu/bits/time.h" 2 3 4
+
+
+
+
+extern int clock_adjtime (__clockid_t __clock_id, struct timex *__utx) __attribute__ ((__nothrow__ , __leaf__));
+
+
+# 34 "/usr/include/time.h" 2 3 4
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h" 1 3 4
+
+
+
+
+
+
+struct tm
+{
+  int tm_sec;
+  int tm_min;
+  int tm_hour;
+  int tm_mday;
+  int tm_mon;
+  int tm_year;
+  int tm_wday;
+  int tm_yday;
+  int tm_isdst;
+
+
+  long int tm_gmtoff;
+  const char *tm_zone;
+
+
+
+
+};
+# 40 "/usr/include/time.h" 2 3 4
+# 48 "/usr/include/time.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h" 1 3 4
+
+
+
+
+
+
+
+struct itimerspec
+  {
+    struct timespec it_interval;
+    struct timespec it_value;
+  };
+# 49 "/usr/include/time.h" 2 3 4
+struct sigevent;
+# 68 "/usr/include/time.h" 3 4
+
+
+
+
+extern clock_t clock (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern time_t time (time_t *__timer) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern double difftime (time_t __time1, time_t __time0)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern time_t mktime (struct tm *__tp) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern size_t strftime (char *__restrict __s, size_t __maxsize,
+   const char *__restrict __format,
+   const struct tm *__restrict __tp) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern char *strptime (const char *__restrict __s,
+         const char *__restrict __fmt, struct tm *__tp)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern size_t strftime_l (char *__restrict __s, size_t __maxsize,
+     const char *__restrict __format,
+     const struct tm *__restrict __tp,
+     locale_t __loc) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern char *strptime_l (const char *__restrict __s,
+    const char *__restrict __fmt, struct tm *__tp,
+    locale_t __loc) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern struct tm *gmtime (const time_t *__timer) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern struct tm *localtime (const time_t *__timer) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern struct tm *gmtime_r (const time_t *__restrict __timer,
+       struct tm *__restrict __tp) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern struct tm *localtime_r (const time_t *__restrict __timer,
+          struct tm *__restrict __tp) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern char *asctime (const struct tm *__tp) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern char *ctime (const time_t *__timer) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern char *asctime_r (const struct tm *__restrict __tp,
+   char *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern char *ctime_r (const time_t *__restrict __timer,
+        char *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern char *__tzname[2];
+extern int __daylight;
+extern long int __timezone;
+
+
+
+
+extern char *tzname[2];
+
+
+
+extern void tzset (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int daylight;
+extern long int timezone;
+# 190 "/usr/include/time.h" 3 4
+extern time_t timegm (struct tm *__tp) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern time_t timelocal (struct tm *__tp) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int dysize (int __year) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+# 205 "/usr/include/time.h" 3 4
+extern int nanosleep (const struct timespec *__requested_time,
+        struct timespec *__remaining);
+
+
+
+extern int clock_getres (clockid_t __clock_id, struct timespec *__res) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int clock_gettime (clockid_t __clock_id, struct timespec *__tp) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int clock_settime (clockid_t __clock_id, const struct timespec *__tp)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern int clock_nanosleep (clockid_t __clock_id, int __flags,
+       const struct timespec *__req,
+       struct timespec *__rem);
+
+
+extern int clock_getcpuclockid (pid_t __pid, clockid_t *__clock_id) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern int timer_create (clockid_t __clock_id,
+    struct sigevent *__restrict __evp,
+    timer_t *__restrict __timerid) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int timer_delete (timer_t __timerid) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int timer_settime (timer_t __timerid, int __flags,
+     const struct itimerspec *__restrict __value,
+     struct itimerspec *__restrict __ovalue) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int timer_gettime (timer_t __timerid, struct itimerspec *__value)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int timer_getoverrun (timer_t __timerid) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern int timespec_get (struct timespec *__ts, int __base)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 274 "/usr/include/time.h" 3 4
+extern int getdate_err;
+# 283 "/usr/include/time.h" 3 4
+extern struct tm *getdate (const char *__string);
+# 297 "/usr/include/time.h" 3 4
+extern int getdate_r (const char *__restrict __string,
+        struct tm *__restrict __resbufp);
+
+
+
+# 24 "/usr/include/pthread.h" 2 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/setjmp.h" 1 3 4
+# 26 "/usr/include/x86_64-linux-gnu/bits/setjmp.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/bits/setjmp.h" 2 3 4
+
+
+
+
+typedef long int __jmp_buf[8];
+# 28 "/usr/include/pthread.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 29 "/usr/include/pthread.h" 2 3 4
+
+
+
+
+enum
+{
+  PTHREAD_CREATE_JOINABLE,
+
+  PTHREAD_CREATE_DETACHED
+
+};
+
+
+
+enum
+{
+  PTHREAD_MUTEX_TIMED_NP,
+  PTHREAD_MUTEX_RECURSIVE_NP,
+  PTHREAD_MUTEX_ERRORCHECK_NP,
+  PTHREAD_MUTEX_ADAPTIVE_NP
+
+  ,
+  PTHREAD_MUTEX_NORMAL = PTHREAD_MUTEX_TIMED_NP,
+  PTHREAD_MUTEX_RECURSIVE = PTHREAD_MUTEX_RECURSIVE_NP,
+  PTHREAD_MUTEX_ERRORCHECK = PTHREAD_MUTEX_ERRORCHECK_NP,
+  PTHREAD_MUTEX_DEFAULT = PTHREAD_MUTEX_NORMAL
+
+
+
+  , PTHREAD_MUTEX_FAST_NP = PTHREAD_MUTEX_TIMED_NP
+
+};
+
+
+
+
+enum
+{
+  PTHREAD_MUTEX_STALLED,
+  PTHREAD_MUTEX_STALLED_NP = PTHREAD_MUTEX_STALLED,
+  PTHREAD_MUTEX_ROBUST,
+  PTHREAD_MUTEX_ROBUST_NP = PTHREAD_MUTEX_ROBUST
+};
+
+
+
+
+
+enum
+{
+  PTHREAD_PRIO_NONE,
+  PTHREAD_PRIO_INHERIT,
+  PTHREAD_PRIO_PROTECT
+};
+# 100 "/usr/include/pthread.h" 3 4
+enum
+{
+  PTHREAD_RWLOCK_PREFER_READER_NP,
+  PTHREAD_RWLOCK_PREFER_WRITER_NP,
+  PTHREAD_RWLOCK_PREFER_WRITER_NONRECURSIVE_NP,
+  PTHREAD_RWLOCK_DEFAULT_NP = PTHREAD_RWLOCK_PREFER_READER_NP
+};
+# 120 "/usr/include/pthread.h" 3 4
+enum
+{
+  PTHREAD_INHERIT_SCHED,
+
+  PTHREAD_EXPLICIT_SCHED
+
+};
+
+
+
+enum
+{
+  PTHREAD_SCOPE_SYSTEM,
+
+  PTHREAD_SCOPE_PROCESS
+
+};
+
+
+
+enum
+{
+  PTHREAD_PROCESS_PRIVATE,
+
+  PTHREAD_PROCESS_SHARED
+
+};
+# 155 "/usr/include/pthread.h" 3 4
+struct _pthread_cleanup_buffer
+{
+  void (*__routine) (void *);
+  void *__arg;
+  int __canceltype;
+  struct _pthread_cleanup_buffer *__prev;
+};
+
+
+enum
+{
+  PTHREAD_CANCEL_ENABLE,
+
+  PTHREAD_CANCEL_DISABLE
+
+};
+enum
+{
+  PTHREAD_CANCEL_DEFERRED,
+
+  PTHREAD_CANCEL_ASYNCHRONOUS
+
+};
+# 193 "/usr/include/pthread.h" 3 4
+
+
+
+
+
+extern int pthread_create (pthread_t *__restrict __newthread,
+      const pthread_attr_t *__restrict __attr,
+      void *(*__start_routine) (void *),
+      void *__restrict __arg) __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+
+
+extern void pthread_exit (void *__retval) __attribute__ ((__noreturn__));
+
+
+
+
+
+
+
+extern int pthread_join (pthread_t __th, void **__thread_return);
+
+
+
+
+extern int pthread_tryjoin_np (pthread_t __th, void **__thread_return) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+extern int pthread_timedjoin_np (pthread_t __th, void **__thread_return,
+     const struct timespec *__abstime);
+# 238 "/usr/include/pthread.h" 3 4
+extern int pthread_clockjoin_np (pthread_t __th, void **__thread_return,
+                                 clockid_t __clockid,
+     const struct timespec *__abstime);
+
+
+
+
+
+
+extern int pthread_detach (pthread_t __th) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern pthread_t pthread_self (void) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern int pthread_equal (pthread_t __thread1, pthread_t __thread2)
+  __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+
+
+
+
+
+extern int pthread_attr_init (pthread_attr_t *__attr) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_attr_destroy (pthread_attr_t *__attr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_attr_getdetachstate (const pthread_attr_t *__attr,
+     int *__detachstate)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int pthread_attr_setdetachstate (pthread_attr_t *__attr,
+     int __detachstate)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int pthread_attr_getguardsize (const pthread_attr_t *__attr,
+          size_t *__guardsize)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int pthread_attr_setguardsize (pthread_attr_t *__attr,
+          size_t __guardsize)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int pthread_attr_getschedparam (const pthread_attr_t *__restrict __attr,
+           struct sched_param *__restrict __param)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int pthread_attr_setschedparam (pthread_attr_t *__restrict __attr,
+           const struct sched_param *__restrict
+           __param) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int pthread_attr_getschedpolicy (const pthread_attr_t *__restrict
+     __attr, int *__restrict __policy)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int pthread_attr_setschedpolicy (pthread_attr_t *__attr, int __policy)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_attr_getinheritsched (const pthread_attr_t *__restrict
+      __attr, int *__restrict __inherit)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int pthread_attr_setinheritsched (pthread_attr_t *__attr,
+      int __inherit)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int pthread_attr_getscope (const pthread_attr_t *__restrict __attr,
+      int *__restrict __scope)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int pthread_attr_setscope (pthread_attr_t *__attr, int __scope)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_attr_getstackaddr (const pthread_attr_t *__restrict
+          __attr, void **__restrict __stackaddr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2))) __attribute__ ((__deprecated__));
+
+
+
+
+
+extern int pthread_attr_setstackaddr (pthread_attr_t *__attr,
+          void *__stackaddr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) __attribute__ ((__deprecated__));
+
+
+extern int pthread_attr_getstacksize (const pthread_attr_t *__restrict
+          __attr, size_t *__restrict __stacksize)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern int pthread_attr_setstacksize (pthread_attr_t *__attr,
+          size_t __stacksize)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int pthread_attr_getstack (const pthread_attr_t *__restrict __attr,
+      void **__restrict __stackaddr,
+      size_t *__restrict __stacksize)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2, 3)));
+
+
+
+
+extern int pthread_attr_setstack (pthread_attr_t *__attr, void *__stackaddr,
+      size_t __stacksize) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern int pthread_attr_setaffinity_np (pthread_attr_t *__attr,
+     size_t __cpusetsize,
+     const cpu_set_t *__cpuset)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+extern int pthread_attr_getaffinity_np (const pthread_attr_t *__attr,
+     size_t __cpusetsize,
+     cpu_set_t *__cpuset)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 3)));
+
+
+extern int pthread_getattr_default_np (pthread_attr_t *__attr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int pthread_setattr_default_np (const pthread_attr_t *__attr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+extern int pthread_getattr_np (pthread_t __th, pthread_attr_t *__attr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+
+
+
+
+extern int pthread_setschedparam (pthread_t __target_thread, int __policy,
+      const struct sched_param *__param)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+
+
+extern int pthread_getschedparam (pthread_t __target_thread,
+      int *__restrict __policy,
+      struct sched_param *__restrict __param)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+
+
+extern int pthread_setschedprio (pthread_t __target_thread, int __prio)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern int pthread_getname_np (pthread_t __target_thread, char *__buf,
+          size_t __buflen)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+extern int pthread_setname_np (pthread_t __target_thread, const char *__name)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+
+
+extern int pthread_getconcurrency (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int pthread_setconcurrency (int __level) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+extern int pthread_yield (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern int pthread_setaffinity_np (pthread_t __th, size_t __cpusetsize,
+       const cpu_set_t *__cpuset)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+
+
+extern int pthread_getaffinity_np (pthread_t __th, size_t __cpusetsize,
+       cpu_set_t *__cpuset)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+# 470 "/usr/include/pthread.h" 3 4
+extern int pthread_once (pthread_once_t *__once_control,
+    void (*__init_routine) (void)) __attribute__ ((__nonnull__ (1, 2)));
+# 482 "/usr/include/pthread.h" 3 4
+extern int pthread_setcancelstate (int __state, int *__oldstate);
+
+
+
+extern int pthread_setcanceltype (int __type, int *__oldtype);
+
+
+extern int pthread_cancel (pthread_t __th);
+
+
+
+
+extern void pthread_testcancel (void);
+
+
+
+
+typedef struct
+{
+  struct
+  {
+    __jmp_buf __cancel_jmp_buf;
+    int __mask_was_saved;
+  } __cancel_jmp_buf[1];
+  void *__pad[4];
+} __pthread_unwind_buf_t __attribute__ ((__aligned__));
+# 516 "/usr/include/pthread.h" 3 4
+struct __pthread_cleanup_frame
+{
+  void (*__cancel_routine) (void *);
+  void *__cancel_arg;
+  int __do_it;
+  int __cancel_type;
+};
+# 656 "/usr/include/pthread.h" 3 4
+extern void __pthread_register_cancel (__pthread_unwind_buf_t *__buf)
+     ;
+# 668 "/usr/include/pthread.h" 3 4
+extern void __pthread_unregister_cancel (__pthread_unwind_buf_t *__buf)
+  ;
+# 691 "/usr/include/pthread.h" 3 4
+extern void __pthread_register_cancel_defer (__pthread_unwind_buf_t *__buf)
+     ;
+# 704 "/usr/include/pthread.h" 3 4
+extern void __pthread_unregister_cancel_restore (__pthread_unwind_buf_t *__buf)
+  ;
+
+
+
+extern void __pthread_unwind_next (__pthread_unwind_buf_t *__buf)
+     __attribute__ ((__noreturn__))
+
+     __attribute__ ((__weak__))
+
+     ;
+
+
+
+struct __jmp_buf_tag;
+extern int __sigsetjmp (struct __jmp_buf_tag *__env, int __savemask) __attribute__ ((__nothrow__));
+
+
+
+
+
+extern int pthread_mutex_init (pthread_mutex_t *__mutex,
+          const pthread_mutexattr_t *__mutexattr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_mutex_destroy (pthread_mutex_t *__mutex)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_mutex_trylock (pthread_mutex_t *__mutex)
+     __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_mutex_lock (pthread_mutex_t *__mutex)
+     __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int pthread_mutex_timedlock (pthread_mutex_t *__restrict __mutex,
+        const struct timespec *__restrict
+        __abstime) __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int pthread_mutex_clocklock (pthread_mutex_t *__restrict __mutex,
+        clockid_t __clockid,
+        const struct timespec *__restrict
+        __abstime) __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+extern int pthread_mutex_unlock (pthread_mutex_t *__mutex)
+     __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int pthread_mutex_getprioceiling (const pthread_mutex_t *
+      __restrict __mutex,
+      int *__restrict __prioceiling)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int pthread_mutex_setprioceiling (pthread_mutex_t *__restrict __mutex,
+      int __prioceiling,
+      int *__restrict __old_ceiling)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+
+extern int pthread_mutex_consistent (pthread_mutex_t *__mutex)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+extern int pthread_mutex_consistent_np (pthread_mutex_t *__mutex)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 789 "/usr/include/pthread.h" 3 4
+extern int pthread_mutexattr_init (pthread_mutexattr_t *__attr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_mutexattr_destroy (pthread_mutexattr_t *__attr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_mutexattr_getpshared (const pthread_mutexattr_t *
+      __restrict __attr,
+      int *__restrict __pshared)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int pthread_mutexattr_setpshared (pthread_mutexattr_t *__attr,
+      int __pshared)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int pthread_mutexattr_gettype (const pthread_mutexattr_t *__restrict
+          __attr, int *__restrict __kind)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern int pthread_mutexattr_settype (pthread_mutexattr_t *__attr, int __kind)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int pthread_mutexattr_getprotocol (const pthread_mutexattr_t *
+       __restrict __attr,
+       int *__restrict __protocol)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int pthread_mutexattr_setprotocol (pthread_mutexattr_t *__attr,
+       int __protocol)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_mutexattr_getprioceiling (const pthread_mutexattr_t *
+          __restrict __attr,
+          int *__restrict __prioceiling)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int pthread_mutexattr_setprioceiling (pthread_mutexattr_t *__attr,
+          int __prioceiling)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int pthread_mutexattr_getrobust (const pthread_mutexattr_t *__attr,
+     int *__robustness)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern int pthread_mutexattr_getrobust_np (const pthread_mutexattr_t *__attr,
+        int *__robustness)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int pthread_mutexattr_setrobust (pthread_mutexattr_t *__attr,
+     int __robustness)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+extern int pthread_mutexattr_setrobust_np (pthread_mutexattr_t *__attr,
+        int __robustness)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 871 "/usr/include/pthread.h" 3 4
+extern int pthread_rwlock_init (pthread_rwlock_t *__restrict __rwlock,
+    const pthread_rwlockattr_t *__restrict
+    __attr) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_rwlock_destroy (pthread_rwlock_t *__rwlock)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_rwlock_rdlock (pthread_rwlock_t *__rwlock)
+     __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_rwlock_tryrdlock (pthread_rwlock_t *__rwlock)
+  __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int pthread_rwlock_timedrdlock (pthread_rwlock_t *__restrict __rwlock,
+           const struct timespec *__restrict
+           __abstime) __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int pthread_rwlock_clockrdlock (pthread_rwlock_t *__restrict __rwlock,
+           clockid_t __clockid,
+           const struct timespec *__restrict
+           __abstime) __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+extern int pthread_rwlock_wrlock (pthread_rwlock_t *__rwlock)
+     __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_rwlock_trywrlock (pthread_rwlock_t *__rwlock)
+     __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int pthread_rwlock_timedwrlock (pthread_rwlock_t *__restrict __rwlock,
+           const struct timespec *__restrict
+           __abstime) __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int pthread_rwlock_clockwrlock (pthread_rwlock_t *__restrict __rwlock,
+           clockid_t __clockid,
+           const struct timespec *__restrict
+           __abstime) __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+extern int pthread_rwlock_unlock (pthread_rwlock_t *__rwlock)
+     __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern int pthread_rwlockattr_init (pthread_rwlockattr_t *__attr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_rwlockattr_destroy (pthread_rwlockattr_t *__attr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_rwlockattr_getpshared (const pthread_rwlockattr_t *
+       __restrict __attr,
+       int *__restrict __pshared)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int pthread_rwlockattr_setpshared (pthread_rwlockattr_t *__attr,
+       int __pshared)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_rwlockattr_getkind_np (const pthread_rwlockattr_t *
+       __restrict __attr,
+       int *__restrict __pref)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int pthread_rwlockattr_setkind_np (pthread_rwlockattr_t *__attr,
+       int __pref) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+
+extern int pthread_cond_init (pthread_cond_t *__restrict __cond,
+         const pthread_condattr_t *__restrict __cond_attr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_cond_destroy (pthread_cond_t *__cond)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_cond_signal (pthread_cond_t *__cond)
+     __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_cond_broadcast (pthread_cond_t *__cond)
+     __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern int pthread_cond_wait (pthread_cond_t *__restrict __cond,
+         pthread_mutex_t *__restrict __mutex)
+     __attribute__ ((__nonnull__ (1, 2)));
+# 997 "/usr/include/pthread.h" 3 4
+extern int pthread_cond_timedwait (pthread_cond_t *__restrict __cond,
+       pthread_mutex_t *__restrict __mutex,
+       const struct timespec *__restrict __abstime)
+     __attribute__ ((__nonnull__ (1, 2, 3)));
+# 1010 "/usr/include/pthread.h" 3 4
+extern int pthread_cond_clockwait (pthread_cond_t *__restrict __cond,
+       pthread_mutex_t *__restrict __mutex,
+       __clockid_t __clock_id,
+       const struct timespec *__restrict __abstime)
+     __attribute__ ((__nonnull__ (1, 2, 4)));
+
+
+
+
+
+extern int pthread_condattr_init (pthread_condattr_t *__attr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_condattr_destroy (pthread_condattr_t *__attr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_condattr_getpshared (const pthread_condattr_t *
+     __restrict __attr,
+     int *__restrict __pshared)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int pthread_condattr_setpshared (pthread_condattr_t *__attr,
+     int __pshared) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int pthread_condattr_getclock (const pthread_condattr_t *
+          __restrict __attr,
+          __clockid_t *__restrict __clock_id)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int pthread_condattr_setclock (pthread_condattr_t *__attr,
+          __clockid_t __clock_id)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 1056 "/usr/include/pthread.h" 3 4
+extern int pthread_spin_init (pthread_spinlock_t *__lock, int __pshared)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_spin_destroy (pthread_spinlock_t *__lock)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_spin_lock (pthread_spinlock_t *__lock)
+     __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_spin_trylock (pthread_spinlock_t *__lock)
+     __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_spin_unlock (pthread_spinlock_t *__lock)
+     __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern int pthread_barrier_init (pthread_barrier_t *__restrict __barrier,
+     const pthread_barrierattr_t *__restrict
+     __attr, unsigned int __count)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_barrier_destroy (pthread_barrier_t *__barrier)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_barrier_wait (pthread_barrier_t *__barrier)
+     __attribute__ ((__nothrow__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int pthread_barrierattr_init (pthread_barrierattr_t *__attr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_barrierattr_destroy (pthread_barrierattr_t *__attr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_barrierattr_getpshared (const pthread_barrierattr_t *
+        __restrict __attr,
+        int *__restrict __pshared)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int pthread_barrierattr_setpshared (pthread_barrierattr_t *__attr,
+        int __pshared)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 1123 "/usr/include/pthread.h" 3 4
+extern int pthread_key_create (pthread_key_t *__key,
+          void (*__destr_function) (void *))
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int pthread_key_delete (pthread_key_t __key) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern void *pthread_getspecific (pthread_key_t __key) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int pthread_setspecific (pthread_key_t __key,
+    const void *__pointer) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern int pthread_getcpuclockid (pthread_t __thread_id,
+      __clockid_t *__clock_id)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+# 1157 "/usr/include/pthread.h" 3 4
+extern int pthread_atfork (void (*__prepare) (void),
+      void (*__parent) (void),
+      void (*__child) (void)) __attribute__ ((__nothrow__ , __leaf__));
+# 1171 "/usr/include/pthread.h" 3 4
+
+# 28 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 2
+
+# 1 "./../common/gp-defs.h" 1
+# 30 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 2
+# 1 "/doner/binutils/binutils-515f23e/gprofng/libcollector/collector.h" 1
+# 27 "/doner/binutils/binutils-515f23e/gprofng/libcollector/collector.h"
+# 1 "./../src/data_pckts.h" 1
+# 31 "./../src/data_pckts.h"
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h" 1 3 4
+# 9 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h" 3 4
+# 1 "/usr/include/stdint.h" 1 3 4
+# 26 "/usr/include/stdint.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
+# 27 "/usr/include/stdint.h" 2 3 4
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/wchar.h" 1 3 4
+# 29 "/usr/include/stdint.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 30 "/usr/include/stdint.h" 2 3 4
+
+
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h" 1 3 4
+# 24 "/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h" 3 4
+typedef __uint8_t uint8_t;
+typedef __uint16_t uint16_t;
+typedef __uint32_t uint32_t;
+typedef __uint64_t uint64_t;
+# 38 "/usr/include/stdint.h" 2 3 4
+
+
+
+
+
+typedef __int_least8_t int_least8_t;
+typedef __int_least16_t int_least16_t;
+typedef __int_least32_t int_least32_t;
+typedef __int_least64_t int_least64_t;
+
+
+typedef __uint_least8_t uint_least8_t;
+typedef __uint_least16_t uint_least16_t;
+typedef __uint_least32_t uint_least32_t;
+typedef __uint_least64_t uint_least64_t;
+
+
+
+
+
+typedef signed char int_fast8_t;
+
+typedef long int int_fast16_t;
+typedef long int int_fast32_t;
+typedef long int int_fast64_t;
+# 71 "/usr/include/stdint.h" 3 4
+typedef unsigned char uint_fast8_t;
+
+typedef unsigned long int uint_fast16_t;
+typedef unsigned long int uint_fast32_t;
+typedef unsigned long int uint_fast64_t;
+# 90 "/usr/include/stdint.h" 3 4
+typedef unsigned long int uintptr_t;
+# 101 "/usr/include/stdint.h" 3 4
+typedef __intmax_t intmax_t;
+typedef __uintmax_t uintmax_t;
+# 10 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h" 2 3 4
+# 32 "./../src/data_pckts.h" 2
+
+
+# 1 "./../common/gp-time.h" 1
+# 24 "./../common/gp-time.h"
+# 1 "/usr/include/x86_64-linux-gnu/sys/time.h" 1 3 4
+# 34 "/usr/include/x86_64-linux-gnu/sys/time.h" 3 4
+
+# 52 "/usr/include/x86_64-linux-gnu/sys/time.h" 3 4
+struct timezone
+  {
+    int tz_minuteswest;
+    int tz_dsttime;
+  };
+# 66 "/usr/include/x86_64-linux-gnu/sys/time.h" 3 4
+extern int gettimeofday (struct timeval *__restrict __tv,
+    void *__restrict __tz) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+
+extern int settimeofday (const struct timeval *__tv,
+    const struct timezone *__tz)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern int adjtime (const struct timeval *__delta,
+      struct timeval *__olddelta) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+enum __itimer_which
+  {
+
+    ITIMER_REAL = 0,
+
+
+    ITIMER_VIRTUAL = 1,
+
+
+
+    ITIMER_PROF = 2
+
+  };
+
+
+
+struct itimerval
+  {
+
+    struct timeval it_interval;
+
+    struct timeval it_value;
+  };
+
+
+
+
+typedef enum __itimer_which __itimer_which_t;
+
+
+
+
+
+
+extern int getitimer (__itimer_which_t __which,
+        struct itimerval *__value) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern int setitimer (__itimer_which_t __which,
+        const struct itimerval *__restrict __new,
+        struct itimerval *__restrict __old) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern int utimes (const char *__file, const struct timeval __tvp[2])
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int lutimes (const char *__file, const struct timeval __tvp[2])
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int futimes (int __fd, const struct timeval __tvp[2]) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern int futimesat (int __fd, const char *__file,
+        const struct timeval __tvp[2]) __attribute__ ((__nothrow__ , __leaf__));
+# 187 "/usr/include/x86_64-linux-gnu/sys/time.h" 3 4
+
+# 25 "./../common/gp-time.h" 2
+
+
+# 26 "./../common/gp-time.h"
+typedef long long hrtime_t;
+typedef struct timespec timestruc_t;
+# 38 "./../common/gp-time.h"
+  hrtime_t gethrtime (void);
+  hrtime_t gethrvtime (void);
+# 35 "./../src/data_pckts.h" 2
+
+
+typedef uint64_t Vaddr_type;
+typedef uint64_t Size_type;
+# 55 "./../src/data_pckts.h"
+typedef enum
+{
+  MASTER_SMPL = 0,
+  PROGRAM_SMPL,
+  PERIOD_SMPL,
+  MANUAL_SMPL
+} Smpl_type;
+
+typedef enum
+{
+  EMPTY_PCKT = 0,
+  PROF_PCKT,
+  SYNC_PCKT,
+  HW_PCKT,
+  XHWC_PCKT,
+  HEAP_PCKT,
+  MPI_PCKT,
+  MHWC_PCKT,
+  OPROF_PCKT,
+  OMP_PCKT,
+  RACE_PCKT,
+  FRAME_PCKT,
+  OMP2_PCKT,
+  DEADLOCK_PCKT,
+  OMP3_PCKT,
+  OMP4_PCKT,
+  OMP5_PCKT,
+  UID_PCKT,
+  FRAME2_PCKT,
+  IOTRACE_PCKT,
+  LAST_PCKT,
+  CLOSED_PCKT = 65535
+} Pckt_type;
+
+typedef enum
+{
+  EMPTY_INFO = 0,
+  STACK_INFO,
+  JAVA_INFO,
+  OMP_INFO,
+  MPI_INFO,
+  OMP2_INFO,
+  LAST_INFO
+} Info_type;
+
+
+
+
+
+
+
+typedef struct CommonHead_packet
+{
+  unsigned int tsize : 16;
+  unsigned int type : 16;
+} CommonHead_packet;
+
+
+typedef struct CM_Packet
+{
+  unsigned int tsize : 16;
+  unsigned int type : 16;
+} CM_Packet;
+
+typedef struct Common_packet
+{
+  unsigned int tsize : 16;
+  unsigned int type : 16;
+  pthread_t lwp_id;
+  pthread_t thr_id;
+  uint32_t cpu_id;
+  hrtime_t tstamp;
+  uint64_t frinfo;
+} Common_packet;
+# 189 "./../src/data_pckts.h"
+typedef enum
+{
+  MALLOC_TRACE = 0,
+  FREE_TRACE,
+  REALLOC_TRACE,
+  MMAP_TRACE,
+  MUNMAP_TRACE,
+  HEAPTYPE_LAST
+} Heap_type;
+# 216 "./../src/data_pckts.h"
+typedef enum
+{
+  ZFS_TYPE = 0,
+  NFS_TYPE,
+  UFS_TYPE,
+  UDFS_TYPE,
+  LOFS_TYPE,
+  VXFS_TYPE,
+  TMPFS_TYPE,
+  PCFS_TYPE,
+  HSFS_TYPE,
+  PROCFS_TYPE,
+  FIFOFS_TYPE,
+  SWAPFS_TYPE,
+  CACHEFS_TYPE,
+  AUTOFS_TYPE,
+  SPECFS_TYPE,
+  SOCKFS_TYPE,
+  FDFS_TYPE,
+  MNTFS_TYPE,
+  NAMEFS_TYPE,
+  OBJFS_TYPE,
+  SHAREFS_TYPE,
+  EXT2FS_TYPE,
+  EXT3FS_TYPE,
+  EXT4FS_TYPE,
+  UNKNOWNFS_TYPE,
+  FSTYPE_LAST
+} FileSystem_type;
+
+typedef enum
+{
+  READ_TRACE = 0,
+  WRITE_TRACE,
+  OPEN_TRACE,
+  CLOSE_TRACE,
+  OTHERIO_TRACE,
+  READ_TRACE_ERROR,
+  WRITE_TRACE_ERROR,
+  OPEN_TRACE_ERROR,
+  CLOSE_TRACE_ERROR,
+  OTHERIO_TRACE_ERROR,
+  IOTRACETYPE_LAST
+} IOTrace_type;
+# 289 "./../src/data_pckts.h"
+typedef enum
+{
+  WRITE_RACE = 0,
+  WRITE_RACE_RED,
+  READ_RACE,
+  READ_RACE_RED,
+  RACETYPE_LAST
+} Race_type;
+
+typedef struct Frame_packet
+{
+  unsigned int tsize : 16;
+  unsigned int type : 16;
+  uint32_t hsize;
+  uint64_t uid;
+} Frame_packet;
+
+typedef struct Uid_packet
+{
+  unsigned int tsize : 16;
+  unsigned int type : 16;
+  uint32_t flags;
+  uint64_t uid;
+} Uid_packet;
+
+
+
+
+typedef struct Common_info
+{
+  unsigned int hsize;
+  unsigned int kind;
+  uint64_t uid;
+} Common_info;
+
+typedef struct Stack_info
+{
+  unsigned int hsize;
+  unsigned int kind;
+  uint64_t uid;
+} Stack_info;
+
+typedef struct Java_info
+{
+  unsigned int hsize;
+  unsigned int kind;
+  uint64_t uid;
+} Java_info;
+
+typedef struct OMP_info
+{
+  unsigned int hsize;
+  unsigned int kind;
+  uint32_t omp_state;
+  uint32_t pad;
+} OMP_info;
+
+typedef struct OMP2_info
+{
+  unsigned int hsize;
+  unsigned int kind;
+  uint32_t omp_state;
+  uint32_t pad;
+  uint64_t uid;
+} OMP2_info;
+
+
+
+
+
+typedef enum
+{
+  OMP_NO_STATE = 0,
+  OMP_OVHD_STATE,
+  OMP_WORK_STATE,
+  OMP_IBAR_STATE,
+  OMP_EBAR_STATE,
+  OMP_IDLE_STATE,
+  OMP_SERL_STATE,
+  OMP_RDUC_STATE,
+  OMP_LKWT_STATE,
+  OMP_CTWT_STATE,
+  OMP_ODWT_STATE,
+  OMP_ATWT_STATE,
+  OMP_TSKWT_STATE,
+  OMP_LAST_STATE
+} OMP_THR_STATE;
+# 410 "./../src/data_pckts.h"
+typedef struct MPI_info
+{
+  unsigned int hsize;
+  unsigned int kind;
+  uint32_t mpi_state;
+  uint32_t pad;
+} MPI_info;
+
+
+typedef enum
+{
+  MPI_NO_STATE = 0,
+  MPI_USER,
+  MPI_PROG,
+  MPI_WAIT
+} MPI_THR_STATE;
+
+
+
+
+typedef enum
+{
+  DT_HEADER = 1,
+  DT_CODE,
+  DT_LTABLE,
+  DT_SRCFILE
+} DT_type;
+
+typedef struct DT_common
+{
+  DT_type type;
+  unsigned int size;
+} DT_common;
+
+typedef struct DT_header
+{
+  DT_type type;
+  unsigned int size;
+  hrtime_t time;
+  uint64_t vaddr;
+} DT_header;
+
+typedef struct DT_code
+{
+  DT_type type;
+  unsigned int size;
+} DT_code;
+
+typedef struct DT_ltable
+{
+  DT_type type;
+  unsigned int size;
+} DT_ltable;
+
+typedef struct DT_lineno
+{
+  unsigned int offset;
+  unsigned int lineno;
+} DT_lineno;
+
+typedef struct DT_srcfile
+{
+  DT_type type;
+  unsigned int size;
+} DT_srcfile;
+
+
+
+
+
+
+
+typedef enum
+{
+  ARCH_SEGMENT_TYPE = 1,
+  ARCH_MSG_TYPE,
+  ARCH_PLT_TYPE,
+  ARCH_MODULE_TYPE,
+  ARCH_FUNCTION_TYPE,
+  ARCH_LDINSTR_TYPE,
+  ARCH_STINSTR_TYPE,
+  ARCH_PREFETCH_TYPE,
+  ARCH_BRTARGET_TYPE,
+  ARCH_JCLASS_TYPE,
+  ARCH_JMETHOD_TYPE,
+  ARCH_JUNLOAD_TYPE,
+  ARCH_INF_TYPE,
+  ARCH_JCLASS_LOCATION_TYPE
+} ARCH_type;
+
+
+
+typedef struct
+{
+  unsigned int type : 16;
+  unsigned int size : 16;
+} ARCH_common;
+
+
+
+
+
+
+typedef struct
+{
+  ARCH_common common;
+  int version;
+  uint32_t inode;
+  uint32_t textsz;
+  uint32_t platform;
+} ARCH_segment;
+
+
+
+typedef struct
+{
+  ARCH_common common;
+  uint32_t errcode;
+} ARCH_message;
+
+
+
+typedef struct
+{
+  ARCH_common common;
+} ARCH_info;
+
+
+
+typedef struct
+{
+  ARCH_common common;
+  unsigned int lang_code;
+  unsigned int fragmented;
+} ARCH_module;
+
+
+
+typedef struct
+{
+  ARCH_common common;
+  uint32_t offset;
+  uint32_t size;
+  uint32_t save_addr;
+} ARCH_function;
+
+
+
+
+
+
+typedef struct
+{
+  ARCH_common common;
+} ARCH_aninfo;
+
+
+
+typedef struct
+{
+  CM_Packet comm;
+  uint32_t pad;
+  uint64_t class_id;
+} ARCH_jclass_location;
+
+
+
+typedef struct
+{
+  CM_Packet comm;
+  uint32_t pad;
+  uint64_t class_id;
+  hrtime_t tstamp;
+} ARCH_jclass;
+
+
+
+typedef struct
+{
+  CM_Packet comm;
+  uint32_t pad;
+  uint64_t class_id;
+  uint64_t method_id;
+} ARCH_jmethod;
+# 28 "/doner/binutils/binutils-515f23e/gprofng/libcollector/collector.h" 2
+# 1 "/doner/binutils/binutils-515f23e/gprofng/libcollector/libcol_util.h" 1
+# 24 "/doner/binutils/binutils-515f23e/gprofng/libcollector/libcol_util.h"
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h" 1 3 4
+# 40 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h" 3 4
+
+# 40 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h" 3 4
+typedef __builtin_va_list __gnuc_va_list;
+# 99 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h" 3 4
+typedef __gnuc_va_list va_list;
+# 25 "/doner/binutils/binutils-515f23e/gprofng/libcollector/libcol_util.h" 2
+
+
+
+
+
+
+
+
+# 32 "/doner/binutils/binutils-515f23e/gprofng/libcollector/libcol_util.h"
+extern int __collector_tracelevel;
+
+
+extern int __collector_util_init();
+extern void __collector_libkstat_funcs_init();
+extern void __collector_libscf_funcs_init();
+
+
+extern void * __collector_memcpy (void *s1, const void *s2, size_t n);
+extern int (*__collector_sscanfp)(const char *restrict s, const char *restrict fmt, ...);
+extern char * __collector_strcat (char *s1, const char *s2);
+extern char * __collector_strchr (const char *s1, int chr);
+extern size_t __collector_strlcpy (char *dst, const char *src, size_t dstsize);
+extern char* __collector_strrchr (const char *str, int chr);
+extern size_t __collector_strlen (const char *s);
+extern size_t __collector_strlcat (char *dst, const char *src, size_t dstsize);
+extern char* __collector_strchr (const char *str, int chr);
+extern int __collector_strcmp (const char *s1, const char *s2);
+extern int __collector_strncmp (const char *s1, const char *s2, size_t n);
+extern char * __collector_strstr (const char *s1, const char *s2);
+extern size_t __collector_strncpy (char *dst, const char *src, size_t dstsize);
+extern size_t __collector_strncat (char *dst, const char *src, size_t dstsize);
+extern void * __collector_malloc (size_t size);
+extern void * __collector_calloc (size_t nelem, size_t elsize);
+extern char * __collector_strdup (const char * str);
+extern int __collector_strStartWith (const char *s1, const char *s2);
+extern int __collector_xml_snprintf (char *s, size_t n, const char *format, ...) __attribute__ ((format (printf, 3, 4)));
+extern int __collector_xml_vsnprintf (char *s, size_t n, const char *format, va_list args);
+
+
+extern pid_t __collector_gettid ();
+extern void __collector_ext_gettid_tsd_create_key ();
+typedef pthread_t collector_thread_t;
+# 74 "/doner/binutils/binutils-515f23e/gprofng/libcollector/libcol_util.h"
+typedef volatile int collector_mutex_t;
+
+extern int __collector_mutex_lock (collector_mutex_t *mp);
+extern int __collector_mutex_unlock (collector_mutex_t *mp);
+extern int __collector_mutex_trylock (collector_mutex_t *mp);
+
+
+
+
+void __collector_sample (char *name);
+void __collector_terminate_expt ();
+void __collector_pause ();
+void __collector_pause_m ();
+void __collector_resume ();
+
+struct DT_lineno;
+
+typedef enum
+{
+  DFUNC_API = 1,
+  DFUNC_JAVA,
+  DFUNC_KERNEL
+} dfunc_mode_t;
+
+extern void __collector_int_func_load (dfunc_mode_t mode, char *name,
+           char *sourcename, void *vaddr,
+           int size, int lntsize,
+           struct DT_lineno *lntable);
+extern void __collector_int_func_unload (dfunc_mode_t mode, void *vaddr);
+
+extern int __collector_sigaction (int sig, const struct sigaction *nact,
+      struct sigaction *oact);
+extern void __collector_SIGDFL_handler (int sig);
+extern int __collector_ext_itimer_set (int period);
+# 116 "/doner/binutils/binutils-515f23e/gprofng/libcollector/libcol_util.h"
+static __attribute__ ((always_inline)) inline void
+__collector_inc_32 (uint32_t *ptr)
+{
+  __asm__ __volatile__("lock; incl %0"
+         :
+         : "m" (*ptr));
+}
+
+
+
+
+
+static __attribute__ ((always_inline)) inline void
+__collector_dec_32 (volatile uint32_t *ptr)
+{
+  __asm__ __volatile__("lock; decl %0"
+         :
+         : "m" (*ptr));
+}
+
+
+
+
+
+static __attribute__ ((always_inline)) inline uint32_t
+__collector_subget_32 (uint32_t *ptr, uint32_t off)
+{
+  uint32_t r;
+  uint32_t offset = off;
+  __asm__ __volatile__("movl %2, %0; negl %0; lock; xaddl %0, %1"
+         : "=r" (r), "=m" (*ptr)
+         : "a" (off), "r" (*ptr)
+         );
+  return (r - offset);
+}
+
+
+
+
+static __attribute__ ((always_inline)) inline void *
+__collector_getsp ()
+{
+  void *r;
+
+
+
+  __asm__ __volatile__("movq %%rsp, %0"
+
+   : "=r" (r));
+  return r;
+}
+
+
+
+
+static __attribute__ ((always_inline)) inline void *
+__collector_getfp ()
+{
+  void *r;
+
+
+
+  __asm__ __volatile__("movq %%rbp, %0"
+
+   : "=r" (r));
+  return r;
+}
+
+
+
+
+static __attribute__ ((always_inline)) inline void *
+__collector_getpc ()
+{
+  void *r;
+
+  __asm__ __volatile__("lea (%%rip), %0" : "=r" (r));
+
+
+
+
+  return r;
+}
+# 207 "/doner/binutils/binutils-515f23e/gprofng/libcollector/libcol_util.h"
+static __attribute__ ((always_inline)) inline uint32_t
+__collector_cas_32 (volatile uint32_t *pdata, uint32_t old, uint32_t new)
+{
+  uint32_t r;
+  __asm__ __volatile__("lock; cmpxchgl %2, %1"
+         : "=a" (r), "=m" (*pdata) : "r" (new),
+         "a" (old), "m" (*pdata));
+  return r;
+}
+
+
+
+
+
+
+
+static __attribute__ ((always_inline)) inline uint64_t
+__collector_cas_64p (volatile uint64_t *mem, uint64_t *old, uint64_t * new)
+{
+  uint64_t r;
+# 242 "/doner/binutils/binutils-515f23e/gprofng/libcollector/libcol_util.h"
+  __asm__ __volatile__( "lock; cmpxchgq %2, %1"
+         : "=a" (r), "=m" (*mem)
+         : "r" (*new), "a" (*old), "m" (*mem)
+         : "%rcx", "rdx"
+         );
+
+  return r;
+}
+
+
+
+
+
+
+
+static __attribute__ ((always_inline)) inline void *
+__collector_cas_ptr (void *mem, void *cmp, void *new)
+{
+  void *r;
+
+
+
+  __asm__ __volatile__("lock; cmpxchgq %2, (%1)"
+         : "=a" (r), "=b" (mem)
+         : "r" (new), "a" (cmp), "b" (mem)
+         );
+
+  return r;
+}
+# 29 "/doner/binutils/binutils-515f23e/gprofng/libcollector/collector.h" 2
+# 1 "./../src/collector_module.h" 1
+# 26 "./../src/collector_module.h"
+# 1 "/usr/include/stdio.h" 1 3 4
+# 27 "/usr/include/stdio.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
+# 28 "/usr/include/stdio.h" 2 3 4
+
+
+
+
+
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 1 3 4
+# 34 "/usr/include/stdio.h" 2 3 4
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 1 3 4
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 1 3 4
+# 13 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3 4
+
+# 13 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3 4
+typedef struct
+{
+  int __count;
+  union
+  {
+    unsigned int __wch;
+    char __wchb[4];
+  } __value;
+} __mbstate_t;
+# 6 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 2 3 4
+
+
+
+
+typedef struct _G_fpos_t
+{
+  __off_t __pos;
+  __mbstate_t __state;
+} __fpos_t;
+# 40 "/usr/include/stdio.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 1 3 4
+# 10 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 3 4
+typedef struct _G_fpos64_t
+{
+  __off64_t __pos;
+  __mbstate_t __state;
+} __fpos64_t;
+# 41 "/usr/include/stdio.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/__FILE.h" 1 3 4
+
+
+
+struct _IO_FILE;
+typedef struct _IO_FILE __FILE;
+# 42 "/usr/include/stdio.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/FILE.h" 1 3 4
+
+
+
+struct _IO_FILE;
+
+
+typedef struct _IO_FILE FILE;
+# 43 "/usr/include/stdio.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 1 3 4
+# 35 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3 4
+struct _IO_FILE;
+struct _IO_marker;
+struct _IO_codecvt;
+struct _IO_wide_data;
+
+
+
+
+typedef void _IO_lock_t;
+
+
+
+
+
+struct _IO_FILE
+{
+  int _flags;
+
+
+  char *_IO_read_ptr;
+  char *_IO_read_end;
+  char *_IO_read_base;
+  char *_IO_write_base;
+  char *_IO_write_ptr;
+  char *_IO_write_end;
+  char *_IO_buf_base;
+  char *_IO_buf_end;
+
+
+  char *_IO_save_base;
+  char *_IO_backup_base;
+  char *_IO_save_end;
+
+  struct _IO_marker *_markers;
+
+  struct _IO_FILE *_chain;
+
+  int _fileno;
+  int _flags2;
+  __off_t _old_offset;
+
+
+  unsigned short _cur_column;
+  signed char _vtable_offset;
+  char _shortbuf[1];
+
+  _IO_lock_t *_lock;
+
+
+
+
+
+
+
+  __off64_t _offset;
+
+  struct _IO_codecvt *_codecvt;
+  struct _IO_wide_data *_wide_data;
+  struct _IO_FILE *_freeres_list;
+  void *_freeres_buf;
+  size_t __pad5;
+  int _mode;
+
+  char _unused2[15 * sizeof (int) - 4 * sizeof (void *) - sizeof (size_t)];
+};
+# 44 "/usr/include/stdio.h" 2 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3 4
+typedef __ssize_t cookie_read_function_t (void *__cookie, char *__buf,
+                                          size_t __nbytes);
+
+
+
+
+
+
+
+typedef __ssize_t cookie_write_function_t (void *__cookie, const char *__buf,
+                                           size_t __nbytes);
+
+
+
+
+
+
+
+typedef int cookie_seek_function_t (void *__cookie, __off64_t *__pos, int __w);
+
+
+typedef int cookie_close_function_t (void *__cookie);
+
+
+
+
+
+
+typedef struct _IO_cookie_io_functions_t
+{
+  cookie_read_function_t *read;
+  cookie_write_function_t *write;
+  cookie_seek_function_t *seek;
+  cookie_close_function_t *close;
+} cookie_io_functions_t;
+# 47 "/usr/include/stdio.h" 2 3 4
+# 84 "/usr/include/stdio.h" 3 4
+typedef __fpos_t fpos_t;
+
+
+
+
+typedef __fpos64_t fpos64_t;
+# 133 "/usr/include/stdio.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/stdio_lim.h" 1 3 4
+# 134 "/usr/include/stdio.h" 2 3 4
+
+
+
+extern FILE *stdin;
+extern FILE *stdout;
+extern FILE *stderr;
+
+
+
+
+
+
+extern int remove (const char *__filename) __attribute__ ((__nothrow__ , __leaf__));
+
+extern int rename (const char *__old, const char *__new) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int renameat (int __oldfd, const char *__old, int __newfd,
+       const char *__new) __attribute__ ((__nothrow__ , __leaf__));
+# 164 "/usr/include/stdio.h" 3 4
+extern int renameat2 (int __oldfd, const char *__old, int __newfd,
+        const char *__new, unsigned int __flags) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+extern FILE *tmpfile (void) ;
+# 183 "/usr/include/stdio.h" 3 4
+extern FILE *tmpfile64 (void) ;
+
+
+
+extern char *tmpnam (char *__s) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern char *tmpnam_r (char *__s) __attribute__ ((__nothrow__ , __leaf__)) ;
+# 204 "/usr/include/stdio.h" 3 4
+extern char *tempnam (const char *__dir, const char *__pfx)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__)) ;
+
+
+
+
+
+
+
+extern int fclose (FILE *__stream);
+
+
+
+
+extern int fflush (FILE *__stream);
+# 227 "/usr/include/stdio.h" 3 4
+extern int fflush_unlocked (FILE *__stream);
+# 237 "/usr/include/stdio.h" 3 4
+extern int fcloseall (void);
+# 246 "/usr/include/stdio.h" 3 4
+extern FILE *fopen (const char *__restrict __filename,
+      const char *__restrict __modes) ;
+
+
+
+
+extern FILE *freopen (const char *__restrict __filename,
+        const char *__restrict __modes,
+        FILE *__restrict __stream) ;
+# 270 "/usr/include/stdio.h" 3 4
+extern FILE *fopen64 (const char *__restrict __filename,
+        const char *__restrict __modes) ;
+extern FILE *freopen64 (const char *__restrict __filename,
+   const char *__restrict __modes,
+   FILE *__restrict __stream) ;
+
+
+
+
+extern FILE *fdopen (int __fd, const char *__modes) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+
+extern FILE *fopencookie (void *__restrict __magic_cookie,
+     const char *__restrict __modes,
+     cookie_io_functions_t __io_funcs) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern FILE *fmemopen (void *__s, size_t __len, const char *__modes)
+  __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern FILE *open_memstream (char **__bufloc, size_t *__sizeloc) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+
+extern void setbuf (FILE *__restrict __stream, char *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int setvbuf (FILE *__restrict __stream, char *__restrict __buf,
+      int __modes, size_t __n) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern void setbuffer (FILE *__restrict __stream, char *__restrict __buf,
+         size_t __size) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern void setlinebuf (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+extern int fprintf (FILE *__restrict __stream,
+      const char *__restrict __format, ...);
+
+
+
+
+extern int printf (const char *__restrict __format, ...);
+
+extern int sprintf (char *__restrict __s,
+      const char *__restrict __format, ...) __attribute__ ((__nothrow__));
+
+
+
+
+
+extern int vfprintf (FILE *__restrict __s, const char *__restrict __format,
+       __gnuc_va_list __arg);
+
+
+
+
+extern int vprintf (const char *__restrict __format, __gnuc_va_list __arg);
+
+extern int vsprintf (char *__restrict __s, const char *__restrict __format,
+       __gnuc_va_list __arg) __attribute__ ((__nothrow__));
+
+
+
+extern int snprintf (char *__restrict __s, size_t __maxlen,
+       const char *__restrict __format, ...)
+     __attribute__ ((__nothrow__)) __attribute__ ((__format__ (__printf__, 3, 4)));
+
+extern int vsnprintf (char *__restrict __s, size_t __maxlen,
+        const char *__restrict __format, __gnuc_va_list __arg)
+     __attribute__ ((__nothrow__)) __attribute__ ((__format__ (__printf__, 3, 0)));
+
+
+
+
+
+extern int vasprintf (char **__restrict __ptr, const char *__restrict __f,
+        __gnuc_va_list __arg)
+     __attribute__ ((__nothrow__)) __attribute__ ((__format__ (__printf__, 2, 0))) ;
+extern int __asprintf (char **__restrict __ptr,
+         const char *__restrict __fmt, ...)
+     __attribute__ ((__nothrow__)) __attribute__ ((__format__ (__printf__, 2, 3))) ;
+extern int asprintf (char **__restrict __ptr,
+       const char *__restrict __fmt, ...)
+     __attribute__ ((__nothrow__)) __attribute__ ((__format__ (__printf__, 2, 3))) ;
+
+
+
+
+extern int vdprintf (int __fd, const char *__restrict __fmt,
+       __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__printf__, 2, 0)));
+extern int dprintf (int __fd, const char *__restrict __fmt, ...)
+     __attribute__ ((__format__ (__printf__, 2, 3)));
+
+
+
+
+
+
+
+extern int fscanf (FILE *__restrict __stream,
+     const char *__restrict __format, ...) ;
+
+
+
+
+extern int scanf (const char *__restrict __format, ...) ;
+
+extern int sscanf (const char *__restrict __s,
+     const char *__restrict __format, ...) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+extern int fscanf (FILE *__restrict __stream, const char *__restrict __format, ...) __asm__ ("" "__isoc99_fscanf")
+
+                               ;
+extern int scanf (const char *__restrict __format, ...) __asm__ ("" "__isoc99_scanf")
+                              ;
+extern int sscanf (const char *__restrict __s, const char *__restrict __format, ...) __asm__ ("" "__isoc99_sscanf") __attribute__ ((__nothrow__ , __leaf__))
+
+                      ;
+# 432 "/usr/include/stdio.h" 3 4
+extern int vfscanf (FILE *__restrict __s, const char *__restrict __format,
+      __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__scanf__, 2, 0))) ;
+
+
+
+
+
+extern int vscanf (const char *__restrict __format, __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__scanf__, 1, 0))) ;
+
+
+extern int vsscanf (const char *__restrict __s,
+      const char *__restrict __format, __gnuc_va_list __arg)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__format__ (__scanf__, 2, 0)));
+
+
+
+
+extern int vfscanf (FILE *__restrict __s, const char *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc99_vfscanf")
+
+
+
+     __attribute__ ((__format__ (__scanf__, 2, 0))) ;
+extern int vscanf (const char *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc99_vscanf")
+
+     __attribute__ ((__format__ (__scanf__, 1, 0))) ;
+extern int vsscanf (const char *__restrict __s, const char *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc99_vsscanf") __attribute__ ((__nothrow__ , __leaf__))
+
+
+
+     __attribute__ ((__format__ (__scanf__, 2, 0)));
+# 485 "/usr/include/stdio.h" 3 4
+extern int fgetc (FILE *__stream);
+extern int getc (FILE *__stream);
+
+
+
+
+
+extern int getchar (void);
+
+
+
+
+
+
+extern int getc_unlocked (FILE *__stream);
+extern int getchar_unlocked (void);
+# 510 "/usr/include/stdio.h" 3 4
+extern int fgetc_unlocked (FILE *__stream);
+# 521 "/usr/include/stdio.h" 3 4
+extern int fputc (int __c, FILE *__stream);
+extern int putc (int __c, FILE *__stream);
+
+
+
+
+
+extern int putchar (int __c);
+# 537 "/usr/include/stdio.h" 3 4
+extern int fputc_unlocked (int __c, FILE *__stream);
+
+
+
+
+
+
+
+extern int putc_unlocked (int __c, FILE *__stream);
+extern int putchar_unlocked (int __c);
+
+
+
+
+
+
+extern int getw (FILE *__stream);
+
+
+extern int putw (int __w, FILE *__stream);
+
+
+
+
+
+
+
+extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+     ;
+# 587 "/usr/include/stdio.h" 3 4
+extern char *fgets_unlocked (char *__restrict __s, int __n,
+        FILE *__restrict __stream) ;
+# 603 "/usr/include/stdio.h" 3 4
+extern __ssize_t __getdelim (char **__restrict __lineptr,
+                             size_t *__restrict __n, int __delimiter,
+                             FILE *__restrict __stream) ;
+extern __ssize_t getdelim (char **__restrict __lineptr,
+                           size_t *__restrict __n, int __delimiter,
+                           FILE *__restrict __stream) ;
+
+
+
+
+
+
+
+extern __ssize_t getline (char **__restrict __lineptr,
+                          size_t *__restrict __n,
+                          FILE *__restrict __stream) ;
+
+
+
+
+
+
+
+extern int fputs (const char *__restrict __s, FILE *__restrict __stream);
+
+
+
+
+
+extern int puts (const char *__s);
+
+
+
+
+
+
+extern int ungetc (int __c, FILE *__stream);
+
+
+
+
+
+
+extern size_t fread (void *__restrict __ptr, size_t __size,
+       size_t __n, FILE *__restrict __stream) ;
+
+
+
+
+extern size_t fwrite (const void *__restrict __ptr, size_t __size,
+        size_t __n, FILE *__restrict __s);
+# 662 "/usr/include/stdio.h" 3 4
+extern int fputs_unlocked (const char *__restrict __s,
+      FILE *__restrict __stream);
+# 673 "/usr/include/stdio.h" 3 4
+extern size_t fread_unlocked (void *__restrict __ptr, size_t __size,
+         size_t __n, FILE *__restrict __stream) ;
+extern size_t fwrite_unlocked (const void *__restrict __ptr, size_t __size,
+          size_t __n, FILE *__restrict __stream);
+
+
+
+
+
+
+
+extern int fseek (FILE *__stream, long int __off, int __whence);
+
+
+
+
+extern long int ftell (FILE *__stream) ;
+
+
+
+
+extern void rewind (FILE *__stream);
+# 707 "/usr/include/stdio.h" 3 4
+extern int fseeko (FILE *__stream, __off_t __off, int __whence);
+
+
+
+
+extern __off_t ftello (FILE *__stream) ;
+# 731 "/usr/include/stdio.h" 3 4
+extern int fgetpos (FILE *__restrict __stream, fpos_t *__restrict __pos);
+
+
+
+
+extern int fsetpos (FILE *__stream, const fpos_t *__pos);
+# 750 "/usr/include/stdio.h" 3 4
+extern int fseeko64 (FILE *__stream, __off64_t __off, int __whence);
+extern __off64_t ftello64 (FILE *__stream) ;
+extern int fgetpos64 (FILE *__restrict __stream, fpos64_t *__restrict __pos);
+extern int fsetpos64 (FILE *__stream, const fpos64_t *__pos);
+
+
+
+extern void clearerr (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__));
+
+extern int feof (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+extern int ferror (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+extern void clearerr_unlocked (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__));
+extern int feof_unlocked (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)) ;
+extern int ferror_unlocked (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+
+
+
+extern void perror (const char *__s);
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 1 3 4
+# 26 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3 4
+extern int sys_nerr;
+extern const char *const sys_errlist[];
+
+
+extern int _sys_nerr;
+extern const char *const _sys_errlist[];
+# 782 "/usr/include/stdio.h" 2 3 4
+
+
+
+
+extern int fileno (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern int fileno_unlocked (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)) ;
+# 800 "/usr/include/stdio.h" 3 4
+extern FILE *popen (const char *__command, const char *__modes) ;
+
+
+
+
+
+extern int pclose (FILE *__stream);
+
+
+
+
+
+extern char *ctermid (char *__s) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern char *cuserid (char *__s);
+
+
+
+
+struct obstack;
+
+
+extern int obstack_printf (struct obstack *__restrict __obstack,
+      const char *__restrict __format, ...)
+     __attribute__ ((__nothrow__)) __attribute__ ((__format__ (__printf__, 2, 3)));
+extern int obstack_vprintf (struct obstack *__restrict __obstack,
+       const char *__restrict __format,
+       __gnuc_va_list __args)
+     __attribute__ ((__nothrow__)) __attribute__ ((__format__ (__printf__, 2, 0)));
+
+
+
+
+
+
+
+extern void flockfile (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int ftrylockfile (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__));
+# 858 "/usr/include/stdio.h" 3 4
+extern int __uflow (FILE *);
+extern int __overflow (FILE *, int);
+# 873 "/usr/include/stdio.h" 3 4
+
+# 27 "./../src/collector_module.h" 2
+
+# 1 "/usr/include/ucontext.h" 1 3 4
+# 26 "/usr/include/ucontext.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/indirect-return.h" 1 3 4
+# 27 "/usr/include/ucontext.h" 2 3 4
+
+
+
+
+
+
+
+extern int getcontext (ucontext_t *__ucp) __attribute__ ((__nothrow__));
+
+
+extern int setcontext (const ucontext_t *__ucp) __attribute__ ((__nothrow__));
+
+
+
+extern int swapcontext (ucontext_t *__restrict __oucp,
+   const ucontext_t *__restrict __ucp)
+  __attribute__ ((__nothrow__)) __attribute__ ((__indirect_return__));
+
+
+
+
+
+
+
+extern void makecontext (ucontext_t *__ucp, void (*__func) (void),
+    int __argc, ...) __attribute__ ((__nothrow__ , __leaf__));
+
+
+# 29 "./../src/collector_module.h" 2
+# 1 "/usr/include/dirent.h" 1 3 4
+# 27 "/usr/include/dirent.h" 3 4
+
+# 61 "/usr/include/dirent.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/dirent.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/dirent.h" 3 4
+struct dirent
+  {
+
+    __ino_t d_ino;
+    __off_t d_off;
+
+
+
+
+    unsigned short int d_reclen;
+    unsigned char d_type;
+    char d_name[256];
+  };
+
+
+struct dirent64
+  {
+    __ino64_t d_ino;
+    __off64_t d_off;
+    unsigned short int d_reclen;
+    unsigned char d_type;
+    char d_name[256];
+  };
+# 62 "/usr/include/dirent.h" 2 3 4
+# 97 "/usr/include/dirent.h" 3 4
+enum
+  {
+    DT_UNKNOWN = 0,
+
+    DT_FIFO = 1,
+
+    DT_CHR = 2,
+
+    DT_DIR = 4,
+
+    DT_BLK = 6,
+
+    DT_REG = 8,
+
+    DT_LNK = 10,
+
+    DT_SOCK = 12,
+
+    DT_WHT = 14
+
+  };
+# 127 "/usr/include/dirent.h" 3 4
+typedef struct __dirstream DIR;
+
+
+
+
+
+
+extern DIR *opendir (const char *__name) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern DIR *fdopendir (int __fd);
+
+
+
+
+
+
+
+extern int closedir (DIR *__dirp) __attribute__ ((__nonnull__ (1)));
+# 162 "/usr/include/dirent.h" 3 4
+extern struct dirent *readdir (DIR *__dirp) __attribute__ ((__nonnull__ (1)));
+# 173 "/usr/include/dirent.h" 3 4
+extern struct dirent64 *readdir64 (DIR *__dirp) __attribute__ ((__nonnull__ (1)));
+# 183 "/usr/include/dirent.h" 3 4
+extern int readdir_r (DIR *__restrict __dirp,
+        struct dirent *__restrict __entry,
+        struct dirent **__restrict __result)
+     __attribute__ ((__nonnull__ (1, 2, 3))) __attribute__ ((__deprecated__));
+# 201 "/usr/include/dirent.h" 3 4
+extern int readdir64_r (DIR *__restrict __dirp,
+   struct dirent64 *__restrict __entry,
+   struct dirent64 **__restrict __result)
+  __attribute__ ((__nonnull__ (1, 2, 3))) __attribute__ ((__deprecated__));
+
+
+
+
+extern void rewinddir (DIR *__dirp) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern void seekdir (DIR *__dirp, long int __pos) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern long int telldir (DIR *__dirp) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern int dirfd (DIR *__dirp) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 233 "/usr/include/dirent.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 28 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 2 3 4
+# 161 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 1 3 4
+# 38 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 3 4
+# 1 "/usr/include/linux/limits.h" 1 3 4
+# 39 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 2 3 4
+# 162 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 2 3 4
+# 234 "/usr/include/dirent.h" 2 3 4
+# 245 "/usr/include/dirent.h" 3 4
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 1 3 4
+# 246 "/usr/include/dirent.h" 2 3 4
+# 255 "/usr/include/dirent.h" 3 4
+extern int scandir (const char *__restrict __dir,
+      struct dirent ***__restrict __namelist,
+      int (*__selector) (const struct dirent *),
+      int (*__cmp) (const struct dirent **,
+      const struct dirent **))
+     __attribute__ ((__nonnull__ (1, 2)));
+# 278 "/usr/include/dirent.h" 3 4
+extern int scandir64 (const char *__restrict __dir,
+        struct dirent64 ***__restrict __namelist,
+        int (*__selector) (const struct dirent64 *),
+        int (*__cmp) (const struct dirent64 **,
+        const struct dirent64 **))
+     __attribute__ ((__nonnull__ (1, 2)));
+# 293 "/usr/include/dirent.h" 3 4
+extern int scandirat (int __dfd, const char *__restrict __dir,
+        struct dirent ***__restrict __namelist,
+        int (*__selector) (const struct dirent *),
+        int (*__cmp) (const struct dirent **,
+        const struct dirent **))
+     __attribute__ ((__nonnull__ (2, 3)));
+# 315 "/usr/include/dirent.h" 3 4
+extern int scandirat64 (int __dfd, const char *__restrict __dir,
+   struct dirent64 ***__restrict __namelist,
+   int (*__selector) (const struct dirent64 *),
+   int (*__cmp) (const struct dirent64 **,
+          const struct dirent64 **))
+     __attribute__ ((__nonnull__ (2, 3)));
+
+
+
+
+extern int alphasort (const struct dirent **__e1,
+        const struct dirent **__e2)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+# 340 "/usr/include/dirent.h" 3 4
+extern int alphasort64 (const struct dirent64 **__e1,
+   const struct dirent64 **__e2)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+# 353 "/usr/include/dirent.h" 3 4
+extern __ssize_t getdirentries (int __fd, char *__restrict __buf,
+    size_t __nbytes,
+    __off_t *__restrict __basep)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+# 370 "/usr/include/dirent.h" 3 4
+extern __ssize_t getdirentries64 (int __fd, char *__restrict __buf,
+      size_t __nbytes,
+      __off64_t *__restrict __basep)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+
+
+
+
+
+
+extern int versionsort (const struct dirent **__e1,
+   const struct dirent **__e2)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+# 396 "/usr/include/dirent.h" 3 4
+extern int versionsort64 (const struct dirent64 **__e1,
+     const struct dirent64 **__e2)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/dirent_ext.h" 1 3 4
+# 23 "/usr/include/x86_64-linux-gnu/bits/dirent_ext.h" 3 4
+
+
+
+
+
+
+extern __ssize_t getdents64 (int __fd, void *__buffer, size_t __length)
+  __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+# 405 "/usr/include/dirent.h" 2 3 4
+# 30 "./../src/collector_module.h" 2
+
+
+
+
+# 33 "./../src/collector_module.h"
+struct stat;
+struct tm;
+
+
+
+
+
+
+typedef struct CollectorUtilFuncs
+{
+  int (*access)();
+  int (*atoi)(const char *nptr);
+  void *(*calloc)(size_t nelem, size_t elsize);
+  int (*clearenv)(void);
+  int (*close)(int);
+  int (*closedir)();
+  int (*execv)(const char *path, char *const argv[]);
+  void (*exit)(int status);
+  int (*fclose)(FILE *stream);
+  int (*fcntl)(int fd, int cmd, ...);
+  char *(*fgets)(char *s, int n, FILE *stream);
+  FILE *(*fopen)(const char *filename, const char *mode);
+  pid_t (*vfork)();
+  int (*fprintf)(FILE *stream, const char *format, ...);
+  void (*free)(void *ptr);
+  int (*fstat)(int fd, struct stat *buf);
+  int (*getcontext)(ucontext_t *ucp);
+  int (*getcpuid)();
+  char *(*getcwd)(char *buf, size_t size);
+  char *(*getenv)(const char *name);
+  struct tm *(*gmtime_r)(const time_t *clock, struct tm *res);
+  int (*ioctl)(int d, int request, ...);
+  off_t (*lseek)(int fd, off_t offset, int whence);
+  void *(*malloc)(size_t size);
+  void *(*memset)(void *s1, int c, size_t n);
+  int (*mkdir)();
+  time_t (*mktime)(struct tm *timeptr);
+  void *(*mmap)(void *, size_t, int, int, int, off_t);
+  void *(*mmap64_)();
+  int (*munmap)();
+  int (*open)(const char *, int, ...);
+  int (*open_bare)(const char *, int, ...);
+  DIR *(*opendir)();
+  int (*pclose)(FILE *stream);
+  FILE *(*popen)(const char *command, const char *mode);
+  int (*putenv)(char *string);
+  ssize_t (*pwrite)();
+  ssize_t (*pwrite64_)();
+  ssize_t (*read)();
+  int (*setenv)(const char *name, const char *value, int overwrite);
+  int (*sigfillset)(sigset_t *set);
+  int (*sigprocmask)(int how, const sigset_t *set, sigset_t *oldset);
+  int (*snprintf)(char *str, size_t size, const char *format, ...);
+  int (*stack_getbounds)();
+  char *(*strchr)(const char *name, int c);
+  int (*strcmp)(const char *s1, const char *s2);
+  int (*strcpy)(const char *s1, const char *s2);
+  char *(*libc_strdup)(const char *s1);
+  char *(*strerror)(int errnum);
+  int (*strerror_r)(int errnum, char *strerrbuf, size_t buflen);
+  size_t (*strlcat)(char *dest, const char *src, size_t dstsize);
+  size_t (*strlcpy)(char *dest, const char *src, size_t dstsize);
+  size_t (*strlen)(const char *string);
+  int (*strncmp)(const char *s1, const char *s2, size_t n);
+  size_t (*strncpy)(char *dst, const char *src, size_t dstsize);
+  size_t (*strspn)(const char *s1, const char *s2);
+  char *(*strrchr)(const char *name, int c);
+  char *(*strstr)(const char *s1, const char *s2);
+  long int (*strtol)(const char *nptr, char **endptr, int base);
+  long long int (*strtoll)(const char *nptr, char **endptr, int base);
+  unsigned long int (*strtoul)(const char *nptr, char **endptr, int base);
+  unsigned long long int (*strtoull)(const char *nptr, char **endptr, int base);
+  int (*symlink)(const char *s1, const char *s2);
+  int (*syscall)(int number, ...);
+  long (*sysconf)(int name);
+  long (*sysinfo)(int command, char *buf, long count);
+  time_t (*time)(time_t *tloc);
+  int (*unsetenv)(const char *name);
+  int (*vsnprintf)(char *str, size_t size, const char *format, va_list ap);
+  pid_t (*waitpid)(pid_t pid, int *stat_loc, int options);
+  ssize_t (*write)();
+  double (*atof)();
+  void *n_a;
+} CollectorUtilFuncs;
+
+extern CollectorUtilFuncs __collector_util_funcs;
+extern int __collector_dlsym_guard;
+# 139 "./../src/collector_module.h"
+typedef struct CM_Array
+{
+  unsigned int length;
+  void *bytes;
+} CM_Array;
+
+
+typedef enum
+{
+  SP_ORIGIN_FORK = -1,
+  SP_ORIGIN_LIBCOL_INIT = 0,
+  SP_ORIGIN_DBX_ATTACH = 1,
+  SP_ORIGIN_GENEXP = 2,
+  SP_ORIGIN_KERNEL = 3,
+  SP_ORIGIN_DTRACE = 4,
+  SP_ORIGIN_COLLECT = 5
+} sp_origin_t;
+
+struct Heap;
+struct Common_packet;
+struct CM_Packet;
+struct ModuleInterface;
+
+typedef long long HiResTime;
+typedef int CollectorModule;
+typedef unsigned long long FrameInfo;
+typedef struct CollectorInterface
+{
+
+  CollectorModule (*registerModule)(struct ModuleInterface*);
+  const char *(*getParams)();
+  const char *(*getExpDir)();
+  int (*writeLog)(char *format, ...);
+  FrameInfo (*getFrameInfo)(CollectorModule modl, HiResTime ts, int mode, void *arg);
+  FrameInfo (*getUID)(CM_Array *arg);
+  FrameInfo (*getUID2)(CM_Array *arg, FrameInfo uid);
+  int (*getStackTrace)(void *buf, int size, void *bptr, void *eptr, void *arg);
+  int (*writeMetaData)(CollectorModule modl, char *format, ...);
+
+
+  int (*writeDataRecord)(CollectorModule modl, struct Common_packet *pckt);
+  int (*writeDataPacket)(CollectorModule modl, struct CM_Packet *pckt);
+  void (*write_sample)(char *name);
+  void (*get_progspec)(char *retstr, int tmp_sz, char *namestr, int name_sz);
+  int (*open_experiment)(const char *exp, const char *params, sp_origin_t origin);
+  HiResTime (*getHiResTime)();
+
+
+  struct Heap *(*newHeap)();
+  void (*deleteHeap)(struct Heap *heap);
+  void *(*allocCSize)(struct Heap *heap, unsigned sz, int log);
+  void (*freeCSize)(struct Heap *heap, void *ptr, unsigned sz);
+  void *(*allocVSize)(struct Heap *heap, unsigned sz);
+  void *(*reallocVSize)(struct Heap *heap, void *ptr, unsigned newsz);
+
+
+  unsigned (*createKey)(size_t sz, void (*init)(void*), void (*fini)(void*));
+  void *(*getKey)(unsigned key);
+
+
+  void (*writeDebugInfo)(int, int, char *, ...) __attribute__ ((format (printf, 3, 4)));
+} CollectorInterface;
+
+typedef struct ModuleInterface
+{
+  char *description;
+  int (*initInterface)(CollectorInterface*);
+  int (*openExperiment)(const char *);
+  int (*startDataCollection)();
+  int (*stopDataCollection)();
+  int (*closeExperiment)();
+  int (*detachExperiment)();
+} ModuleInterface;
+
+typedef CollectorModule (*RegModuleFunc)(ModuleInterface*);
+typedef void (*ModuleInitFunc)(CollectorInterface*);
+
+
+
+
+
+  CollectorModule __collector_register_module (ModuleInterface *modint);
+# 30 "/doner/binutils/binutils-515f23e/gprofng/libcollector/collector.h" 2
+# 56 "/doner/binutils/binutils-515f23e/gprofng/libcollector/collector.h"
+extern hrtime_t __collector_start_time;
+
+
+
+
+struct DataHandle;
+struct Heap;
+extern struct DataHandle *__collector_create_handle (char*);
+extern void __collector_delete_handle (struct DataHandle*);
+extern int __collector_write_record (struct DataHandle*, Common_packet*);
+extern int __collector_write_packet (struct DataHandle*, CM_Packet*);
+extern int __collector_write_string (struct DataHandle*, char*, int);
+extern FrameInfo __collector_get_frame_info (hrtime_t, int, void *);
+extern FrameInfo __collector_getUID (CM_Array *arg, FrameInfo uid);
+extern int __collector_getStackTrace (void *buf, int size, void *bptr,
+          void *eptr, void *arg);
+extern void *__collector_ext_return_address (unsigned level);
+extern void __collector_mmap_fork_child_cleanup ();
+
+extern int __collector_ext_mmap_install (int);
+extern int __collector_ext_mmap_deinstall (int);
+extern int __collector_ext_update_map_segments (void);
+extern int __collector_check_segment (unsigned long addr,
+          unsigned long *base,
+          unsigned long *end, int maxnretries);
+extern int __collector_check_readable_segment (unsigned long addr,
+            unsigned long *base,
+            unsigned long *end, int maxnretries);
+extern int __collector_ext_line_init (int * pfollow_this_experiment,
+          const char * progspec,
+          const char *progname);
+extern int __collector_ext_line_install (char *, const char *);
+extern void __collector_ext_line_close ();
+extern void __collector_ext_unwind_init (int);
+extern void __collector_ext_unwind_close ();
+extern int __collector_ext_jstack_unwind (char*, int, ucontext_t *);
+extern void __collector_ext_dispatcher_fork_child_cleanup ();
+extern void __collector_ext_unwind_key_init (int isPthread, void * stack);
+extern void __collector_ext_dispatcher_tsd_create_key ();
+extern void __collector_ext_dispatcher_thread_timer_suspend ();
+extern int __collector_ext_dispatcher_thread_timer_resume ();
+extern int __collector_ext_dispatcher_install ();
+extern void __collector_ext_dispatcher_suspend ();
+extern void __collector_ext_dispatcher_restart ();
+extern void __collector_ext_dispatcher_deinstall ();
+extern void __collector_ext_usage_sample (Smpl_type type, char *name);
+extern void __collector_ext_profile_handler (siginfo_t *, ucontext_t *);
+extern int __collector_ext_clone_pthread (int (*fn)(void *), void *child_stack,
+       int flags, void *arg, va_list va);
+extern int __collector_sigprof_install ();
+extern int __collector_ext_hwc_active ();
+extern void __collector_ext_hwc_check (siginfo_t *, ucontext_t *);
+extern int __collector_ext_hwc_lwp_init ();
+extern void __collector_ext_hwc_lwp_fini ();
+extern int __collector_ext_hwc_lwp_suspend ();
+extern int __collector_ext_hwc_lwp_resume ();
+extern int (*__collector_VM_ReadByteInstruction)(unsigned char *);
+extern int (*__collector_omp_stack_trace)(char*, int, hrtime_t, void*);
+extern hrtime_t (*__collector_gethrtime)();
+extern int (*__collector_mpi_stack_trace)(char*, int, hrtime_t);
+extern int __collector_open_experiment (const char *exp, const char *par,
+     sp_origin_t origin);
+extern void __collector_suspend_experiment (char *why);
+extern void __collector_resume_experiment ();
+extern void __collector_clean_state ();
+extern void __collector_close_experiment ();
+extern void __collector_terminate_expt ();
+extern void __collector_terminate_hook ();
+extern void __collector_sample (char *name);
+extern void __collector_pause ();
+extern void __collector_pause_m ();
+extern void __collector_resume ();
+extern int collector_sigemt_sigaction (const struct sigaction*,
+           struct sigaction*);
+extern int collector_sigchld_sigaction (const struct sigaction*,
+     struct sigaction*);
+
+extern int
+__collector_log_write (char *format, ...) __attribute__ ((format (printf, 1, 2)));
+
+
+
+extern struct Heap *__collector_heap;
+
+
+typedef enum
+{
+  EXP_INIT, EXP_OPEN, EXP_PAUSED, EXP_CLOSED
+} sp_state_t;
+extern volatile sp_state_t __collector_expstate;
+
+
+
+
+
+
+extern int __collector_no_threads;
+extern int __collector_libthread_T1;
+extern int __collector_sample_sig;
+extern int __collector_sample_sig_warn;
+extern int __collector_pause_sig;
+extern int __collector_pause_sig_warn;
+extern hrtime_t __collector_delay_start;
+extern int __collector_exp_active;
+
+
+extern hrtime_t __collector_next_sample;
+extern int __collector_sample_period;
+
+
+extern hrtime_t __collector_terminate_time;
+extern int __collector_terminate_duration;
+extern char __collector_exp_dir_name[];
+extern int __collector_java_mode;
+extern int __collector_java_asyncgetcalltrace_loaded;
+extern int __collector_jprofile_start_attach ();
+
+
+
+
+extern void __collector_dlog (int, int, char *, ...) __attribute__ ((format (printf, 3, 4)));
+
+
+
+
+
+enum
+{
+  SP_DUMP_TIME = 1,
+  SP_DUMP_FLAG = 2,
+  SP_DUMP_JAVA = 4,
+  SP_DUMP_NOHEADER = 8,
+  SP_DUMP_UNWIND = 16,
+  SP_DUMP_STACK = 32,
+};
+
+
+enum
+{
+  DBG_LT0 = 0,
+  DBG_LTT = 0,
+  DBG_LT1 = 1,
+  DBG_LT2 = 2,
+  DBG_LT3 = 3,
+  DBG_LT4 = 4
+};
+# 31 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 2
+# 1 "./../common/gp-experiment.h" 1
+# 31 "./../common/gp-experiment.h"
+# 1 "./../src/Emsgnum.h" 1
+# 32 "./../common/gp-experiment.h" 2
+# 32 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 2
+# 1 "/doner/binutils/binutils-515f23e/gprofng/libcollector/memmgr.h" 1
+# 24 "/doner/binutils/binutils-515f23e/gprofng/libcollector/memmgr.h"
+struct Heap;
+typedef struct Heap Heap;
+
+Heap *__collector_newHeap ();
+void __collector_deleteHeap (Heap *heap);
+
+
+
+
+void __collector_mmgr_init_mutex_locks (Heap *heap);
+
+
+
+
+void *__collector_allocCSize (Heap *heap, unsigned sz, int log);
+
+
+
+
+void __collector_freeCSize (Heap *heap, void *ptr, unsigned sz);
+
+
+
+
+void *__collector_allocVSize (Heap *heap, unsigned sz);
+# 57 "/doner/binutils/binutils-515f23e/gprofng/libcollector/memmgr.h"
+void *__collector_reallocVSize (Heap *heap, void *ptr, unsigned newsz);
+# 33 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 2
+# 1 "/doner/binutils/binutils-515f23e/gprofng/libcollector/tsd.h" 1
+# 28 "/doner/binutils/binutils-515f23e/gprofng/libcollector/tsd.h"
+int __collector_tsd_init ();
+
+
+
+
+
+void __collector_tsd_fini ();
+
+
+
+
+
+void __collector_tsd_fork_child_cleanup ();
+
+
+
+
+
+int __collector_tsd_allocate ();
+
+
+
+
+
+
+
+void __collector_tsd_release ();
+
+
+
+
+
+
+
+unsigned __collector_tsd_create_key (size_t memsize, void (*init)(void*), void (*fini)(void*));
+# 73 "/doner/binutils/binutils-515f23e/gprofng/libcollector/tsd.h"
+void *__collector_tsd_get_by_key (unsigned key);
+# 34 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 2
+# 56 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+struct frame
+{
+  unsigned long fr_savfp;
+  unsigned long fr_savpc;
+};
+# 69 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+int (*__collector_VM_ReadByteInstruction)(unsigned char *) = 
+# 69 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                            ((void *)0)
+# 69 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                ;
+# 115 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+# 1 "./../../opcodes/disassemble.h" 1
+# 22 "./../../opcodes/disassemble.h"
+# 1 "./../../include/dis-asm.h" 1
+# 35 "./../../include/dis-asm.h"
+# 1 "/usr/include/string.h" 1 3 4
+# 26 "/usr/include/string.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
+# 27 "/usr/include/string.h" 2 3 4
+
+
+
+
+
+
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 1 3 4
+# 34 "/usr/include/string.h" 2 3 4
+# 43 "/usr/include/string.h" 3 4
+
+# 43 "/usr/include/string.h" 3 4
+extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+       size_t __n) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern void *memmove (void *__dest, const void *__src, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+extern void *memccpy (void *__restrict __dest, const void *__restrict __src,
+        int __c, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern void *memset (void *__s, int __c, size_t __n) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern int memcmp (const void *__s1, const void *__s2, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+# 91 "/usr/include/string.h" 3 4
+extern void *memchr (const void *__s, int __c, size_t __n)
+      __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 104 "/usr/include/string.h" 3 4
+extern void *rawmemchr (const void *__s, int __c)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 115 "/usr/include/string.h" 3 4
+extern void *memrchr (const void *__s, int __c, size_t __n)
+      __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern char *strncpy (char *__restrict __dest,
+        const char *__restrict __src, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern char *strcat (char *__restrict __dest, const char *__restrict __src)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern char *strncat (char *__restrict __dest, const char *__restrict __src,
+        size_t __n) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int strcmp (const char *__s1, const char *__s2)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern int strncmp (const char *__s1, const char *__s2, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int strcoll (const char *__s1, const char *__s2)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern size_t strxfrm (char *__restrict __dest,
+         const char *__restrict __src, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+
+
+
+extern int strcoll_l (const char *__s1, const char *__s2, locale_t __l)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2, 3)));
+
+
+extern size_t strxfrm_l (char *__dest, const char *__src, size_t __n,
+    locale_t __l) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+
+
+
+
+
+extern char *strdup (const char *__s)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern char *strndup (const char *__string, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__)) __attribute__ ((__nonnull__ (1)));
+# 226 "/usr/include/string.h" 3 4
+extern char *strchr (const char *__s, int __c)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 253 "/usr/include/string.h" 3 4
+extern char *strrchr (const char *__s, int __c)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 266 "/usr/include/string.h" 3 4
+extern char *strchrnul (const char *__s, int __c)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern size_t strcspn (const char *__s, const char *__reject)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern size_t strspn (const char *__s, const char *__accept)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+# 303 "/usr/include/string.h" 3 4
+extern char *strpbrk (const char *__s, const char *__accept)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+# 330 "/usr/include/string.h" 3 4
+extern char *strstr (const char *__haystack, const char *__needle)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern char *strtok (char *__restrict __s, const char *__restrict __delim)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+extern char *__strtok_r (char *__restrict __s,
+    const char *__restrict __delim,
+    char **__restrict __save_ptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+
+extern char *strtok_r (char *__restrict __s, const char *__restrict __delim,
+         char **__restrict __save_ptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+# 360 "/usr/include/string.h" 3 4
+extern char *strcasestr (const char *__haystack, const char *__needle)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+
+
+extern void *memmem (const void *__haystack, size_t __haystacklen,
+       const void *__needle, size_t __needlelen)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 3)));
+
+
+
+extern void *__mempcpy (void *__restrict __dest,
+   const void *__restrict __src, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+extern void *mempcpy (void *__restrict __dest,
+        const void *__restrict __src, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern size_t strlen (const char *__s)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+extern size_t strnlen (const char *__string, size_t __maxlen)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+extern char *strerror (int __errnum) __attribute__ ((__nothrow__ , __leaf__));
+# 421 "/usr/include/string.h" 3 4
+extern char *strerror_r (int __errnum, char *__buf, size_t __buflen)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2))) ;
+
+
+
+
+
+extern char *strerror_l (int __errnum, locale_t __l) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+# 1 "/usr/include/strings.h" 1 3 4
+# 23 "/usr/include/strings.h" 3 4
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h" 1 3 4
+# 24 "/usr/include/strings.h" 2 3 4
+
+
+
+
+
+
+
+
+
+
+extern int bcmp (const void *__s1, const void *__s2, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern void bcopy (const void *__src, void *__dest, size_t __n)
+  __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern void bzero (void *__s, size_t __n) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 68 "/usr/include/strings.h" 3 4
+extern char *index (const char *__s, int __c)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+# 96 "/usr/include/strings.h" 3 4
+extern char *rindex (const char *__s, int __c)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern int ffs (int __i) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+
+
+
+extern int ffsl (long int __l) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+__extension__ extern int ffsll (long long int __ll)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+
+extern int strcasecmp (const char *__s1, const char *__s2)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int strncasecmp (const char *__s1, const char *__s2, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+
+extern int strcasecmp_l (const char *__s1, const char *__s2, locale_t __loc)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2, 3)));
+
+
+
+extern int strncasecmp_l (const char *__s1, const char *__s2,
+     size_t __n, locale_t __loc)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2, 4)));
+
+
+
+# 433 "/usr/include/string.h" 2 3 4
+
+
+
+extern void explicit_bzero (void *__s, size_t __n) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern char *strsep (char **__restrict __stringp,
+       const char *__restrict __delim)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern char *strsignal (int __sig) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern char *__stpcpy (char *__restrict __dest, const char *__restrict __src)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+extern char *stpcpy (char *__restrict __dest, const char *__restrict __src)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern char *__stpncpy (char *__restrict __dest,
+   const char *__restrict __src, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+extern char *stpncpy (char *__restrict __dest,
+        const char *__restrict __src, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern int strverscmp (const char *__s1, const char *__s2)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern char *strfry (char *__string) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern void *memfrob (void *__s, size_t __n) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 487 "/usr/include/string.h" 3 4
+extern char *basename (const char *__filename) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 499 "/usr/include/string.h" 3 4
+
+# 36 "./../../include/dis-asm.h" 2
+# 1 "../../bfd/bfd.h" 1
+# 43 "../../bfd/bfd.h"
+# 1 "./../../include/ansidecl.h" 1
+# 44 "../../bfd/bfd.h" 2
+# 1 "./../../include/symcat.h" 1
+# 45 "../../bfd/bfd.h" 2
+
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h" 1 3 4
+# 47 "../../bfd/bfd.h" 2
+# 1 "./../../include/diagnostics.h" 1
+# 48 "../../bfd/bfd.h" 2
+
+
+# 1 "/usr/include/x86_64-linux-gnu/sys/stat.h" 1 3 4
+# 99 "/usr/include/x86_64-linux-gnu/sys/stat.h" 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/stat.h" 1 3 4
+# 46 "/usr/include/x86_64-linux-gnu/bits/stat.h" 3 4
+struct stat
+  {
+    __dev_t st_dev;
+
+
+
+
+    __ino_t st_ino;
+
+
+
+
+
+
+
+    __nlink_t st_nlink;
+    __mode_t st_mode;
+
+    __uid_t st_uid;
+    __gid_t st_gid;
+
+    int __pad0;
+
+    __dev_t st_rdev;
+
+
+
+
+    __off_t st_size;
+
+
+
+    __blksize_t st_blksize;
+
+    __blkcnt_t st_blocks;
+# 91 "/usr/include/x86_64-linux-gnu/bits/stat.h" 3 4
+    struct timespec st_atim;
+    struct timespec st_mtim;
+    struct timespec st_ctim;
+# 106 "/usr/include/x86_64-linux-gnu/bits/stat.h" 3 4
+    __syscall_slong_t __glibc_reserved[3];
+# 115 "/usr/include/x86_64-linux-gnu/bits/stat.h" 3 4
+  };
+
+
+
+struct stat64
+  {
+    __dev_t st_dev;
+
+    __ino64_t st_ino;
+    __nlink_t st_nlink;
+    __mode_t st_mode;
+
+
+
+
+
+
+    __uid_t st_uid;
+    __gid_t st_gid;
+
+    int __pad0;
+    __dev_t st_rdev;
+    __off_t st_size;
+
+
+
+
+
+    __blksize_t st_blksize;
+    __blkcnt64_t st_blocks;
+
+
+
+
+
+
+
+    struct timespec st_atim;
+    struct timespec st_mtim;
+    struct timespec st_ctim;
+# 164 "/usr/include/x86_64-linux-gnu/bits/stat.h" 3 4
+    __syscall_slong_t __glibc_reserved[3];
+
+
+
+  };
+# 102 "/usr/include/x86_64-linux-gnu/sys/stat.h" 2 3 4
+# 205 "/usr/include/x86_64-linux-gnu/sys/stat.h" 3 4
+extern int stat (const char *__restrict __file,
+   struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int fstat (int __fd, struct stat *__buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+# 224 "/usr/include/x86_64-linux-gnu/sys/stat.h" 3 4
+extern int stat64 (const char *__restrict __file,
+     struct stat64 *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+extern int fstat64 (int __fd, struct stat64 *__buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+
+
+
+
+extern int fstatat (int __fd, const char *__restrict __file,
+      struct stat *__restrict __buf, int __flag)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+# 249 "/usr/include/x86_64-linux-gnu/sys/stat.h" 3 4
+extern int fstatat64 (int __fd, const char *__restrict __file,
+        struct stat64 *__restrict __buf, int __flag)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+
+
+
+
+
+
+
+extern int lstat (const char *__restrict __file,
+    struct stat *__restrict __buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+# 272 "/usr/include/x86_64-linux-gnu/sys/stat.h" 3 4
+extern int lstat64 (const char *__restrict __file,
+      struct stat64 *__restrict __buf)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+extern int chmod (const char *__file, __mode_t __mode)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern int lchmod (const char *__file, __mode_t __mode)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+extern int fchmod (int __fd, __mode_t __mode) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern int fchmodat (int __fd, const char *__file, __mode_t __mode,
+       int __flag)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2))) ;
+
+
+
+
+
+
+extern __mode_t umask (__mode_t __mask) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern __mode_t getumask (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern int mkdir (const char *__path, __mode_t __mode)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern int mkdirat (int __fd, const char *__path, __mode_t __mode)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+
+
+
+extern int mknod (const char *__path, __mode_t __mode, __dev_t __dev)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern int mknodat (int __fd, const char *__path, __mode_t __mode,
+      __dev_t __dev) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+
+
+extern int mkfifo (const char *__path, __mode_t __mode)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern int mkfifoat (int __fd, const char *__path, __mode_t __mode)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+
+
+extern int utimensat (int __fd, const char *__path,
+        const struct timespec __times[2],
+        int __flags)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+
+extern int futimens (int __fd, const struct timespec __times[2]) __attribute__ ((__nothrow__ , __leaf__));
+# 395 "/usr/include/x86_64-linux-gnu/sys/stat.h" 3 4
+extern int __fxstat (int __ver, int __fildes, struct stat *__stat_buf)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+extern int __xstat (int __ver, const char *__filename,
+      struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+extern int __lxstat (int __ver, const char *__filename,
+       struct stat *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+extern int __fxstatat (int __ver, int __fildes, const char *__filename,
+         struct stat *__stat_buf, int __flag)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4)));
+# 428 "/usr/include/x86_64-linux-gnu/sys/stat.h" 3 4
+extern int __fxstat64 (int __ver, int __fildes, struct stat64 *__stat_buf)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3)));
+extern int __xstat64 (int __ver, const char *__filename,
+        struct stat64 *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+extern int __lxstat64 (int __ver, const char *__filename,
+         struct stat64 *__stat_buf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 3)));
+extern int __fxstatat64 (int __ver, int __fildes, const char *__filename,
+    struct stat64 *__stat_buf, int __flag)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4)));
+
+extern int __xmknod (int __ver, const char *__path, __mode_t __mode,
+       __dev_t *__dev) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+
+extern int __xmknodat (int __ver, int __fd, const char *__path,
+         __mode_t __mode, __dev_t *__dev)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 5)));
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/statx.h" 1 3 4
+# 31 "/usr/include/x86_64-linux-gnu/bits/statx.h" 3 4
+# 1 "/usr/include/linux/stat.h" 1 3 4
+
+
+
+
+# 1 "/usr/include/linux/types.h" 1 3 4
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/asm/types.h" 1 3 4
+# 1 "/usr/include/asm-generic/types.h" 1 3 4
+
+
+
+
+
+
+# 1 "/usr/include/asm-generic/int-ll64.h" 1 3 4
+# 12 "/usr/include/asm-generic/int-ll64.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/asm/bitsperlong.h" 1 3 4
+# 11 "/usr/include/x86_64-linux-gnu/asm/bitsperlong.h" 3 4
+# 1 "/usr/include/asm-generic/bitsperlong.h" 1 3 4
+# 12 "/usr/include/x86_64-linux-gnu/asm/bitsperlong.h" 2 3 4
+# 13 "/usr/include/asm-generic/int-ll64.h" 2 3 4
+
+
+
+
+
+
+
+typedef __signed__ char __s8;
+typedef unsigned char __u8;
+
+typedef __signed__ short __s16;
+typedef unsigned short __u16;
+
+typedef __signed__ int __s32;
+typedef unsigned int __u32;
+
+
+__extension__ typedef __signed__ long long __s64;
+__extension__ typedef unsigned long long __u64;
+# 8 "/usr/include/asm-generic/types.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/asm/types.h" 2 3 4
+# 6 "/usr/include/linux/types.h" 2 3 4
+
+
+
+# 1 "/usr/include/linux/posix_types.h" 1 3 4
+
+
+
+
+# 1 "/usr/include/linux/stddef.h" 1 3 4
+# 6 "/usr/include/linux/posix_types.h" 2 3 4
+# 25 "/usr/include/linux/posix_types.h" 3 4
+typedef struct {
+ unsigned long fds_bits[1024 / (8 * sizeof(long))];
+} __kernel_fd_set;
+
+
+typedef void (*__kernel_sighandler_t)(int);
+
+
+typedef int __kernel_key_t;
+typedef int __kernel_mqd_t;
+
+# 1 "/usr/include/x86_64-linux-gnu/asm/posix_types.h" 1 3 4
+
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/asm/posix_types_64.h" 1 3 4
+# 11 "/usr/include/x86_64-linux-gnu/asm/posix_types_64.h" 3 4
+typedef unsigned short __kernel_old_uid_t;
+typedef unsigned short __kernel_old_gid_t;
+
+
+typedef unsigned long __kernel_old_dev_t;
+
+
+# 1 "/usr/include/asm-generic/posix_types.h" 1 3 4
+# 15 "/usr/include/asm-generic/posix_types.h" 3 4
+typedef long __kernel_long_t;
+typedef unsigned long __kernel_ulong_t;
+
+
+
+typedef __kernel_ulong_t __kernel_ino_t;
+
+
+
+typedef unsigned int __kernel_mode_t;
+
+
+
+typedef int __kernel_pid_t;
+
+
+
+typedef int __kernel_ipc_pid_t;
+
+
+
+typedef unsigned int __kernel_uid_t;
+typedef unsigned int __kernel_gid_t;
+
+
+
+typedef __kernel_long_t __kernel_suseconds_t;
+
+
+
+typedef int __kernel_daddr_t;
+
+
+
+typedef unsigned int __kernel_uid32_t;
+typedef unsigned int __kernel_gid32_t;
+# 72 "/usr/include/asm-generic/posix_types.h" 3 4
+typedef __kernel_ulong_t __kernel_size_t;
+typedef __kernel_long_t __kernel_ssize_t;
+typedef __kernel_long_t __kernel_ptrdiff_t;
+
+
+
+
+typedef struct {
+ int val[2];
+} __kernel_fsid_t;
+
+
+
+
+
+typedef __kernel_long_t __kernel_off_t;
+typedef long long __kernel_loff_t;
+typedef __kernel_long_t __kernel_time_t;
+typedef long long __kernel_time64_t;
+typedef __kernel_long_t __kernel_clock_t;
+typedef int __kernel_timer_t;
+typedef int __kernel_clockid_t;
+typedef char * __kernel_caddr_t;
+typedef unsigned short __kernel_uid16_t;
+typedef unsigned short __kernel_gid16_t;
+# 19 "/usr/include/x86_64-linux-gnu/asm/posix_types_64.h" 2 3 4
+# 8 "/usr/include/x86_64-linux-gnu/asm/posix_types.h" 2 3 4
+# 37 "/usr/include/linux/posix_types.h" 2 3 4
+# 10 "/usr/include/linux/types.h" 2 3 4
+# 24 "/usr/include/linux/types.h" 3 4
+typedef __u16 __le16;
+typedef __u16 __be16;
+typedef __u32 __le32;
+typedef __u32 __be32;
+typedef __u64 __le64;
+typedef __u64 __be64;
+
+typedef __u16 __sum16;
+typedef __u32 __wsum;
+# 47 "/usr/include/linux/types.h" 3 4
+typedef unsigned __poll_t;
+# 6 "/usr/include/linux/stat.h" 2 3 4
+# 56 "/usr/include/linux/stat.h" 3 4
+struct statx_timestamp {
+ __s64 tv_sec;
+ __u32 tv_nsec;
+ __s32 __reserved;
+};
+# 99 "/usr/include/linux/stat.h" 3 4
+struct statx {
+
+ __u32 stx_mask;
+ __u32 stx_blksize;
+ __u64 stx_attributes;
+
+ __u32 stx_nlink;
+ __u32 stx_uid;
+ __u32 stx_gid;
+ __u16 stx_mode;
+ __u16 __spare0[1];
+
+ __u64 stx_ino;
+ __u64 stx_size;
+ __u64 stx_blocks;
+ __u64 stx_attributes_mask;
+
+ struct statx_timestamp stx_atime;
+ struct statx_timestamp stx_btime;
+ struct statx_timestamp stx_ctime;
+ struct statx_timestamp stx_mtime;
+
+ __u32 stx_rdev_major;
+ __u32 stx_rdev_minor;
+ __u32 stx_dev_major;
+ __u32 stx_dev_minor;
+
+ __u64 __spare2[14];
+
+};
+# 32 "/usr/include/x86_64-linux-gnu/bits/statx.h" 2 3 4
+
+
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/statx-generic.h" 1 3 4
+# 25 "/usr/include/x86_64-linux-gnu/bits/statx-generic.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h" 1 3 4
+# 26 "/usr/include/x86_64-linux-gnu/bits/statx-generic.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/bits/statx-generic.h" 2 3 4
+# 53 "/usr/include/x86_64-linux-gnu/bits/statx-generic.h" 3 4
+
+
+
+int statx (int __dirfd, const char *__restrict __path, int __flags,
+           unsigned int __mask, struct statx *__restrict __buf)
+  __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 5)));
+
+
+# 39 "/usr/include/x86_64-linux-gnu/bits/statx.h" 2 3 4
+# 447 "/usr/include/x86_64-linux-gnu/sys/stat.h" 2 3 4
+# 534 "/usr/include/x86_64-linux-gnu/sys/stat.h" 3 4
+
+# 51 "../../bfd/bfd.h" 2
+# 80 "../../bfd/bfd.h"
+# 1 "/usr/include/inttypes.h" 1 3 4
+# 34 "/usr/include/inttypes.h" 3 4
+typedef int __gwchar_t;
+# 266 "/usr/include/inttypes.h" 3 4
+
+
+
+
+
+typedef struct
+  {
+    long int quot;
+    long int rem;
+  } imaxdiv_t;
+# 290 "/usr/include/inttypes.h" 3 4
+extern intmax_t imaxabs (intmax_t __n) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern imaxdiv_t imaxdiv (intmax_t __numer, intmax_t __denom)
+      __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+extern intmax_t strtoimax (const char *__restrict __nptr,
+      char **__restrict __endptr, int __base) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern uintmax_t strtoumax (const char *__restrict __nptr,
+       char ** __restrict __endptr, int __base) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern intmax_t wcstoimax (const __gwchar_t *__restrict __nptr,
+      __gwchar_t **__restrict __endptr, int __base)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern uintmax_t wcstoumax (const __gwchar_t *__restrict __nptr,
+       __gwchar_t ** __restrict __endptr, int __base)
+     __attribute__ ((__nothrow__ , __leaf__));
+# 432 "/usr/include/inttypes.h" 3 4
+
+# 81 "../../bfd/bfd.h" 2
+# 110 "../../bfd/bfd.h"
+
+# 110 "../../bfd/bfd.h"
+typedef uint64_t bfd_vma;
+
+
+
+
+
+typedef int64_t bfd_signed_vma;
+
+typedef uint64_t bfd_size_type;
+typedef uint64_t symvalue;
+# 135 "../../bfd/bfd.h"
+typedef int64_t file_ptr;
+typedef uint64_t ufile_ptr;
+
+typedef uint32_t flagword;
+typedef uint8_t bfd_byte;
+
+
+typedef struct bfd bfd;
+struct bfd_link_info;
+struct bfd_link_hash_entry;
+typedef struct bfd_section *sec_ptr;
+typedef struct reloc_cache_entry arelent;
+struct orl;
+# 163 "../../bfd/bfd.h"
+static inline 
+# 163 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 164 "../../bfd/bfd.h"
+startswith (const char *str, const char *prefix)
+{
+  return strncmp (str, prefix, strlen (prefix)) == 0;
+}
+
+
+void *bfd_alloc (bfd *abfd, bfd_size_type wanted);
+
+void *bfd_zalloc (bfd *abfd, bfd_size_type wanted);
+
+void bfd_release (bfd *, void *);
+# 205 "../../bfd/bfd.h"
+bfd_vma bfd_getb24 (const void *p);
+bfd_vma bfd_getl24 (const void *p);
+# 302 "../../bfd/bfd.h"
+uint64_t bfd_getb64 (const void *);
+uint64_t bfd_getl64 (const void *);
+int64_t bfd_getb_signed_64 (const void *);
+int64_t bfd_getl_signed_64 (const void *);
+bfd_vma bfd_getb32 (const void *);
+bfd_vma bfd_getl32 (const void *);
+bfd_signed_vma bfd_getb_signed_32 (const void *);
+bfd_signed_vma bfd_getl_signed_32 (const void *);
+bfd_vma bfd_getb16 (const void *);
+bfd_vma bfd_getl16 (const void *);
+bfd_signed_vma bfd_getb_signed_16 (const void *);
+bfd_signed_vma bfd_getl_signed_16 (const void *);
+void bfd_putb64 (uint64_t, void *);
+void bfd_putl64 (uint64_t, void *);
+void bfd_putb32 (bfd_vma, void *);
+void bfd_putl32 (bfd_vma, void *);
+void bfd_putb24 (bfd_vma, void *);
+void bfd_putl24 (bfd_vma, void *);
+void bfd_putb16 (bfd_vma, void *);
+void bfd_putl16 (bfd_vma, void *);
+uint64_t bfd_get_bits (const void *, int, 
+# 322 "../../bfd/bfd.h" 3 4
+                                         _Bool
+# 322 "../../bfd/bfd.h"
+                                             );
+void bfd_put_bits (uint64_t, void *, int, 
+# 323 "../../bfd/bfd.h" 3 4
+                                         _Bool
+# 323 "../../bfd/bfd.h"
+                                             );
+
+
+
+
+
+struct bfd_hash_entry
+{
+
+  struct bfd_hash_entry *next;
+
+  const char *string;
+
+
+  unsigned long hash;
+};
+
+
+
+struct bfd_hash_table
+{
+
+  struct bfd_hash_entry **table;
+
+
+
+
+
+
+
+  struct bfd_hash_entry *(*newfunc)
+    (struct bfd_hash_entry *, struct bfd_hash_table *, const char *);
+
+
+  void *memory;
+
+  unsigned int size;
+
+  unsigned int count;
+
+  unsigned int entsize;
+
+  unsigned int frozen:1;
+};
+
+
+# 368 "../../bfd/bfd.h" 3 4
+_Bool 
+# 368 "../../bfd/bfd.h"
+    bfd_hash_table_init_n
+   (struct bfd_hash_table *,
+    struct bfd_hash_entry *(* )
+       (struct bfd_hash_entry *, struct bfd_hash_table *, const char *),
+    unsigned int , unsigned int );
+
+
+# 374 "../../bfd/bfd.h" 3 4
+_Bool 
+# 374 "../../bfd/bfd.h"
+    bfd_hash_table_init
+   (struct bfd_hash_table *,
+    struct bfd_hash_entry *(* )
+       (struct bfd_hash_entry *, struct bfd_hash_table *, const char *),
+    unsigned int );
+
+void bfd_hash_table_free (struct bfd_hash_table *);
+
+struct bfd_hash_entry *bfd_hash_lookup
+   (struct bfd_hash_table *, const char *,
+    
+# 384 "../../bfd/bfd.h" 3 4
+   _Bool 
+# 384 "../../bfd/bfd.h"
+                  , 
+# 384 "../../bfd/bfd.h" 3 4
+                    _Bool 
+# 384 "../../bfd/bfd.h"
+                                 );
+
+struct bfd_hash_entry *bfd_hash_insert
+   (struct bfd_hash_table *,
+    const char *,
+    unsigned long );
+
+void bfd_hash_rename (struct bfd_hash_table *,
+    const char *,
+    struct bfd_hash_entry *);
+
+void bfd_hash_replace (struct bfd_hash_table *,
+    struct bfd_hash_entry * ,
+    struct bfd_hash_entry * );
+
+void *bfd_hash_allocate (struct bfd_hash_table *,
+    unsigned int );
+
+struct bfd_hash_entry *bfd_hash_newfunc
+   (struct bfd_hash_entry *,
+    struct bfd_hash_table *,
+    const char *);
+
+void bfd_hash_traverse
+   (struct bfd_hash_table *,
+    
+# 409 "../../bfd/bfd.h" 3 4
+   _Bool 
+# 409 "../../bfd/bfd.h"
+        (*) (struct bfd_hash_entry *, void *),
+    void *);
+
+unsigned int bfd_hash_set_default_size (unsigned int);
+
+
+
+typedef struct lineno_cache_entry
+{
+  unsigned int line_number;
+  union
+  {
+    struct bfd_symbol *sym;
+    bfd_vma offset;
+  } u;
+}
+alent;
+
+typedef struct bfd_section
+{
+
+
+  const char *name;
+
+
+  struct bfd_section *next;
+
+
+  struct bfd_section *prev;
+
+
+  unsigned int id;
+
+
+
+  unsigned int section_id;
+
+
+  unsigned int index;
+
+
+
+
+  flagword flags;
+# 653 "../../bfd/bfd.h"
+  unsigned int user_set_vma : 1;
+
+
+  unsigned int linker_mark : 1;
+
+
+
+  unsigned int linker_has_input : 1;
+
+
+  unsigned int gc_mark : 1;
+
+
+  unsigned int compress_status : 2;
+# 675 "../../bfd/bfd.h"
+  unsigned int segment_mark : 1;
+
+
+  unsigned int sec_info_type:3;
+# 689 "../../bfd/bfd.h"
+  unsigned int use_rela_p:1;
+
+
+
+
+  unsigned int sec_flg0:1;
+  unsigned int sec_flg1:1;
+  unsigned int sec_flg2:1;
+  unsigned int sec_flg3:1;
+  unsigned int sec_flg4:1;
+  unsigned int sec_flg5:1;
+# 709 "../../bfd/bfd.h"
+  bfd_vma vma;
+
+
+
+
+  bfd_vma lma;
+
+
+
+
+  bfd_size_type size;
+# 729 "../../bfd/bfd.h"
+  bfd_size_type rawsize;
+
+
+  bfd_size_type compressed_size;
+# 741 "../../bfd/bfd.h"
+  bfd_vma output_offset;
+
+
+  struct bfd_section *output_section;
+
+
+
+  struct reloc_cache_entry *relocation;
+
+
+
+  struct reloc_cache_entry **orelocation;
+
+
+  unsigned reloc_count;
+
+
+
+  unsigned int alignment_power;
+
+
+
+
+
+  file_ptr filepos;
+
+
+  file_ptr rel_filepos;
+
+
+  file_ptr line_filepos;
+
+
+  void *userdata;
+
+
+
+  bfd_byte *contents;
+
+
+  alent *lineno;
+
+
+  unsigned int lineno_count;
+
+
+  unsigned int entsize;
+
+
+
+  struct bfd_section *kept_section;
+
+
+
+  file_ptr moving_line_filepos;
+
+
+  int target_index;
+
+  void *used_by_bfd;
+
+
+
+  struct relent_chain *constructor_chain;
+
+
+  bfd *owner;
+
+
+  struct bfd_symbol *symbol;
+  struct bfd_symbol **symbol_ptr_ptr;
+
+
+
+
+
+
+  union {
+    struct bfd_link_order *link_order;
+    struct bfd_section *s;
+    const char *linked_to_symbol_name;
+  } map_head, map_tail;
+
+
+
+
+  struct bfd_section *already_assigned;
+
+
+  unsigned int type;
+
+} asection;
+
+static inline const char *
+bfd_section_name (const asection *sec)
+{
+  return sec->name;
+}
+
+static inline bfd_size_type
+bfd_section_size (const asection *sec)
+{
+  return sec->size;
+}
+
+static inline bfd_vma
+bfd_section_vma (const asection *sec)
+{
+  return sec->vma;
+}
+
+static inline bfd_vma
+bfd_section_lma (const asection *sec)
+{
+  return sec->lma;
+}
+
+static inline unsigned int
+bfd_section_alignment (const asection *sec)
+{
+  return sec->alignment_power;
+}
+
+static inline flagword
+bfd_section_flags (const asection *sec)
+{
+  return sec->flags;
+}
+
+static inline void *
+bfd_section_userdata (const asection *sec)
+{
+  return sec->userdata;
+}
+static inline 
+# 875 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 876 "../../bfd/bfd.h"
+bfd_is_com_section (const asection *sec)
+{
+  return (sec->flags & 0x1000) != 0;
+}
+
+
+
+
+
+static inline 
+# 885 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 886 "../../bfd/bfd.h"
+bfd_set_section_userdata (asection *sec, void *val)
+{
+  sec->userdata = val;
+  return 
+# 889 "../../bfd/bfd.h" 3 4
+        1
+# 889 "../../bfd/bfd.h"
+            ;
+}
+
+static inline 
+# 892 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 893 "../../bfd/bfd.h"
+bfd_set_section_vma (asection *sec, bfd_vma val)
+{
+  sec->vma = sec->lma = val;
+  sec->user_set_vma = 
+# 896 "../../bfd/bfd.h" 3 4
+                     1
+# 896 "../../bfd/bfd.h"
+                         ;
+  return 
+# 897 "../../bfd/bfd.h" 3 4
+        1
+# 897 "../../bfd/bfd.h"
+            ;
+}
+
+static inline 
+# 900 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 901 "../../bfd/bfd.h"
+bfd_set_section_lma (asection *sec, bfd_vma val)
+{
+  sec->lma = val;
+  return 
+# 904 "../../bfd/bfd.h" 3 4
+        1
+# 904 "../../bfd/bfd.h"
+            ;
+}
+
+static inline 
+# 907 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 908 "../../bfd/bfd.h"
+bfd_set_section_alignment (asection *sec, unsigned int val)
+{
+  if (val >= sizeof (bfd_vma) * 8 - 1)
+    return 
+# 911 "../../bfd/bfd.h" 3 4
+          0
+# 911 "../../bfd/bfd.h"
+               ;
+  sec->alignment_power = val;
+  return 
+# 913 "../../bfd/bfd.h" 3 4
+        1
+# 913 "../../bfd/bfd.h"
+            ;
+}
+
+
+
+
+extern asection _bfd_std_section[4];
+# 935 "../../bfd/bfd.h"
+static inline 
+# 935 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 936 "../../bfd/bfd.h"
+bfd_is_und_section (const asection *sec)
+{
+  return sec == (&_bfd_std_section[1]);
+}
+
+static inline 
+# 941 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 942 "../../bfd/bfd.h"
+bfd_is_abs_section (const asection *sec)
+{
+  return sec == (&_bfd_std_section[2]);
+}
+
+static inline 
+# 947 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 948 "../../bfd/bfd.h"
+bfd_is_ind_section (const asection *sec)
+{
+  return sec == (&_bfd_std_section[3]);
+}
+
+static inline 
+# 953 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 954 "../../bfd/bfd.h"
+bfd_is_const_section (const asection *sec)
+{
+  return (sec >= _bfd_std_section
+   && sec < _bfd_std_section + (sizeof (_bfd_std_section)
+           / sizeof (_bfd_std_section[0])));
+}
+
+
+static inline 
+# 962 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 963 "../../bfd/bfd.h"
+discarded_section (const asection *sec)
+{
+  return (!bfd_is_abs_section (sec)
+   && bfd_is_abs_section (sec->output_section)
+   && sec->sec_info_type != 2
+   && sec->sec_info_type != 4);
+}
+# 1022 "../../bfd/bfd.h"
+void bfd_section_list_clear (bfd *);
+
+asection *bfd_get_section_by_name (bfd *abfd, const char *name);
+
+asection *bfd_get_next_section_by_name (bfd *ibfd, asection *sec);
+
+asection *bfd_get_linker_section (bfd *abfd, const char *name);
+
+asection *bfd_get_section_by_name_if
+   (bfd *abfd,
+    const char *name,
+    
+# 1033 "../../bfd/bfd.h" 3 4
+   _Bool 
+# 1033 "../../bfd/bfd.h"
+        (*func) (bfd *abfd, asection *sect, void *obj),
+    void *obj);
+
+char *bfd_get_unique_section_name
+   (bfd *abfd, const char *templat, int *count);
+
+asection *bfd_make_section_old_way (bfd *abfd, const char *name);
+
+asection *bfd_make_section_anyway_with_flags
+   (bfd *abfd, const char *name, flagword flags);
+
+asection *bfd_make_section_anyway (bfd *abfd, const char *name);
+
+asection *bfd_make_section_with_flags
+   (bfd *, const char *name, flagword flags);
+
+asection *bfd_make_section (bfd *, const char *name);
+
+
+# 1051 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1051 "../../bfd/bfd.h"
+    bfd_set_section_flags (asection *sec, flagword flags);
+
+void bfd_rename_section
+   (asection *sec, const char *newname);
+
+void bfd_map_over_sections
+   (bfd *abfd,
+    void (*func) (bfd *abfd, asection *sect, void *obj),
+    void *obj);
+
+asection *bfd_sections_find_if
+   (bfd *abfd,
+    
+# 1063 "../../bfd/bfd.h" 3 4
+   _Bool 
+# 1063 "../../bfd/bfd.h"
+        (*operation) (bfd *abfd, asection *sect, void *obj),
+    void *obj);
+
+
+# 1066 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1066 "../../bfd/bfd.h"
+    bfd_set_section_size (asection *sec, bfd_size_type val);
+
+
+# 1068 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1068 "../../bfd/bfd.h"
+    bfd_set_section_contents
+   (bfd *abfd, asection *section, const void *data,
+    file_ptr offset, bfd_size_type count);
+
+
+# 1072 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1072 "../../bfd/bfd.h"
+    bfd_get_section_contents
+   (bfd *abfd, asection *section, void *location, file_ptr offset,
+    bfd_size_type count);
+
+
+# 1076 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1076 "../../bfd/bfd.h"
+    bfd_malloc_and_get_section
+   (bfd *abfd, asection *section, bfd_byte **buf);
+
+
+# 1079 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1079 "../../bfd/bfd.h"
+    bfd_copy_private_section_data
+   (bfd *ibfd, asection *isec, bfd *obfd, asection *osec);
+
+
+
+
+
+# 1085 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1085 "../../bfd/bfd.h"
+    bfd_generic_is_group_section (bfd *, const asection *sec);
+
+const char *bfd_generic_group_name (bfd *, const asection *sec);
+
+
+# 1089 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1089 "../../bfd/bfd.h"
+    bfd_generic_discard_group (bfd *abfd, asection *group);
+
+
+typedef struct bfd_symbol
+{
+# 1103 "../../bfd/bfd.h"
+  struct bfd *the_bfd;
+
+
+
+  const char *name;
+
+
+
+
+  symvalue value;
+# 1221 "../../bfd/bfd.h"
+  flagword flags;
+
+
+
+
+  struct bfd_section *section;
+
+
+  union
+    {
+      void *p;
+      bfd_vma i;
+    }
+  udata;
+}
+asymbol;
+
+typedef enum bfd_print_symbol
+{
+  bfd_print_symbol_name,
+  bfd_print_symbol_more,
+  bfd_print_symbol_all
+} bfd_print_symbol_type;
+
+
+
+typedef struct _symbol_info
+{
+  symvalue value;
+  char type;
+  const char *name;
+  unsigned char stab_type;
+  char stab_other;
+  short stab_desc;
+  const char *stab_name;
+} symbol_info;
+
+
+
+
+
+# 1261 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1261 "../../bfd/bfd.h"
+    bfd_is_local_label (bfd *abfd, asymbol *sym);
+
+
+# 1263 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1263 "../../bfd/bfd.h"
+    bfd_is_local_label_name (bfd *abfd, const char *name);
+
+
+
+
+
+# 1268 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1268 "../../bfd/bfd.h"
+    bfd_is_target_special_symbol (bfd *abfd, asymbol *sym);
+
+
+
+
+
+
+
+
+# 1276 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1276 "../../bfd/bfd.h"
+    bfd_set_symtab
+   (bfd *abfd, asymbol **location, unsigned int count);
+
+void bfd_print_symbol_vandf (bfd *abfd, void *file, asymbol *symbol);
+
+
+
+
+asymbol *_bfd_generic_make_empty_symbol (bfd *);
+
+
+
+
+int bfd_decode_symclass (asymbol *symbol);
+
+
+# 1291 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1291 "../../bfd/bfd.h"
+    bfd_is_undefined_symclass (int symclass);
+
+void bfd_symbol_info (asymbol *symbol, symbol_info *ret);
+
+
+# 1295 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1295 "../../bfd/bfd.h"
+    bfd_copy_private_symbol_data
+   (bfd *ibfd, asymbol *isym, bfd *obfd, asymbol *osym);
+# 1305 "../../bfd/bfd.h"
+typedef struct carsym
+{
+  const char *name;
+  file_ptr file_offset;
+}
+carsym;
+
+
+ typedef unsigned long symindex;
+
+
+symindex bfd_get_next_mapent
+   (bfd *abfd, symindex previous, carsym **sym);
+
+
+# 1319 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1319 "../../bfd/bfd.h"
+    bfd_set_archive_head (bfd *output, bfd *new_head);
+
+bfd *bfd_openr_next_archived_file (bfd *archive, bfd *previous);
+
+
+enum bfd_architecture
+{
+  bfd_arch_unknown,
+  bfd_arch_obscure,
+  bfd_arch_m68k,
+# 1360 "../../bfd/bfd.h"
+  bfd_arch_vax,
+
+  bfd_arch_or1k,
+
+
+
+  bfd_arch_sparc,
+# 1404 "../../bfd/bfd.h"
+  bfd_arch_spu,
+
+  bfd_arch_mips,
+# 1456 "../../bfd/bfd.h"
+  bfd_arch_i386,
+# 1465 "../../bfd/bfd.h"
+  bfd_arch_iamcu,
+
+
+
+  bfd_arch_romp,
+  bfd_arch_convex,
+  bfd_arch_m98k,
+  bfd_arch_pyramid,
+  bfd_arch_h8300,
+
+
+
+
+
+
+
+  bfd_arch_pdp11,
+  bfd_arch_powerpc,
+# 1509 "../../bfd/bfd.h"
+  bfd_arch_rs6000,
+
+
+
+
+  bfd_arch_hppa,
+
+
+
+
+  bfd_arch_d10v,
+
+
+
+  bfd_arch_d30v,
+  bfd_arch_dlx,
+  bfd_arch_m68hc11,
+  bfd_arch_m68hc12,
+
+
+
+  bfd_arch_m9s12x,
+  bfd_arch_m9s12xg,
+  bfd_arch_s12z,
+
+  bfd_arch_z8k,
+
+
+  bfd_arch_sh,
+# 1558 "../../bfd/bfd.h"
+  bfd_arch_alpha,
+
+
+
+  bfd_arch_arm,
+# 1592 "../../bfd/bfd.h"
+  bfd_arch_nds32,
+
+
+
+
+
+  bfd_arch_ns32k,
+  bfd_arch_tic30,
+  bfd_arch_tic4x,
+
+
+  bfd_arch_tic54x,
+  bfd_arch_tic6x,
+  bfd_arch_v850,
+  bfd_arch_v850_rh850,
+
+
+
+
+
+
+  bfd_arch_arc,
+
+
+
+
+
+
+ bfd_arch_m32c,
+
+
+  bfd_arch_m32r,
+
+
+
+  bfd_arch_mn10200,
+  bfd_arch_mn10300,
+
+
+
+  bfd_arch_fr30,
+
+  bfd_arch_frv,
+# 1643 "../../bfd/bfd.h"
+  bfd_arch_moxie,
+
+  bfd_arch_ft32,
+
+
+  bfd_arch_mcore,
+  bfd_arch_mep,
+
+
+
+  bfd_arch_metag,
+
+  bfd_arch_ia64,
+
+
+  bfd_arch_ip2k,
+
+
+ bfd_arch_iq2000,
+
+
+  bfd_arch_bpf,
+
+
+  bfd_arch_epiphany,
+
+
+  bfd_arch_mt,
+
+
+
+  bfd_arch_pj,
+  bfd_arch_avr,
+# 1694 "../../bfd/bfd.h"
+  bfd_arch_bfin,
+
+  bfd_arch_cr16,
+
+  bfd_arch_crx,
+
+  bfd_arch_cris,
+
+
+
+  bfd_arch_riscv,
+
+
+  bfd_arch_rl78,
+
+  bfd_arch_rx,
+
+
+
+  bfd_arch_s390,
+
+
+  bfd_arch_score,
+
+
+  bfd_arch_mmix,
+  bfd_arch_xstormy16,
+
+  bfd_arch_msp430,
+# 1747 "../../bfd/bfd.h"
+  bfd_arch_xgate,
+
+  bfd_arch_xtensa,
+
+  bfd_arch_z80,
+# 1771 "../../bfd/bfd.h"
+  bfd_arch_lm32,
+
+  bfd_arch_microblaze,
+  bfd_arch_tilepro,
+  bfd_arch_tilegx,
+
+
+
+  bfd_arch_aarch64,
+
+
+
+
+  bfd_arch_nios2,
+
+
+
+  bfd_arch_visium,
+
+  bfd_arch_wasm32,
+
+  bfd_arch_pru,
+
+  bfd_arch_nfp,
+
+
+  bfd_arch_csky,
+# 1807 "../../bfd/bfd.h"
+  bfd_arch_loongarch,
+
+
+  bfd_arch_amdgcn,
+# 1823 "../../bfd/bfd.h"
+  bfd_arch_last
+  };
+
+typedef struct bfd_arch_info
+{
+  int bits_per_word;
+  int bits_per_address;
+  int bits_per_byte;
+  enum bfd_architecture arch;
+  unsigned long mach;
+  const char *arch_name;
+  const char *printable_name;
+  unsigned int section_align_power;
+
+
+
+  
+# 1839 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 1839 "../../bfd/bfd.h"
+      the_default;
+  const struct bfd_arch_info * (*compatible) (const struct bfd_arch_info *,
+           const struct bfd_arch_info *);
+
+  
+# 1843 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 1843 "../../bfd/bfd.h"
+      (*scan) (const struct bfd_arch_info *, const char *);
+
+
+
+
+  void *(*fill) (bfd_size_type count, 
+# 1848 "../../bfd/bfd.h" 3 4
+                                     _Bool 
+# 1848 "../../bfd/bfd.h"
+                                          is_bigendian, 
+# 1848 "../../bfd/bfd.h" 3 4
+                                                        _Bool 
+# 1848 "../../bfd/bfd.h"
+                                                             code);
+
+  const struct bfd_arch_info *next;
+# 1860 "../../bfd/bfd.h"
+  signed int max_reloc_offset_into_insn;
+}
+bfd_arch_info_type;
+
+const char *bfd_printable_name (bfd *abfd);
+
+const bfd_arch_info_type *bfd_scan_arch (const char *string);
+
+const char **bfd_arch_list (void);
+
+const bfd_arch_info_type *bfd_arch_get_compatible
+   (const bfd *abfd, const bfd *bbfd, 
+# 1871 "../../bfd/bfd.h" 3 4
+                                     _Bool 
+# 1871 "../../bfd/bfd.h"
+                                          accept_unknowns);
+
+void bfd_set_arch_info (bfd *abfd, const bfd_arch_info_type *arg);
+
+
+# 1875 "../../bfd/bfd.h" 3 4
+_Bool 
+# 1875 "../../bfd/bfd.h"
+    bfd_default_set_arch_mach
+   (bfd *abfd, enum bfd_architecture arch, unsigned long mach);
+
+enum bfd_architecture bfd_get_arch (const bfd *abfd);
+
+unsigned long bfd_get_mach (const bfd *abfd);
+
+unsigned int bfd_arch_bits_per_byte (const bfd *abfd);
+
+unsigned int bfd_arch_bits_per_address (const bfd *abfd);
+
+const bfd_arch_info_type *bfd_get_arch_info (bfd *abfd);
+
+const bfd_arch_info_type *bfd_lookup_arch
+   (enum bfd_architecture arch, unsigned long machine);
+
+const char *bfd_printable_arch_mach
+   (enum bfd_architecture arch, unsigned long machine);
+
+unsigned int bfd_octets_per_byte (const bfd *abfd,
+    const asection *sec);
+
+unsigned int bfd_arch_mach_octets_per_byte
+   (enum bfd_architecture arch, unsigned long machine);
+
+
+typedef enum bfd_format
+  {
+    bfd_unknown = 0,
+    bfd_object,
+    bfd_archive,
+    bfd_core,
+    bfd_type_end
+  }
+bfd_format;
+
+enum bfd_direction
+  {
+    no_direction = 0,
+    read_direction = 1,
+    write_direction = 2,
+    both_direction = 3
+  };
+
+enum bfd_plugin_format
+  {
+    bfd_plugin_unknown = 0,
+    bfd_plugin_yes = 1,
+    bfd_plugin_no = 2
+  };
+
+struct bfd_build_id
+  {
+    bfd_size_type size;
+    bfd_byte data[1];
+  };
+
+struct bfd
+{
+
+  const char *filename;
+
+
+  const struct bfd_target *xvec;
+
+
+
+  void *iostream;
+  const struct bfd_iovec *iovec;
+
+
+
+  struct bfd *lru_prev, *lru_next;
+
+
+
+
+  ufile_ptr where;
+
+
+  long mtime;
+
+
+  unsigned int id;
+
+
+  flagword flags;
+# 2066 "../../bfd/bfd.h"
+  __extension__ enum bfd_format format : 3;
+
+
+  __extension__ enum bfd_direction direction : 2;
+
+
+
+  unsigned int cacheable : 1;
+
+
+
+
+  unsigned int target_defaulted : 1;
+
+
+  unsigned int opened_once : 1;
+
+
+
+  unsigned int mtime_set : 1;
+
+
+  unsigned int no_export : 1;
+
+
+
+  unsigned int output_has_begun : 1;
+
+
+  unsigned int has_armap : 1;
+
+
+  unsigned int is_thin_archive : 1;
+
+
+  unsigned int no_element_cache : 1;
+
+
+
+  unsigned int selective_search : 1;
+
+
+  unsigned int is_linker_output : 1;
+
+
+  unsigned int is_linker_input : 1;
+
+
+  __extension__ enum bfd_plugin_format plugin_format : 2;
+
+
+  unsigned int lto_output : 1;
+
+
+  unsigned int lto_slim_object : 1;
+
+
+
+  unsigned int read_only : 1;
+
+
+
+  bfd *plugin_dummy_bfd;
+
+
+
+  ufile_ptr origin;
+
+
+
+
+
+
+  ufile_ptr proxy_origin;
+
+
+  struct bfd_hash_table section_htab;
+
+
+  struct bfd_section *sections;
+
+
+  struct bfd_section *section_last;
+
+
+  unsigned int section_count;
+
+
+  int archive_plugin_fd;
+
+
+  unsigned int archive_plugin_fd_open_count;
+
+
+
+  int archive_pass;
+
+
+  bfd_size_type alloc_size;
+
+
+
+  bfd_vma start_address;
+
+
+
+  struct bfd_symbol **outsymbols;
+
+
+  unsigned int symcount;
+
+
+  unsigned int dynsymcount;
+
+
+  const struct bfd_arch_info *arch_info;
+
+
+
+
+  ufile_ptr size;
+
+
+  void *arelt_data;
+  struct bfd *my_archive;
+  struct bfd *archive_next;
+  struct bfd *archive_head;
+  struct bfd *nested_archives;
+
+
+  union {
+
+    struct bfd *next;
+
+    struct bfd_link_hash_table *hash;
+  } link;
+
+
+  union
+    {
+      struct aout_data_struct *aout_data;
+      struct artdata *aout_ar_data;
+      struct coff_tdata *coff_obj_data;
+      struct pe_tdata *pe_obj_data;
+      struct xcoff_tdata *xcoff_obj_data;
+      struct ecoff_tdata *ecoff_obj_data;
+      struct srec_data_struct *srec_data;
+      struct verilog_data_struct *verilog_data;
+      struct ihex_data_struct *ihex_data;
+      struct tekhex_data_struct *tekhex_data;
+      struct elf_obj_tdata *elf_obj_data;
+      struct mmo_data_struct *mmo_data;
+      struct trad_core_struct *trad_core_data;
+      struct som_data_struct *som_data;
+      struct hpux_core_struct *hpux_core_data;
+      struct hppabsd_core_struct *hppabsd_core_data;
+      struct sgi_core_struct *sgi_core_data;
+      struct lynx_core_struct *lynx_core_data;
+      struct osf_core_struct *osf_core_data;
+      struct cisco_core_struct *cisco_core_data;
+      struct netbsd_core_struct *netbsd_core_data;
+      struct mach_o_data_struct *mach_o_data;
+      struct mach_o_fat_data_struct *mach_o_fat_data;
+      struct plugin_data_struct *plugin_data;
+      struct bfd_pef_data_struct *pef_data;
+      struct bfd_pef_xlib_data_struct *pef_xlib_data;
+      struct bfd_sym_data_struct *sym_data;
+      void *any;
+    }
+  tdata;
+
+
+  void *usrdata;
+
+
+
+
+  void *memory;
+
+
+  const struct bfd_build_id *build_id;
+};
+
+static inline const char *
+bfd_get_filename (const bfd *abfd)
+{
+  return abfd->filename;
+}
+
+static inline 
+# 2255 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 2256 "../../bfd/bfd.h"
+bfd_get_cacheable (const bfd *abfd)
+{
+  return abfd->cacheable;
+}
+
+static inline enum bfd_format
+bfd_get_format (const bfd *abfd)
+{
+  return abfd->format;
+}
+
+static inline flagword
+bfd_get_file_flags (const bfd *abfd)
+{
+  return abfd->flags;
+}
+
+static inline bfd_vma
+bfd_get_start_address (const bfd *abfd)
+{
+  return abfd->start_address;
+}
+
+static inline unsigned int
+bfd_get_symcount (const bfd *abfd)
+{
+  return abfd->symcount;
+}
+
+static inline unsigned int
+bfd_get_dynamic_symcount (const bfd *abfd)
+{
+  return abfd->dynsymcount;
+}
+
+static inline struct bfd_symbol **
+bfd_get_outsymbols (const bfd *abfd)
+{
+  return abfd->outsymbols;
+}
+
+static inline unsigned int
+bfd_count_sections (const bfd *abfd)
+{
+  return abfd->section_count;
+}
+
+static inline 
+# 2303 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 2304 "../../bfd/bfd.h"
+bfd_has_map (const bfd *abfd)
+{
+  return abfd->has_armap;
+}
+
+static inline 
+# 2309 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 2310 "../../bfd/bfd.h"
+bfd_is_thin_archive (const bfd *abfd)
+{
+  return abfd->is_thin_archive;
+}
+
+static inline void *
+bfd_usrdata (const bfd *abfd)
+{
+  return abfd->usrdata;
+}
+
+
+static inline 
+# 2322 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 2323 "../../bfd/bfd.h"
+bfd_set_cacheable (bfd * abfd, 
+# 2323 "../../bfd/bfd.h" 3 4
+                              _Bool 
+# 2323 "../../bfd/bfd.h"
+                                   val)
+{
+  abfd->cacheable = val;
+  return 
+# 2326 "../../bfd/bfd.h" 3 4
+        1
+# 2326 "../../bfd/bfd.h"
+            ;
+}
+
+static inline void
+bfd_set_thin_archive (bfd *abfd, 
+# 2330 "../../bfd/bfd.h" 3 4
+                                _Bool 
+# 2330 "../../bfd/bfd.h"
+                                     val)
+{
+  abfd->is_thin_archive = val;
+}
+
+static inline void
+bfd_set_usrdata (bfd *abfd, void *val)
+{
+  abfd->usrdata = val;
+}
+
+static inline asection *
+bfd_asymbol_section (const asymbol *sy)
+{
+  return sy->section;
+}
+
+static inline bfd_vma
+bfd_asymbol_value (const asymbol *sy)
+{
+  return sy->section->vma + sy->value;
+}
+
+static inline const char *
+bfd_asymbol_name (const asymbol *sy)
+{
+  return sy->name;
+}
+
+static inline struct bfd *
+bfd_asymbol_bfd (const asymbol *sy)
+{
+  return sy->the_bfd;
+}
+
+static inline void
+bfd_set_asymbol_name (asymbol *sy, const char *name)
+{
+  sy->name = name;
+}
+
+
+
+static inline bfd_size_type
+bfd_get_section_limit_octets (const bfd *abfd, const asection *sec)
+{
+  if (abfd->direction != write_direction && sec->rawsize != 0)
+    return sec->rawsize;
+  return sec->size;
+}
+
+
+static inline bfd_size_type
+bfd_get_section_limit (const bfd *abfd, const asection *sec)
+{
+  return (bfd_get_section_limit_octets (abfd, sec)
+   / bfd_octets_per_byte (abfd, sec));
+}
+
+
+
+
+static inline bfd_size_type
+bfd_get_section_alloc_size (const bfd *abfd, const asection *sec)
+{
+  if (abfd->direction != write_direction && sec->rawsize > sec->size)
+    return sec->rawsize;
+  return sec->size;
+}
+
+
+
+
+static inline void
+bfd_section_list_remove (bfd *abfd, asection *s)
+{
+  asection *next = s->next;
+  asection *prev = s->prev;
+  if (prev)
+    prev->next = next;
+  else
+    abfd->sections = next;
+  if (next)
+    next->prev = prev;
+  else
+    abfd->section_last = prev;
+}
+
+static inline void
+bfd_section_list_append (bfd *abfd, asection *s)
+{
+  s->next = 0;
+  if (abfd->section_last)
+    {
+      s->prev = abfd->section_last;
+      abfd->section_last->next = s;
+    }
+  else
+    {
+      s->prev = 0;
+      abfd->sections = s;
+    }
+  abfd->section_last = s;
+}
+
+static inline void
+bfd_section_list_prepend (bfd *abfd, asection *s)
+{
+  s->prev = 0;
+  if (abfd->sections)
+    {
+      s->next = abfd->sections;
+      abfd->sections->prev = s;
+    }
+  else
+    {
+      s->next = 0;
+      abfd->section_last = s;
+    }
+  abfd->sections = s;
+}
+
+static inline void
+bfd_section_list_insert_after (bfd *abfd, asection *a, asection *s)
+{
+  asection *next = a->next;
+  s->next = next;
+  s->prev = a;
+  a->next = s;
+  if (next)
+    next->prev = s;
+  else
+    abfd->section_last = s;
+}
+
+static inline void
+bfd_section_list_insert_before (bfd *abfd, asection *b, asection *s)
+{
+  asection *prev = b->prev;
+  s->prev = prev;
+  s->next = b;
+  b->prev = s;
+  if (prev)
+    prev->next = s;
+  else
+    abfd->sections = s;
+}
+
+static inline 
+# 2478 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 2479 "../../bfd/bfd.h"
+bfd_section_removed_from_list (const bfd *abfd, const asection *s)
+{
+  return s->next ? s->next->prev != s : abfd->section_last != s;
+}
+
+typedef enum bfd_error
+{
+  bfd_error_no_error = 0,
+  bfd_error_system_call,
+  bfd_error_invalid_target,
+  bfd_error_wrong_format,
+  bfd_error_wrong_object_format,
+  bfd_error_invalid_operation,
+  bfd_error_no_memory,
+  bfd_error_no_symbols,
+  bfd_error_no_armap,
+  bfd_error_no_more_archived_files,
+  bfd_error_malformed_archive,
+  bfd_error_missing_dso,
+  bfd_error_file_not_recognized,
+  bfd_error_file_ambiguously_recognized,
+  bfd_error_no_contents,
+  bfd_error_nonrepresentable_section,
+  bfd_error_no_debug_section,
+  bfd_error_bad_value,
+  bfd_error_file_truncated,
+  bfd_error_file_too_big,
+  bfd_error_sorry,
+  bfd_error_on_input,
+  bfd_error_invalid_error_code
+}
+bfd_error_type;
+
+bfd_error_type bfd_get_error (void);
+
+void bfd_set_error (bfd_error_type error_tag);
+
+void bfd_set_input_error (bfd *input, bfd_error_type error_tag);
+
+const char *bfd_errmsg (bfd_error_type error_tag);
+
+void bfd_perror (const char *message);
+
+typedef void (*bfd_error_handler_type) (const char *, va_list);
+
+void _bfd_error_handler (const char *fmt, ...) __attribute__ ((__format__ (__printf__, 1, 2))) __attribute__ ((__nonnull__ (1)));
+
+bfd_error_handler_type bfd_set_error_handler (bfd_error_handler_type);
+
+void bfd_set_error_program_name (const char *);
+
+typedef void (*bfd_assert_handler_type) (const char *bfd_formatmsg,
+      const char *bfd_version,
+      const char *bfd_file,
+      int bfd_line);
+
+bfd_assert_handler_type bfd_set_assert_handler (bfd_assert_handler_type);
+
+unsigned int bfd_init (void);
+
+
+
+
+long bfd_get_reloc_upper_bound (bfd *abfd, asection *sect);
+
+long bfd_canonicalize_reloc
+   (bfd *abfd, asection *sec, arelent **loc, asymbol **syms);
+
+void bfd_set_reloc
+   (bfd *abfd, asection *sec, arelent **rel, unsigned int count);
+
+
+
+
+# 2552 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2552 "../../bfd/bfd.h"
+    bfd_set_file_flags (bfd *abfd, flagword flags);
+
+int bfd_get_arch_size (bfd *abfd);
+
+int bfd_get_sign_extend_vma (bfd *abfd);
+
+
+# 2558 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2558 "../../bfd/bfd.h"
+    bfd_set_start_address (bfd *abfd, bfd_vma vma);
+
+unsigned int bfd_get_gp_size (bfd *abfd);
+
+void bfd_set_gp_size (bfd *abfd, unsigned int i);
+
+void bfd_set_gp_value (bfd *abfd, bfd_vma v);
+
+bfd_vma bfd_scan_vma (const char *string, const char **end, int base);
+
+
+# 2568 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2568 "../../bfd/bfd.h"
+    bfd_copy_private_header_data (bfd *ibfd, bfd *obfd);
+
+
+
+
+
+# 2573 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2573 "../../bfd/bfd.h"
+    bfd_copy_private_bfd_data (bfd *ibfd, bfd *obfd);
+
+
+
+
+
+# 2578 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2578 "../../bfd/bfd.h"
+    bfd_set_private_flags (bfd *abfd, flagword flags);
+# 2681 "../../bfd/bfd.h"
+bfd_byte *bfd_get_relocated_section_contents
+   (bfd *, struct bfd_link_info *, struct bfd_link_order *, bfd_byte *,
+    
+# 2683 "../../bfd/bfd.h" 3 4
+   _Bool
+# 2683 "../../bfd/bfd.h"
+       , asymbol **);
+
+
+# 2685 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2685 "../../bfd/bfd.h"
+    bfd_record_phdr
+   (bfd *, unsigned long, 
+# 2686 "../../bfd/bfd.h" 3 4
+                         _Bool
+# 2686 "../../bfd/bfd.h"
+                             , flagword, 
+# 2686 "../../bfd/bfd.h" 3 4
+                                         _Bool
+# 2686 "../../bfd/bfd.h"
+                                             , bfd_vma,
+    
+# 2687 "../../bfd/bfd.h" 3 4
+   _Bool
+# 2687 "../../bfd/bfd.h"
+       , 
+# 2687 "../../bfd/bfd.h" 3 4
+         _Bool
+# 2687 "../../bfd/bfd.h"
+             , unsigned int, struct bfd_section **);
+
+void bfd_sprintf_vma (bfd *, char *, bfd_vma);
+void bfd_fprintf_vma (bfd *, void *, bfd_vma);
+
+
+
+
+# 2694 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2694 "../../bfd/bfd.h"
+    bfd_alt_mach_code (bfd *abfd, int alternative);
+
+bfd_vma bfd_emul_get_maxpagesize (const char *);
+
+bfd_vma bfd_emul_get_commonpagesize (const char *);
+
+char *bfd_demangle (bfd *, const char *, int);
+
+
+bfd_size_type bfd_bread (void *, bfd_size_type, bfd *);
+
+bfd_size_type bfd_bwrite (const void *, bfd_size_type, bfd *);
+
+file_ptr bfd_tell (bfd *);
+
+int bfd_flush (bfd *);
+
+int bfd_stat (bfd *, struct stat *);
+
+int bfd_seek (bfd *, file_ptr, int);
+
+long bfd_get_mtime (bfd *abfd);
+
+ufile_ptr bfd_get_size (bfd *abfd);
+
+ufile_ptr bfd_get_file_size (bfd *abfd);
+
+void *bfd_mmap (bfd *abfd, void *addr, bfd_size_type len,
+    int prot, int flags, file_ptr offset,
+    void **map_addr, bfd_size_type *map_len);
+
+
+struct _bfd_window_internal;
+
+typedef struct _bfd_window
+{
+
+  void *data;
+  bfd_size_type size;
+
+
+
+
+
+
+  struct _bfd_window_internal *i;
+}
+bfd_window;
+
+void bfd_init_window (bfd_window *);
+
+void bfd_free_window (bfd_window *);
+
+
+# 2747 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2747 "../../bfd/bfd.h"
+    bfd_get_file_window
+   (bfd *, file_ptr, bfd_size_type, bfd_window *, 
+# 2748 "../../bfd/bfd.h" 3 4
+                                                 _Bool 
+# 2748 "../../bfd/bfd.h"
+                                                                  );
+
+
+
+# 2751 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2751 "../../bfd/bfd.h"
+    bfd_cache_close (bfd *abfd);
+
+
+# 2753 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2753 "../../bfd/bfd.h"
+    bfd_cache_close_all (void);
+
+
+
+enum compressed_debug_section_type
+{
+  COMPRESS_DEBUG_NONE = 0,
+  COMPRESS_DEBUG_GNU_ZLIB = 1 << 1,
+  COMPRESS_DEBUG_GABI_ZLIB = 1 << 2,
+  COMPRESS_DEBUG_ZSTD = 1 << 3,
+  COMPRESS_UNKNOWN = 1 << 4
+};
+
+
+struct compressed_type_tuple
+{
+  enum compressed_debug_section_type type;
+  const char *name;
+};
+
+
+enum compression_type
+{
+  ch_none = 0,
+  ch_compress_zlib = 1 ,
+  ch_compress_zstd = 2
+};
+
+static inline char *
+bfd_debug_name_to_zdebug (bfd *abfd, const char *name)
+{
+  size_t len = strlen (name);
+  char *new_name = (char *) bfd_alloc (abfd, len + 2);
+  if (new_name == 
+# 2786 "../../bfd/bfd.h" 3 4
+                 ((void *)0)
+# 2786 "../../bfd/bfd.h"
+                     )
+    return 
+# 2787 "../../bfd/bfd.h" 3 4
+          ((void *)0)
+# 2787 "../../bfd/bfd.h"
+              ;
+  new_name[0] = '.';
+  new_name[1] = 'z';
+  memcpy (new_name + 2, name + 1, len);
+  return new_name;
+}
+
+static inline char *
+bfd_zdebug_name_to_debug (bfd *abfd, const char *name)
+{
+  size_t len = strlen (name);
+  char *new_name = (char *) bfd_alloc (abfd, len);
+  if (new_name == 
+# 2799 "../../bfd/bfd.h" 3 4
+                 ((void *)0)
+# 2799 "../../bfd/bfd.h"
+                     )
+    return 
+# 2800 "../../bfd/bfd.h" 3 4
+          ((void *)0)
+# 2800 "../../bfd/bfd.h"
+              ;
+  new_name[0] = '.';
+  memcpy (new_name + 1, name + 2, len - 1);
+  return new_name;
+}
+
+enum compressed_debug_section_type
+bfd_get_compression_algorithm (const char *name);
+
+const char *bfd_get_compression_algorithm_name
+   (enum compressed_debug_section_type type);
+
+void bfd_update_compression_header
+   (bfd *abfd, bfd_byte *contents, asection *sec);
+
+int bfd_get_compression_header_size (bfd *abfd, asection *sec);
+
+
+# 2817 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2817 "../../bfd/bfd.h"
+    bfd_convert_section_setup
+   (bfd *ibfd, asection *isec, bfd *obfd,
+    const char **new_name, bfd_size_type *new_size);
+
+
+# 2821 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2821 "../../bfd/bfd.h"
+    bfd_convert_section_contents
+   (bfd *ibfd, asection *isec, bfd *obfd,
+    bfd_byte **ptr, bfd_size_type *ptr_size);
+
+
+# 2825 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2825 "../../bfd/bfd.h"
+    bfd_get_full_section_contents
+   (bfd *abfd, asection *section, bfd_byte **ptr);
+
+
+# 2828 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2828 "../../bfd/bfd.h"
+    bfd_is_section_compressed_info
+   (bfd *abfd, asection *section,
+    int *compression_header_size_p,
+    bfd_size_type *uncompressed_size_p,
+    unsigned int *uncompressed_alignment_power_p,
+    enum compression_type *ch_type);
+
+
+# 2835 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2835 "../../bfd/bfd.h"
+    bfd_is_section_compressed
+   (bfd *abfd, asection *section);
+
+
+# 2838 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2838 "../../bfd/bfd.h"
+    bfd_init_section_decompress_status
+   (bfd *abfd, asection *section);
+
+
+# 2841 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2841 "../../bfd/bfd.h"
+    bfd_init_section_compress_status
+   (bfd *abfd, asection *section);
+
+
+# 2844 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2844 "../../bfd/bfd.h"
+    bfd_compress_section
+   (bfd *abfd, asection *section, bfd_byte *uncompressed_buffer);
+
+
+const char *bfd_core_file_failing_command (bfd *abfd);
+
+int bfd_core_file_failing_signal (bfd *abfd);
+
+int bfd_core_file_pid (bfd *abfd);
+
+
+# 2854 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2854 "../../bfd/bfd.h"
+    core_file_matches_executable_p
+   (bfd *core_bfd, bfd *exec_bfd);
+
+
+# 2857 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2857 "../../bfd/bfd.h"
+    generic_core_file_matches_executable_p
+   (bfd *core_bfd, bfd *exec_bfd);
+
+
+
+# 2861 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2861 "../../bfd/bfd.h"
+    bfd_check_format (bfd *abfd, bfd_format format);
+
+
+# 2863 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2863 "../../bfd/bfd.h"
+    bfd_check_format_matches
+   (bfd *abfd, bfd_format format, char ***matching);
+
+
+# 2866 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2866 "../../bfd/bfd.h"
+    bfd_set_format (bfd *abfd, bfd_format format);
+
+const char *bfd_format_string (bfd_format format);
+# 2882 "../../bfd/bfd.h"
+
+# 2882 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2882 "../../bfd/bfd.h"
+    bfd_link_split_section (bfd *abfd, asection *sec);
+
+
+
+
+
+# 2887 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2887 "../../bfd/bfd.h"
+    bfd_section_already_linked (bfd *abfd,
+    asection *sec,
+    struct bfd_link_info *info);
+
+
+
+
+
+# 2894 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2894 "../../bfd/bfd.h"
+    bfd_generic_define_common_symbol
+   (bfd *output_bfd, struct bfd_link_info *info,
+    struct bfd_link_hash_entry *h);
+
+
+
+
+void _bfd_generic_link_hide_symbol
+   (bfd *output_bfd, struct bfd_link_info *info,
+    struct bfd_link_hash_entry *h);
+
+
+
+
+struct bfd_link_hash_entry *bfd_generic_define_start_stop
+   (struct bfd_link_info *info,
+    const char *symbol, asection *sec);
+
+
+
+
+struct bfd_elf_version_tree * bfd_find_version_for_sym
+   (struct bfd_elf_version_tree *verdefs,
+    const char *sym_name, 
+# 2917 "../../bfd/bfd.h" 3 4
+                         _Bool 
+# 2917 "../../bfd/bfd.h"
+                              *hide);
+
+
+# 2919 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2919 "../../bfd/bfd.h"
+    bfd_hide_sym_by_version
+   (struct bfd_elf_version_tree *verdefs, const char *sym_name);
+
+
+# 2922 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2922 "../../bfd/bfd.h"
+    bfd_link_check_relocs
+   (bfd *abfd, struct bfd_link_info *info);
+
+
+# 2925 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2925 "../../bfd/bfd.h"
+    _bfd_generic_link_check_relocs
+   (bfd *abfd, struct bfd_link_info *info);
+
+
+# 2928 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2928 "../../bfd/bfd.h"
+    bfd_merge_private_bfd_data
+   (bfd *ibfd, struct bfd_link_info *info);
+
+
+
+
+
+
+
+extern unsigned int bfd_use_reserved_id;
+
+bfd *bfd_fopen (const char *filename, const char *target,
+    const char *mode, int fd);
+
+bfd *bfd_openr (const char *filename, const char *target);
+
+bfd *bfd_fdopenr (const char *filename, const char *target, int fd);
+
+bfd *bfd_fdopenw (const char *filename, const char *target, int fd);
+
+bfd *bfd_openstreamr (const char * filename, const char * target,
+    void * stream);
+
+bfd *bfd_openr_iovec (const char *filename, const char *target,
+    void *(*open_func) (struct bfd *nbfd,
+ void *open_closure),
+    void *open_closure,
+    file_ptr (*pread_func) (struct bfd *nbfd,
+ void *stream,
+ void *buf,
+ file_ptr nbytes,
+ file_ptr offset),
+    int (*close_func) (struct bfd *nbfd,
+ void *stream),
+    int (*stat_func) (struct bfd *abfd,
+ void *stream,
+ struct stat *sb));
+
+bfd *bfd_openw (const char *filename, const char *target);
+
+bfd *bfd_elf_bfd_from_remote_memory
+   (bfd *templ, bfd_vma ehdr_vma, bfd_size_type size, bfd_vma *loadbasep,
+    int (*target_read_memory)
+       (bfd_vma vma, bfd_byte *myaddr, bfd_size_type len));
+
+
+# 2973 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2973 "../../bfd/bfd.h"
+    bfd_close (bfd *abfd);
+
+
+# 2975 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2975 "../../bfd/bfd.h"
+    bfd_close_all_done (bfd *);
+
+bfd *bfd_create (const char *filename, bfd *templ);
+
+
+# 2979 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2979 "../../bfd/bfd.h"
+    bfd_make_writable (bfd *abfd);
+
+
+# 2981 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2981 "../../bfd/bfd.h"
+    bfd_make_readable (bfd *abfd);
+
+uint32_t bfd_calc_gnu_debuglink_crc32
+   (uint32_t crc, const bfd_byte *buf, bfd_size_type len);
+
+char *bfd_get_debug_link_info (bfd *abfd, uint32_t *crc32_out);
+
+char *bfd_get_alt_debug_link_info (bfd * abfd,
+    bfd_size_type *buildid_len,
+    bfd_byte **buildid_out);
+
+char *bfd_follow_gnu_debuglink (bfd *abfd, const char *dir);
+
+char *bfd_follow_gnu_debugaltlink (bfd *abfd, const char *dir);
+
+struct bfd_section *bfd_create_gnu_debuglink_section
+   (bfd *abfd, const char *filename);
+
+
+# 2999 "../../bfd/bfd.h" 3 4
+_Bool 
+# 2999 "../../bfd/bfd.h"
+    bfd_fill_in_gnu_debuglink_section
+   (bfd *abfd, struct bfd_section *sect, const char *filename);
+
+char *bfd_follow_build_id_debuglink (bfd *abfd, const char *dir);
+
+const char *bfd_set_filename (bfd *abfd, const char *filename);
+
+
+typedef enum bfd_reloc_status
+{
+
+
+  bfd_reloc_ok = 2,
+
+
+  bfd_reloc_overflow,
+
+
+  bfd_reloc_outofrange,
+
+
+  bfd_reloc_continue,
+
+
+  bfd_reloc_notsupported,
+
+
+  bfd_reloc_other,
+
+
+  bfd_reloc_undefined,
+
+
+
+
+  bfd_reloc_dangerous
+ }
+ bfd_reloc_status_type;
+
+typedef const struct reloc_howto_struct reloc_howto_type;
+
+struct reloc_cache_entry
+{
+
+  struct bfd_symbol **sym_ptr_ptr;
+
+
+  bfd_size_type address;
+
+
+  bfd_vma addend;
+
+
+  reloc_howto_type *howto;
+
+};
+
+enum complain_overflow
+{
+
+  complain_overflow_dont,
+
+
+
+
+  complain_overflow_bitfield,
+
+
+
+  complain_overflow_signed,
+
+
+
+  complain_overflow_unsigned
+};
+
+struct reloc_howto_struct
+{
+
+
+
+  unsigned int type;
+
+
+  unsigned int size:4;
+
+
+
+  unsigned int bitsize:7;
+
+
+
+  unsigned int rightshift:6;
+
+
+
+  unsigned int bitpos:6;
+
+
+
+  __extension__ enum complain_overflow complain_on_overflow:2;
+
+
+  unsigned int negate:1;
+
+
+  unsigned int pc_relative:1;
+# 3122 "../../bfd/bfd.h"
+  unsigned int partial_inplace:1;
+
+
+
+
+
+
+
+  unsigned int pcrel_offset:1;
+
+
+
+
+  unsigned int install_addend:1;
+# 3145 "../../bfd/bfd.h"
+  bfd_vma src_mask;
+
+
+
+  bfd_vma dst_mask;
+
+
+
+
+  bfd_reloc_status_type (*special_function)
+    (bfd *, arelent *, struct bfd_symbol *, void *, asection *,
+     bfd *, char **);
+
+
+  const char *name;
+};
+# 3173 "../../bfd/bfd.h"
+static inline unsigned int
+bfd_get_reloc_size (reloc_howto_type *howto)
+{
+  return howto->size;
+}
+
+typedef struct relent_chain
+{
+  arelent relent;
+  struct relent_chain *next;
+}
+arelent_chain;
+
+bfd_reloc_status_type bfd_check_overflow
+   (enum complain_overflow how,
+    unsigned int bitsize,
+    unsigned int rightshift,
+    unsigned int addrsize,
+    bfd_vma relocation);
+
+
+# 3193 "../../bfd/bfd.h" 3 4
+_Bool 
+# 3193 "../../bfd/bfd.h"
+    bfd_reloc_offset_in_range
+   (reloc_howto_type *howto,
+    bfd *abfd,
+    asection *section,
+    bfd_size_type offset);
+
+bfd_reloc_status_type bfd_perform_relocation
+   (bfd *abfd,
+    arelent *reloc_entry,
+    void *data,
+    asection *input_section,
+    bfd *output_bfd,
+    char **error_message);
+
+bfd_reloc_status_type bfd_install_relocation
+   (bfd *abfd,
+    arelent *reloc_entry,
+    void *data, bfd_vma data_start,
+    asection *input_section,
+    char **error_message);
+
+enum bfd_reloc_code_real {
+  _dummy_first_bfd_reloc_code_real,
+
+
+
+  BFD_RELOC_64,
+  BFD_RELOC_32,
+  BFD_RELOC_26,
+  BFD_RELOC_24,
+  BFD_RELOC_16,
+  BFD_RELOC_14,
+  BFD_RELOC_8,
+
+
+
+
+  BFD_RELOC_64_PCREL,
+  BFD_RELOC_32_PCREL,
+  BFD_RELOC_24_PCREL,
+  BFD_RELOC_16_PCREL,
+  BFD_RELOC_12_PCREL,
+  BFD_RELOC_8_PCREL,
+
+
+  BFD_RELOC_32_SECREL,
+  BFD_RELOC_16_SECIDX,
+
+
+  BFD_RELOC_32_GOT_PCREL,
+  BFD_RELOC_16_GOT_PCREL,
+  BFD_RELOC_8_GOT_PCREL,
+  BFD_RELOC_32_GOTOFF,
+  BFD_RELOC_16_GOTOFF,
+  BFD_RELOC_LO16_GOTOFF,
+  BFD_RELOC_HI16_GOTOFF,
+  BFD_RELOC_HI16_S_GOTOFF,
+  BFD_RELOC_8_GOTOFF,
+  BFD_RELOC_64_PLT_PCREL,
+  BFD_RELOC_32_PLT_PCREL,
+  BFD_RELOC_24_PLT_PCREL,
+  BFD_RELOC_16_PLT_PCREL,
+  BFD_RELOC_8_PLT_PCREL,
+  BFD_RELOC_64_PLTOFF,
+  BFD_RELOC_32_PLTOFF,
+  BFD_RELOC_16_PLTOFF,
+  BFD_RELOC_LO16_PLTOFF,
+  BFD_RELOC_HI16_PLTOFF,
+  BFD_RELOC_HI16_S_PLTOFF,
+  BFD_RELOC_8_PLTOFF,
+
+
+  BFD_RELOC_SIZE32,
+  BFD_RELOC_SIZE64,
+
+
+  BFD_RELOC_68K_GLOB_DAT,
+  BFD_RELOC_68K_JMP_SLOT,
+  BFD_RELOC_68K_RELATIVE,
+  BFD_RELOC_68K_TLS_GD32,
+  BFD_RELOC_68K_TLS_GD16,
+  BFD_RELOC_68K_TLS_GD8,
+  BFD_RELOC_68K_TLS_LDM32,
+  BFD_RELOC_68K_TLS_LDM16,
+  BFD_RELOC_68K_TLS_LDM8,
+  BFD_RELOC_68K_TLS_LDO32,
+  BFD_RELOC_68K_TLS_LDO16,
+  BFD_RELOC_68K_TLS_LDO8,
+  BFD_RELOC_68K_TLS_IE32,
+  BFD_RELOC_68K_TLS_IE16,
+  BFD_RELOC_68K_TLS_IE8,
+  BFD_RELOC_68K_TLS_LE32,
+  BFD_RELOC_68K_TLS_LE16,
+  BFD_RELOC_68K_TLS_LE8,
+
+
+  BFD_RELOC_32_BASEREL,
+  BFD_RELOC_16_BASEREL,
+  BFD_RELOC_LO16_BASEREL,
+  BFD_RELOC_HI16_BASEREL,
+  BFD_RELOC_HI16_S_BASEREL,
+  BFD_RELOC_8_BASEREL,
+  BFD_RELOC_RVA,
+
+
+  BFD_RELOC_8_FFnn,
+
+
+
+
+
+
+
+  BFD_RELOC_32_PCREL_S2,
+  BFD_RELOC_16_PCREL_S2,
+  BFD_RELOC_23_PCREL_S2,
+
+
+
+  BFD_RELOC_HI22,
+  BFD_RELOC_LO10,
+
+
+
+
+
+  BFD_RELOC_GPREL16,
+  BFD_RELOC_GPREL32,
+
+
+
+  BFD_RELOC_NONE,
+  BFD_RELOC_SPARC_WDISP22,
+  BFD_RELOC_SPARC22,
+  BFD_RELOC_SPARC13,
+  BFD_RELOC_SPARC_GOT10,
+  BFD_RELOC_SPARC_GOT13,
+  BFD_RELOC_SPARC_GOT22,
+  BFD_RELOC_SPARC_PC10,
+  BFD_RELOC_SPARC_PC22,
+  BFD_RELOC_SPARC_WPLT30,
+  BFD_RELOC_SPARC_COPY,
+  BFD_RELOC_SPARC_GLOB_DAT,
+  BFD_RELOC_SPARC_JMP_SLOT,
+  BFD_RELOC_SPARC_RELATIVE,
+  BFD_RELOC_SPARC_UA16,
+  BFD_RELOC_SPARC_UA32,
+  BFD_RELOC_SPARC_UA64,
+  BFD_RELOC_SPARC_GOTDATA_HIX22,
+  BFD_RELOC_SPARC_GOTDATA_LOX10,
+  BFD_RELOC_SPARC_GOTDATA_OP_HIX22,
+  BFD_RELOC_SPARC_GOTDATA_OP_LOX10,
+  BFD_RELOC_SPARC_GOTDATA_OP,
+  BFD_RELOC_SPARC_JMP_IREL,
+  BFD_RELOC_SPARC_IRELATIVE,
+
+
+  BFD_RELOC_SPARC_BASE13,
+  BFD_RELOC_SPARC_BASE22,
+
+
+
+  BFD_RELOC_SPARC_10,
+  BFD_RELOC_SPARC_11,
+  BFD_RELOC_SPARC_OLO10,
+  BFD_RELOC_SPARC_HH22,
+  BFD_RELOC_SPARC_HM10,
+  BFD_RELOC_SPARC_LM22,
+  BFD_RELOC_SPARC_PC_HH22,
+  BFD_RELOC_SPARC_PC_HM10,
+  BFD_RELOC_SPARC_PC_LM22,
+  BFD_RELOC_SPARC_WDISP16,
+  BFD_RELOC_SPARC_WDISP19,
+  BFD_RELOC_SPARC_7,
+  BFD_RELOC_SPARC_6,
+  BFD_RELOC_SPARC_5,
+
+  BFD_RELOC_SPARC_PLT32,
+  BFD_RELOC_SPARC_PLT64,
+  BFD_RELOC_SPARC_HIX22,
+  BFD_RELOC_SPARC_LOX10,
+  BFD_RELOC_SPARC_H44,
+  BFD_RELOC_SPARC_M44,
+  BFD_RELOC_SPARC_L44,
+  BFD_RELOC_SPARC_REGISTER,
+  BFD_RELOC_SPARC_H34,
+  BFD_RELOC_SPARC_SIZE32,
+  BFD_RELOC_SPARC_SIZE64,
+  BFD_RELOC_SPARC_WDISP10,
+
+
+  BFD_RELOC_SPARC_REV32,
+
+
+  BFD_RELOC_SPARC_TLS_GD_HI22,
+  BFD_RELOC_SPARC_TLS_GD_LO10,
+  BFD_RELOC_SPARC_TLS_GD_ADD,
+  BFD_RELOC_SPARC_TLS_GD_CALL,
+  BFD_RELOC_SPARC_TLS_LDM_HI22,
+  BFD_RELOC_SPARC_TLS_LDM_LO10,
+  BFD_RELOC_SPARC_TLS_LDM_ADD,
+  BFD_RELOC_SPARC_TLS_LDM_CALL,
+  BFD_RELOC_SPARC_TLS_LDO_HIX22,
+  BFD_RELOC_SPARC_TLS_LDO_LOX10,
+  BFD_RELOC_SPARC_TLS_LDO_ADD,
+  BFD_RELOC_SPARC_TLS_IE_HI22,
+  BFD_RELOC_SPARC_TLS_IE_LO10,
+  BFD_RELOC_SPARC_TLS_IE_LD,
+  BFD_RELOC_SPARC_TLS_IE_LDX,
+  BFD_RELOC_SPARC_TLS_IE_ADD,
+  BFD_RELOC_SPARC_TLS_LE_HIX22,
+  BFD_RELOC_SPARC_TLS_LE_LOX10,
+  BFD_RELOC_SPARC_TLS_DTPMOD32,
+  BFD_RELOC_SPARC_TLS_DTPMOD64,
+  BFD_RELOC_SPARC_TLS_DTPOFF32,
+  BFD_RELOC_SPARC_TLS_DTPOFF64,
+  BFD_RELOC_SPARC_TLS_TPOFF32,
+  BFD_RELOC_SPARC_TLS_TPOFF64,
+
+
+  BFD_RELOC_SPU_IMM7,
+  BFD_RELOC_SPU_IMM8,
+  BFD_RELOC_SPU_IMM10,
+  BFD_RELOC_SPU_IMM10W,
+  BFD_RELOC_SPU_IMM16,
+  BFD_RELOC_SPU_IMM16W,
+  BFD_RELOC_SPU_IMM18,
+  BFD_RELOC_SPU_PCREL9a,
+  BFD_RELOC_SPU_PCREL9b,
+  BFD_RELOC_SPU_PCREL16,
+  BFD_RELOC_SPU_LO16,
+  BFD_RELOC_SPU_HI16,
+  BFD_RELOC_SPU_PPU32,
+  BFD_RELOC_SPU_PPU64,
+  BFD_RELOC_SPU_ADD_PIC,
+
+
+
+
+
+
+
+  BFD_RELOC_ALPHA_GPDISP_HI16,
+
+
+
+
+
+  BFD_RELOC_ALPHA_GPDISP_LO16,
+
+
+
+
+  BFD_RELOC_ALPHA_GPDISP,
+# 3471 "../../bfd/bfd.h"
+  BFD_RELOC_ALPHA_LITERAL,
+  BFD_RELOC_ALPHA_ELF_LITERAL,
+  BFD_RELOC_ALPHA_LITUSE,
+
+
+
+
+  BFD_RELOC_ALPHA_HINT,
+
+
+
+  BFD_RELOC_ALPHA_LINKAGE,
+
+
+
+  BFD_RELOC_ALPHA_CODEADDR,
+
+
+
+  BFD_RELOC_ALPHA_GPREL_HI16,
+  BFD_RELOC_ALPHA_GPREL_LO16,
+
+
+
+
+  BFD_RELOC_ALPHA_BRSGP,
+
+
+
+  BFD_RELOC_ALPHA_NOP,
+
+
+
+  BFD_RELOC_ALPHA_BSR,
+
+
+
+  BFD_RELOC_ALPHA_LDA,
+
+
+
+  BFD_RELOC_ALPHA_BOH,
+
+
+  BFD_RELOC_ALPHA_TLSGD,
+  BFD_RELOC_ALPHA_TLSLDM,
+  BFD_RELOC_ALPHA_DTPMOD64,
+  BFD_RELOC_ALPHA_GOTDTPREL16,
+  BFD_RELOC_ALPHA_DTPREL64,
+  BFD_RELOC_ALPHA_DTPREL_HI16,
+  BFD_RELOC_ALPHA_DTPREL_LO16,
+  BFD_RELOC_ALPHA_DTPREL16,
+  BFD_RELOC_ALPHA_GOTTPREL16,
+  BFD_RELOC_ALPHA_TPREL64,
+  BFD_RELOC_ALPHA_TPREL_HI16,
+  BFD_RELOC_ALPHA_TPREL_LO16,
+  BFD_RELOC_ALPHA_TPREL16,
+
+
+  BFD_RELOC_MIPS_JMP,
+  BFD_RELOC_MICROMIPS_JMP,
+
+
+  BFD_RELOC_MIPS16_JMP,
+
+
+  BFD_RELOC_MIPS16_GPREL,
+
+
+  BFD_RELOC_HI16,
+
+
+
+
+
+  BFD_RELOC_HI16_S,
+
+
+  BFD_RELOC_LO16,
+
+
+  BFD_RELOC_HI16_PCREL,
+
+
+  BFD_RELOC_HI16_S_PCREL,
+
+
+  BFD_RELOC_LO16_PCREL,
+
+
+
+  BFD_RELOC_MIPS16_GOT16,
+  BFD_RELOC_MIPS16_CALL16,
+
+
+  BFD_RELOC_MIPS16_HI16,
+
+
+
+
+
+  BFD_RELOC_MIPS16_HI16_S,
+
+
+  BFD_RELOC_MIPS16_LO16,
+
+
+  BFD_RELOC_MIPS16_TLS_GD,
+  BFD_RELOC_MIPS16_TLS_LDM,
+  BFD_RELOC_MIPS16_TLS_DTPREL_HI16,
+  BFD_RELOC_MIPS16_TLS_DTPREL_LO16,
+  BFD_RELOC_MIPS16_TLS_GOTTPREL,
+  BFD_RELOC_MIPS16_TLS_TPREL_HI16,
+  BFD_RELOC_MIPS16_TLS_TPREL_LO16,
+
+
+  BFD_RELOC_MIPS_LITERAL,
+  BFD_RELOC_MICROMIPS_LITERAL,
+
+
+  BFD_RELOC_MICROMIPS_7_PCREL_S1,
+  BFD_RELOC_MICROMIPS_10_PCREL_S1,
+  BFD_RELOC_MICROMIPS_16_PCREL_S1,
+
+
+  BFD_RELOC_MIPS16_16_PCREL_S1,
+
+
+  BFD_RELOC_MIPS_21_PCREL_S2,
+  BFD_RELOC_MIPS_26_PCREL_S2,
+  BFD_RELOC_MIPS_18_PCREL_S3,
+  BFD_RELOC_MIPS_19_PCREL_S2,
+
+
+  BFD_RELOC_MICROMIPS_GPREL16,
+  BFD_RELOC_MICROMIPS_HI16,
+  BFD_RELOC_MICROMIPS_HI16_S,
+  BFD_RELOC_MICROMIPS_LO16,
+
+
+  BFD_RELOC_MIPS_GOT16,
+  BFD_RELOC_MICROMIPS_GOT16,
+  BFD_RELOC_MIPS_CALL16,
+  BFD_RELOC_MICROMIPS_CALL16,
+  BFD_RELOC_MIPS_GOT_HI16,
+  BFD_RELOC_MICROMIPS_GOT_HI16,
+  BFD_RELOC_MIPS_GOT_LO16,
+  BFD_RELOC_MICROMIPS_GOT_LO16,
+  BFD_RELOC_MIPS_CALL_HI16,
+  BFD_RELOC_MICROMIPS_CALL_HI16,
+  BFD_RELOC_MIPS_CALL_LO16,
+  BFD_RELOC_MICROMIPS_CALL_LO16,
+  BFD_RELOC_MIPS_SUB,
+  BFD_RELOC_MICROMIPS_SUB,
+  BFD_RELOC_MIPS_GOT_PAGE,
+  BFD_RELOC_MICROMIPS_GOT_PAGE,
+  BFD_RELOC_MIPS_GOT_OFST,
+  BFD_RELOC_MICROMIPS_GOT_OFST,
+  BFD_RELOC_MIPS_GOT_DISP,
+  BFD_RELOC_MICROMIPS_GOT_DISP,
+  BFD_RELOC_MIPS_SHIFT5,
+  BFD_RELOC_MIPS_SHIFT6,
+  BFD_RELOC_MIPS_INSERT_A,
+  BFD_RELOC_MIPS_INSERT_B,
+  BFD_RELOC_MIPS_DELETE,
+  BFD_RELOC_MIPS_HIGHEST,
+  BFD_RELOC_MICROMIPS_HIGHEST,
+  BFD_RELOC_MIPS_HIGHER,
+  BFD_RELOC_MICROMIPS_HIGHER,
+  BFD_RELOC_MIPS_SCN_DISP,
+  BFD_RELOC_MICROMIPS_SCN_DISP,
+  BFD_RELOC_MIPS_16,
+  BFD_RELOC_MIPS_RELGOT,
+  BFD_RELOC_MIPS_JALR,
+  BFD_RELOC_MICROMIPS_JALR,
+  BFD_RELOC_MIPS_TLS_DTPMOD32,
+  BFD_RELOC_MIPS_TLS_DTPREL32,
+  BFD_RELOC_MIPS_TLS_DTPMOD64,
+  BFD_RELOC_MIPS_TLS_DTPREL64,
+  BFD_RELOC_MIPS_TLS_GD,
+  BFD_RELOC_MICROMIPS_TLS_GD,
+  BFD_RELOC_MIPS_TLS_LDM,
+  BFD_RELOC_MICROMIPS_TLS_LDM,
+  BFD_RELOC_MIPS_TLS_DTPREL_HI16,
+  BFD_RELOC_MICROMIPS_TLS_DTPREL_HI16,
+  BFD_RELOC_MIPS_TLS_DTPREL_LO16,
+  BFD_RELOC_MICROMIPS_TLS_DTPREL_LO16,
+  BFD_RELOC_MIPS_TLS_GOTTPREL,
+  BFD_RELOC_MICROMIPS_TLS_GOTTPREL,
+  BFD_RELOC_MIPS_TLS_TPREL32,
+  BFD_RELOC_MIPS_TLS_TPREL64,
+  BFD_RELOC_MIPS_TLS_TPREL_HI16,
+  BFD_RELOC_MICROMIPS_TLS_TPREL_HI16,
+  BFD_RELOC_MIPS_TLS_TPREL_LO16,
+  BFD_RELOC_MICROMIPS_TLS_TPREL_LO16,
+  BFD_RELOC_MIPS_EH,
+
+
+
+  BFD_RELOC_MIPS_COPY,
+  BFD_RELOC_MIPS_JUMP_SLOT,
+
+
+
+  BFD_RELOC_MOXIE_10_PCREL,
+
+
+
+  BFD_RELOC_FT32_10,
+  BFD_RELOC_FT32_20,
+  BFD_RELOC_FT32_17,
+  BFD_RELOC_FT32_18,
+  BFD_RELOC_FT32_RELAX,
+  BFD_RELOC_FT32_SC0,
+  BFD_RELOC_FT32_SC1,
+  BFD_RELOC_FT32_15,
+  BFD_RELOC_FT32_DIFF32,
+
+
+
+  BFD_RELOC_FRV_LABEL16,
+  BFD_RELOC_FRV_LABEL24,
+  BFD_RELOC_FRV_LO16,
+  BFD_RELOC_FRV_HI16,
+  BFD_RELOC_FRV_GPREL12,
+  BFD_RELOC_FRV_GPRELU12,
+  BFD_RELOC_FRV_GPREL32,
+  BFD_RELOC_FRV_GPRELHI,
+  BFD_RELOC_FRV_GPRELLO,
+  BFD_RELOC_FRV_GOT12,
+  BFD_RELOC_FRV_GOTHI,
+  BFD_RELOC_FRV_GOTLO,
+  BFD_RELOC_FRV_FUNCDESC,
+  BFD_RELOC_FRV_FUNCDESC_GOT12,
+  BFD_RELOC_FRV_FUNCDESC_GOTHI,
+  BFD_RELOC_FRV_FUNCDESC_GOTLO,
+  BFD_RELOC_FRV_FUNCDESC_VALUE,
+  BFD_RELOC_FRV_FUNCDESC_GOTOFF12,
+  BFD_RELOC_FRV_FUNCDESC_GOTOFFHI,
+  BFD_RELOC_FRV_FUNCDESC_GOTOFFLO,
+  BFD_RELOC_FRV_GOTOFF12,
+  BFD_RELOC_FRV_GOTOFFHI,
+  BFD_RELOC_FRV_GOTOFFLO,
+  BFD_RELOC_FRV_GETTLSOFF,
+  BFD_RELOC_FRV_TLSDESC_VALUE,
+  BFD_RELOC_FRV_GOTTLSDESC12,
+  BFD_RELOC_FRV_GOTTLSDESCHI,
+  BFD_RELOC_FRV_GOTTLSDESCLO,
+  BFD_RELOC_FRV_TLSMOFF12,
+  BFD_RELOC_FRV_TLSMOFFHI,
+  BFD_RELOC_FRV_TLSMOFFLO,
+  BFD_RELOC_FRV_GOTTLSOFF12,
+  BFD_RELOC_FRV_GOTTLSOFFHI,
+  BFD_RELOC_FRV_GOTTLSOFFLO,
+  BFD_RELOC_FRV_TLSOFF,
+  BFD_RELOC_FRV_TLSDESC_RELAX,
+  BFD_RELOC_FRV_GETTLSOFF_RELAX,
+  BFD_RELOC_FRV_TLSOFF_RELAX,
+  BFD_RELOC_FRV_TLSMOFF,
+
+
+
+  BFD_RELOC_MN10300_GOTOFF24,
+
+
+
+  BFD_RELOC_MN10300_GOT32,
+
+
+
+  BFD_RELOC_MN10300_GOT24,
+
+
+
+  BFD_RELOC_MN10300_GOT16,
+
+
+  BFD_RELOC_MN10300_COPY,
+
+
+  BFD_RELOC_MN10300_GLOB_DAT,
+
+
+  BFD_RELOC_MN10300_JMP_SLOT,
+
+
+  BFD_RELOC_MN10300_RELATIVE,
+
+
+
+
+  BFD_RELOC_MN10300_SYM_DIFF,
+
+
+
+
+  BFD_RELOC_MN10300_ALIGN,
+
+
+  BFD_RELOC_MN10300_TLS_GD,
+  BFD_RELOC_MN10300_TLS_LD,
+  BFD_RELOC_MN10300_TLS_LDO,
+  BFD_RELOC_MN10300_TLS_GOTIE,
+  BFD_RELOC_MN10300_TLS_IE,
+  BFD_RELOC_MN10300_TLS_LE,
+  BFD_RELOC_MN10300_TLS_DTPMOD,
+  BFD_RELOC_MN10300_TLS_DTPOFF,
+  BFD_RELOC_MN10300_TLS_TPOFF,
+
+
+
+  BFD_RELOC_MN10300_32_PCREL,
+
+
+
+  BFD_RELOC_MN10300_16_PCREL,
+
+
+
+  BFD_RELOC_386_GOT32,
+  BFD_RELOC_386_PLT32,
+  BFD_RELOC_386_COPY,
+  BFD_RELOC_386_GLOB_DAT,
+  BFD_RELOC_386_JUMP_SLOT,
+  BFD_RELOC_386_RELATIVE,
+  BFD_RELOC_386_GOTOFF,
+  BFD_RELOC_386_GOTPC,
+  BFD_RELOC_386_TLS_TPOFF,
+  BFD_RELOC_386_TLS_IE,
+  BFD_RELOC_386_TLS_GOTIE,
+  BFD_RELOC_386_TLS_LE,
+  BFD_RELOC_386_TLS_GD,
+  BFD_RELOC_386_TLS_LDM,
+  BFD_RELOC_386_TLS_LDO_32,
+  BFD_RELOC_386_TLS_IE_32,
+  BFD_RELOC_386_TLS_LE_32,
+  BFD_RELOC_386_TLS_DTPMOD32,
+  BFD_RELOC_386_TLS_DTPOFF32,
+  BFD_RELOC_386_TLS_TPOFF32,
+  BFD_RELOC_386_TLS_GOTDESC,
+  BFD_RELOC_386_TLS_DESC_CALL,
+  BFD_RELOC_386_TLS_DESC,
+  BFD_RELOC_386_IRELATIVE,
+  BFD_RELOC_386_GOT32X,
+
+
+  BFD_RELOC_X86_64_GOT32,
+  BFD_RELOC_X86_64_PLT32,
+  BFD_RELOC_X86_64_COPY,
+  BFD_RELOC_X86_64_GLOB_DAT,
+  BFD_RELOC_X86_64_JUMP_SLOT,
+  BFD_RELOC_X86_64_RELATIVE,
+  BFD_RELOC_X86_64_GOTPCREL,
+  BFD_RELOC_X86_64_32S,
+  BFD_RELOC_X86_64_DTPMOD64,
+  BFD_RELOC_X86_64_DTPOFF64,
+  BFD_RELOC_X86_64_TPOFF64,
+  BFD_RELOC_X86_64_TLSGD,
+  BFD_RELOC_X86_64_TLSLD,
+  BFD_RELOC_X86_64_DTPOFF32,
+  BFD_RELOC_X86_64_GOTTPOFF,
+  BFD_RELOC_X86_64_TPOFF32,
+  BFD_RELOC_X86_64_GOTOFF64,
+  BFD_RELOC_X86_64_GOTPC32,
+  BFD_RELOC_X86_64_GOT64,
+  BFD_RELOC_X86_64_GOTPCREL64,
+  BFD_RELOC_X86_64_GOTPC64,
+  BFD_RELOC_X86_64_GOTPLT64,
+  BFD_RELOC_X86_64_PLTOFF64,
+  BFD_RELOC_X86_64_GOTPC32_TLSDESC,
+  BFD_RELOC_X86_64_TLSDESC_CALL,
+  BFD_RELOC_X86_64_TLSDESC,
+  BFD_RELOC_X86_64_IRELATIVE,
+  BFD_RELOC_X86_64_PC32_BND,
+  BFD_RELOC_X86_64_PLT32_BND,
+  BFD_RELOC_X86_64_GOTPCRELX,
+  BFD_RELOC_X86_64_REX_GOTPCRELX,
+
+
+  BFD_RELOC_NS32K_IMM_8,
+  BFD_RELOC_NS32K_IMM_16,
+  BFD_RELOC_NS32K_IMM_32,
+  BFD_RELOC_NS32K_IMM_8_PCREL,
+  BFD_RELOC_NS32K_IMM_16_PCREL,
+  BFD_RELOC_NS32K_IMM_32_PCREL,
+  BFD_RELOC_NS32K_DISP_8,
+  BFD_RELOC_NS32K_DISP_16,
+  BFD_RELOC_NS32K_DISP_32,
+  BFD_RELOC_NS32K_DISP_8_PCREL,
+  BFD_RELOC_NS32K_DISP_16_PCREL,
+  BFD_RELOC_NS32K_DISP_32_PCREL,
+
+
+  BFD_RELOC_PDP11_DISP_8_PCREL,
+  BFD_RELOC_PDP11_DISP_6_PCREL,
+
+
+  BFD_RELOC_PJ_CODE_HI16,
+  BFD_RELOC_PJ_CODE_LO16,
+  BFD_RELOC_PJ_CODE_DIR16,
+  BFD_RELOC_PJ_CODE_DIR32,
+  BFD_RELOC_PJ_CODE_REL16,
+  BFD_RELOC_PJ_CODE_REL32,
+
+
+  BFD_RELOC_PPC_B26,
+  BFD_RELOC_PPC_BA26,
+  BFD_RELOC_PPC_TOC16,
+  BFD_RELOC_PPC_TOC16_LO,
+  BFD_RELOC_PPC_TOC16_HI,
+  BFD_RELOC_PPC_B16,
+  BFD_RELOC_PPC_B16_BRTAKEN,
+  BFD_RELOC_PPC_B16_BRNTAKEN,
+  BFD_RELOC_PPC_BA16,
+  BFD_RELOC_PPC_BA16_BRTAKEN,
+  BFD_RELOC_PPC_BA16_BRNTAKEN,
+  BFD_RELOC_PPC_COPY,
+  BFD_RELOC_PPC_GLOB_DAT,
+  BFD_RELOC_PPC_JMP_SLOT,
+  BFD_RELOC_PPC_RELATIVE,
+  BFD_RELOC_PPC_LOCAL24PC,
+  BFD_RELOC_PPC_EMB_NADDR32,
+  BFD_RELOC_PPC_EMB_NADDR16,
+  BFD_RELOC_PPC_EMB_NADDR16_LO,
+  BFD_RELOC_PPC_EMB_NADDR16_HI,
+  BFD_RELOC_PPC_EMB_NADDR16_HA,
+  BFD_RELOC_PPC_EMB_SDAI16,
+  BFD_RELOC_PPC_EMB_SDA2I16,
+  BFD_RELOC_PPC_EMB_SDA2REL,
+  BFD_RELOC_PPC_EMB_SDA21,
+  BFD_RELOC_PPC_EMB_MRKREF,
+  BFD_RELOC_PPC_EMB_RELSEC16,
+  BFD_RELOC_PPC_EMB_RELST_LO,
+  BFD_RELOC_PPC_EMB_RELST_HI,
+  BFD_RELOC_PPC_EMB_RELST_HA,
+  BFD_RELOC_PPC_EMB_BIT_FLD,
+  BFD_RELOC_PPC_EMB_RELSDA,
+  BFD_RELOC_PPC_VLE_REL8,
+  BFD_RELOC_PPC_VLE_REL15,
+  BFD_RELOC_PPC_VLE_REL24,
+  BFD_RELOC_PPC_VLE_LO16A,
+  BFD_RELOC_PPC_VLE_LO16D,
+  BFD_RELOC_PPC_VLE_HI16A,
+  BFD_RELOC_PPC_VLE_HI16D,
+  BFD_RELOC_PPC_VLE_HA16A,
+  BFD_RELOC_PPC_VLE_HA16D,
+  BFD_RELOC_PPC_VLE_SDA21,
+  BFD_RELOC_PPC_VLE_SDA21_LO,
+  BFD_RELOC_PPC_VLE_SDAREL_LO16A,
+  BFD_RELOC_PPC_VLE_SDAREL_LO16D,
+  BFD_RELOC_PPC_VLE_SDAREL_HI16A,
+  BFD_RELOC_PPC_VLE_SDAREL_HI16D,
+  BFD_RELOC_PPC_VLE_SDAREL_HA16A,
+  BFD_RELOC_PPC_VLE_SDAREL_HA16D,
+  BFD_RELOC_PPC_16DX_HA,
+  BFD_RELOC_PPC_REL16DX_HA,
+  BFD_RELOC_PPC_NEG,
+  BFD_RELOC_PPC64_HIGHER,
+  BFD_RELOC_PPC64_HIGHER_S,
+  BFD_RELOC_PPC64_HIGHEST,
+  BFD_RELOC_PPC64_HIGHEST_S,
+  BFD_RELOC_PPC64_TOC16_LO,
+  BFD_RELOC_PPC64_TOC16_HI,
+  BFD_RELOC_PPC64_TOC16_HA,
+  BFD_RELOC_PPC64_TOC,
+  BFD_RELOC_PPC64_PLTGOT16,
+  BFD_RELOC_PPC64_PLTGOT16_LO,
+  BFD_RELOC_PPC64_PLTGOT16_HI,
+  BFD_RELOC_PPC64_PLTGOT16_HA,
+  BFD_RELOC_PPC64_ADDR16_DS,
+  BFD_RELOC_PPC64_ADDR16_LO_DS,
+  BFD_RELOC_PPC64_GOT16_DS,
+  BFD_RELOC_PPC64_GOT16_LO_DS,
+  BFD_RELOC_PPC64_PLT16_LO_DS,
+  BFD_RELOC_PPC64_SECTOFF_DS,
+  BFD_RELOC_PPC64_SECTOFF_LO_DS,
+  BFD_RELOC_PPC64_TOC16_DS,
+  BFD_RELOC_PPC64_TOC16_LO_DS,
+  BFD_RELOC_PPC64_PLTGOT16_DS,
+  BFD_RELOC_PPC64_PLTGOT16_LO_DS,
+  BFD_RELOC_PPC64_ADDR16_HIGH,
+  BFD_RELOC_PPC64_ADDR16_HIGHA,
+  BFD_RELOC_PPC64_REL16_HIGH,
+  BFD_RELOC_PPC64_REL16_HIGHA,
+  BFD_RELOC_PPC64_REL16_HIGHER,
+  BFD_RELOC_PPC64_REL16_HIGHERA,
+  BFD_RELOC_PPC64_REL16_HIGHEST,
+  BFD_RELOC_PPC64_REL16_HIGHESTA,
+  BFD_RELOC_PPC64_ADDR64_LOCAL,
+  BFD_RELOC_PPC64_ENTRY,
+  BFD_RELOC_PPC64_REL24_NOTOC,
+  BFD_RELOC_PPC64_REL24_P9NOTOC,
+  BFD_RELOC_PPC64_D34,
+  BFD_RELOC_PPC64_D34_LO,
+  BFD_RELOC_PPC64_D34_HI30,
+  BFD_RELOC_PPC64_D34_HA30,
+  BFD_RELOC_PPC64_PCREL34,
+  BFD_RELOC_PPC64_GOT_PCREL34,
+  BFD_RELOC_PPC64_PLT_PCREL34,
+  BFD_RELOC_PPC64_ADDR16_HIGHER34,
+  BFD_RELOC_PPC64_ADDR16_HIGHERA34,
+  BFD_RELOC_PPC64_ADDR16_HIGHEST34,
+  BFD_RELOC_PPC64_ADDR16_HIGHESTA34,
+  BFD_RELOC_PPC64_REL16_HIGHER34,
+  BFD_RELOC_PPC64_REL16_HIGHERA34,
+  BFD_RELOC_PPC64_REL16_HIGHEST34,
+  BFD_RELOC_PPC64_REL16_HIGHESTA34,
+  BFD_RELOC_PPC64_D28,
+  BFD_RELOC_PPC64_PCREL28,
+
+
+  BFD_RELOC_PPC_TLS,
+  BFD_RELOC_PPC_TLSGD,
+  BFD_RELOC_PPC_TLSLD,
+  BFD_RELOC_PPC_TLSLE,
+  BFD_RELOC_PPC_TLSIE,
+  BFD_RELOC_PPC_TLSM,
+  BFD_RELOC_PPC_TLSML,
+  BFD_RELOC_PPC_DTPMOD,
+  BFD_RELOC_PPC_TPREL16,
+  BFD_RELOC_PPC_TPREL16_LO,
+  BFD_RELOC_PPC_TPREL16_HI,
+  BFD_RELOC_PPC_TPREL16_HA,
+  BFD_RELOC_PPC_TPREL,
+  BFD_RELOC_PPC_DTPREL16,
+  BFD_RELOC_PPC_DTPREL16_LO,
+  BFD_RELOC_PPC_DTPREL16_HI,
+  BFD_RELOC_PPC_DTPREL16_HA,
+  BFD_RELOC_PPC_DTPREL,
+  BFD_RELOC_PPC_GOT_TLSGD16,
+  BFD_RELOC_PPC_GOT_TLSGD16_LO,
+  BFD_RELOC_PPC_GOT_TLSGD16_HI,
+  BFD_RELOC_PPC_GOT_TLSGD16_HA,
+  BFD_RELOC_PPC_GOT_TLSLD16,
+  BFD_RELOC_PPC_GOT_TLSLD16_LO,
+  BFD_RELOC_PPC_GOT_TLSLD16_HI,
+  BFD_RELOC_PPC_GOT_TLSLD16_HA,
+  BFD_RELOC_PPC_GOT_TPREL16,
+  BFD_RELOC_PPC_GOT_TPREL16_LO,
+  BFD_RELOC_PPC_GOT_TPREL16_HI,
+  BFD_RELOC_PPC_GOT_TPREL16_HA,
+  BFD_RELOC_PPC_GOT_DTPREL16,
+  BFD_RELOC_PPC_GOT_DTPREL16_LO,
+  BFD_RELOC_PPC_GOT_DTPREL16_HI,
+  BFD_RELOC_PPC_GOT_DTPREL16_HA,
+  BFD_RELOC_PPC64_TLSGD,
+  BFD_RELOC_PPC64_TLSLD,
+  BFD_RELOC_PPC64_TLSLE,
+  BFD_RELOC_PPC64_TLSIE,
+  BFD_RELOC_PPC64_TLSM,
+  BFD_RELOC_PPC64_TLSML,
+  BFD_RELOC_PPC64_TPREL16_DS,
+  BFD_RELOC_PPC64_TPREL16_LO_DS,
+  BFD_RELOC_PPC64_TPREL16_HIGH,
+  BFD_RELOC_PPC64_TPREL16_HIGHA,
+  BFD_RELOC_PPC64_TPREL16_HIGHER,
+  BFD_RELOC_PPC64_TPREL16_HIGHERA,
+  BFD_RELOC_PPC64_TPREL16_HIGHEST,
+  BFD_RELOC_PPC64_TPREL16_HIGHESTA,
+  BFD_RELOC_PPC64_DTPREL16_DS,
+  BFD_RELOC_PPC64_DTPREL16_LO_DS,
+  BFD_RELOC_PPC64_DTPREL16_HIGH,
+  BFD_RELOC_PPC64_DTPREL16_HIGHA,
+  BFD_RELOC_PPC64_DTPREL16_HIGHER,
+  BFD_RELOC_PPC64_DTPREL16_HIGHERA,
+  BFD_RELOC_PPC64_DTPREL16_HIGHEST,
+  BFD_RELOC_PPC64_DTPREL16_HIGHESTA,
+  BFD_RELOC_PPC64_TPREL34,
+  BFD_RELOC_PPC64_DTPREL34,
+  BFD_RELOC_PPC64_GOT_TLSGD_PCREL34,
+  BFD_RELOC_PPC64_GOT_TLSLD_PCREL34,
+  BFD_RELOC_PPC64_GOT_TPREL_PCREL34,
+  BFD_RELOC_PPC64_GOT_DTPREL_PCREL34,
+  BFD_RELOC_PPC64_TLS_PCREL,
+
+
+  BFD_RELOC_I370_D12,
+
+
+
+
+  BFD_RELOC_CTOR,
+
+
+
+  BFD_RELOC_ARM_PCREL_BRANCH,
+
+
+
+
+  BFD_RELOC_ARM_PCREL_BLX,
+
+
+
+
+  BFD_RELOC_THUMB_PCREL_BLX,
+
+
+  BFD_RELOC_ARM_PCREL_CALL,
+
+
+  BFD_RELOC_ARM_PCREL_JUMP,
+
+
+  BFD_RELOC_THUMB_PCREL_BRANCH5,
+
+
+  BFD_RELOC_THUMB_PCREL_BFCSEL,
+
+
+  BFD_RELOC_ARM_THUMB_BF17,
+
+
+  BFD_RELOC_ARM_THUMB_BF13,
+
+
+  BFD_RELOC_ARM_THUMB_BF19,
+
+
+  BFD_RELOC_ARM_THUMB_LOOP12,
+
+
+
+
+
+
+  BFD_RELOC_THUMB_PCREL_BRANCH7,
+  BFD_RELOC_THUMB_PCREL_BRANCH9,
+  BFD_RELOC_THUMB_PCREL_BRANCH12,
+  BFD_RELOC_THUMB_PCREL_BRANCH20,
+  BFD_RELOC_THUMB_PCREL_BRANCH23,
+  BFD_RELOC_THUMB_PCREL_BRANCH25,
+
+
+  BFD_RELOC_ARM_OFFSET_IMM,
+
+
+  BFD_RELOC_ARM_THUMB_OFFSET,
+
+
+
+  BFD_RELOC_ARM_TARGET1,
+
+
+  BFD_RELOC_ARM_ROSEGREL32,
+
+
+  BFD_RELOC_ARM_SBREL32,
+
+
+
+
+  BFD_RELOC_ARM_TARGET2,
+
+
+  BFD_RELOC_ARM_PREL31,
+
+
+  BFD_RELOC_ARM_MOVW,
+  BFD_RELOC_ARM_MOVT,
+  BFD_RELOC_ARM_MOVW_PCREL,
+  BFD_RELOC_ARM_MOVT_PCREL,
+  BFD_RELOC_ARM_THUMB_MOVW,
+  BFD_RELOC_ARM_THUMB_MOVT,
+  BFD_RELOC_ARM_THUMB_MOVW_PCREL,
+  BFD_RELOC_ARM_THUMB_MOVT_PCREL,
+
+
+  BFD_RELOC_ARM_GOTFUNCDESC,
+  BFD_RELOC_ARM_GOTOFFFUNCDESC,
+  BFD_RELOC_ARM_FUNCDESC,
+  BFD_RELOC_ARM_FUNCDESC_VALUE,
+  BFD_RELOC_ARM_TLS_GD32_FDPIC,
+  BFD_RELOC_ARM_TLS_LDM32_FDPIC,
+  BFD_RELOC_ARM_TLS_IE32_FDPIC,
+
+
+  BFD_RELOC_ARM_JUMP_SLOT,
+  BFD_RELOC_ARM_GLOB_DAT,
+  BFD_RELOC_ARM_GOT32,
+  BFD_RELOC_ARM_PLT32,
+  BFD_RELOC_ARM_RELATIVE,
+  BFD_RELOC_ARM_GOTOFF,
+  BFD_RELOC_ARM_GOTPC,
+  BFD_RELOC_ARM_GOT_PREL,
+
+
+  BFD_RELOC_ARM_TLS_GD32,
+  BFD_RELOC_ARM_TLS_LDO32,
+  BFD_RELOC_ARM_TLS_LDM32,
+  BFD_RELOC_ARM_TLS_DTPOFF32,
+  BFD_RELOC_ARM_TLS_DTPMOD32,
+  BFD_RELOC_ARM_TLS_TPOFF32,
+  BFD_RELOC_ARM_TLS_IE32,
+  BFD_RELOC_ARM_TLS_LE32,
+  BFD_RELOC_ARM_TLS_GOTDESC,
+  BFD_RELOC_ARM_TLS_CALL,
+  BFD_RELOC_ARM_THM_TLS_CALL,
+  BFD_RELOC_ARM_TLS_DESCSEQ,
+  BFD_RELOC_ARM_THM_TLS_DESCSEQ,
+  BFD_RELOC_ARM_TLS_DESC,
+
+
+  BFD_RELOC_ARM_ALU_PC_G0_NC,
+  BFD_RELOC_ARM_ALU_PC_G0,
+  BFD_RELOC_ARM_ALU_PC_G1_NC,
+  BFD_RELOC_ARM_ALU_PC_G1,
+  BFD_RELOC_ARM_ALU_PC_G2,
+  BFD_RELOC_ARM_LDR_PC_G0,
+  BFD_RELOC_ARM_LDR_PC_G1,
+  BFD_RELOC_ARM_LDR_PC_G2,
+  BFD_RELOC_ARM_LDRS_PC_G0,
+  BFD_RELOC_ARM_LDRS_PC_G1,
+  BFD_RELOC_ARM_LDRS_PC_G2,
+  BFD_RELOC_ARM_LDC_PC_G0,
+  BFD_RELOC_ARM_LDC_PC_G1,
+  BFD_RELOC_ARM_LDC_PC_G2,
+  BFD_RELOC_ARM_ALU_SB_G0_NC,
+  BFD_RELOC_ARM_ALU_SB_G0,
+  BFD_RELOC_ARM_ALU_SB_G1_NC,
+  BFD_RELOC_ARM_ALU_SB_G1,
+  BFD_RELOC_ARM_ALU_SB_G2,
+  BFD_RELOC_ARM_LDR_SB_G0,
+  BFD_RELOC_ARM_LDR_SB_G1,
+  BFD_RELOC_ARM_LDR_SB_G2,
+  BFD_RELOC_ARM_LDRS_SB_G0,
+  BFD_RELOC_ARM_LDRS_SB_G1,
+  BFD_RELOC_ARM_LDRS_SB_G2,
+  BFD_RELOC_ARM_LDC_SB_G0,
+  BFD_RELOC_ARM_LDC_SB_G1,
+  BFD_RELOC_ARM_LDC_SB_G2,
+
+
+  BFD_RELOC_ARM_V4BX,
+
+
+  BFD_RELOC_ARM_IRELATIVE,
+
+
+  BFD_RELOC_ARM_THUMB_ALU_ABS_G0_NC,
+  BFD_RELOC_ARM_THUMB_ALU_ABS_G1_NC,
+  BFD_RELOC_ARM_THUMB_ALU_ABS_G2_NC,
+  BFD_RELOC_ARM_THUMB_ALU_ABS_G3_NC,
+
+
+
+  BFD_RELOC_ARM_IMMEDIATE,
+  BFD_RELOC_ARM_ADRL_IMMEDIATE,
+  BFD_RELOC_ARM_T32_IMMEDIATE,
+  BFD_RELOC_ARM_T32_ADD_IMM,
+  BFD_RELOC_ARM_T32_IMM12,
+  BFD_RELOC_ARM_T32_ADD_PC12,
+  BFD_RELOC_ARM_SHIFT_IMM,
+  BFD_RELOC_ARM_SMC,
+  BFD_RELOC_ARM_HVC,
+  BFD_RELOC_ARM_SWI,
+  BFD_RELOC_ARM_MULTI,
+  BFD_RELOC_ARM_CP_OFF_IMM,
+  BFD_RELOC_ARM_CP_OFF_IMM_S2,
+  BFD_RELOC_ARM_T32_CP_OFF_IMM,
+  BFD_RELOC_ARM_T32_CP_OFF_IMM_S2,
+  BFD_RELOC_ARM_T32_VLDR_VSTR_OFF_IMM,
+  BFD_RELOC_ARM_ADR_IMM,
+  BFD_RELOC_ARM_LDR_IMM,
+  BFD_RELOC_ARM_LITERAL,
+  BFD_RELOC_ARM_IN_POOL,
+  BFD_RELOC_ARM_OFFSET_IMM8,
+  BFD_RELOC_ARM_T32_OFFSET_U8,
+  BFD_RELOC_ARM_T32_OFFSET_IMM,
+  BFD_RELOC_ARM_HWLITERAL,
+  BFD_RELOC_ARM_THUMB_ADD,
+  BFD_RELOC_ARM_THUMB_IMM,
+  BFD_RELOC_ARM_THUMB_SHIFT,
+
+
+  BFD_RELOC_SH_PCDISP8BY2,
+  BFD_RELOC_SH_PCDISP12BY2,
+  BFD_RELOC_SH_IMM3,
+  BFD_RELOC_SH_IMM3U,
+  BFD_RELOC_SH_DISP12,
+  BFD_RELOC_SH_DISP12BY2,
+  BFD_RELOC_SH_DISP12BY4,
+  BFD_RELOC_SH_DISP12BY8,
+  BFD_RELOC_SH_DISP20,
+  BFD_RELOC_SH_DISP20BY8,
+  BFD_RELOC_SH_IMM4,
+  BFD_RELOC_SH_IMM4BY2,
+  BFD_RELOC_SH_IMM4BY4,
+  BFD_RELOC_SH_IMM8,
+  BFD_RELOC_SH_IMM8BY2,
+  BFD_RELOC_SH_IMM8BY4,
+  BFD_RELOC_SH_PCRELIMM8BY2,
+  BFD_RELOC_SH_PCRELIMM8BY4,
+  BFD_RELOC_SH_SWITCH16,
+  BFD_RELOC_SH_SWITCH32,
+  BFD_RELOC_SH_USES,
+  BFD_RELOC_SH_COUNT,
+  BFD_RELOC_SH_ALIGN,
+  BFD_RELOC_SH_CODE,
+  BFD_RELOC_SH_DATA,
+  BFD_RELOC_SH_LABEL,
+  BFD_RELOC_SH_LOOP_START,
+  BFD_RELOC_SH_LOOP_END,
+  BFD_RELOC_SH_COPY,
+  BFD_RELOC_SH_GLOB_DAT,
+  BFD_RELOC_SH_JMP_SLOT,
+  BFD_RELOC_SH_RELATIVE,
+  BFD_RELOC_SH_GOTPC,
+  BFD_RELOC_SH_GOT_LOW16,
+  BFD_RELOC_SH_GOT_MEDLOW16,
+  BFD_RELOC_SH_GOT_MEDHI16,
+  BFD_RELOC_SH_GOT_HI16,
+  BFD_RELOC_SH_GOTPLT_LOW16,
+  BFD_RELOC_SH_GOTPLT_MEDLOW16,
+  BFD_RELOC_SH_GOTPLT_MEDHI16,
+  BFD_RELOC_SH_GOTPLT_HI16,
+  BFD_RELOC_SH_PLT_LOW16,
+  BFD_RELOC_SH_PLT_MEDLOW16,
+  BFD_RELOC_SH_PLT_MEDHI16,
+  BFD_RELOC_SH_PLT_HI16,
+  BFD_RELOC_SH_GOTOFF_LOW16,
+  BFD_RELOC_SH_GOTOFF_MEDLOW16,
+  BFD_RELOC_SH_GOTOFF_MEDHI16,
+  BFD_RELOC_SH_GOTOFF_HI16,
+  BFD_RELOC_SH_GOTPC_LOW16,
+  BFD_RELOC_SH_GOTPC_MEDLOW16,
+  BFD_RELOC_SH_GOTPC_MEDHI16,
+  BFD_RELOC_SH_GOTPC_HI16,
+  BFD_RELOC_SH_COPY64,
+  BFD_RELOC_SH_GLOB_DAT64,
+  BFD_RELOC_SH_JMP_SLOT64,
+  BFD_RELOC_SH_RELATIVE64,
+  BFD_RELOC_SH_GOT10BY4,
+  BFD_RELOC_SH_GOT10BY8,
+  BFD_RELOC_SH_GOTPLT10BY4,
+  BFD_RELOC_SH_GOTPLT10BY8,
+  BFD_RELOC_SH_GOTPLT32,
+  BFD_RELOC_SH_SHMEDIA_CODE,
+  BFD_RELOC_SH_IMMU5,
+  BFD_RELOC_SH_IMMS6,
+  BFD_RELOC_SH_IMMS6BY32,
+  BFD_RELOC_SH_IMMU6,
+  BFD_RELOC_SH_IMMS10,
+  BFD_RELOC_SH_IMMS10BY2,
+  BFD_RELOC_SH_IMMS10BY4,
+  BFD_RELOC_SH_IMMS10BY8,
+  BFD_RELOC_SH_IMMS16,
+  BFD_RELOC_SH_IMMU16,
+  BFD_RELOC_SH_IMM_LOW16,
+  BFD_RELOC_SH_IMM_LOW16_PCREL,
+  BFD_RELOC_SH_IMM_MEDLOW16,
+  BFD_RELOC_SH_IMM_MEDLOW16_PCREL,
+  BFD_RELOC_SH_IMM_MEDHI16,
+  BFD_RELOC_SH_IMM_MEDHI16_PCREL,
+  BFD_RELOC_SH_IMM_HI16,
+  BFD_RELOC_SH_IMM_HI16_PCREL,
+  BFD_RELOC_SH_PT_16,
+  BFD_RELOC_SH_TLS_GD_32,
+  BFD_RELOC_SH_TLS_LD_32,
+  BFD_RELOC_SH_TLS_LDO_32,
+  BFD_RELOC_SH_TLS_IE_32,
+  BFD_RELOC_SH_TLS_LE_32,
+  BFD_RELOC_SH_TLS_DTPMOD32,
+  BFD_RELOC_SH_TLS_DTPOFF32,
+  BFD_RELOC_SH_TLS_TPOFF32,
+  BFD_RELOC_SH_GOT20,
+  BFD_RELOC_SH_GOTOFF20,
+  BFD_RELOC_SH_GOTFUNCDESC,
+  BFD_RELOC_SH_GOTFUNCDESC20,
+  BFD_RELOC_SH_GOTOFFFUNCDESC,
+  BFD_RELOC_SH_GOTOFFFUNCDESC20,
+  BFD_RELOC_SH_FUNCDESC,
+
+
+  BFD_RELOC_ARC_NONE,
+  BFD_RELOC_ARC_8,
+  BFD_RELOC_ARC_16,
+  BFD_RELOC_ARC_24,
+  BFD_RELOC_ARC_32,
+  BFD_RELOC_ARC_N8,
+  BFD_RELOC_ARC_N16,
+  BFD_RELOC_ARC_N24,
+  BFD_RELOC_ARC_N32,
+  BFD_RELOC_ARC_SDA,
+  BFD_RELOC_ARC_SECTOFF,
+  BFD_RELOC_ARC_S21H_PCREL,
+  BFD_RELOC_ARC_S21W_PCREL,
+  BFD_RELOC_ARC_S25H_PCREL,
+  BFD_RELOC_ARC_S25W_PCREL,
+  BFD_RELOC_ARC_SDA32,
+  BFD_RELOC_ARC_SDA_LDST,
+  BFD_RELOC_ARC_SDA_LDST1,
+  BFD_RELOC_ARC_SDA_LDST2,
+  BFD_RELOC_ARC_SDA16_LD,
+  BFD_RELOC_ARC_SDA16_LD1,
+  BFD_RELOC_ARC_SDA16_LD2,
+  BFD_RELOC_ARC_S13_PCREL,
+  BFD_RELOC_ARC_W,
+  BFD_RELOC_ARC_32_ME,
+  BFD_RELOC_ARC_32_ME_S,
+  BFD_RELOC_ARC_N32_ME,
+  BFD_RELOC_ARC_SECTOFF_ME,
+  BFD_RELOC_ARC_SDA32_ME,
+  BFD_RELOC_ARC_W_ME,
+  BFD_RELOC_AC_SECTOFF_U8,
+  BFD_RELOC_AC_SECTOFF_U8_1,
+  BFD_RELOC_AC_SECTOFF_U8_2,
+  BFD_RELOC_AC_SECTOFF_S9,
+  BFD_RELOC_AC_SECTOFF_S9_1,
+  BFD_RELOC_AC_SECTOFF_S9_2,
+  BFD_RELOC_ARC_SECTOFF_ME_1,
+  BFD_RELOC_ARC_SECTOFF_ME_2,
+  BFD_RELOC_ARC_SECTOFF_1,
+  BFD_RELOC_ARC_SECTOFF_2,
+  BFD_RELOC_ARC_SDA_12,
+  BFD_RELOC_ARC_SDA16_ST2,
+  BFD_RELOC_ARC_32_PCREL,
+  BFD_RELOC_ARC_PC32,
+  BFD_RELOC_ARC_GOT32,
+  BFD_RELOC_ARC_GOTPC32,
+  BFD_RELOC_ARC_PLT32,
+  BFD_RELOC_ARC_COPY,
+  BFD_RELOC_ARC_GLOB_DAT,
+  BFD_RELOC_ARC_JMP_SLOT,
+  BFD_RELOC_ARC_RELATIVE,
+  BFD_RELOC_ARC_GOTOFF,
+  BFD_RELOC_ARC_GOTPC,
+  BFD_RELOC_ARC_S21W_PCREL_PLT,
+  BFD_RELOC_ARC_S25H_PCREL_PLT,
+  BFD_RELOC_ARC_TLS_DTPMOD,
+  BFD_RELOC_ARC_TLS_TPOFF,
+  BFD_RELOC_ARC_TLS_GD_GOT,
+  BFD_RELOC_ARC_TLS_GD_LD,
+  BFD_RELOC_ARC_TLS_GD_CALL,
+  BFD_RELOC_ARC_TLS_IE_GOT,
+  BFD_RELOC_ARC_TLS_DTPOFF,
+  BFD_RELOC_ARC_TLS_DTPOFF_S9,
+  BFD_RELOC_ARC_TLS_LE_S9,
+  BFD_RELOC_ARC_TLS_LE_32,
+  BFD_RELOC_ARC_S25W_PCREL_PLT,
+  BFD_RELOC_ARC_S21H_PCREL_PLT,
+  BFD_RELOC_ARC_NPS_CMEM16,
+  BFD_RELOC_ARC_JLI_SECTOFF,
+
+
+  BFD_RELOC_BFIN_16_IMM,
+
+
+  BFD_RELOC_BFIN_16_HIGH,
+
+
+  BFD_RELOC_BFIN_4_PCREL,
+
+
+  BFD_RELOC_BFIN_5_PCREL,
+
+
+  BFD_RELOC_BFIN_16_LOW,
+
+
+  BFD_RELOC_BFIN_10_PCREL,
+
+
+  BFD_RELOC_BFIN_11_PCREL,
+
+
+  BFD_RELOC_BFIN_12_PCREL_JUMP,
+
+
+  BFD_RELOC_BFIN_12_PCREL_JUMP_S,
+
+
+  BFD_RELOC_BFIN_24_PCREL_CALL_X,
+
+
+  BFD_RELOC_BFIN_24_PCREL_JUMP_L,
+
+
+  BFD_RELOC_BFIN_GOT17M4,
+  BFD_RELOC_BFIN_GOTHI,
+  BFD_RELOC_BFIN_GOTLO,
+  BFD_RELOC_BFIN_FUNCDESC,
+  BFD_RELOC_BFIN_FUNCDESC_GOT17M4,
+  BFD_RELOC_BFIN_FUNCDESC_GOTHI,
+  BFD_RELOC_BFIN_FUNCDESC_GOTLO,
+  BFD_RELOC_BFIN_FUNCDESC_VALUE,
+  BFD_RELOC_BFIN_FUNCDESC_GOTOFF17M4,
+  BFD_RELOC_BFIN_FUNCDESC_GOTOFFHI,
+  BFD_RELOC_BFIN_FUNCDESC_GOTOFFLO,
+  BFD_RELOC_BFIN_GOTOFF17M4,
+  BFD_RELOC_BFIN_GOTOFFHI,
+  BFD_RELOC_BFIN_GOTOFFLO,
+
+
+  BFD_RELOC_BFIN_GOT,
+
+
+  BFD_RELOC_BFIN_PLTPC,
+
+
+  BFD_ARELOC_BFIN_PUSH,
+
+
+  BFD_ARELOC_BFIN_CONST,
+
+
+  BFD_ARELOC_BFIN_ADD,
+
+
+  BFD_ARELOC_BFIN_SUB,
+
+
+  BFD_ARELOC_BFIN_MULT,
+
+
+  BFD_ARELOC_BFIN_DIV,
+
+
+  BFD_ARELOC_BFIN_MOD,
+
+
+  BFD_ARELOC_BFIN_LSHIFT,
+
+
+  BFD_ARELOC_BFIN_RSHIFT,
+
+
+  BFD_ARELOC_BFIN_AND,
+
+
+  BFD_ARELOC_BFIN_OR,
+
+
+  BFD_ARELOC_BFIN_XOR,
+
+
+  BFD_ARELOC_BFIN_LAND,
+
+
+  BFD_ARELOC_BFIN_LOR,
+
+
+  BFD_ARELOC_BFIN_LEN,
+
+
+  BFD_ARELOC_BFIN_NEG,
+
+
+  BFD_ARELOC_BFIN_COMP,
+
+
+  BFD_ARELOC_BFIN_PAGE,
+
+
+  BFD_ARELOC_BFIN_HWPAGE,
+
+
+  BFD_ARELOC_BFIN_ADDR,
+
+
+
+
+  BFD_RELOC_D10V_10_PCREL_R,
+
+
+
+
+
+
+  BFD_RELOC_D10V_10_PCREL_L,
+
+
+
+  BFD_RELOC_D10V_18,
+
+
+
+  BFD_RELOC_D10V_18_PCREL,
+
+
+
+  BFD_RELOC_D30V_6,
+
+
+
+  BFD_RELOC_D30V_9_PCREL,
+
+
+
+
+
+  BFD_RELOC_D30V_9_PCREL_R,
+
+
+
+  BFD_RELOC_D30V_15,
+
+
+
+  BFD_RELOC_D30V_15_PCREL,
+
+
+
+
+
+  BFD_RELOC_D30V_15_PCREL_R,
+
+
+
+  BFD_RELOC_D30V_21,
+
+
+
+  BFD_RELOC_D30V_21_PCREL,
+
+
+
+
+
+  BFD_RELOC_D30V_21_PCREL_R,
+
+
+  BFD_RELOC_D30V_32,
+
+
+  BFD_RELOC_D30V_32_PCREL,
+
+
+  BFD_RELOC_DLX_HI16_S,
+
+
+  BFD_RELOC_DLX_LO16,
+
+
+  BFD_RELOC_DLX_JMP26,
+
+
+  BFD_RELOC_M32C_HI8,
+  BFD_RELOC_M32C_RL_JUMP,
+  BFD_RELOC_M32C_RL_1ADDR,
+  BFD_RELOC_M32C_RL_2ADDR,
+
+
+
+  BFD_RELOC_M32R_24,
+
+
+  BFD_RELOC_M32R_10_PCREL,
+
+
+  BFD_RELOC_M32R_18_PCREL,
+
+
+  BFD_RELOC_M32R_26_PCREL,
+
+
+
+  BFD_RELOC_M32R_HI16_ULO,
+
+
+
+  BFD_RELOC_M32R_HI16_SLO,
+
+
+  BFD_RELOC_M32R_LO16,
+
+
+
+  BFD_RELOC_M32R_SDA16,
+
+
+  BFD_RELOC_M32R_GOT24,
+  BFD_RELOC_M32R_26_PLTREL,
+  BFD_RELOC_M32R_COPY,
+  BFD_RELOC_M32R_GLOB_DAT,
+  BFD_RELOC_M32R_JMP_SLOT,
+  BFD_RELOC_M32R_RELATIVE,
+  BFD_RELOC_M32R_GOTOFF,
+  BFD_RELOC_M32R_GOTOFF_HI_ULO,
+  BFD_RELOC_M32R_GOTOFF_HI_SLO,
+  BFD_RELOC_M32R_GOTOFF_LO,
+  BFD_RELOC_M32R_GOTPC24,
+  BFD_RELOC_M32R_GOT16_HI_ULO,
+  BFD_RELOC_M32R_GOT16_HI_SLO,
+  BFD_RELOC_M32R_GOT16_LO,
+  BFD_RELOC_M32R_GOTPC_HI_ULO,
+  BFD_RELOC_M32R_GOTPC_HI_SLO,
+  BFD_RELOC_M32R_GOTPC_LO,
+
+
+
+  BFD_RELOC_NDS32_20,
+
+
+  BFD_RELOC_NDS32_9_PCREL,
+
+
+  BFD_RELOC_NDS32_WORD_9_PCREL,
+
+
+  BFD_RELOC_NDS32_15_PCREL,
+
+
+  BFD_RELOC_NDS32_17_PCREL,
+
+
+  BFD_RELOC_NDS32_25_PCREL,
+
+
+
+  BFD_RELOC_NDS32_HI20,
+
+
+
+  BFD_RELOC_NDS32_LO12S3,
+
+
+
+  BFD_RELOC_NDS32_LO12S2,
+
+
+
+  BFD_RELOC_NDS32_LO12S1,
+
+
+
+  BFD_RELOC_NDS32_LO12S0,
+
+
+
+  BFD_RELOC_NDS32_LO12S0_ORI,
+
+
+
+  BFD_RELOC_NDS32_SDA15S3,
+
+
+
+  BFD_RELOC_NDS32_SDA15S2,
+
+
+
+  BFD_RELOC_NDS32_SDA15S1,
+
+
+
+  BFD_RELOC_NDS32_SDA15S0,
+
+
+
+  BFD_RELOC_NDS32_SDA16S3,
+
+
+
+  BFD_RELOC_NDS32_SDA17S2,
+
+
+
+  BFD_RELOC_NDS32_SDA18S1,
+
+
+
+  BFD_RELOC_NDS32_SDA19S0,
+
+
+  BFD_RELOC_NDS32_GOT20,
+  BFD_RELOC_NDS32_9_PLTREL,
+  BFD_RELOC_NDS32_25_PLTREL,
+  BFD_RELOC_NDS32_COPY,
+  BFD_RELOC_NDS32_GLOB_DAT,
+  BFD_RELOC_NDS32_JMP_SLOT,
+  BFD_RELOC_NDS32_RELATIVE,
+  BFD_RELOC_NDS32_GOTOFF,
+  BFD_RELOC_NDS32_GOTOFF_HI20,
+  BFD_RELOC_NDS32_GOTOFF_LO12,
+  BFD_RELOC_NDS32_GOTPC20,
+  BFD_RELOC_NDS32_GOT_HI20,
+  BFD_RELOC_NDS32_GOT_LO12,
+  BFD_RELOC_NDS32_GOTPC_HI20,
+  BFD_RELOC_NDS32_GOTPC_LO12,
+
+
+  BFD_RELOC_NDS32_INSN16,
+  BFD_RELOC_NDS32_LABEL,
+  BFD_RELOC_NDS32_LONGCALL1,
+  BFD_RELOC_NDS32_LONGCALL2,
+  BFD_RELOC_NDS32_LONGCALL3,
+  BFD_RELOC_NDS32_LONGJUMP1,
+  BFD_RELOC_NDS32_LONGJUMP2,
+  BFD_RELOC_NDS32_LONGJUMP3,
+  BFD_RELOC_NDS32_LOADSTORE,
+  BFD_RELOC_NDS32_9_FIXED,
+  BFD_RELOC_NDS32_15_FIXED,
+  BFD_RELOC_NDS32_17_FIXED,
+  BFD_RELOC_NDS32_25_FIXED,
+  BFD_RELOC_NDS32_LONGCALL4,
+  BFD_RELOC_NDS32_LONGCALL5,
+  BFD_RELOC_NDS32_LONGCALL6,
+  BFD_RELOC_NDS32_LONGJUMP4,
+  BFD_RELOC_NDS32_LONGJUMP5,
+  BFD_RELOC_NDS32_LONGJUMP6,
+  BFD_RELOC_NDS32_LONGJUMP7,
+
+
+  BFD_RELOC_NDS32_PLTREL_HI20,
+  BFD_RELOC_NDS32_PLTREL_LO12,
+  BFD_RELOC_NDS32_PLT_GOTREL_HI20,
+  BFD_RELOC_NDS32_PLT_GOTREL_LO12,
+
+
+  BFD_RELOC_NDS32_SDA12S2_DP,
+  BFD_RELOC_NDS32_SDA12S2_SP,
+  BFD_RELOC_NDS32_LO12S2_DP,
+  BFD_RELOC_NDS32_LO12S2_SP,
+
+
+  BFD_RELOC_NDS32_DWARF2_OP1,
+  BFD_RELOC_NDS32_DWARF2_OP2,
+  BFD_RELOC_NDS32_DWARF2_LEB,
+
+
+  BFD_RELOC_NDS32_UPDATE_TA,
+
+
+  BFD_RELOC_NDS32_PLT_GOTREL_LO20,
+  BFD_RELOC_NDS32_PLT_GOTREL_LO15,
+  BFD_RELOC_NDS32_PLT_GOTREL_LO19,
+  BFD_RELOC_NDS32_GOT_LO15,
+  BFD_RELOC_NDS32_GOT_LO19,
+  BFD_RELOC_NDS32_GOTOFF_LO15,
+  BFD_RELOC_NDS32_GOTOFF_LO19,
+  BFD_RELOC_NDS32_GOT15S2,
+  BFD_RELOC_NDS32_GOT17S2,
+
+
+
+  BFD_RELOC_NDS32_5,
+
+
+  BFD_RELOC_NDS32_10_UPCREL,
+
+
+  BFD_RELOC_NDS32_SDA_FP7U2_RELA,
+
+
+  BFD_RELOC_NDS32_RELAX_ENTRY,
+  BFD_RELOC_NDS32_GOT_SUFF,
+  BFD_RELOC_NDS32_GOTOFF_SUFF,
+  BFD_RELOC_NDS32_PLT_GOT_SUFF,
+  BFD_RELOC_NDS32_MULCALL_SUFF,
+  BFD_RELOC_NDS32_PTR,
+  BFD_RELOC_NDS32_PTR_COUNT,
+  BFD_RELOC_NDS32_PTR_RESOLVED,
+  BFD_RELOC_NDS32_PLTBLOCK,
+  BFD_RELOC_NDS32_RELAX_REGION_BEGIN,
+  BFD_RELOC_NDS32_RELAX_REGION_END,
+  BFD_RELOC_NDS32_MINUEND,
+  BFD_RELOC_NDS32_SUBTRAHEND,
+  BFD_RELOC_NDS32_DIFF8,
+  BFD_RELOC_NDS32_DIFF16,
+  BFD_RELOC_NDS32_DIFF32,
+  BFD_RELOC_NDS32_DIFF_ULEB128,
+  BFD_RELOC_NDS32_EMPTY,
+
+
+  BFD_RELOC_NDS32_25_ABS,
+
+
+  BFD_RELOC_NDS32_DATA,
+  BFD_RELOC_NDS32_TRAN,
+  BFD_RELOC_NDS32_17IFC_PCREL,
+  BFD_RELOC_NDS32_10IFCU_PCREL,
+
+
+  BFD_RELOC_NDS32_TPOFF,
+  BFD_RELOC_NDS32_GOTTPOFF,
+  BFD_RELOC_NDS32_TLS_LE_HI20,
+  BFD_RELOC_NDS32_TLS_LE_LO12,
+  BFD_RELOC_NDS32_TLS_LE_20,
+  BFD_RELOC_NDS32_TLS_LE_15S0,
+  BFD_RELOC_NDS32_TLS_LE_15S1,
+  BFD_RELOC_NDS32_TLS_LE_15S2,
+  BFD_RELOC_NDS32_TLS_LE_ADD,
+  BFD_RELOC_NDS32_TLS_LE_LS,
+  BFD_RELOC_NDS32_TLS_IE_HI20,
+  BFD_RELOC_NDS32_TLS_IE_LO12,
+  BFD_RELOC_NDS32_TLS_IE_LO12S2,
+  BFD_RELOC_NDS32_TLS_IEGP_HI20,
+  BFD_RELOC_NDS32_TLS_IEGP_LO12,
+  BFD_RELOC_NDS32_TLS_IEGP_LO12S2,
+  BFD_RELOC_NDS32_TLS_IEGP_LW,
+  BFD_RELOC_NDS32_TLS_DESC,
+  BFD_RELOC_NDS32_TLS_DESC_HI20,
+  BFD_RELOC_NDS32_TLS_DESC_LO12,
+  BFD_RELOC_NDS32_TLS_DESC_20,
+  BFD_RELOC_NDS32_TLS_DESC_SDA17S2,
+  BFD_RELOC_NDS32_TLS_DESC_ADD,
+  BFD_RELOC_NDS32_TLS_DESC_FUNC,
+  BFD_RELOC_NDS32_TLS_DESC_CALL,
+  BFD_RELOC_NDS32_TLS_DESC_MEM,
+  BFD_RELOC_NDS32_REMOVE,
+  BFD_RELOC_NDS32_GROUP,
+
+
+  BFD_RELOC_NDS32_LSI,
+
+
+  BFD_RELOC_V850_9_PCREL,
+
+
+  BFD_RELOC_V850_22_PCREL,
+
+
+  BFD_RELOC_V850_SDA_16_16_OFFSET,
+
+
+
+  BFD_RELOC_V850_SDA_15_16_OFFSET,
+
+
+  BFD_RELOC_V850_ZDA_16_16_OFFSET,
+
+
+
+  BFD_RELOC_V850_ZDA_15_16_OFFSET,
+
+
+
+  BFD_RELOC_V850_TDA_6_8_OFFSET,
+
+
+
+  BFD_RELOC_V850_TDA_7_8_OFFSET,
+
+
+  BFD_RELOC_V850_TDA_7_7_OFFSET,
+
+
+  BFD_RELOC_V850_TDA_16_16_OFFSET,
+
+
+
+  BFD_RELOC_V850_TDA_4_5_OFFSET,
+
+
+  BFD_RELOC_V850_TDA_4_4_OFFSET,
+
+
+
+  BFD_RELOC_V850_SDA_16_16_SPLIT_OFFSET,
+
+
+
+  BFD_RELOC_V850_ZDA_16_16_SPLIT_OFFSET,
+
+
+  BFD_RELOC_V850_CALLT_6_7_OFFSET,
+
+
+  BFD_RELOC_V850_CALLT_16_16_OFFSET,
+
+
+  BFD_RELOC_V850_LONGCALL,
+
+
+  BFD_RELOC_V850_LONGJUMP,
+
+
+  BFD_RELOC_V850_ALIGN,
+
+
+
+  BFD_RELOC_V850_LO16_SPLIT_OFFSET,
+
+
+  BFD_RELOC_V850_16_PCREL,
+
+
+  BFD_RELOC_V850_17_PCREL,
+
+
+  BFD_RELOC_V850_23,
+
+
+  BFD_RELOC_V850_32_PCREL,
+
+
+  BFD_RELOC_V850_32_ABS,
+
+
+  BFD_RELOC_V850_16_SPLIT_OFFSET,
+
+
+  BFD_RELOC_V850_16_S1,
+
+
+  BFD_RELOC_V850_LO16_S1,
+
+
+  BFD_RELOC_V850_CALLT_15_16_OFFSET,
+
+
+  BFD_RELOC_V850_32_GOTPCREL,
+
+
+  BFD_RELOC_V850_16_GOT,
+
+
+  BFD_RELOC_V850_32_GOT,
+
+
+  BFD_RELOC_V850_22_PLT_PCREL,
+
+
+  BFD_RELOC_V850_32_PLT_PCREL,
+
+
+  BFD_RELOC_V850_COPY,
+
+
+  BFD_RELOC_V850_GLOB_DAT,
+
+
+  BFD_RELOC_V850_JMP_SLOT,
+
+
+  BFD_RELOC_V850_RELATIVE,
+
+
+  BFD_RELOC_V850_16_GOTOFF,
+
+
+  BFD_RELOC_V850_32_GOTOFF,
+
+
+  BFD_RELOC_V850_CODE,
+
+
+  BFD_RELOC_V850_DATA,
+
+
+
+
+  BFD_RELOC_TIC30_LDP,
+
+
+
+
+  BFD_RELOC_TIC54X_PARTLS7,
+
+
+
+
+  BFD_RELOC_TIC54X_PARTMS9,
+
+
+  BFD_RELOC_TIC54X_23,
+
+
+
+
+  BFD_RELOC_TIC54X_16_OF_23,
+
+
+
+
+  BFD_RELOC_TIC54X_MS7_OF_23,
+
+
+  BFD_RELOC_C6000_PCR_S21,
+  BFD_RELOC_C6000_PCR_S12,
+  BFD_RELOC_C6000_PCR_S10,
+  BFD_RELOC_C6000_PCR_S7,
+  BFD_RELOC_C6000_ABS_S16,
+  BFD_RELOC_C6000_ABS_L16,
+  BFD_RELOC_C6000_ABS_H16,
+  BFD_RELOC_C6000_SBR_U15_B,
+  BFD_RELOC_C6000_SBR_U15_H,
+  BFD_RELOC_C6000_SBR_U15_W,
+  BFD_RELOC_C6000_SBR_S16,
+  BFD_RELOC_C6000_SBR_L16_B,
+  BFD_RELOC_C6000_SBR_L16_H,
+  BFD_RELOC_C6000_SBR_L16_W,
+  BFD_RELOC_C6000_SBR_H16_B,
+  BFD_RELOC_C6000_SBR_H16_H,
+  BFD_RELOC_C6000_SBR_H16_W,
+  BFD_RELOC_C6000_SBR_GOT_U15_W,
+  BFD_RELOC_C6000_SBR_GOT_L16_W,
+  BFD_RELOC_C6000_SBR_GOT_H16_W,
+  BFD_RELOC_C6000_DSBT_INDEX,
+  BFD_RELOC_C6000_PREL31,
+  BFD_RELOC_C6000_COPY,
+  BFD_RELOC_C6000_JUMP_SLOT,
+  BFD_RELOC_C6000_EHTYPE,
+  BFD_RELOC_C6000_PCR_H16,
+  BFD_RELOC_C6000_PCR_L16,
+  BFD_RELOC_C6000_ALIGN,
+  BFD_RELOC_C6000_FPHEAD,
+  BFD_RELOC_C6000_NOCMP,
+
+
+  BFD_RELOC_FR30_48,
+
+
+
+  BFD_RELOC_FR30_20,
+
+
+
+  BFD_RELOC_FR30_6_IN_4,
+
+
+
+  BFD_RELOC_FR30_8_IN_8,
+
+
+
+  BFD_RELOC_FR30_9_IN_8,
+
+
+
+  BFD_RELOC_FR30_10_IN_8,
+
+
+
+  BFD_RELOC_FR30_9_PCREL,
+
+
+
+  BFD_RELOC_FR30_12_PCREL,
+
+
+  BFD_RELOC_MCORE_PCREL_IMM8BY4,
+  BFD_RELOC_MCORE_PCREL_IMM11BY2,
+  BFD_RELOC_MCORE_PCREL_IMM4BY2,
+  BFD_RELOC_MCORE_PCREL_32,
+  BFD_RELOC_MCORE_PCREL_JSR_IMM11BY2,
+  BFD_RELOC_MCORE_RVA,
+
+
+  BFD_RELOC_MEP_8,
+  BFD_RELOC_MEP_16,
+  BFD_RELOC_MEP_32,
+  BFD_RELOC_MEP_PCREL8A2,
+  BFD_RELOC_MEP_PCREL12A2,
+  BFD_RELOC_MEP_PCREL17A2,
+  BFD_RELOC_MEP_PCREL24A2,
+  BFD_RELOC_MEP_PCABS24A2,
+  BFD_RELOC_MEP_LOW16,
+  BFD_RELOC_MEP_HI16U,
+  BFD_RELOC_MEP_HI16S,
+  BFD_RELOC_MEP_GPREL,
+  BFD_RELOC_MEP_TPREL,
+  BFD_RELOC_MEP_TPREL7,
+  BFD_RELOC_MEP_TPREL7A2,
+  BFD_RELOC_MEP_TPREL7A4,
+  BFD_RELOC_MEP_UIMM24,
+  BFD_RELOC_MEP_ADDR24A4,
+  BFD_RELOC_MEP_GNU_VTINHERIT,
+  BFD_RELOC_MEP_GNU_VTENTRY,
+
+
+
+  BFD_RELOC_METAG_HIADDR16,
+  BFD_RELOC_METAG_LOADDR16,
+  BFD_RELOC_METAG_RELBRANCH,
+  BFD_RELOC_METAG_GETSETOFF,
+  BFD_RELOC_METAG_HIOG,
+  BFD_RELOC_METAG_LOOG,
+  BFD_RELOC_METAG_REL8,
+  BFD_RELOC_METAG_REL16,
+  BFD_RELOC_METAG_HI16_GOTOFF,
+  BFD_RELOC_METAG_LO16_GOTOFF,
+  BFD_RELOC_METAG_GETSET_GOTOFF,
+  BFD_RELOC_METAG_GETSET_GOT,
+  BFD_RELOC_METAG_HI16_GOTPC,
+  BFD_RELOC_METAG_LO16_GOTPC,
+  BFD_RELOC_METAG_HI16_PLT,
+  BFD_RELOC_METAG_LO16_PLT,
+  BFD_RELOC_METAG_RELBRANCH_PLT,
+  BFD_RELOC_METAG_GOTOFF,
+  BFD_RELOC_METAG_PLT,
+  BFD_RELOC_METAG_COPY,
+  BFD_RELOC_METAG_JMP_SLOT,
+  BFD_RELOC_METAG_RELATIVE,
+  BFD_RELOC_METAG_GLOB_DAT,
+  BFD_RELOC_METAG_TLS_GD,
+  BFD_RELOC_METAG_TLS_LDM,
+  BFD_RELOC_METAG_TLS_LDO_HI16,
+  BFD_RELOC_METAG_TLS_LDO_LO16,
+  BFD_RELOC_METAG_TLS_LDO,
+  BFD_RELOC_METAG_TLS_IE,
+  BFD_RELOC_METAG_TLS_IENONPIC,
+  BFD_RELOC_METAG_TLS_IENONPIC_HI16,
+  BFD_RELOC_METAG_TLS_IENONPIC_LO16,
+  BFD_RELOC_METAG_TLS_TPOFF,
+  BFD_RELOC_METAG_TLS_DTPMOD,
+  BFD_RELOC_METAG_TLS_DTPOFF,
+  BFD_RELOC_METAG_TLS_LE,
+  BFD_RELOC_METAG_TLS_LE_HI16,
+  BFD_RELOC_METAG_TLS_LE_LO16,
+
+
+  BFD_RELOC_MMIX_GETA,
+  BFD_RELOC_MMIX_GETA_1,
+  BFD_RELOC_MMIX_GETA_2,
+  BFD_RELOC_MMIX_GETA_3,
+
+
+  BFD_RELOC_MMIX_CBRANCH,
+  BFD_RELOC_MMIX_CBRANCH_J,
+  BFD_RELOC_MMIX_CBRANCH_1,
+  BFD_RELOC_MMIX_CBRANCH_2,
+  BFD_RELOC_MMIX_CBRANCH_3,
+
+
+  BFD_RELOC_MMIX_PUSHJ,
+  BFD_RELOC_MMIX_PUSHJ_1,
+  BFD_RELOC_MMIX_PUSHJ_2,
+  BFD_RELOC_MMIX_PUSHJ_3,
+  BFD_RELOC_MMIX_PUSHJ_STUBBABLE,
+
+
+  BFD_RELOC_MMIX_JMP,
+  BFD_RELOC_MMIX_JMP_1,
+  BFD_RELOC_MMIX_JMP_2,
+  BFD_RELOC_MMIX_JMP_3,
+
+
+
+  BFD_RELOC_MMIX_ADDR19,
+
+
+  BFD_RELOC_MMIX_ADDR27,
+
+
+
+  BFD_RELOC_MMIX_REG_OR_BYTE,
+
+
+
+  BFD_RELOC_MMIX_REG,
+
+
+
+  BFD_RELOC_MMIX_BASE_PLUS_OFFSET,
+
+
+
+  BFD_RELOC_MMIX_LOCAL,
+
+
+
+  BFD_RELOC_AVR_7_PCREL,
+
+
+
+  BFD_RELOC_AVR_13_PCREL,
+
+
+
+  BFD_RELOC_AVR_16_PM,
+
+
+
+  BFD_RELOC_AVR_LO8_LDI,
+
+
+
+  BFD_RELOC_AVR_HI8_LDI,
+
+
+
+  BFD_RELOC_AVR_HH8_LDI,
+
+
+
+  BFD_RELOC_AVR_MS8_LDI,
+
+
+
+  BFD_RELOC_AVR_LO8_LDI_NEG,
+
+
+
+
+  BFD_RELOC_AVR_HI8_LDI_NEG,
+
+
+
+
+  BFD_RELOC_AVR_HH8_LDI_NEG,
+
+
+
+  BFD_RELOC_AVR_MS8_LDI_NEG,
+
+
+
+  BFD_RELOC_AVR_LO8_LDI_PM,
+
+
+
+
+
+  BFD_RELOC_AVR_LO8_LDI_GS,
+
+
+
+  BFD_RELOC_AVR_HI8_LDI_PM,
+
+
+
+
+
+  BFD_RELOC_AVR_HI8_LDI_GS,
+
+
+
+  BFD_RELOC_AVR_HH8_LDI_PM,
+
+
+
+  BFD_RELOC_AVR_LO8_LDI_PM_NEG,
+
+
+
+
+  BFD_RELOC_AVR_HI8_LDI_PM_NEG,
+
+
+
+
+  BFD_RELOC_AVR_HH8_LDI_PM_NEG,
+
+
+
+  BFD_RELOC_AVR_CALL,
+
+
+
+  BFD_RELOC_AVR_LDI,
+
+
+
+  BFD_RELOC_AVR_6,
+
+
+
+  BFD_RELOC_AVR_6_ADIW,
+
+
+
+  BFD_RELOC_AVR_8_LO,
+
+
+
+  BFD_RELOC_AVR_8_HI,
+
+
+
+  BFD_RELOC_AVR_8_HLO,
+
+
+
+
+
+
+
+  BFD_RELOC_AVR_DIFF8,
+  BFD_RELOC_AVR_DIFF16,
+  BFD_RELOC_AVR_DIFF32,
+
+
+
+  BFD_RELOC_AVR_LDS_STS_16,
+
+
+
+  BFD_RELOC_AVR_PORT6,
+
+
+
+  BFD_RELOC_AVR_PORT5,
+
+
+  BFD_RELOC_RISCV_HI20,
+  BFD_RELOC_RISCV_PCREL_HI20,
+  BFD_RELOC_RISCV_PCREL_LO12_I,
+  BFD_RELOC_RISCV_PCREL_LO12_S,
+  BFD_RELOC_RISCV_LO12_I,
+  BFD_RELOC_RISCV_LO12_S,
+  BFD_RELOC_RISCV_GPREL12_I,
+  BFD_RELOC_RISCV_GPREL12_S,
+  BFD_RELOC_RISCV_TPREL_HI20,
+  BFD_RELOC_RISCV_TPREL_LO12_I,
+  BFD_RELOC_RISCV_TPREL_LO12_S,
+  BFD_RELOC_RISCV_TPREL_ADD,
+  BFD_RELOC_RISCV_CALL,
+  BFD_RELOC_RISCV_CALL_PLT,
+  BFD_RELOC_RISCV_ADD8,
+  BFD_RELOC_RISCV_ADD16,
+  BFD_RELOC_RISCV_ADD32,
+  BFD_RELOC_RISCV_ADD64,
+  BFD_RELOC_RISCV_SUB8,
+  BFD_RELOC_RISCV_SUB16,
+  BFD_RELOC_RISCV_SUB32,
+  BFD_RELOC_RISCV_SUB64,
+  BFD_RELOC_RISCV_GOT_HI20,
+  BFD_RELOC_RISCV_TLS_GOT_HI20,
+  BFD_RELOC_RISCV_TLS_GD_HI20,
+  BFD_RELOC_RISCV_JMP,
+  BFD_RELOC_RISCV_TLS_DTPMOD32,
+  BFD_RELOC_RISCV_TLS_DTPREL32,
+  BFD_RELOC_RISCV_TLS_DTPMOD64,
+  BFD_RELOC_RISCV_TLS_DTPREL64,
+  BFD_RELOC_RISCV_TLS_TPREL32,
+  BFD_RELOC_RISCV_TLS_TPREL64,
+  BFD_RELOC_RISCV_ALIGN,
+  BFD_RELOC_RISCV_RVC_BRANCH,
+  BFD_RELOC_RISCV_RVC_JUMP,
+  BFD_RELOC_RISCV_RVC_LUI,
+  BFD_RELOC_RISCV_GPREL_I,
+  BFD_RELOC_RISCV_GPREL_S,
+  BFD_RELOC_RISCV_TPREL_I,
+  BFD_RELOC_RISCV_TPREL_S,
+  BFD_RELOC_RISCV_RELAX,
+  BFD_RELOC_RISCV_CFA,
+  BFD_RELOC_RISCV_SUB6,
+  BFD_RELOC_RISCV_SET6,
+  BFD_RELOC_RISCV_SET8,
+  BFD_RELOC_RISCV_SET16,
+  BFD_RELOC_RISCV_SET32,
+  BFD_RELOC_RISCV_32_PCREL,
+  BFD_RELOC_RISCV_SET_ULEB128,
+  BFD_RELOC_RISCV_SUB_ULEB128,
+
+
+  BFD_RELOC_RL78_NEG8,
+  BFD_RELOC_RL78_NEG16,
+  BFD_RELOC_RL78_NEG24,
+  BFD_RELOC_RL78_NEG32,
+  BFD_RELOC_RL78_16_OP,
+  BFD_RELOC_RL78_24_OP,
+  BFD_RELOC_RL78_32_OP,
+  BFD_RELOC_RL78_8U,
+  BFD_RELOC_RL78_16U,
+  BFD_RELOC_RL78_24U,
+  BFD_RELOC_RL78_DIR3U_PCREL,
+  BFD_RELOC_RL78_DIFF,
+  BFD_RELOC_RL78_GPRELB,
+  BFD_RELOC_RL78_GPRELW,
+  BFD_RELOC_RL78_GPRELL,
+  BFD_RELOC_RL78_SYM,
+  BFD_RELOC_RL78_OP_SUBTRACT,
+  BFD_RELOC_RL78_OP_NEG,
+  BFD_RELOC_RL78_OP_AND,
+  BFD_RELOC_RL78_OP_SHRA,
+  BFD_RELOC_RL78_ABS8,
+  BFD_RELOC_RL78_ABS16,
+  BFD_RELOC_RL78_ABS16_REV,
+  BFD_RELOC_RL78_ABS32,
+  BFD_RELOC_RL78_ABS32_REV,
+  BFD_RELOC_RL78_ABS16U,
+  BFD_RELOC_RL78_ABS16UW,
+  BFD_RELOC_RL78_ABS16UL,
+  BFD_RELOC_RL78_RELAX,
+  BFD_RELOC_RL78_HI16,
+  BFD_RELOC_RL78_HI8,
+  BFD_RELOC_RL78_LO16,
+  BFD_RELOC_RL78_CODE,
+  BFD_RELOC_RL78_SADDR,
+
+
+  BFD_RELOC_RX_NEG8,
+  BFD_RELOC_RX_NEG16,
+  BFD_RELOC_RX_NEG24,
+  BFD_RELOC_RX_NEG32,
+  BFD_RELOC_RX_16_OP,
+  BFD_RELOC_RX_24_OP,
+  BFD_RELOC_RX_32_OP,
+  BFD_RELOC_RX_8U,
+  BFD_RELOC_RX_16U,
+  BFD_RELOC_RX_24U,
+  BFD_RELOC_RX_DIR3U_PCREL,
+  BFD_RELOC_RX_DIFF,
+  BFD_RELOC_RX_GPRELB,
+  BFD_RELOC_RX_GPRELW,
+  BFD_RELOC_RX_GPRELL,
+  BFD_RELOC_RX_SYM,
+  BFD_RELOC_RX_OP_SUBTRACT,
+  BFD_RELOC_RX_OP_NEG,
+  BFD_RELOC_RX_ABS8,
+  BFD_RELOC_RX_ABS16,
+  BFD_RELOC_RX_ABS16_REV,
+  BFD_RELOC_RX_ABS32,
+  BFD_RELOC_RX_ABS32_REV,
+  BFD_RELOC_RX_ABS16U,
+  BFD_RELOC_RX_ABS16UW,
+  BFD_RELOC_RX_ABS16UL,
+  BFD_RELOC_RX_RELAX,
+
+
+  BFD_RELOC_390_12,
+
+
+  BFD_RELOC_390_GOT12,
+
+
+  BFD_RELOC_390_PLT32,
+
+
+  BFD_RELOC_390_COPY,
+
+
+  BFD_RELOC_390_GLOB_DAT,
+
+
+  BFD_RELOC_390_JMP_SLOT,
+
+
+  BFD_RELOC_390_RELATIVE,
+
+
+  BFD_RELOC_390_GOTPC,
+
+
+  BFD_RELOC_390_GOT16,
+
+
+  BFD_RELOC_390_PC12DBL,
+
+
+  BFD_RELOC_390_PLT12DBL,
+
+
+  BFD_RELOC_390_PC16DBL,
+
+
+  BFD_RELOC_390_PLT16DBL,
+
+
+  BFD_RELOC_390_PC24DBL,
+
+
+  BFD_RELOC_390_PLT24DBL,
+
+
+  BFD_RELOC_390_PC32DBL,
+
+
+  BFD_RELOC_390_PLT32DBL,
+
+
+  BFD_RELOC_390_GOTPCDBL,
+
+
+  BFD_RELOC_390_GOT64,
+
+
+  BFD_RELOC_390_PLT64,
+
+
+  BFD_RELOC_390_GOTENT,
+
+
+  BFD_RELOC_390_GOTOFF64,
+
+
+  BFD_RELOC_390_GOTPLT12,
+
+
+  BFD_RELOC_390_GOTPLT16,
+
+
+  BFD_RELOC_390_GOTPLT32,
+
+
+  BFD_RELOC_390_GOTPLT64,
+
+
+  BFD_RELOC_390_GOTPLTENT,
+
+
+  BFD_RELOC_390_PLTOFF16,
+
+
+  BFD_RELOC_390_PLTOFF32,
+
+
+  BFD_RELOC_390_PLTOFF64,
+
+
+  BFD_RELOC_390_TLS_LOAD,
+  BFD_RELOC_390_TLS_GDCALL,
+  BFD_RELOC_390_TLS_LDCALL,
+  BFD_RELOC_390_TLS_GD32,
+  BFD_RELOC_390_TLS_GD64,
+  BFD_RELOC_390_TLS_GOTIE12,
+  BFD_RELOC_390_TLS_GOTIE32,
+  BFD_RELOC_390_TLS_GOTIE64,
+  BFD_RELOC_390_TLS_LDM32,
+  BFD_RELOC_390_TLS_LDM64,
+  BFD_RELOC_390_TLS_IE32,
+  BFD_RELOC_390_TLS_IE64,
+  BFD_RELOC_390_TLS_IEENT,
+  BFD_RELOC_390_TLS_LE32,
+  BFD_RELOC_390_TLS_LE64,
+  BFD_RELOC_390_TLS_LDO32,
+  BFD_RELOC_390_TLS_LDO64,
+  BFD_RELOC_390_TLS_DTPMOD,
+  BFD_RELOC_390_TLS_DTPOFF,
+  BFD_RELOC_390_TLS_TPOFF,
+
+
+  BFD_RELOC_390_20,
+  BFD_RELOC_390_GOT20,
+  BFD_RELOC_390_GOTPLT20,
+  BFD_RELOC_390_TLS_GOTIE20,
+
+
+  BFD_RELOC_390_IRELATIVE,
+
+
+
+  BFD_RELOC_SCORE_GPREL15,
+
+
+  BFD_RELOC_SCORE_DUMMY2,
+  BFD_RELOC_SCORE_JMP,
+
+
+  BFD_RELOC_SCORE_BRANCH,
+
+
+  BFD_RELOC_SCORE_IMM30,
+
+
+  BFD_RELOC_SCORE_IMM32,
+
+
+  BFD_RELOC_SCORE16_JMP,
+
+
+  BFD_RELOC_SCORE16_BRANCH,
+
+
+  BFD_RELOC_SCORE_BCMP,
+
+
+  BFD_RELOC_SCORE_GOT15,
+  BFD_RELOC_SCORE_GOT_LO16,
+  BFD_RELOC_SCORE_CALL15,
+  BFD_RELOC_SCORE_DUMMY_HI16,
+
+
+  BFD_RELOC_IP2K_FR9,
+
+
+  BFD_RELOC_IP2K_BANK,
+
+
+  BFD_RELOC_IP2K_ADDR16CJP,
+
+
+  BFD_RELOC_IP2K_PAGE3,
+
+
+  BFD_RELOC_IP2K_LO8DATA,
+  BFD_RELOC_IP2K_HI8DATA,
+  BFD_RELOC_IP2K_EX8DATA,
+
+
+  BFD_RELOC_IP2K_LO8INSN,
+  BFD_RELOC_IP2K_HI8INSN,
+
+
+  BFD_RELOC_IP2K_PC_SKIP,
+
+
+  BFD_RELOC_IP2K_TEXT,
+
+
+  BFD_RELOC_IP2K_FR_OFFSET,
+
+
+  BFD_RELOC_VPE4KMATH_DATA,
+  BFD_RELOC_VPE4KMATH_INSN,
+# 5677 "../../bfd/bfd.h"
+  BFD_RELOC_VTABLE_INHERIT,
+  BFD_RELOC_VTABLE_ENTRY,
+
+
+  BFD_RELOC_IA64_IMM14,
+  BFD_RELOC_IA64_IMM22,
+  BFD_RELOC_IA64_IMM64,
+  BFD_RELOC_IA64_DIR32MSB,
+  BFD_RELOC_IA64_DIR32LSB,
+  BFD_RELOC_IA64_DIR64MSB,
+  BFD_RELOC_IA64_DIR64LSB,
+  BFD_RELOC_IA64_GPREL22,
+  BFD_RELOC_IA64_GPREL64I,
+  BFD_RELOC_IA64_GPREL32MSB,
+  BFD_RELOC_IA64_GPREL32LSB,
+  BFD_RELOC_IA64_GPREL64MSB,
+  BFD_RELOC_IA64_GPREL64LSB,
+  BFD_RELOC_IA64_LTOFF22,
+  BFD_RELOC_IA64_LTOFF64I,
+  BFD_RELOC_IA64_PLTOFF22,
+  BFD_RELOC_IA64_PLTOFF64I,
+  BFD_RELOC_IA64_PLTOFF64MSB,
+  BFD_RELOC_IA64_PLTOFF64LSB,
+  BFD_RELOC_IA64_FPTR64I,
+  BFD_RELOC_IA64_FPTR32MSB,
+  BFD_RELOC_IA64_FPTR32LSB,
+  BFD_RELOC_IA64_FPTR64MSB,
+  BFD_RELOC_IA64_FPTR64LSB,
+  BFD_RELOC_IA64_PCREL21B,
+  BFD_RELOC_IA64_PCREL21BI,
+  BFD_RELOC_IA64_PCREL21M,
+  BFD_RELOC_IA64_PCREL21F,
+  BFD_RELOC_IA64_PCREL22,
+  BFD_RELOC_IA64_PCREL60B,
+  BFD_RELOC_IA64_PCREL64I,
+  BFD_RELOC_IA64_PCREL32MSB,
+  BFD_RELOC_IA64_PCREL32LSB,
+  BFD_RELOC_IA64_PCREL64MSB,
+  BFD_RELOC_IA64_PCREL64LSB,
+  BFD_RELOC_IA64_LTOFF_FPTR22,
+  BFD_RELOC_IA64_LTOFF_FPTR64I,
+  BFD_RELOC_IA64_LTOFF_FPTR32MSB,
+  BFD_RELOC_IA64_LTOFF_FPTR32LSB,
+  BFD_RELOC_IA64_LTOFF_FPTR64MSB,
+  BFD_RELOC_IA64_LTOFF_FPTR64LSB,
+  BFD_RELOC_IA64_SEGREL32MSB,
+  BFD_RELOC_IA64_SEGREL32LSB,
+  BFD_RELOC_IA64_SEGREL64MSB,
+  BFD_RELOC_IA64_SEGREL64LSB,
+  BFD_RELOC_IA64_SECREL32MSB,
+  BFD_RELOC_IA64_SECREL32LSB,
+  BFD_RELOC_IA64_SECREL64MSB,
+  BFD_RELOC_IA64_SECREL64LSB,
+  BFD_RELOC_IA64_REL32MSB,
+  BFD_RELOC_IA64_REL32LSB,
+  BFD_RELOC_IA64_REL64MSB,
+  BFD_RELOC_IA64_REL64LSB,
+  BFD_RELOC_IA64_LTV32MSB,
+  BFD_RELOC_IA64_LTV32LSB,
+  BFD_RELOC_IA64_LTV64MSB,
+  BFD_RELOC_IA64_LTV64LSB,
+  BFD_RELOC_IA64_IPLTMSB,
+  BFD_RELOC_IA64_IPLTLSB,
+  BFD_RELOC_IA64_COPY,
+  BFD_RELOC_IA64_LTOFF22X,
+  BFD_RELOC_IA64_LDXMOV,
+  BFD_RELOC_IA64_TPREL14,
+  BFD_RELOC_IA64_TPREL22,
+  BFD_RELOC_IA64_TPREL64I,
+  BFD_RELOC_IA64_TPREL64MSB,
+  BFD_RELOC_IA64_TPREL64LSB,
+  BFD_RELOC_IA64_LTOFF_TPREL22,
+  BFD_RELOC_IA64_DTPMOD64MSB,
+  BFD_RELOC_IA64_DTPMOD64LSB,
+  BFD_RELOC_IA64_LTOFF_DTPMOD22,
+  BFD_RELOC_IA64_DTPREL14,
+  BFD_RELOC_IA64_DTPREL22,
+  BFD_RELOC_IA64_DTPREL64I,
+  BFD_RELOC_IA64_DTPREL32MSB,
+  BFD_RELOC_IA64_DTPREL32LSB,
+  BFD_RELOC_IA64_DTPREL64MSB,
+  BFD_RELOC_IA64_DTPREL64LSB,
+  BFD_RELOC_IA64_LTOFF_DTPREL22,
+
+
+
+  BFD_RELOC_M68HC11_HI8,
+
+
+
+  BFD_RELOC_M68HC11_LO8,
+
+
+
+  BFD_RELOC_M68HC11_3B,
+
+
+
+
+
+
+  BFD_RELOC_M68HC11_RL_JUMP,
+
+
+
+
+
+  BFD_RELOC_M68HC11_RL_GROUP,
+
+
+
+
+
+  BFD_RELOC_M68HC11_LO16,
+
+
+
+
+
+  BFD_RELOC_M68HC11_PAGE,
+
+
+
+
+
+  BFD_RELOC_M68HC11_24,
+
+
+
+  BFD_RELOC_M68HC12_5B,
+
+
+
+  BFD_RELOC_XGATE_RL_JUMP,
+
+
+
+
+
+  BFD_RELOC_XGATE_RL_GROUP,
+
+
+
+
+  BFD_RELOC_XGATE_LO16,
+
+
+  BFD_RELOC_XGATE_GPAGE,
+
+
+  BFD_RELOC_XGATE_24,
+
+
+
+  BFD_RELOC_XGATE_PCREL_9,
+
+
+
+  BFD_RELOC_XGATE_PCREL_10,
+
+
+
+
+  BFD_RELOC_XGATE_IMM8_LO,
+
+
+
+
+  BFD_RELOC_XGATE_IMM8_HI,
+
+
+
+  BFD_RELOC_XGATE_IMM3,
+
+
+
+  BFD_RELOC_XGATE_IMM4,
+
+
+
+  BFD_RELOC_XGATE_IMM5,
+
+
+
+  BFD_RELOC_M68HC12_9B,
+
+
+
+  BFD_RELOC_M68HC12_16B,
+
+
+
+  BFD_RELOC_M68HC12_9_PCREL,
+
+
+
+  BFD_RELOC_M68HC12_10_PCREL,
+
+
+
+
+  BFD_RELOC_M68HC12_LO8XG,
+
+
+
+
+  BFD_RELOC_M68HC12_HI8XG,
+
+
+
+
+  BFD_RELOC_S12Z_15_PCREL,
+
+
+  BFD_RELOC_CR16_NUM8,
+  BFD_RELOC_CR16_NUM16,
+  BFD_RELOC_CR16_NUM32,
+  BFD_RELOC_CR16_NUM32a,
+  BFD_RELOC_CR16_REGREL0,
+  BFD_RELOC_CR16_REGREL4,
+  BFD_RELOC_CR16_REGREL4a,
+  BFD_RELOC_CR16_REGREL14,
+  BFD_RELOC_CR16_REGREL14a,
+  BFD_RELOC_CR16_REGREL16,
+  BFD_RELOC_CR16_REGREL20,
+  BFD_RELOC_CR16_REGREL20a,
+  BFD_RELOC_CR16_ABS20,
+  BFD_RELOC_CR16_ABS24,
+  BFD_RELOC_CR16_IMM4,
+  BFD_RELOC_CR16_IMM8,
+  BFD_RELOC_CR16_IMM16,
+  BFD_RELOC_CR16_IMM20,
+  BFD_RELOC_CR16_IMM24,
+  BFD_RELOC_CR16_IMM32,
+  BFD_RELOC_CR16_IMM32a,
+  BFD_RELOC_CR16_DISP4,
+  BFD_RELOC_CR16_DISP8,
+  BFD_RELOC_CR16_DISP16,
+  BFD_RELOC_CR16_DISP20,
+  BFD_RELOC_CR16_DISP24,
+  BFD_RELOC_CR16_DISP24a,
+  BFD_RELOC_CR16_SWITCH8,
+  BFD_RELOC_CR16_SWITCH16,
+  BFD_RELOC_CR16_SWITCH32,
+  BFD_RELOC_CR16_GOT_REGREL20,
+  BFD_RELOC_CR16_GOTC_REGREL20,
+  BFD_RELOC_CR16_GLOB_DAT,
+
+
+  BFD_RELOC_CRX_REL4,
+  BFD_RELOC_CRX_REL8,
+  BFD_RELOC_CRX_REL8_CMP,
+  BFD_RELOC_CRX_REL16,
+  BFD_RELOC_CRX_REL24,
+  BFD_RELOC_CRX_REL32,
+  BFD_RELOC_CRX_REGREL12,
+  BFD_RELOC_CRX_REGREL22,
+  BFD_RELOC_CRX_REGREL28,
+  BFD_RELOC_CRX_REGREL32,
+  BFD_RELOC_CRX_ABS16,
+  BFD_RELOC_CRX_ABS32,
+  BFD_RELOC_CRX_NUM8,
+  BFD_RELOC_CRX_NUM16,
+  BFD_RELOC_CRX_NUM32,
+  BFD_RELOC_CRX_IMM16,
+  BFD_RELOC_CRX_IMM32,
+  BFD_RELOC_CRX_SWITCH8,
+  BFD_RELOC_CRX_SWITCH16,
+  BFD_RELOC_CRX_SWITCH32,
+
+
+
+  BFD_RELOC_CRIS_BDISP8,
+  BFD_RELOC_CRIS_UNSIGNED_5,
+  BFD_RELOC_CRIS_SIGNED_6,
+  BFD_RELOC_CRIS_UNSIGNED_6,
+  BFD_RELOC_CRIS_SIGNED_8,
+  BFD_RELOC_CRIS_UNSIGNED_8,
+  BFD_RELOC_CRIS_SIGNED_16,
+  BFD_RELOC_CRIS_UNSIGNED_16,
+  BFD_RELOC_CRIS_LAPCQ_OFFSET,
+  BFD_RELOC_CRIS_UNSIGNED_4,
+
+
+  BFD_RELOC_CRIS_COPY,
+  BFD_RELOC_CRIS_GLOB_DAT,
+  BFD_RELOC_CRIS_JUMP_SLOT,
+  BFD_RELOC_CRIS_RELATIVE,
+
+
+  BFD_RELOC_CRIS_32_GOT,
+
+
+  BFD_RELOC_CRIS_16_GOT,
+
+
+  BFD_RELOC_CRIS_32_GOTPLT,
+
+
+  BFD_RELOC_CRIS_16_GOTPLT,
+
+
+  BFD_RELOC_CRIS_32_GOTREL,
+
+
+  BFD_RELOC_CRIS_32_PLT_GOTREL,
+
+
+  BFD_RELOC_CRIS_32_PLT_PCREL,
+
+
+  BFD_RELOC_CRIS_32_GOT_GD,
+  BFD_RELOC_CRIS_16_GOT_GD,
+  BFD_RELOC_CRIS_32_GD,
+  BFD_RELOC_CRIS_DTP,
+  BFD_RELOC_CRIS_32_DTPREL,
+  BFD_RELOC_CRIS_16_DTPREL,
+  BFD_RELOC_CRIS_32_GOT_TPREL,
+  BFD_RELOC_CRIS_16_GOT_TPREL,
+  BFD_RELOC_CRIS_32_TPREL,
+  BFD_RELOC_CRIS_16_TPREL,
+  BFD_RELOC_CRIS_DTPMOD,
+  BFD_RELOC_CRIS_32_IE,
+
+
+  BFD_RELOC_OR1K_REL_26,
+  BFD_RELOC_OR1K_SLO16,
+  BFD_RELOC_OR1K_PCREL_PG21,
+  BFD_RELOC_OR1K_LO13,
+  BFD_RELOC_OR1K_SLO13,
+  BFD_RELOC_OR1K_GOTPC_HI16,
+  BFD_RELOC_OR1K_GOTPC_LO16,
+  BFD_RELOC_OR1K_GOT_AHI16,
+  BFD_RELOC_OR1K_GOT16,
+  BFD_RELOC_OR1K_GOT_PG21,
+  BFD_RELOC_OR1K_GOT_LO13,
+  BFD_RELOC_OR1K_PLT26,
+  BFD_RELOC_OR1K_PLTA26,
+  BFD_RELOC_OR1K_GOTOFF_SLO16,
+  BFD_RELOC_OR1K_COPY,
+  BFD_RELOC_OR1K_GLOB_DAT,
+  BFD_RELOC_OR1K_JMP_SLOT,
+  BFD_RELOC_OR1K_RELATIVE,
+  BFD_RELOC_OR1K_TLS_GD_HI16,
+  BFD_RELOC_OR1K_TLS_GD_LO16,
+  BFD_RELOC_OR1K_TLS_GD_PG21,
+  BFD_RELOC_OR1K_TLS_GD_LO13,
+  BFD_RELOC_OR1K_TLS_LDM_HI16,
+  BFD_RELOC_OR1K_TLS_LDM_LO16,
+  BFD_RELOC_OR1K_TLS_LDM_PG21,
+  BFD_RELOC_OR1K_TLS_LDM_LO13,
+  BFD_RELOC_OR1K_TLS_LDO_HI16,
+  BFD_RELOC_OR1K_TLS_LDO_LO16,
+  BFD_RELOC_OR1K_TLS_IE_HI16,
+  BFD_RELOC_OR1K_TLS_IE_AHI16,
+  BFD_RELOC_OR1K_TLS_IE_LO16,
+  BFD_RELOC_OR1K_TLS_IE_PG21,
+  BFD_RELOC_OR1K_TLS_IE_LO13,
+  BFD_RELOC_OR1K_TLS_LE_HI16,
+  BFD_RELOC_OR1K_TLS_LE_AHI16,
+  BFD_RELOC_OR1K_TLS_LE_LO16,
+  BFD_RELOC_OR1K_TLS_LE_SLO16,
+  BFD_RELOC_OR1K_TLS_TPOFF,
+  BFD_RELOC_OR1K_TLS_DTPOFF,
+  BFD_RELOC_OR1K_TLS_DTPMOD,
+
+
+  BFD_RELOC_H8_DIR16A8,
+  BFD_RELOC_H8_DIR16R8,
+  BFD_RELOC_H8_DIR24A8,
+  BFD_RELOC_H8_DIR24R8,
+  BFD_RELOC_H8_DIR32A16,
+  BFD_RELOC_H8_DISP32A16,
+
+
+  BFD_RELOC_XSTORMY16_REL_12,
+  BFD_RELOC_XSTORMY16_12,
+  BFD_RELOC_XSTORMY16_24,
+  BFD_RELOC_XSTORMY16_FPTR16,
+
+
+  BFD_RELOC_RELC,
+
+
+
+  BFD_RELOC_VAX_GLOB_DAT,
+  BFD_RELOC_VAX_JMP_SLOT,
+  BFD_RELOC_VAX_RELATIVE,
+
+
+  BFD_RELOC_MT_PC16,
+
+
+  BFD_RELOC_MT_HI16,
+
+
+  BFD_RELOC_MT_LO16,
+
+
+  BFD_RELOC_MT_GNU_VTINHERIT,
+
+
+  BFD_RELOC_MT_GNU_VTENTRY,
+
+
+  BFD_RELOC_MT_PCINSN8,
+
+
+  BFD_RELOC_MSP430_10_PCREL,
+  BFD_RELOC_MSP430_16_PCREL,
+  BFD_RELOC_MSP430_16,
+  BFD_RELOC_MSP430_16_PCREL_BYTE,
+  BFD_RELOC_MSP430_16_BYTE,
+  BFD_RELOC_MSP430_2X_PCREL,
+  BFD_RELOC_MSP430_RL_PCREL,
+  BFD_RELOC_MSP430_ABS8,
+  BFD_RELOC_MSP430X_PCR20_EXT_SRC,
+  BFD_RELOC_MSP430X_PCR20_EXT_DST,
+  BFD_RELOC_MSP430X_PCR20_EXT_ODST,
+  BFD_RELOC_MSP430X_ABS20_EXT_SRC,
+  BFD_RELOC_MSP430X_ABS20_EXT_DST,
+  BFD_RELOC_MSP430X_ABS20_EXT_ODST,
+  BFD_RELOC_MSP430X_ABS20_ADR_SRC,
+  BFD_RELOC_MSP430X_ABS20_ADR_DST,
+  BFD_RELOC_MSP430X_PCR16,
+  BFD_RELOC_MSP430X_PCR20_CALL,
+  BFD_RELOC_MSP430X_ABS16,
+  BFD_RELOC_MSP430_ABS_HI16,
+  BFD_RELOC_MSP430_PREL31,
+  BFD_RELOC_MSP430_SYM_DIFF,
+  BFD_RELOC_MSP430_SET_ULEB128,
+  BFD_RELOC_MSP430_SUB_ULEB128,
+
+
+  BFD_RELOC_NIOS2_S16,
+  BFD_RELOC_NIOS2_U16,
+  BFD_RELOC_NIOS2_CALL26,
+  BFD_RELOC_NIOS2_IMM5,
+  BFD_RELOC_NIOS2_CACHE_OPX,
+  BFD_RELOC_NIOS2_IMM6,
+  BFD_RELOC_NIOS2_IMM8,
+  BFD_RELOC_NIOS2_HI16,
+  BFD_RELOC_NIOS2_LO16,
+  BFD_RELOC_NIOS2_HIADJ16,
+  BFD_RELOC_NIOS2_GPREL,
+  BFD_RELOC_NIOS2_UJMP,
+  BFD_RELOC_NIOS2_CJMP,
+  BFD_RELOC_NIOS2_CALLR,
+  BFD_RELOC_NIOS2_ALIGN,
+  BFD_RELOC_NIOS2_GOT16,
+  BFD_RELOC_NIOS2_CALL16,
+  BFD_RELOC_NIOS2_GOTOFF_LO,
+  BFD_RELOC_NIOS2_GOTOFF_HA,
+  BFD_RELOC_NIOS2_PCREL_LO,
+  BFD_RELOC_NIOS2_PCREL_HA,
+  BFD_RELOC_NIOS2_TLS_GD16,
+  BFD_RELOC_NIOS2_TLS_LDM16,
+  BFD_RELOC_NIOS2_TLS_LDO16,
+  BFD_RELOC_NIOS2_TLS_IE16,
+  BFD_RELOC_NIOS2_TLS_LE16,
+  BFD_RELOC_NIOS2_TLS_DTPMOD,
+  BFD_RELOC_NIOS2_TLS_DTPREL,
+  BFD_RELOC_NIOS2_TLS_TPREL,
+  BFD_RELOC_NIOS2_COPY,
+  BFD_RELOC_NIOS2_GLOB_DAT,
+  BFD_RELOC_NIOS2_JUMP_SLOT,
+  BFD_RELOC_NIOS2_RELATIVE,
+  BFD_RELOC_NIOS2_GOTOFF,
+  BFD_RELOC_NIOS2_CALL26_NOAT,
+  BFD_RELOC_NIOS2_GOT_LO,
+  BFD_RELOC_NIOS2_GOT_HA,
+  BFD_RELOC_NIOS2_CALL_LO,
+  BFD_RELOC_NIOS2_CALL_HA,
+  BFD_RELOC_NIOS2_R2_S12,
+  BFD_RELOC_NIOS2_R2_I10_1_PCREL,
+  BFD_RELOC_NIOS2_R2_T1I7_1_PCREL,
+  BFD_RELOC_NIOS2_R2_T1I7_2,
+  BFD_RELOC_NIOS2_R2_T2I4,
+  BFD_RELOC_NIOS2_R2_T2I4_1,
+  BFD_RELOC_NIOS2_R2_T2I4_2,
+  BFD_RELOC_NIOS2_R2_X1I7_2,
+  BFD_RELOC_NIOS2_R2_X2L5,
+  BFD_RELOC_NIOS2_R2_F1I5_2,
+  BFD_RELOC_NIOS2_R2_L5I4X1,
+  BFD_RELOC_NIOS2_R2_T1X1I6,
+  BFD_RELOC_NIOS2_R2_T1X1I6_2,
+
+
+  BFD_RELOC_PRU_U16,
+
+
+  BFD_RELOC_PRU_U16_PMEMIMM,
+
+
+
+
+  BFD_RELOC_PRU_LDI32,
+
+
+  BFD_RELOC_PRU_S10_PCREL,
+
+
+  BFD_RELOC_PRU_U8_PCREL,
+
+
+
+  BFD_RELOC_PRU_32_PMEM,
+  BFD_RELOC_PRU_16_PMEM,
+# 6193 "../../bfd/bfd.h"
+  BFD_RELOC_PRU_GNU_DIFF8,
+  BFD_RELOC_PRU_GNU_DIFF16,
+  BFD_RELOC_PRU_GNU_DIFF32,
+  BFD_RELOC_PRU_GNU_DIFF16_PMEM,
+  BFD_RELOC_PRU_GNU_DIFF32_PMEM,
+
+
+  BFD_RELOC_IQ2000_OFFSET_16,
+  BFD_RELOC_IQ2000_OFFSET_21,
+  BFD_RELOC_IQ2000_UHI16,
+
+
+
+
+  BFD_RELOC_XTENSA_RTLD,
+
+
+  BFD_RELOC_XTENSA_GLOB_DAT,
+  BFD_RELOC_XTENSA_JMP_SLOT,
+  BFD_RELOC_XTENSA_RELATIVE,
+
+
+
+  BFD_RELOC_XTENSA_PLT,
+# 6226 "../../bfd/bfd.h"
+  BFD_RELOC_XTENSA_DIFF8,
+  BFD_RELOC_XTENSA_DIFF16,
+  BFD_RELOC_XTENSA_DIFF32,
+
+
+
+
+
+  BFD_RELOC_XTENSA_SLOT0_OP,
+  BFD_RELOC_XTENSA_SLOT1_OP,
+  BFD_RELOC_XTENSA_SLOT2_OP,
+  BFD_RELOC_XTENSA_SLOT3_OP,
+  BFD_RELOC_XTENSA_SLOT4_OP,
+  BFD_RELOC_XTENSA_SLOT5_OP,
+  BFD_RELOC_XTENSA_SLOT6_OP,
+  BFD_RELOC_XTENSA_SLOT7_OP,
+  BFD_RELOC_XTENSA_SLOT8_OP,
+  BFD_RELOC_XTENSA_SLOT9_OP,
+  BFD_RELOC_XTENSA_SLOT10_OP,
+  BFD_RELOC_XTENSA_SLOT11_OP,
+  BFD_RELOC_XTENSA_SLOT12_OP,
+  BFD_RELOC_XTENSA_SLOT13_OP,
+  BFD_RELOC_XTENSA_SLOT14_OP,
+
+
+
+  BFD_RELOC_XTENSA_SLOT0_ALT,
+  BFD_RELOC_XTENSA_SLOT1_ALT,
+  BFD_RELOC_XTENSA_SLOT2_ALT,
+  BFD_RELOC_XTENSA_SLOT3_ALT,
+  BFD_RELOC_XTENSA_SLOT4_ALT,
+  BFD_RELOC_XTENSA_SLOT5_ALT,
+  BFD_RELOC_XTENSA_SLOT6_ALT,
+  BFD_RELOC_XTENSA_SLOT7_ALT,
+  BFD_RELOC_XTENSA_SLOT8_ALT,
+  BFD_RELOC_XTENSA_SLOT9_ALT,
+  BFD_RELOC_XTENSA_SLOT10_ALT,
+  BFD_RELOC_XTENSA_SLOT11_ALT,
+  BFD_RELOC_XTENSA_SLOT12_ALT,
+  BFD_RELOC_XTENSA_SLOT13_ALT,
+  BFD_RELOC_XTENSA_SLOT14_ALT,
+
+
+
+  BFD_RELOC_XTENSA_OP0,
+  BFD_RELOC_XTENSA_OP1,
+  BFD_RELOC_XTENSA_OP2,
+
+
+
+
+  BFD_RELOC_XTENSA_ASM_EXPAND,
+
+
+
+
+
+  BFD_RELOC_XTENSA_ASM_SIMPLIFY,
+
+
+  BFD_RELOC_XTENSA_TLSDESC_FN,
+  BFD_RELOC_XTENSA_TLSDESC_ARG,
+  BFD_RELOC_XTENSA_TLS_DTPOFF,
+  BFD_RELOC_XTENSA_TLS_TPOFF,
+  BFD_RELOC_XTENSA_TLS_FUNC,
+  BFD_RELOC_XTENSA_TLS_ARG,
+  BFD_RELOC_XTENSA_TLS_CALL,
+# 6303 "../../bfd/bfd.h"
+  BFD_RELOC_XTENSA_PDIFF8,
+  BFD_RELOC_XTENSA_PDIFF16,
+  BFD_RELOC_XTENSA_PDIFF32,
+  BFD_RELOC_XTENSA_NDIFF8,
+  BFD_RELOC_XTENSA_NDIFF16,
+  BFD_RELOC_XTENSA_NDIFF32,
+
+
+  BFD_RELOC_Z80_DISP8,
+
+
+  BFD_RELOC_Z80_BYTE0,
+
+
+  BFD_RELOC_Z80_BYTE1,
+
+
+  BFD_RELOC_Z80_BYTE2,
+
+
+  BFD_RELOC_Z80_BYTE3,
+
+
+  BFD_RELOC_Z80_WORD0,
+
+
+  BFD_RELOC_Z80_WORD1,
+
+
+  BFD_RELOC_Z80_16_BE,
+
+
+  BFD_RELOC_Z8K_DISP7,
+
+
+  BFD_RELOC_Z8K_CALLR,
+
+
+  BFD_RELOC_Z8K_IMM4L,
+
+
+  BFD_RELOC_LM32_CALL,
+  BFD_RELOC_LM32_BRANCH,
+  BFD_RELOC_LM32_16_GOT,
+  BFD_RELOC_LM32_GOTOFF_HI16,
+  BFD_RELOC_LM32_GOTOFF_LO16,
+  BFD_RELOC_LM32_COPY,
+  BFD_RELOC_LM32_GLOB_DAT,
+  BFD_RELOC_LM32_JMP_SLOT,
+  BFD_RELOC_LM32_RELATIVE,
+
+
+
+  BFD_RELOC_MACH_O_SECTDIFF,
+
+
+  BFD_RELOC_MACH_O_LOCAL_SECTDIFF,
+
+
+  BFD_RELOC_MACH_O_PAIR,
+
+
+  BFD_RELOC_MACH_O_SUBTRACTOR32,
+
+
+  BFD_RELOC_MACH_O_SUBTRACTOR64,
+
+
+
+  BFD_RELOC_MACH_O_X86_64_BRANCH32,
+  BFD_RELOC_MACH_O_X86_64_BRANCH8,
+
+
+  BFD_RELOC_MACH_O_X86_64_GOT,
+
+
+
+  BFD_RELOC_MACH_O_X86_64_GOT_LOAD,
+
+
+  BFD_RELOC_MACH_O_X86_64_PCREL32_1,
+
+
+  BFD_RELOC_MACH_O_X86_64_PCREL32_2,
+
+
+  BFD_RELOC_MACH_O_X86_64_PCREL32_4,
+
+
+  BFD_RELOC_MACH_O_X86_64_TLV,
+
+
+  BFD_RELOC_MACH_O_ARM64_ADDEND,
+
+
+  BFD_RELOC_MACH_O_ARM64_GOT_LOAD_PAGE21,
+
+
+  BFD_RELOC_MACH_O_ARM64_GOT_LOAD_PAGEOFF12,
+
+
+  BFD_RELOC_MACH_O_ARM64_POINTER_TO_GOT,
+
+
+
+  BFD_RELOC_MICROBLAZE_32_LO,
+
+
+
+  BFD_RELOC_MICROBLAZE_32_LO_PCREL,
+
+
+
+  BFD_RELOC_MICROBLAZE_32_ROSDA,
+
+
+
+  BFD_RELOC_MICROBLAZE_32_RWSDA,
+
+
+
+  BFD_RELOC_MICROBLAZE_32_SYM_OP_SYM,
+
+
+
+
+  BFD_RELOC_MICROBLAZE_64_NONE,
+
+
+
+
+  BFD_RELOC_MICROBLAZE_64_GOTPC,
+
+
+
+
+  BFD_RELOC_MICROBLAZE_64_GOT,
+
+
+
+
+  BFD_RELOC_MICROBLAZE_64_PLT,
+
+
+
+
+  BFD_RELOC_MICROBLAZE_64_GOTOFF,
+
+
+
+  BFD_RELOC_MICROBLAZE_32_GOTOFF,
+
+
+
+  BFD_RELOC_MICROBLAZE_COPY,
+
+
+  BFD_RELOC_MICROBLAZE_64_TLS,
+
+
+
+
+  BFD_RELOC_MICROBLAZE_64_TLSGD,
+
+
+
+
+  BFD_RELOC_MICROBLAZE_64_TLSLD,
+
+
+  BFD_RELOC_MICROBLAZE_32_TLSDTPMOD,
+
+
+  BFD_RELOC_MICROBLAZE_32_TLSDTPREL,
+
+
+
+  BFD_RELOC_MICROBLAZE_64_TLSDTPREL,
+
+
+
+  BFD_RELOC_MICROBLAZE_64_TLSGOTTPREL,
+
+
+
+  BFD_RELOC_MICROBLAZE_64_TLSTPREL,
+
+
+
+
+  BFD_RELOC_MICROBLAZE_64_TEXTPCREL,
+
+
+
+
+  BFD_RELOC_MICROBLAZE_64_TEXTREL,
+
+
+
+
+
+  BFD_RELOC_AARCH64_RELOC_START,
+
+
+  BFD_RELOC_AARCH64_NULL,
+
+
+  BFD_RELOC_AARCH64_NONE,
+
+
+
+
+  BFD_RELOC_AARCH64_64,
+  BFD_RELOC_AARCH64_32,
+  BFD_RELOC_AARCH64_16,
+
+
+
+  BFD_RELOC_AARCH64_64_PCREL,
+  BFD_RELOC_AARCH64_32_PCREL,
+  BFD_RELOC_AARCH64_16_PCREL,
+
+
+
+  BFD_RELOC_AARCH64_MOVW_G0,
+
+
+
+  BFD_RELOC_AARCH64_MOVW_G0_NC,
+
+
+
+  BFD_RELOC_AARCH64_MOVW_G1,
+
+
+
+  BFD_RELOC_AARCH64_MOVW_G1_NC,
+
+
+
+  BFD_RELOC_AARCH64_MOVW_G2,
+
+
+
+  BFD_RELOC_AARCH64_MOVW_G2_NC,
+
+
+
+  BFD_RELOC_AARCH64_MOVW_G3,
+
+
+
+
+  BFD_RELOC_AARCH64_MOVW_G0_S,
+
+
+
+
+  BFD_RELOC_AARCH64_MOVW_G1_S,
+
+
+
+
+  BFD_RELOC_AARCH64_MOVW_G2_S,
+
+
+
+
+  BFD_RELOC_AARCH64_MOVW_PREL_G0,
+
+
+
+
+  BFD_RELOC_AARCH64_MOVW_PREL_G0_NC,
+
+
+
+  BFD_RELOC_AARCH64_MOVW_PREL_G1,
+
+
+
+  BFD_RELOC_AARCH64_MOVW_PREL_G1_NC,
+
+
+
+  BFD_RELOC_AARCH64_MOVW_PREL_G2,
+
+
+
+  BFD_RELOC_AARCH64_MOVW_PREL_G2_NC,
+
+
+
+  BFD_RELOC_AARCH64_MOVW_PREL_G3,
+
+
+
+
+  BFD_RELOC_AARCH64_LD_LO19_PCREL,
+
+
+  BFD_RELOC_AARCH64_ADR_LO21_PCREL,
+
+
+
+  BFD_RELOC_AARCH64_ADR_HI21_PCREL,
+
+
+
+
+  BFD_RELOC_AARCH64_ADR_HI21_NC_PCREL,
+
+
+
+  BFD_RELOC_AARCH64_ADD_LO12,
+
+
+
+  BFD_RELOC_AARCH64_LDST8_LO12,
+
+
+
+
+  BFD_RELOC_AARCH64_TSTBR14,
+
+
+
+
+  BFD_RELOC_AARCH64_BRANCH19,
+
+
+
+
+  BFD_RELOC_AARCH64_JUMP26,
+
+
+
+
+  BFD_RELOC_AARCH64_CALL26,
+
+
+
+  BFD_RELOC_AARCH64_LDST16_LO12,
+
+
+
+  BFD_RELOC_AARCH64_LDST32_LO12,
+
+
+
+  BFD_RELOC_AARCH64_LDST64_LO12,
+
+
+
+  BFD_RELOC_AARCH64_LDST128_LO12,
+
+
+
+
+
+
+  BFD_RELOC_AARCH64_GOT_LD_PREL19,
+
+
+
+
+  BFD_RELOC_AARCH64_ADR_GOT_PAGE,
+
+
+
+
+  BFD_RELOC_AARCH64_LD64_GOT_LO12_NC,
+
+
+
+
+  BFD_RELOC_AARCH64_LD32_GOT_LO12_NC,
+
+
+
+  BFD_RELOC_AARCH64_MOVW_GOTOFF_G0_NC,
+
+
+
+  BFD_RELOC_AARCH64_MOVW_GOTOFF_G1,
+
+
+
+  BFD_RELOC_AARCH64_LD64_GOTOFF_LO15,
+
+
+  BFD_RELOC_AARCH64_LD32_GOTPAGE_LO14,
+
+
+  BFD_RELOC_AARCH64_LD64_GOTPAGE_LO15,
+
+
+
+
+
+  BFD_RELOC_AARCH64_TLSGD_ADR_PAGE21,
+
+
+  BFD_RELOC_AARCH64_TLSGD_ADR_PREL21,
+
+
+
+
+  BFD_RELOC_AARCH64_TLSGD_ADD_LO12_NC,
+
+
+  BFD_RELOC_AARCH64_TLSGD_MOVW_G0_NC,
+
+
+  BFD_RELOC_AARCH64_TLSGD_MOVW_G1,
+
+
+  BFD_RELOC_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21,
+
+
+  BFD_RELOC_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC,
+
+
+  BFD_RELOC_AARCH64_TLSIE_LD32_GOTTPREL_LO12_NC,
+
+
+  BFD_RELOC_AARCH64_TLSIE_LD_GOTTPREL_PREL19,
+
+
+  BFD_RELOC_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC,
+
+
+  BFD_RELOC_AARCH64_TLSIE_MOVW_GOTTPREL_G1,
+
+
+  BFD_RELOC_AARCH64_TLSLD_ADD_DTPREL_HI12,
+
+
+  BFD_RELOC_AARCH64_TLSLD_ADD_DTPREL_LO12,
+
+
+  BFD_RELOC_AARCH64_TLSLD_ADD_DTPREL_LO12_NC,
+
+
+
+
+  BFD_RELOC_AARCH64_TLSLD_ADD_LO12_NC,
+
+
+
+  BFD_RELOC_AARCH64_TLSLD_ADR_PAGE21,
+
+
+  BFD_RELOC_AARCH64_TLSLD_ADR_PREL21,
+
+
+
+  BFD_RELOC_AARCH64_TLSLD_LDST16_DTPREL_LO12,
+
+
+  BFD_RELOC_AARCH64_TLSLD_LDST16_DTPREL_LO12_NC,
+
+
+
+  BFD_RELOC_AARCH64_TLSLD_LDST32_DTPREL_LO12,
+
+
+  BFD_RELOC_AARCH64_TLSLD_LDST32_DTPREL_LO12_NC,
+
+
+
+  BFD_RELOC_AARCH64_TLSLD_LDST64_DTPREL_LO12,
+
+
+  BFD_RELOC_AARCH64_TLSLD_LDST64_DTPREL_LO12_NC,
+
+
+
+  BFD_RELOC_AARCH64_TLSLD_LDST8_DTPREL_LO12,
+
+
+  BFD_RELOC_AARCH64_TLSLD_LDST8_DTPREL_LO12_NC,
+
+
+  BFD_RELOC_AARCH64_TLSLD_MOVW_DTPREL_G0,
+
+
+  BFD_RELOC_AARCH64_TLSLD_MOVW_DTPREL_G0_NC,
+
+
+  BFD_RELOC_AARCH64_TLSLD_MOVW_DTPREL_G1,
+
+
+  BFD_RELOC_AARCH64_TLSLD_MOVW_DTPREL_G1_NC,
+
+
+  BFD_RELOC_AARCH64_TLSLD_MOVW_DTPREL_G2,
+
+
+  BFD_RELOC_AARCH64_TLSLE_MOVW_TPREL_G2,
+
+
+  BFD_RELOC_AARCH64_TLSLE_MOVW_TPREL_G1,
+
+
+  BFD_RELOC_AARCH64_TLSLE_MOVW_TPREL_G1_NC,
+
+
+  BFD_RELOC_AARCH64_TLSLE_MOVW_TPREL_G0,
+
+
+  BFD_RELOC_AARCH64_TLSLE_MOVW_TPREL_G0_NC,
+
+
+  BFD_RELOC_AARCH64_TLSLE_ADD_TPREL_HI12,
+
+
+  BFD_RELOC_AARCH64_TLSLE_ADD_TPREL_LO12,
+
+
+  BFD_RELOC_AARCH64_TLSLE_ADD_TPREL_LO12_NC,
+
+
+
+  BFD_RELOC_AARCH64_TLSLE_LDST16_TPREL_LO12,
+
+
+  BFD_RELOC_AARCH64_TLSLE_LDST16_TPREL_LO12_NC,
+
+
+
+  BFD_RELOC_AARCH64_TLSLE_LDST32_TPREL_LO12,
+
+
+  BFD_RELOC_AARCH64_TLSLE_LDST32_TPREL_LO12_NC,
+
+
+
+  BFD_RELOC_AARCH64_TLSLE_LDST64_TPREL_LO12,
+
+
+  BFD_RELOC_AARCH64_TLSLE_LDST64_TPREL_LO12_NC,
+
+
+
+  BFD_RELOC_AARCH64_TLSLE_LDST8_TPREL_LO12,
+
+
+  BFD_RELOC_AARCH64_TLSLE_LDST8_TPREL_LO12_NC,
+
+
+  BFD_RELOC_AARCH64_TLSDESC_LD_PREL19,
+
+
+  BFD_RELOC_AARCH64_TLSDESC_ADR_PREL21,
+
+
+  BFD_RELOC_AARCH64_TLSDESC_ADR_PAGE21,
+
+
+  BFD_RELOC_AARCH64_TLSDESC_LD64_LO12,
+
+
+  BFD_RELOC_AARCH64_TLSDESC_LD32_LO12_NC,
+
+
+  BFD_RELOC_AARCH64_TLSDESC_ADD_LO12,
+
+
+  BFD_RELOC_AARCH64_TLSDESC_OFF_G1,
+
+
+  BFD_RELOC_AARCH64_TLSDESC_OFF_G0_NC,
+
+
+  BFD_RELOC_AARCH64_TLSDESC_LDR,
+
+
+  BFD_RELOC_AARCH64_TLSDESC_ADD,
+
+
+  BFD_RELOC_AARCH64_TLSDESC_CALL,
+
+
+  BFD_RELOC_AARCH64_COPY,
+
+
+  BFD_RELOC_AARCH64_GLOB_DAT,
+
+
+  BFD_RELOC_AARCH64_JUMP_SLOT,
+
+
+  BFD_RELOC_AARCH64_RELATIVE,
+
+
+  BFD_RELOC_AARCH64_TLS_DTPMOD,
+
+
+  BFD_RELOC_AARCH64_TLS_DTPREL,
+
+
+  BFD_RELOC_AARCH64_TLS_TPREL,
+
+
+  BFD_RELOC_AARCH64_TLSDESC,
+
+
+  BFD_RELOC_AARCH64_IRELATIVE,
+
+
+
+
+
+
+  BFD_RELOC_AARCH64_RELOC_END,
+
+
+
+  BFD_RELOC_AARCH64_GAS_INTERNAL_FIXUP,
+
+
+
+  BFD_RELOC_AARCH64_LDST_LO12,
+
+
+
+
+  BFD_RELOC_AARCH64_TLSLD_LDST_DTPREL_LO12,
+
+
+  BFD_RELOC_AARCH64_TLSLD_LDST_DTPREL_LO12_NC,
+
+
+
+
+  BFD_RELOC_AARCH64_TLSLE_LDST_TPREL_LO12,
+
+
+  BFD_RELOC_AARCH64_TLSLE_LDST_TPREL_LO12_NC,
+
+
+
+  BFD_RELOC_AARCH64_LD_GOT_LO12_NC,
+
+
+
+  BFD_RELOC_AARCH64_TLSIE_LD_GOTTPREL_LO12_NC,
+
+
+
+  BFD_RELOC_AARCH64_TLSDESC_LD_LO12_NC,
+
+
+  BFD_RELOC_TILEPRO_COPY,
+  BFD_RELOC_TILEPRO_GLOB_DAT,
+  BFD_RELOC_TILEPRO_JMP_SLOT,
+  BFD_RELOC_TILEPRO_RELATIVE,
+  BFD_RELOC_TILEPRO_BROFF_X1,
+  BFD_RELOC_TILEPRO_JOFFLONG_X1,
+  BFD_RELOC_TILEPRO_JOFFLONG_X1_PLT,
+  BFD_RELOC_TILEPRO_IMM8_X0,
+  BFD_RELOC_TILEPRO_IMM8_Y0,
+  BFD_RELOC_TILEPRO_IMM8_X1,
+  BFD_RELOC_TILEPRO_IMM8_Y1,
+  BFD_RELOC_TILEPRO_DEST_IMM8_X1,
+  BFD_RELOC_TILEPRO_MT_IMM15_X1,
+  BFD_RELOC_TILEPRO_MF_IMM15_X1,
+  BFD_RELOC_TILEPRO_IMM16_X0,
+  BFD_RELOC_TILEPRO_IMM16_X1,
+  BFD_RELOC_TILEPRO_IMM16_X0_LO,
+  BFD_RELOC_TILEPRO_IMM16_X1_LO,
+  BFD_RELOC_TILEPRO_IMM16_X0_HI,
+  BFD_RELOC_TILEPRO_IMM16_X1_HI,
+  BFD_RELOC_TILEPRO_IMM16_X0_HA,
+  BFD_RELOC_TILEPRO_IMM16_X1_HA,
+  BFD_RELOC_TILEPRO_IMM16_X0_PCREL,
+  BFD_RELOC_TILEPRO_IMM16_X1_PCREL,
+  BFD_RELOC_TILEPRO_IMM16_X0_LO_PCREL,
+  BFD_RELOC_TILEPRO_IMM16_X1_LO_PCREL,
+  BFD_RELOC_TILEPRO_IMM16_X0_HI_PCREL,
+  BFD_RELOC_TILEPRO_IMM16_X1_HI_PCREL,
+  BFD_RELOC_TILEPRO_IMM16_X0_HA_PCREL,
+  BFD_RELOC_TILEPRO_IMM16_X1_HA_PCREL,
+  BFD_RELOC_TILEPRO_IMM16_X0_GOT,
+  BFD_RELOC_TILEPRO_IMM16_X1_GOT,
+  BFD_RELOC_TILEPRO_IMM16_X0_GOT_LO,
+  BFD_RELOC_TILEPRO_IMM16_X1_GOT_LO,
+  BFD_RELOC_TILEPRO_IMM16_X0_GOT_HI,
+  BFD_RELOC_TILEPRO_IMM16_X1_GOT_HI,
+  BFD_RELOC_TILEPRO_IMM16_X0_GOT_HA,
+  BFD_RELOC_TILEPRO_IMM16_X1_GOT_HA,
+  BFD_RELOC_TILEPRO_MMSTART_X0,
+  BFD_RELOC_TILEPRO_MMEND_X0,
+  BFD_RELOC_TILEPRO_MMSTART_X1,
+  BFD_RELOC_TILEPRO_MMEND_X1,
+  BFD_RELOC_TILEPRO_SHAMT_X0,
+  BFD_RELOC_TILEPRO_SHAMT_X1,
+  BFD_RELOC_TILEPRO_SHAMT_Y0,
+  BFD_RELOC_TILEPRO_SHAMT_Y1,
+  BFD_RELOC_TILEPRO_TLS_GD_CALL,
+  BFD_RELOC_TILEPRO_IMM8_X0_TLS_GD_ADD,
+  BFD_RELOC_TILEPRO_IMM8_X1_TLS_GD_ADD,
+  BFD_RELOC_TILEPRO_IMM8_Y0_TLS_GD_ADD,
+  BFD_RELOC_TILEPRO_IMM8_Y1_TLS_GD_ADD,
+  BFD_RELOC_TILEPRO_TLS_IE_LOAD,
+  BFD_RELOC_TILEPRO_IMM16_X0_TLS_GD,
+  BFD_RELOC_TILEPRO_IMM16_X1_TLS_GD,
+  BFD_RELOC_TILEPRO_IMM16_X0_TLS_GD_LO,
+  BFD_RELOC_TILEPRO_IMM16_X1_TLS_GD_LO,
+  BFD_RELOC_TILEPRO_IMM16_X0_TLS_GD_HI,
+  BFD_RELOC_TILEPRO_IMM16_X1_TLS_GD_HI,
+  BFD_RELOC_TILEPRO_IMM16_X0_TLS_GD_HA,
+  BFD_RELOC_TILEPRO_IMM16_X1_TLS_GD_HA,
+  BFD_RELOC_TILEPRO_IMM16_X0_TLS_IE,
+  BFD_RELOC_TILEPRO_IMM16_X1_TLS_IE,
+  BFD_RELOC_TILEPRO_IMM16_X0_TLS_IE_LO,
+  BFD_RELOC_TILEPRO_IMM16_X1_TLS_IE_LO,
+  BFD_RELOC_TILEPRO_IMM16_X0_TLS_IE_HI,
+  BFD_RELOC_TILEPRO_IMM16_X1_TLS_IE_HI,
+  BFD_RELOC_TILEPRO_IMM16_X0_TLS_IE_HA,
+  BFD_RELOC_TILEPRO_IMM16_X1_TLS_IE_HA,
+  BFD_RELOC_TILEPRO_TLS_DTPMOD32,
+  BFD_RELOC_TILEPRO_TLS_DTPOFF32,
+  BFD_RELOC_TILEPRO_TLS_TPOFF32,
+  BFD_RELOC_TILEPRO_IMM16_X0_TLS_LE,
+  BFD_RELOC_TILEPRO_IMM16_X1_TLS_LE,
+  BFD_RELOC_TILEPRO_IMM16_X0_TLS_LE_LO,
+  BFD_RELOC_TILEPRO_IMM16_X1_TLS_LE_LO,
+  BFD_RELOC_TILEPRO_IMM16_X0_TLS_LE_HI,
+  BFD_RELOC_TILEPRO_IMM16_X1_TLS_LE_HI,
+  BFD_RELOC_TILEPRO_IMM16_X0_TLS_LE_HA,
+  BFD_RELOC_TILEPRO_IMM16_X1_TLS_LE_HA,
+
+
+  BFD_RELOC_TILEGX_HW0,
+  BFD_RELOC_TILEGX_HW1,
+  BFD_RELOC_TILEGX_HW2,
+  BFD_RELOC_TILEGX_HW3,
+  BFD_RELOC_TILEGX_HW0_LAST,
+  BFD_RELOC_TILEGX_HW1_LAST,
+  BFD_RELOC_TILEGX_HW2_LAST,
+  BFD_RELOC_TILEGX_COPY,
+  BFD_RELOC_TILEGX_GLOB_DAT,
+  BFD_RELOC_TILEGX_JMP_SLOT,
+  BFD_RELOC_TILEGX_RELATIVE,
+  BFD_RELOC_TILEGX_BROFF_X1,
+  BFD_RELOC_TILEGX_JUMPOFF_X1,
+  BFD_RELOC_TILEGX_JUMPOFF_X1_PLT,
+  BFD_RELOC_TILEGX_IMM8_X0,
+  BFD_RELOC_TILEGX_IMM8_Y0,
+  BFD_RELOC_TILEGX_IMM8_X1,
+  BFD_RELOC_TILEGX_IMM8_Y1,
+  BFD_RELOC_TILEGX_DEST_IMM8_X1,
+  BFD_RELOC_TILEGX_MT_IMM14_X1,
+  BFD_RELOC_TILEGX_MF_IMM14_X1,
+  BFD_RELOC_TILEGX_MMSTART_X0,
+  BFD_RELOC_TILEGX_MMEND_X0,
+  BFD_RELOC_TILEGX_SHAMT_X0,
+  BFD_RELOC_TILEGX_SHAMT_X1,
+  BFD_RELOC_TILEGX_SHAMT_Y0,
+  BFD_RELOC_TILEGX_SHAMT_Y1,
+  BFD_RELOC_TILEGX_IMM16_X0_HW0,
+  BFD_RELOC_TILEGX_IMM16_X1_HW0,
+  BFD_RELOC_TILEGX_IMM16_X0_HW1,
+  BFD_RELOC_TILEGX_IMM16_X1_HW1,
+  BFD_RELOC_TILEGX_IMM16_X0_HW2,
+  BFD_RELOC_TILEGX_IMM16_X1_HW2,
+  BFD_RELOC_TILEGX_IMM16_X0_HW3,
+  BFD_RELOC_TILEGX_IMM16_X1_HW3,
+  BFD_RELOC_TILEGX_IMM16_X0_HW0_LAST,
+  BFD_RELOC_TILEGX_IMM16_X1_HW0_LAST,
+  BFD_RELOC_TILEGX_IMM16_X0_HW1_LAST,
+  BFD_RELOC_TILEGX_IMM16_X1_HW1_LAST,
+  BFD_RELOC_TILEGX_IMM16_X0_HW2_LAST,
+  BFD_RELOC_TILEGX_IMM16_X1_HW2_LAST,
+  BFD_RELOC_TILEGX_IMM16_X0_HW0_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X1_HW0_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X0_HW1_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X1_HW1_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X0_HW2_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X1_HW2_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X0_HW3_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X1_HW3_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X0_HW0_LAST_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X1_HW0_LAST_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X0_HW1_LAST_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X1_HW1_LAST_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X0_HW2_LAST_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X1_HW2_LAST_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X0_HW0_GOT,
+  BFD_RELOC_TILEGX_IMM16_X1_HW0_GOT,
+  BFD_RELOC_TILEGX_IMM16_X0_HW0_PLT_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X1_HW0_PLT_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X0_HW1_PLT_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X1_HW1_PLT_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X0_HW2_PLT_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X1_HW2_PLT_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X0_HW0_LAST_GOT,
+  BFD_RELOC_TILEGX_IMM16_X1_HW0_LAST_GOT,
+  BFD_RELOC_TILEGX_IMM16_X0_HW1_LAST_GOT,
+  BFD_RELOC_TILEGX_IMM16_X1_HW1_LAST_GOT,
+  BFD_RELOC_TILEGX_IMM16_X0_HW3_PLT_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X1_HW3_PLT_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X0_HW0_TLS_GD,
+  BFD_RELOC_TILEGX_IMM16_X1_HW0_TLS_GD,
+  BFD_RELOC_TILEGX_IMM16_X0_HW0_TLS_LE,
+  BFD_RELOC_TILEGX_IMM16_X1_HW0_TLS_LE,
+  BFD_RELOC_TILEGX_IMM16_X0_HW0_LAST_TLS_LE,
+  BFD_RELOC_TILEGX_IMM16_X1_HW0_LAST_TLS_LE,
+  BFD_RELOC_TILEGX_IMM16_X0_HW1_LAST_TLS_LE,
+  BFD_RELOC_TILEGX_IMM16_X1_HW1_LAST_TLS_LE,
+  BFD_RELOC_TILEGX_IMM16_X0_HW0_LAST_TLS_GD,
+  BFD_RELOC_TILEGX_IMM16_X1_HW0_LAST_TLS_GD,
+  BFD_RELOC_TILEGX_IMM16_X0_HW1_LAST_TLS_GD,
+  BFD_RELOC_TILEGX_IMM16_X1_HW1_LAST_TLS_GD,
+  BFD_RELOC_TILEGX_IMM16_X0_HW0_TLS_IE,
+  BFD_RELOC_TILEGX_IMM16_X1_HW0_TLS_IE,
+  BFD_RELOC_TILEGX_IMM16_X0_HW0_LAST_PLT_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X1_HW0_LAST_PLT_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X0_HW1_LAST_PLT_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X1_HW1_LAST_PLT_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X0_HW2_LAST_PLT_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X1_HW2_LAST_PLT_PCREL,
+  BFD_RELOC_TILEGX_IMM16_X0_HW0_LAST_TLS_IE,
+  BFD_RELOC_TILEGX_IMM16_X1_HW0_LAST_TLS_IE,
+  BFD_RELOC_TILEGX_IMM16_X0_HW1_LAST_TLS_IE,
+  BFD_RELOC_TILEGX_IMM16_X1_HW1_LAST_TLS_IE,
+  BFD_RELOC_TILEGX_TLS_DTPMOD64,
+  BFD_RELOC_TILEGX_TLS_DTPOFF64,
+  BFD_RELOC_TILEGX_TLS_TPOFF64,
+  BFD_RELOC_TILEGX_TLS_DTPMOD32,
+  BFD_RELOC_TILEGX_TLS_DTPOFF32,
+  BFD_RELOC_TILEGX_TLS_TPOFF32,
+  BFD_RELOC_TILEGX_TLS_GD_CALL,
+  BFD_RELOC_TILEGX_IMM8_X0_TLS_GD_ADD,
+  BFD_RELOC_TILEGX_IMM8_X1_TLS_GD_ADD,
+  BFD_RELOC_TILEGX_IMM8_Y0_TLS_GD_ADD,
+  BFD_RELOC_TILEGX_IMM8_Y1_TLS_GD_ADD,
+  BFD_RELOC_TILEGX_TLS_IE_LOAD,
+  BFD_RELOC_TILEGX_IMM8_X0_TLS_ADD,
+  BFD_RELOC_TILEGX_IMM8_X1_TLS_ADD,
+  BFD_RELOC_TILEGX_IMM8_Y0_TLS_ADD,
+  BFD_RELOC_TILEGX_IMM8_Y1_TLS_ADD,
+
+
+  BFD_RELOC_BPF_64,
+  BFD_RELOC_BPF_DISP32,
+  BFD_RELOC_BPF_DISPCALL32,
+  BFD_RELOC_BPF_DISP16,
+
+
+  BFD_RELOC_EPIPHANY_SIMM8,
+
+
+  BFD_RELOC_EPIPHANY_SIMM24,
+
+
+  BFD_RELOC_EPIPHANY_HIGH,
+
+
+  BFD_RELOC_EPIPHANY_LOW,
+
+
+  BFD_RELOC_EPIPHANY_SIMM11,
+
+
+  BFD_RELOC_EPIPHANY_IMM11,
+
+
+  BFD_RELOC_EPIPHANY_IMM8,
+
+
+  BFD_RELOC_VISIUM_HI16,
+  BFD_RELOC_VISIUM_LO16,
+  BFD_RELOC_VISIUM_IM16,
+  BFD_RELOC_VISIUM_REL16,
+  BFD_RELOC_VISIUM_HI16_PCREL,
+  BFD_RELOC_VISIUM_LO16_PCREL,
+  BFD_RELOC_VISIUM_IM16_PCREL,
+
+
+  BFD_RELOC_WASM32_LEB128,
+  BFD_RELOC_WASM32_LEB128_GOT,
+  BFD_RELOC_WASM32_LEB128_GOT_CODE,
+  BFD_RELOC_WASM32_LEB128_PLT,
+  BFD_RELOC_WASM32_PLT_INDEX,
+  BFD_RELOC_WASM32_ABS32_CODE,
+  BFD_RELOC_WASM32_COPY,
+  BFD_RELOC_WASM32_CODE_POINTER,
+  BFD_RELOC_WASM32_INDEX,
+  BFD_RELOC_WASM32_PLT_SIG,
+
+
+  BFD_RELOC_CKCORE_NONE,
+  BFD_RELOC_CKCORE_ADDR32,
+  BFD_RELOC_CKCORE_PCREL_IMM8BY4,
+  BFD_RELOC_CKCORE_PCREL_IMM11BY2,
+  BFD_RELOC_CKCORE_PCREL_IMM4BY2,
+  BFD_RELOC_CKCORE_PCREL32,
+  BFD_RELOC_CKCORE_PCREL_JSR_IMM11BY2,
+  BFD_RELOC_CKCORE_GNU_VTINHERIT,
+  BFD_RELOC_CKCORE_GNU_VTENTRY,
+  BFD_RELOC_CKCORE_RELATIVE,
+  BFD_RELOC_CKCORE_COPY,
+  BFD_RELOC_CKCORE_GLOB_DAT,
+  BFD_RELOC_CKCORE_JUMP_SLOT,
+  BFD_RELOC_CKCORE_GOTOFF,
+  BFD_RELOC_CKCORE_GOTPC,
+  BFD_RELOC_CKCORE_GOT32,
+  BFD_RELOC_CKCORE_PLT32,
+  BFD_RELOC_CKCORE_ADDRGOT,
+  BFD_RELOC_CKCORE_ADDRPLT,
+  BFD_RELOC_CKCORE_PCREL_IMM26BY2,
+  BFD_RELOC_CKCORE_PCREL_IMM16BY2,
+  BFD_RELOC_CKCORE_PCREL_IMM16BY4,
+  BFD_RELOC_CKCORE_PCREL_IMM10BY2,
+  BFD_RELOC_CKCORE_PCREL_IMM10BY4,
+  BFD_RELOC_CKCORE_ADDR_HI16,
+  BFD_RELOC_CKCORE_ADDR_LO16,
+  BFD_RELOC_CKCORE_GOTPC_HI16,
+  BFD_RELOC_CKCORE_GOTPC_LO16,
+  BFD_RELOC_CKCORE_GOTOFF_HI16,
+  BFD_RELOC_CKCORE_GOTOFF_LO16,
+  BFD_RELOC_CKCORE_GOT12,
+  BFD_RELOC_CKCORE_GOT_HI16,
+  BFD_RELOC_CKCORE_GOT_LO16,
+  BFD_RELOC_CKCORE_PLT12,
+  BFD_RELOC_CKCORE_PLT_HI16,
+  BFD_RELOC_CKCORE_PLT_LO16,
+  BFD_RELOC_CKCORE_ADDRGOT_HI16,
+  BFD_RELOC_CKCORE_ADDRGOT_LO16,
+  BFD_RELOC_CKCORE_ADDRPLT_HI16,
+  BFD_RELOC_CKCORE_ADDRPLT_LO16,
+  BFD_RELOC_CKCORE_PCREL_JSR_IMM26BY2,
+  BFD_RELOC_CKCORE_TOFFSET_LO16,
+  BFD_RELOC_CKCORE_DOFFSET_LO16,
+  BFD_RELOC_CKCORE_PCREL_IMM18BY2,
+  BFD_RELOC_CKCORE_DOFFSET_IMM18,
+  BFD_RELOC_CKCORE_DOFFSET_IMM18BY2,
+  BFD_RELOC_CKCORE_DOFFSET_IMM18BY4,
+  BFD_RELOC_CKCORE_GOTOFF_IMM18,
+  BFD_RELOC_CKCORE_GOT_IMM18BY4,
+  BFD_RELOC_CKCORE_PLT_IMM18BY4,
+  BFD_RELOC_CKCORE_PCREL_IMM7BY4,
+  BFD_RELOC_CKCORE_TLS_LE32,
+  BFD_RELOC_CKCORE_TLS_IE32,
+  BFD_RELOC_CKCORE_TLS_GD32,
+  BFD_RELOC_CKCORE_TLS_LDM32,
+  BFD_RELOC_CKCORE_TLS_LDO32,
+  BFD_RELOC_CKCORE_TLS_DTPMOD32,
+  BFD_RELOC_CKCORE_TLS_DTPOFF32,
+  BFD_RELOC_CKCORE_TLS_TPOFF32,
+  BFD_RELOC_CKCORE_PCREL_FLRW_IMM8BY4,
+  BFD_RELOC_CKCORE_NOJSRI,
+  BFD_RELOC_CKCORE_CALLGRAPH,
+  BFD_RELOC_CKCORE_IRELATIVE,
+  BFD_RELOC_CKCORE_PCREL_BLOOP_IMM4BY4,
+  BFD_RELOC_CKCORE_PCREL_BLOOP_IMM12BY4,
+
+
+  BFD_RELOC_S12Z_OPR,
+
+
+  BFD_RELOC_LARCH_TLS_DTPMOD32,
+  BFD_RELOC_LARCH_TLS_DTPREL32,
+  BFD_RELOC_LARCH_TLS_DTPMOD64,
+  BFD_RELOC_LARCH_TLS_DTPREL64,
+  BFD_RELOC_LARCH_TLS_TPREL32,
+  BFD_RELOC_LARCH_TLS_TPREL64,
+  BFD_RELOC_LARCH_MARK_LA,
+  BFD_RELOC_LARCH_MARK_PCREL,
+  BFD_RELOC_LARCH_SOP_PUSH_PCREL,
+  BFD_RELOC_LARCH_SOP_PUSH_ABSOLUTE,
+  BFD_RELOC_LARCH_SOP_PUSH_DUP,
+  BFD_RELOC_LARCH_SOP_PUSH_GPREL,
+  BFD_RELOC_LARCH_SOP_PUSH_TLS_TPREL,
+  BFD_RELOC_LARCH_SOP_PUSH_TLS_GOT,
+  BFD_RELOC_LARCH_SOP_PUSH_TLS_GD,
+  BFD_RELOC_LARCH_SOP_PUSH_PLT_PCREL,
+  BFD_RELOC_LARCH_SOP_ASSERT,
+  BFD_RELOC_LARCH_SOP_NOT,
+  BFD_RELOC_LARCH_SOP_SUB,
+  BFD_RELOC_LARCH_SOP_SL,
+  BFD_RELOC_LARCH_SOP_SR,
+  BFD_RELOC_LARCH_SOP_ADD,
+  BFD_RELOC_LARCH_SOP_AND,
+  BFD_RELOC_LARCH_SOP_IF_ELSE,
+  BFD_RELOC_LARCH_SOP_POP_32_S_10_5,
+  BFD_RELOC_LARCH_SOP_POP_32_U_10_12,
+  BFD_RELOC_LARCH_SOP_POP_32_S_10_12,
+  BFD_RELOC_LARCH_SOP_POP_32_S_10_16,
+  BFD_RELOC_LARCH_SOP_POP_32_S_10_16_S2,
+  BFD_RELOC_LARCH_SOP_POP_32_S_5_20,
+  BFD_RELOC_LARCH_SOP_POP_32_S_0_5_10_16_S2,
+  BFD_RELOC_LARCH_SOP_POP_32_S_0_10_10_16_S2,
+  BFD_RELOC_LARCH_SOP_POP_32_U,
+  BFD_RELOC_LARCH_ADD8,
+  BFD_RELOC_LARCH_ADD16,
+  BFD_RELOC_LARCH_ADD24,
+  BFD_RELOC_LARCH_ADD32,
+  BFD_RELOC_LARCH_ADD64,
+  BFD_RELOC_LARCH_SUB8,
+  BFD_RELOC_LARCH_SUB16,
+  BFD_RELOC_LARCH_SUB24,
+  BFD_RELOC_LARCH_SUB32,
+  BFD_RELOC_LARCH_SUB64,
+  BFD_RELOC_LARCH_B16,
+  BFD_RELOC_LARCH_B21,
+  BFD_RELOC_LARCH_B26,
+  BFD_RELOC_LARCH_ABS_HI20,
+  BFD_RELOC_LARCH_ABS_LO12,
+  BFD_RELOC_LARCH_ABS64_LO20,
+  BFD_RELOC_LARCH_ABS64_HI12,
+  BFD_RELOC_LARCH_PCALA_HI20,
+  BFD_RELOC_LARCH_PCALA_LO12,
+  BFD_RELOC_LARCH_PCALA64_LO20,
+  BFD_RELOC_LARCH_PCALA64_HI12,
+  BFD_RELOC_LARCH_GOT_PC_HI20,
+  BFD_RELOC_LARCH_GOT_PC_LO12,
+  BFD_RELOC_LARCH_GOT64_PC_LO20,
+  BFD_RELOC_LARCH_GOT64_PC_HI12,
+  BFD_RELOC_LARCH_GOT_HI20,
+  BFD_RELOC_LARCH_GOT_LO12,
+  BFD_RELOC_LARCH_GOT64_LO20,
+  BFD_RELOC_LARCH_GOT64_HI12,
+  BFD_RELOC_LARCH_TLS_LE_HI20,
+  BFD_RELOC_LARCH_TLS_LE_LO12,
+  BFD_RELOC_LARCH_TLS_LE64_LO20,
+  BFD_RELOC_LARCH_TLS_LE64_HI12,
+  BFD_RELOC_LARCH_TLS_IE_PC_HI20,
+  BFD_RELOC_LARCH_TLS_IE_PC_LO12,
+  BFD_RELOC_LARCH_TLS_IE64_PC_LO20,
+  BFD_RELOC_LARCH_TLS_IE64_PC_HI12,
+  BFD_RELOC_LARCH_TLS_IE_HI20,
+  BFD_RELOC_LARCH_TLS_IE_LO12,
+  BFD_RELOC_LARCH_TLS_IE64_LO20,
+  BFD_RELOC_LARCH_TLS_IE64_HI12,
+  BFD_RELOC_LARCH_TLS_LD_PC_HI20,
+  BFD_RELOC_LARCH_TLS_LD_HI20,
+  BFD_RELOC_LARCH_TLS_GD_PC_HI20,
+  BFD_RELOC_LARCH_TLS_GD_HI20,
+  BFD_RELOC_LARCH_32_PCREL,
+  BFD_RELOC_LARCH_RELAX,
+  BFD_RELOC_LARCH_DELETE,
+  BFD_RELOC_LARCH_ALIGN,
+  BFD_RELOC_LARCH_PCREL20_S2,
+  BFD_RELOC_LARCH_CFA,
+  BFD_RELOC_LARCH_ADD6,
+  BFD_RELOC_LARCH_SUB6,
+  BFD_RELOC_LARCH_ADD_ULEB128,
+  BFD_RELOC_LARCH_SUB_ULEB128,
+  BFD_RELOC_LARCH_64_PCREL,
+  BFD_RELOC_UNUSED };
+typedef enum bfd_reloc_code_real bfd_reloc_code_real_type;
+
+reloc_howto_type *bfd_reloc_type_lookup
+   (bfd *abfd, bfd_reloc_code_real_type code);
+reloc_howto_type *bfd_reloc_name_lookup
+   (bfd *abfd, const char *reloc_name);
+
+const char *bfd_get_reloc_code_name (bfd_reloc_code_real_type code);
+
+
+bfd_byte *bfd_simple_get_relocated_section_contents
+   (bfd *abfd, asection *sec, bfd_byte *outbuf, asymbol **symbol_table);
+
+
+const char *bfd_get_stab_name (int);
+
+
+
+
+
+struct stab_info
+{
+
+  struct bfd_strtab_hash *strings;
+
+  struct bfd_hash_table includes;
+
+  struct bfd_section *stabstr;
+};
+# 7414 "../../bfd/bfd.h"
+enum bfd_flavour
+{
+
+  bfd_target_unknown_flavour,
+  bfd_target_aout_flavour,
+  bfd_target_coff_flavour,
+  bfd_target_ecoff_flavour,
+  bfd_target_xcoff_flavour,
+  bfd_target_elf_flavour,
+  bfd_target_tekhex_flavour,
+  bfd_target_srec_flavour,
+  bfd_target_verilog_flavour,
+  bfd_target_ihex_flavour,
+  bfd_target_som_flavour,
+  bfd_target_msdos_flavour,
+  bfd_target_evax_flavour,
+  bfd_target_mmo_flavour,
+  bfd_target_mach_o_flavour,
+  bfd_target_pef_flavour,
+  bfd_target_pef_xlib_flavour,
+  bfd_target_sym_flavour
+};
+
+enum bfd_endian { BFD_ENDIAN_BIG, BFD_ENDIAN_LITTLE, BFD_ENDIAN_UNKNOWN };
+
+
+struct flag_info;
+typedef void (*bfd_cleanup) (bfd *);
+
+typedef struct bfd_target
+{
+
+  const char *name;
+
+
+
+  enum bfd_flavour flavour;
+
+
+  enum bfd_endian byteorder;
+
+
+  enum bfd_endian header_byteorder;
+
+
+
+  flagword object_flags;
+
+
+
+  flagword section_flags;
+
+
+
+  char symbol_leading_char;
+
+
+  char ar_pad_char;
+
+
+  unsigned char ar_max_namelen;
+
+
+
+  unsigned char match_priority;
+
+
+  
+# 7481 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7481 "../../bfd/bfd.h"
+      keep_unused_section_symbols;
+
+
+
+
+  uint64_t (*bfd_getx64) (const void *);
+  int64_t (*bfd_getx_signed_64) (const void *);
+  void (*bfd_putx64) (uint64_t, void *);
+  bfd_vma (*bfd_getx32) (const void *);
+  bfd_signed_vma (*bfd_getx_signed_32) (const void *);
+  void (*bfd_putx32) (bfd_vma, void *);
+  bfd_vma (*bfd_getx16) (const void *);
+  bfd_signed_vma (*bfd_getx_signed_16) (const void *);
+  void (*bfd_putx16) (bfd_vma, void *);
+
+
+  uint64_t (*bfd_h_getx64) (const void *);
+  int64_t (*bfd_h_getx_signed_64) (const void *);
+  void (*bfd_h_putx64) (uint64_t, void *);
+  bfd_vma (*bfd_h_getx32) (const void *);
+  bfd_signed_vma (*bfd_h_getx_signed_32) (const void *);
+  void (*bfd_h_putx32) (bfd_vma, void *);
+  bfd_vma (*bfd_h_getx16) (const void *);
+  bfd_signed_vma (*bfd_h_getx_signed_16) (const void *);
+  void (*bfd_h_putx16) (bfd_vma, void *);
+
+
+
+
+
+
+  bfd_cleanup (*_bfd_check_format[bfd_type_end]) (bfd *);
+
+
+  
+# 7515 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7515 "../../bfd/bfd.h"
+      (*_bfd_set_format[bfd_type_end]) (bfd *);
+
+
+  
+# 7518 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7518 "../../bfd/bfd.h"
+      (*_bfd_write_contents[bfd_type_end]) (bfd *);
+# 7529 "../../bfd/bfd.h"
+  
+# 7529 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7529 "../../bfd/bfd.h"
+      (*_close_and_cleanup) (bfd *);
+
+  
+# 7531 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7531 "../../bfd/bfd.h"
+      (*_bfd_free_cached_info) (bfd *);
+
+  
+# 7533 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7533 "../../bfd/bfd.h"
+      (*_new_section_hook) (bfd *, sec_ptr);
+
+  
+# 7535 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7535 "../../bfd/bfd.h"
+      (*_bfd_get_section_contents) (bfd *, sec_ptr, void *, file_ptr,
+         bfd_size_type);
+  
+# 7537 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7537 "../../bfd/bfd.h"
+      (*_bfd_get_section_contents_in_window) (bfd *, sec_ptr, bfd_window *,
+            file_ptr, bfd_size_type);
+# 7553 "../../bfd/bfd.h"
+  
+# 7553 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7553 "../../bfd/bfd.h"
+      (*_bfd_copy_private_bfd_data) (bfd *, bfd *);
+
+
+  
+# 7556 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7556 "../../bfd/bfd.h"
+      (*_bfd_merge_private_bfd_data) (bfd *, struct bfd_link_info *);
+
+
+
+
+
+  
+# 7562 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7562 "../../bfd/bfd.h"
+      (*_bfd_init_private_section_data) (bfd *, sec_ptr, bfd *, sec_ptr,
+       struct bfd_link_info *);
+
+
+  
+# 7566 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7566 "../../bfd/bfd.h"
+      (*_bfd_copy_private_section_data) (bfd *, sec_ptr, bfd *, sec_ptr);
+
+
+  
+# 7569 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7569 "../../bfd/bfd.h"
+      (*_bfd_copy_private_symbol_data) (bfd *, asymbol *,
+      bfd *, asymbol *);
+
+
+  
+# 7573 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7573 "../../bfd/bfd.h"
+      (*_bfd_copy_private_header_data) (bfd *, bfd *);
+
+  
+# 7575 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7575 "../../bfd/bfd.h"
+      (*_bfd_set_private_flags) (bfd *, flagword);
+
+
+  
+# 7578 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7578 "../../bfd/bfd.h"
+      (*_bfd_print_private_bfd_data) (bfd *, void *);
+# 7587 "../../bfd/bfd.h"
+  char *(*_core_file_failing_command) (bfd *);
+  int (*_core_file_failing_signal) (bfd *);
+  
+# 7589 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7589 "../../bfd/bfd.h"
+       (*_core_file_matches_executable_p) (bfd *, bfd *);
+  int (*_core_file_pid) (bfd *);
+# 7606 "../../bfd/bfd.h"
+  
+# 7606 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7606 "../../bfd/bfd.h"
+      (*_bfd_slurp_armap) (bfd *);
+  
+# 7607 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7607 "../../bfd/bfd.h"
+      (*_bfd_slurp_extended_name_table) (bfd *);
+  
+# 7608 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7608 "../../bfd/bfd.h"
+      (*_bfd_construct_extended_name_table) (bfd *, char **,
+           bfd_size_type *,
+           const char **);
+  void (*_bfd_truncate_arname) (bfd *, const char *, char *);
+  
+# 7612 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7612 "../../bfd/bfd.h"
+      (*write_armap) (bfd *, unsigned, struct orl *, unsigned, int);
+  void *(*_bfd_read_ar_hdr_fn) (bfd *);
+  
+# 7614 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7614 "../../bfd/bfd.h"
+      (*_bfd_write_ar_hdr_fn) (bfd *, bfd *);
+  bfd *(*openr_next_archived_file) (bfd *, bfd *);
+
+
+  bfd *(*_bfd_get_elt_at_index) (bfd *, symindex);
+  int (*_bfd_stat_arch_elt) (bfd *, struct stat *);
+  
+# 7620 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7620 "../../bfd/bfd.h"
+      (*_bfd_update_armap_timestamp) (bfd *);
+# 7641 "../../bfd/bfd.h"
+  long (*_bfd_get_symtab_upper_bound) (bfd *);
+  long (*_bfd_canonicalize_symtab) (bfd *, struct bfd_symbol **);
+  struct bfd_symbol *
+       (*_bfd_make_empty_symbol) (bfd *);
+  void (*_bfd_print_symbol) (bfd *, void *, struct bfd_symbol *,
+        bfd_print_symbol_type);
+
+
+  void (*_bfd_get_symbol_info) (bfd *, struct bfd_symbol *, symbol_info *);
+
+
+  const char *
+       (*_bfd_get_symbol_version_string) (bfd *, struct bfd_symbol *,
+       
+# 7654 "../../bfd/bfd.h" 3 4
+      _Bool
+# 7654 "../../bfd/bfd.h"
+          , 
+# 7654 "../../bfd/bfd.h" 3 4
+            _Bool 
+# 7654 "../../bfd/bfd.h"
+                 *);
+
+
+  
+# 7657 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7657 "../../bfd/bfd.h"
+      (*_bfd_is_local_label_name) (bfd *, const char *);
+  
+# 7658 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7658 "../../bfd/bfd.h"
+      (*_bfd_is_target_special_symbol) (bfd *, asymbol *);
+  alent *
+       (*_get_lineno) (bfd *, struct bfd_symbol *);
+  
+# 7661 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7661 "../../bfd/bfd.h"
+      (*_bfd_find_nearest_line) (bfd *, struct bfd_symbol **,
+      struct bfd_section *, bfd_vma,
+      const char **, const char **,
+      unsigned int *, unsigned int *);
+  
+# 7665 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7665 "../../bfd/bfd.h"
+      (*_bfd_find_nearest_line_with_alt) (bfd *, const char *,
+        struct bfd_symbol **,
+        struct bfd_section *, bfd_vma,
+        const char **, const char **,
+        unsigned int *, unsigned int *);
+  
+# 7670 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7670 "../../bfd/bfd.h"
+      (*_bfd_find_line) (bfd *, struct bfd_symbol **,
+     struct bfd_symbol *, const char **,
+     unsigned int *);
+  
+# 7673 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7673 "../../bfd/bfd.h"
+      (*_bfd_find_inliner_info)
+    (bfd *, const char **, const char **, unsigned int *);
+
+
+
+  asymbol *
+       (*_bfd_make_debug_symbol) (bfd *);
+
+
+  long (*_read_minisymbols) (bfd *, 
+# 7682 "../../bfd/bfd.h" 3 4
+                                   _Bool
+# 7682 "../../bfd/bfd.h"
+                                       , void **, unsigned int *);
+
+
+  asymbol *
+       (*_minisymbol_to_symbol) (bfd *, 
+# 7686 "../../bfd/bfd.h" 3 4
+                                       _Bool
+# 7686 "../../bfd/bfd.h"
+                                           , const void *, asymbol *);
+# 7696 "../../bfd/bfd.h"
+  long (*_get_reloc_upper_bound) (bfd *, sec_ptr);
+  long (*_bfd_canonicalize_reloc) (bfd *, sec_ptr, arelent **,
+       struct bfd_symbol **);
+  void (*_bfd_set_reloc) (bfd *, sec_ptr, arelent **, unsigned int);
+
+  reloc_howto_type *
+       (*reloc_type_lookup) (bfd *, bfd_reloc_code_real_type);
+  reloc_howto_type *
+       (*reloc_name_lookup) (bfd *, const char *);
+
+
+
+
+
+
+  
+# 7711 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7711 "../../bfd/bfd.h"
+      (*_bfd_set_arch_mach) (bfd *, enum bfd_architecture,
+         unsigned long);
+  
+# 7713 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7713 "../../bfd/bfd.h"
+      (*_bfd_set_section_contents) (bfd *, sec_ptr, const void *,
+         file_ptr, bfd_size_type);
+# 7739 "../../bfd/bfd.h"
+  int (*_bfd_sizeof_headers) (bfd *, struct bfd_link_info *);
+  bfd_byte *
+       (*_bfd_get_relocated_section_contents) (bfd *,
+            struct bfd_link_info *,
+            struct bfd_link_order *,
+            bfd_byte *, 
+# 7744 "../../bfd/bfd.h" 3 4
+                       _Bool
+# 7744 "../../bfd/bfd.h"
+                           ,
+            struct bfd_symbol **);
+
+  
+# 7747 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7747 "../../bfd/bfd.h"
+      (*_bfd_relax_section) (bfd *, struct bfd_section *,
+         struct bfd_link_info *, 
+# 7748 "../../bfd/bfd.h" 3 4
+                                _Bool 
+# 7748 "../../bfd/bfd.h"
+                                     *);
+
+
+
+  struct bfd_link_hash_table *
+       (*_bfd_link_hash_table_create) (bfd *);
+
+
+  
+# 7756 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7756 "../../bfd/bfd.h"
+      (*_bfd_link_add_symbols) (bfd *, struct bfd_link_info *);
+
+
+  void (*_bfd_link_just_syms) (asection *, struct bfd_link_info *);
+
+
+
+
+
+  void (*_bfd_copy_link_hash_symbol_type) (bfd *,
+        struct bfd_link_hash_entry *,
+        struct bfd_link_hash_entry *);
+
+
+
+  
+# 7771 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7771 "../../bfd/bfd.h"
+      (*_bfd_final_link) (bfd *, struct bfd_link_info *);
+
+
+  
+# 7774 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7774 "../../bfd/bfd.h"
+      (*_bfd_link_split_section) (bfd *, struct bfd_section *);
+
+
+  
+# 7777 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7777 "../../bfd/bfd.h"
+      (* _bfd_link_check_relocs)(bfd *, struct bfd_link_info *);
+
+
+  
+# 7780 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7780 "../../bfd/bfd.h"
+      (*_bfd_gc_sections) (bfd *, struct bfd_link_info *);
+
+
+  
+# 7783 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7783 "../../bfd/bfd.h"
+      (*_bfd_lookup_section_flags) (struct bfd_link_info *,
+         struct flag_info *, asection *);
+
+
+  
+# 7787 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7787 "../../bfd/bfd.h"
+      (*_bfd_merge_sections) (bfd *, struct bfd_link_info *);
+
+
+  
+# 7790 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7790 "../../bfd/bfd.h"
+      (*_bfd_is_group_section) (bfd *, const struct bfd_section *);
+
+
+  const char *(*_bfd_group_name) (bfd *, const struct bfd_section *);
+
+
+  
+# 7796 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7796 "../../bfd/bfd.h"
+      (*_bfd_discard_group) (bfd *, struct bfd_section *);
+
+
+
+  
+# 7800 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7800 "../../bfd/bfd.h"
+      (*_section_already_linked) (bfd *, asection *,
+       struct bfd_link_info *);
+
+
+  
+# 7804 "../../bfd/bfd.h" 3 4
+ _Bool 
+# 7804 "../../bfd/bfd.h"
+      (*_bfd_define_common_symbol) (bfd *, struct bfd_link_info *,
+         struct bfd_link_hash_entry *);
+
+
+  void (*_bfd_link_hide_symbol) (bfd *, struct bfd_link_info *,
+     struct bfd_link_hash_entry *);
+
+
+  struct bfd_link_hash_entry *
+       (*_bfd_define_start_stop) (struct bfd_link_info *, const char *,
+      asection *);
+# 7825 "../../bfd/bfd.h"
+  long (*_bfd_get_dynamic_symtab_upper_bound) (bfd *);
+
+  long (*_bfd_canonicalize_dynamic_symtab) (bfd *, struct bfd_symbol **);
+
+  long (*_bfd_get_synthetic_symtab) (bfd *, long, struct bfd_symbol **,
+         long, struct bfd_symbol **,
+         struct bfd_symbol **);
+
+  long (*_bfd_get_dynamic_reloc_upper_bound) (bfd *);
+
+  long (*_bfd_canonicalize_dynamic_reloc) (bfd *, arelent **,
+        struct bfd_symbol **);
+
+
+  const struct bfd_target *alternative_target;
+
+
+
+  const void *backend_data;
+
+} bfd_target;
+
+static inline const char *
+bfd_get_target (const bfd *abfd)
+{
+  return abfd->xvec->name;
+}
+
+static inline enum bfd_flavour
+bfd_get_flavour (const bfd *abfd)
+{
+  return abfd->xvec->flavour;
+}
+
+static inline flagword
+bfd_applicable_file_flags (const bfd *abfd)
+{
+  return abfd->xvec->object_flags;
+}
+
+static inline 
+# 7865 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 7866 "../../bfd/bfd.h"
+bfd_family_coff (const bfd *abfd)
+{
+  return (bfd_get_flavour (abfd) == bfd_target_coff_flavour
+   || bfd_get_flavour (abfd) == bfd_target_xcoff_flavour);
+}
+
+static inline 
+# 7872 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 7873 "../../bfd/bfd.h"
+bfd_big_endian (const bfd *abfd)
+{
+  return abfd->xvec->byteorder == BFD_ENDIAN_BIG;
+}
+static inline 
+# 7877 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 7878 "../../bfd/bfd.h"
+bfd_little_endian (const bfd *abfd)
+{
+  return abfd->xvec->byteorder == BFD_ENDIAN_LITTLE;
+}
+
+static inline 
+# 7883 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 7884 "../../bfd/bfd.h"
+bfd_header_big_endian (const bfd *abfd)
+{
+  return abfd->xvec->header_byteorder == BFD_ENDIAN_BIG;
+}
+
+static inline 
+# 7889 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 7890 "../../bfd/bfd.h"
+bfd_header_little_endian (const bfd *abfd)
+{
+  return abfd->xvec->header_byteorder == BFD_ENDIAN_LITTLE;
+}
+
+static inline flagword
+bfd_applicable_section_flags (const bfd *abfd)
+{
+  return abfd->xvec->section_flags;
+}
+
+static inline char
+bfd_get_symbol_leading_char (const bfd *abfd)
+{
+  return abfd->xvec->symbol_leading_char;
+}
+
+static inline enum bfd_flavour
+bfd_asymbol_flavour (const asymbol *sy)
+{
+  if ((sy->flags & (1 << 21)) != 0)
+    return bfd_target_unknown_flavour;
+  return sy->the_bfd->xvec->flavour;
+}
+
+static inline 
+# 7915 "../../bfd/bfd.h" 3 4
+             _Bool
+
+# 7916 "../../bfd/bfd.h"
+bfd_keep_unused_section_symbols (const bfd *abfd)
+{
+  return abfd->xvec->keep_unused_section_symbols;
+}
+
+
+# 7921 "../../bfd/bfd.h" 3 4
+_Bool 
+# 7921 "../../bfd/bfd.h"
+    bfd_set_default_target (const char *name);
+
+const bfd_target *bfd_find_target (const char *target_name, bfd *abfd);
+
+const bfd_target *bfd_get_target_info (const char *target_name,
+    bfd *abfd,
+    
+# 7927 "../../bfd/bfd.h" 3 4
+   _Bool 
+# 7927 "../../bfd/bfd.h"
+        *is_bigendian,
+    int *underscoring,
+    const char **def_target_arch);
+
+const char ** bfd_target_list (void);
+
+const bfd_target *bfd_iterate_over_targets
+   (int (*func) (const bfd_target *, void *),
+    void *data);
+
+const char *bfd_flavour_name (enum bfd_flavour flavour);
+# 37 "./../../include/dis-asm.h" 2
+
+enum dis_insn_type
+{
+  dis_noninsn,
+  dis_nonbranch,
+  dis_branch,
+  dis_condbranch,
+  dis_jsr,
+  dis_condjsr,
+  dis_dref,
+  dis_dref2
+};
+
+
+
+
+enum disassembler_style
+{
+
+
+
+  dis_style_text,
+
+
+
+
+  dis_style_mnemonic,
+
+
+
+
+
+
+  dis_style_sub_mnemonic,
+
+
+
+  dis_style_assembler_directive,
+
+
+
+
+
+
+  dis_style_register,
+# 90 "./../../include/dis-asm.h"
+  dis_style_immediate,
+
+
+
+
+
+
+
+  dis_style_address,
+
+
+
+
+
+
+
+  dis_style_address_offset,
+
+
+
+
+  dis_style_symbol,
+# 121 "./../../include/dis-asm.h"
+  dis_style_comment_start
+};
+
+typedef int (*fprintf_ftype) (void *, const char*, ...) __attribute__ ((__format__ (__printf__, 2, 3))) __attribute__ ((__nonnull__ (2)));
+typedef int (*fprintf_styled_ftype) (void *, enum disassembler_style, const char*, ...) __attribute__ ((__format__ (__printf__, 3, 4))) __attribute__ ((__nonnull__ (3)));
+# 137 "./../../include/dis-asm.h"
+typedef struct disassemble_info
+{
+  fprintf_ftype fprintf_func;
+  fprintf_styled_ftype fprintf_styled_func;
+  void *stream;
+  void *application_data;
+
+
+
+
+
+  enum bfd_flavour flavour;
+
+  enum bfd_architecture arch;
+
+  unsigned long mach;
+
+  enum bfd_endian endian;
+
+  enum bfd_endian endian_code;
+
+
+
+
+  asection *section;
+
+
+
+
+
+
+  asymbol **symbols;
+
+  int num_symbols;
+
+
+
+  asymbol **symtab;
+  int symtab_pos;
+  int symtab_size;
+
+
+
+
+  unsigned long flags;
+# 194 "./../../include/dis-asm.h"
+  arelent **dynrelbuf;
+  long dynrelcount;
+
+
+  void *private_data;
+
+
+
+
+
+
+  int (*read_memory_func)
+    (bfd_vma memaddr, bfd_byte *myaddr, unsigned int length,
+     struct disassemble_info *dinfo);
+
+
+
+
+
+  void (*memory_error_func)
+    (int status, bfd_vma memaddr, struct disassemble_info *dinfo);
+
+
+  void (*print_address_func)
+    (bfd_vma addr, struct disassemble_info *dinfo);
+# 227 "./../../include/dis-asm.h"
+  asymbol * (*symbol_at_address_func)
+    (bfd_vma addr, struct disassemble_info *dinfo);
+
+
+
+
+  
+# 233 "./../../include/dis-asm.h" 3 4
+ _Bool 
+# 233 "./../../include/dis-asm.h"
+      (*symbol_is_valid)
+    (asymbol *, struct disassemble_info *dinfo);
+
+
+  bfd_byte *buffer;
+  bfd_vma buffer_vma;
+  size_t buffer_length;
+
+
+
+
+
+  int bytes_per_line;
+
+
+
+
+
+
+  int bytes_per_chunk;
+  enum bfd_endian display_endian;
+
+
+
+  unsigned int octets_per_byte;
+
+
+
+  unsigned int skip_zeroes;
+
+
+
+
+
+
+
+  unsigned int skip_zeroes_at_end;
+
+
+  
+# 272 "./../../include/dis-asm.h" 3 4
+ _Bool 
+# 272 "./../../include/dis-asm.h"
+      disassembler_needs_relocs;
+# 281 "./../../include/dis-asm.h"
+  char insn_info_valid;
+  char branch_delay_insns;
+
+  char data_size;
+  enum dis_insn_type insn_type;
+  bfd_vma target;
+
+  bfd_vma target2;
+
+
+  const char *disassembler_options;
+
+
+
+
+
+
+
+  bfd_vma stop_vma;
+
+
+
+
+
+  bfd_vma stop_offset;
+
+
+
+  
+# 309 "./../../include/dis-asm.h" 3 4
+ _Bool 
+# 309 "./../../include/dis-asm.h"
+      created_styled_output;
+} disassemble_info;
+
+
+
+
+
+typedef struct
+{
+
+  const char *name;
+
+
+
+  const char **values;
+} disasm_option_arg_t;
+
+
+
+
+
+
+typedef struct
+{
+
+  const char **name;
+
+
+  const char **description;
+
+
+
+
+  const disasm_option_arg_t **arg;
+} disasm_options_t;
+
+
+
+
+
+typedef struct
+{
+
+
+  disasm_options_t options;
+
+
+
+
+  disasm_option_arg_t *args;
+} disasm_options_and_args_t;
+
+
+
+typedef int (*disassembler_ftype) (bfd_vma, disassemble_info *);
+
+
+extern int print_insn_m32c (bfd_vma, disassemble_info *);
+extern int print_insn_mep (bfd_vma, disassemble_info *);
+extern int print_insn_s12z (bfd_vma, disassemble_info *);
+extern int print_insn_sh (bfd_vma, disassemble_info *);
+extern int print_insn_sparc (bfd_vma, disassemble_info *);
+extern int print_insn_rx (bfd_vma, disassemble_info *);
+extern int print_insn_rl78 (bfd_vma, disassemble_info *);
+extern int print_insn_rl78_g10 (bfd_vma, disassemble_info *);
+extern int print_insn_rl78_g13 (bfd_vma, disassemble_info *);
+extern int print_insn_rl78_g14 (bfd_vma, disassemble_info *);
+
+extern disassembler_ftype arc_get_disassembler (bfd *);
+extern disassembler_ftype cris_get_disassembler (bfd *);
+
+extern void print_aarch64_disassembler_options (FILE *);
+extern void print_i386_disassembler_options (FILE *);
+extern void print_mips_disassembler_options (FILE *);
+extern void print_nfp_disassembler_options (FILE *);
+extern void print_ppc_disassembler_options (FILE *);
+extern void print_riscv_disassembler_options (FILE *);
+extern void print_arm_disassembler_options (FILE *);
+extern void print_arc_disassembler_options (FILE *);
+extern void print_s390_disassembler_options (FILE *);
+extern void print_wasm32_disassembler_options (FILE *);
+extern void print_loongarch_disassembler_options (FILE *);
+extern void print_bpf_disassembler_options (FILE *);
+extern 
+# 392 "./../../include/dis-asm.h" 3 4
+      _Bool 
+# 392 "./../../include/dis-asm.h"
+           aarch64_symbol_is_valid (asymbol *, struct disassemble_info *);
+extern 
+# 393 "./../../include/dis-asm.h" 3 4
+      _Bool 
+# 393 "./../../include/dis-asm.h"
+           arm_symbol_is_valid (asymbol *, struct disassemble_info *);
+extern 
+# 394 "./../../include/dis-asm.h" 3 4
+      _Bool 
+# 394 "./../../include/dis-asm.h"
+           csky_symbol_is_valid (asymbol *, struct disassemble_info *);
+extern 
+# 395 "./../../include/dis-asm.h" 3 4
+      _Bool 
+# 395 "./../../include/dis-asm.h"
+           riscv_symbol_is_valid (asymbol *, struct disassemble_info *);
+extern void disassemble_init_powerpc (struct disassemble_info *);
+extern void disassemble_init_s390 (struct disassemble_info *);
+extern void disassemble_init_wasm32 (struct disassemble_info *);
+extern void disassemble_init_nds32 (struct disassemble_info *);
+extern const disasm_options_and_args_t *disassembler_options_arc (void);
+extern const disasm_options_and_args_t *disassembler_options_arm (void);
+extern const disasm_options_and_args_t *disassembler_options_mips (void);
+extern const disasm_options_and_args_t *disassembler_options_powerpc (void);
+extern const disasm_options_and_args_t *disassembler_options_riscv (void);
+extern const disasm_options_and_args_t *disassembler_options_s390 (void);
+
+
+
+
+extern disassembler_ftype disassembler (enum bfd_architecture arc,
+     
+# 411 "./../../include/dis-asm.h" 3 4
+    _Bool 
+# 411 "./../../include/dis-asm.h"
+         big, unsigned long mach,
+     bfd *abfd);
+
+
+
+extern void disassemble_init_for_target (struct disassemble_info *);
+
+
+extern void disassemble_free_target (struct disassemble_info *);
+
+
+extern void disassemble_set_printf (struct disassemble_info *, void *,
+        fprintf_ftype, fprintf_styled_ftype);
+
+
+extern void disassembler_usage (FILE *);
+
+
+extern char *remove_whitespace_and_extra_commas (char *);
+
+
+
+extern int disassembler_options_cmp (const char *, const char *);
+
+
+static inline const char *
+next_disassembler_option (const char *options)
+{
+  const char *opt = strchr (options, ',');
+  if (opt != 
+# 440 "./../../include/dis-asm.h" 3 4
+            ((void *)0)
+# 440 "./../../include/dis-asm.h"
+                )
+    opt++;
+  return opt;
+}
+# 457 "./../../include/dis-asm.h"
+extern int buffer_read_memory
+  (bfd_vma, bfd_byte *, unsigned int, struct disassemble_info *);
+
+
+
+extern void perror_memory (int, bfd_vma, struct disassemble_info *);
+
+
+
+
+
+extern void generic_print_address
+  (bfd_vma, struct disassemble_info *);
+
+
+extern asymbol *generic_symbol_at_address
+  (bfd_vma, struct disassemble_info *);
+
+
+extern 
+# 476 "./../../include/dis-asm.h" 3 4
+      _Bool 
+# 476 "./../../include/dis-asm.h"
+           generic_symbol_is_valid
+  (asymbol *, struct disassemble_info *);
+
+
+
+extern void init_disassemble_info (struct disassemble_info *dinfo, void *stream,
+       fprintf_ftype fprintf_func,
+       fprintf_styled_ftype fprintf_styled_func);
+# 23 "./../../opcodes/disassemble.h" 2
+
+extern int print_insn_aarch64 (bfd_vma, disassemble_info *);
+extern int print_insn_alpha (bfd_vma, disassemble_info *);
+extern int print_insn_avr (bfd_vma, disassemble_info *);
+extern int print_insn_bfin (bfd_vma, disassemble_info *);
+extern int print_insn_big_arm (bfd_vma, disassemble_info *);
+extern int print_insn_big_mips (bfd_vma, disassemble_info *);
+extern int print_insn_big_nios2 (bfd_vma, disassemble_info *);
+extern int print_insn_big_powerpc (bfd_vma, disassemble_info *);
+extern int print_insn_big_score (bfd_vma, disassemble_info *);
+extern int print_insn_cr16 (bfd_vma, disassemble_info *);
+extern int print_insn_crx (bfd_vma, disassemble_info *);
+extern int print_insn_csky (bfd_vma, disassemble_info *);
+extern int print_insn_d10v (bfd_vma, disassemble_info *);
+extern int print_insn_d30v (bfd_vma, disassemble_info *);
+extern int print_insn_dlx (bfd_vma, disassemble_info *);
+extern int print_insn_bpf (bfd_vma, disassemble_info *);
+extern int print_insn_epiphany (bfd_vma, disassemble_info *);
+extern int print_insn_fr30 (bfd_vma, disassemble_info *);
+extern int print_insn_frv (bfd_vma, disassemble_info *);
+extern int print_insn_ft32 (bfd_vma, disassemble_info *);
+extern int print_insn_h8300 (bfd_vma, disassemble_info *);
+extern int print_insn_h8300h (bfd_vma, disassemble_info *);
+extern int print_insn_h8300s (bfd_vma, disassemble_info *);
+extern int print_insn_hppa (bfd_vma, disassemble_info *);
+extern int print_insn_i386 (bfd_vma, disassemble_info *);
+extern int print_insn_i386_att (bfd_vma, disassemble_info *);
+extern int print_insn_i386_intel (bfd_vma, disassemble_info *);
+extern int print_insn_ia64 (bfd_vma, disassemble_info *);
+extern int print_insn_ip2k (bfd_vma, disassemble_info *);
+extern int print_insn_iq2000 (bfd_vma, disassemble_info *);
+extern int print_insn_little_nios2 (bfd_vma, disassemble_info *);
+extern int print_insn_riscv (bfd_vma, disassemble_info *);
+extern int print_insn_little_arm (bfd_vma, disassemble_info *);
+extern int print_insn_little_mips (bfd_vma, disassemble_info *);
+extern int print_insn_little_powerpc (bfd_vma, disassemble_info *);
+extern int print_insn_little_score (bfd_vma, disassemble_info *);
+extern int print_insn_lm32 (bfd_vma, disassemble_info *);
+extern int print_insn_m32r (bfd_vma, disassemble_info *);
+extern int print_insn_m68hc11 (bfd_vma, disassemble_info *);
+extern int print_insn_m68hc12 (bfd_vma, disassemble_info *);
+extern int print_insn_m9s12x (bfd_vma, disassemble_info *);
+extern int print_insn_m9s12xg (bfd_vma, disassemble_info *);
+extern int print_insn_s12z (bfd_vma, disassemble_info *);
+extern int print_insn_m68k (bfd_vma, disassemble_info *);
+extern int print_insn_mcore (bfd_vma, disassemble_info *);
+extern int print_insn_metag (bfd_vma, disassemble_info *);
+extern int print_insn_microblaze (bfd_vma, disassemble_info *);
+extern int print_insn_mmix (bfd_vma, disassemble_info *);
+extern int print_insn_mn10200 (bfd_vma, disassemble_info *);
+extern int print_insn_mn10300 (bfd_vma, disassemble_info *);
+extern int print_insn_moxie (bfd_vma, disassemble_info *);
+extern int print_insn_msp430 (bfd_vma, disassemble_info *);
+extern int print_insn_mt (bfd_vma, disassemble_info *);
+extern int print_insn_nds32 (bfd_vma, disassemble_info *);
+extern int print_insn_nfp (bfd_vma, disassemble_info *);
+extern int print_insn_ns32k (bfd_vma, disassemble_info *);
+extern int print_insn_or1k (bfd_vma, disassemble_info *);
+extern int print_insn_pdp11 (bfd_vma, disassemble_info *);
+extern int print_insn_pj (bfd_vma, disassemble_info *);
+extern int print_insn_pru (bfd_vma, disassemble_info *);
+extern int print_insn_s390 (bfd_vma, disassemble_info *);
+extern int print_insn_spu (bfd_vma, disassemble_info *);
+extern int print_insn_tic30 (bfd_vma, disassemble_info *);
+extern int print_insn_tic4x (bfd_vma, disassemble_info *);
+extern int print_insn_tic54x (bfd_vma, disassemble_info *);
+extern int print_insn_tic6x (bfd_vma, disassemble_info *);
+extern int print_insn_tilegx (bfd_vma, disassemble_info *);
+extern int print_insn_tilepro (bfd_vma, disassemble_info *);
+extern int print_insn_v850 (bfd_vma, disassemble_info *);
+extern int print_insn_vax (bfd_vma, disassemble_info *);
+extern int print_insn_visium (bfd_vma, disassemble_info *);
+extern int print_insn_wasm32 (bfd_vma, disassemble_info *);
+extern int print_insn_xgate (bfd_vma, disassemble_info *);
+extern int print_insn_xstormy16 (bfd_vma, disassemble_info *);
+extern int print_insn_xtensa (bfd_vma, disassemble_info *);
+extern int print_insn_z80 (bfd_vma, disassemble_info *);
+extern int print_insn_z8001 (bfd_vma, disassemble_info *);
+extern int print_insn_z8002 (bfd_vma, disassemble_info *);
+extern int print_insn_loongarch (bfd_vma, disassemble_info *);
+
+extern disassembler_ftype csky_get_disassembler (bfd *);
+extern disassembler_ftype rl78_get_disassembler (bfd *);
+extern disassembler_ftype riscv_get_disassembler (bfd *);
+
+extern void disassemble_free_riscv (disassemble_info *);
+
+extern void __attribute__ ((__noreturn__)) opcodes_assert (const char *, int);
+# 116 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 2
+
+static int
+fprintf_func (void *arg __attribute__ ((__unused__)), const char *fmt __attribute__ ((__unused__)), ...)
+{
+  return 0;
+}
+
+static int
+fprintf_styled_func (void *arg __attribute__ ((__unused__)),
+        enum disassembler_style st __attribute__ ((__unused__)),
+        const char *fmt __attribute__ ((__unused__)), ...)
+{
+  return 0;
+}
+
+
+
+static int
+read_memory_func (bfd_vma memaddr, bfd_byte *myaddr, unsigned int length,
+    disassemble_info *info)
+{
+  unsigned int opb = info->octets_per_byte;
+  size_t end_addr_offset = length / opb;
+  size_t max_addr_offset = info->buffer_length / opb;
+  size_t octets = (memaddr - info->buffer_vma) * opb;
+  if (memaddr < info->buffer_vma
+      || memaddr - info->buffer_vma > max_addr_offset
+      || memaddr - info->buffer_vma + end_addr_offset > max_addr_offset
+      || (info->stop_vma && (memaddr >= info->stop_vma
+        || memaddr + end_addr_offset > info->stop_vma)))
+    return -1;
+  memcpy (myaddr, info->buffer + octets, length);
+  return 0;
+}
+
+static void
+print_address_func (bfd_vma addr __attribute__ ((__unused__)),
+      disassemble_info *info __attribute__ ((__unused__))) { }
+
+static asymbol *
+symbol_at_address_func (bfd_vma addr __attribute__ ((__unused__)),
+   disassemble_info *info __attribute__ ((__unused__)))
+{
+  return 
+# 159 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+        ((void *)0)
+# 159 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+            ;
+}
+
+static 
+# 162 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+      _Bool
+
+# 163 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+symbol_is_valid (asymbol *sym __attribute__ ((__unused__)),
+   disassemble_info *info __attribute__ ((__unused__)))
+{
+  return 1;
+}
+
+static void
+memory_error_func (int status __attribute__ ((__unused__)), bfd_vma addr __attribute__ ((__unused__)),
+     disassemble_info *info __attribute__ ((__unused__))) { }
+# 241 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+static int
+getByteInstruction (unsigned char *p)
+{
+  if (__collector_VM_ReadByteInstruction)
+    {
+      int v = __collector_VM_ReadByteInstruction (p);
+      if (v != (-2))
+ return v;
+    }
+  return *p;
+}
+
+struct DataHandle *dhndl = 
+# 253 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                          ((void *)0)
+# 253 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                              ;
+
+static unsigned unwind_key = ((unsigned)-1);
+
+
+
+
+int (*__collector_omp_stack_trace)(char*, int, hrtime_t, void*) = 
+# 260 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                                 ((void *)0)
+# 260 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                     ;
+int (*__collector_mpi_stack_trace)(char*, int, hrtime_t) = 
+# 261 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                          ((void *)0)
+# 261 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                              ;
+
+
+static int max_native_nframes = 256;
+static int max_java_nframes = 256;
+# 276 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+static volatile uint64_t *UIDTable = 
+# 276 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                    ((void *)0)
+# 276 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                        ;
+static volatile int seen_omp = 0;
+
+static int stack_unwind (char *buf, int size, void *bptr, void *eptr, ucontext_t *context, int mode);
+static FrameInfo compute_uid (Frame_packet *frp);
+static int omp_no_walk = 0;
+
+
+
+
+static unsigned long *AddrTable_RA_FROMFP = 
+# 286 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                           ((void *)0)
+# 286 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                               ;
+static unsigned long *AddrTable_RA_EOSTCK = 
+# 287 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                           ((void *)0)
+# 287 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                               ;
+static struct WalkContext *OmpCurCtxs = 
+# 288 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                       ((void *)0)
+# 288 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                           ;
+static struct WalkContext *OmpCtxs = 
+# 289 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                    ((void *)0)
+# 289 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                        ;
+static uint32_t *OmpVals = 
+# 290 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                          ((void *)0)
+# 290 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                              ;
+static unsigned long *OmpRAs = 
+# 291 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                              ((void *)0)
+# 291 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                  ;
+static unsigned long adjust_ret_addr (unsigned long ra, unsigned long segoff, unsigned long tend);
+static int parse_x86_AVX_instruction (unsigned char *pc);
+
+struct WalkContext
+{
+  unsigned long pc;
+  unsigned long sp;
+  unsigned long fp;
+  unsigned long ln;
+  unsigned long sbase;
+  unsigned long tbgn;
+  unsigned long tend;
+};
+# 335 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+void
+__collector_ext_unwind_key_init (int isPthread, void * stack)
+{
+  void * ptr = __collector_tsd_get_by_key (unwind_key);
+  if (ptr == 
+# 339 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+            ((void *)0)
+# 339 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                )
+    {
+      ;
+      return;
+    }
+  if (isPthread)
+    {
+      size_t stack_size = 0;
+      void *stack_addr = 0;
+      pthread_t pthread = pthread_self ();
+      pthread_attr_t attr;
+      int err = pthread_getattr_np (pthread, &attr);
+      ;
+      if (err == 0)
+ {
+   err = pthread_attr_getstack (&attr, &stack_addr, &stack_size);
+   if (err == 0)
+     stack_addr = (char*) stack_addr + stack_size;
+  
+                                         ;
+   err = pthread_attr_destroy (&attr);
+   ;
+ }
+      *(void**) ptr = stack_addr;
+    }
+  else
+    *(void**) ptr = stack;
+}
+
+void
+__collector_ext_unwind_init (int record)
+{
+  int sz = 1048576 * sizeof (*UIDTable);
+  UIDTable = (uint64_t*) __collector_allocCSize (__collector_heap, sz, 1);
+  if (UIDTable == 
+# 373 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                 ((void *)0)
+# 373 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                     )
+    {
+      __collector_terminate_expt ();
+      return;
+    }
+  __collector_util_funcs.memset((void*) UIDTable, 0, sz);
+
+  char *str = __collector_util_funcs.getenv("GPROFNG_JAVA_MAX_CALL_STACK_DEPTH");
+  if (str != 
+# 381 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+            ((void *)0) 
+# 381 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                 && *str != 0)
+    {
+      char *endptr;
+      int n = __collector_util_funcs.strtol(str, &endptr, 0);
+      if (endptr != str && n >= 0)
+ {
+   if (n < 5)
+     n = 5;
+   if (n > 2048)
+     n = 2048;
+   max_java_nframes = n;
+ }
+    }
+
+  str = __collector_util_funcs.getenv("GPROFNG_MAX_CALL_STACK_DEPTH");
+  if (str != 
+# 396 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+            ((void *)0) 
+# 396 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                 && *str != 0)
+    {
+      char *endptr = str;
+      int n = __collector_util_funcs.strtol(str, &endptr, 0);
+      if (endptr != str && n >= 0)
+ {
+   if (n < 5)
+     n = 5;
+   if (n > 2048)
+     n = 2048;
+   max_native_nframes = n;
+ }
+    }
+
+ 
+                                          ;
+  omp_no_walk = 1;
+
+  if (__collector_VM_ReadByteInstruction == 
+# 414 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                           ((void *)0)
+# 414 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                               )
+    __collector_VM_ReadByteInstruction = (int(*)()) dlsym (
+# 415 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                          ((void *) 0)
+# 415 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                      , "Async_VM_ReadByteInstruction");
+# 435 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+  sz = 1048576 * sizeof (*AddrTable_RA_FROMFP);
+  AddrTable_RA_FROMFP = (unsigned long*) __collector_allocCSize (__collector_heap, sz, 1);
+  sz = 1048576 * sizeof (*AddrTable_RA_EOSTCK);
+  AddrTable_RA_EOSTCK = (unsigned long*) __collector_allocCSize (__collector_heap, sz, 1);
+  if (omp_no_walk && (__collector_omp_stack_trace != 
+# 439 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                    ((void *)0) 
+# 439 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                         || __collector_mpi_stack_trace != 
+# 439 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                                                           ((void *)0)
+# 439 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                                               ))
+    {
+      sz = 65536 * sizeof (*OmpCurCtxs);
+      OmpCurCtxs = (struct WalkContext *) __collector_allocCSize (__collector_heap, sz, 1);
+      sz = 65536 * sizeof (*OmpCtxs);
+      OmpCtxs = (struct WalkContext *) __collector_allocCSize (__collector_heap, sz, 1);
+      sz = 65536 * sizeof (*OmpVals);
+      OmpVals = (uint32_t*) __collector_allocCSize (__collector_heap, sz, 1);
+      sz = 65536 * sizeof (*OmpRAs);
+      OmpRAs = (unsigned long*) __collector_allocCSize (__collector_heap, sz, 1);
+      if (OmpCurCtxs == 
+# 449 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                       ((void *)0) 
+# 449 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                            || OmpCtxs == 
+# 449 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                          ((void *)0) 
+# 449 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                               || OmpVals == 
+# 449 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                             ((void *)0) 
+# 449 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                  || OmpRAs == 
+# 449 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                                               ((void *)0)
+# 449 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                                   )
+ {
+   ;
+   __collector_terminate_expt ();
+   return;
+ }
+    }
+
+
+  if (record)
+    {
+      dhndl = __collector_create_handle ("frameinfo");
+      __collector_log_write ("<%s name=\"%s\" format=\"binary\"/>\n", "dataptr", "frameinfo");
+    }
+
+  unwind_key = __collector_tsd_create_key (sizeof (void*), 
+# 464 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                          ((void *)0)
+# 464 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                              , 
+# 464 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                                ((void *)0)
+# 464 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                    );
+  if (unwind_key == ((unsigned)-1))
+    {
+      ;
+      __collector_log_write ("<%s kind=\"%s\" id=\"%d\">TSD key not created</%s>\n",
+        "event", "cerror", 47, "event");
+      return;
+    }
+  ;
+  return;
+}
+
+void
+__collector_ext_unwind_close ()
+{
+  __collector_delete_handle (dhndl);
+  dhndl = 
+# 480 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+         ((void *)0)
+# 480 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+             ;
+}
+
+void*
+__collector_ext_return_address (unsigned level)
+{
+  if (
+# 486 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+     ((void *)0) 
+# 486 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+          == UIDTable)
+    return 
+# 487 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+          ((void *)0)
+# 487 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+              ;
+  unsigned size = (level + 4) * sizeof (long);
+  ucontext_t context;
+  { (&context)->uc_link = 
+# 490 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+ ((void *)0)
+# 490 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+ ; void *sp = __collector_getsp(); (((ucontext_t*)(&context))->uc_mcontext.gregs[
+# 490 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+ REG_RSP
+# 490 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+ ]) = (intptr_t)sp; (((ucontext_t*)(&context))->uc_mcontext.gregs[
+# 490 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+ REG_RBP
+# 490 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+ ]) = (intptr_t)__collector_getfp(); (((ucontext_t*)(&context))->uc_mcontext.gregs[
+# 490 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+ REG_RIP
+# 490 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+ ]) = (intptr_t)__collector_getpc(); (&context)->uc_stack.ss_sp = sp; (&context)->uc_stack.ss_size = 0x100000; };
+  char* buf = (char*) 
+# 491 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                     __builtin_alloca (
+# 491 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                     size
+# 491 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                     )
+# 491 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                  ;
+  if (buf == 
+# 492 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+            ((void *)0)
+# 492 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                )
+    {
+      ;
+      return 
+# 495 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+            ((void *)0)
+# 495 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                ;
+    }
+  int sz = stack_unwind (buf, size, 
+# 497 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                   ((void *)0)
+# 497 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                       , 
+# 497 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                         ((void *)0)
+# 497 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                             , &context, 0);
+  if (sz < (level + 3) * sizeof (long))
+    {
+      ;
+      return 
+# 501 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+            ((void *)0)
+# 501 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                ;
+    }
+  long *lbuf = (long*) buf;
+  ;
+  return (void *) (lbuf[level + 2]);
+}
+
+
+
+FrameInfo
+__collector_get_frame_info (hrtime_t ts, int mode, void *arg)
+{
+  ucontext_t *context = 
+# 513 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                       ((void *)0)
+# 513 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                           ;
+  void *bptr = 
+# 514 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+              ((void *)0)
+# 514 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                  ;
+  CM_Array *array = 
+# 515 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                   ((void *)0)
+# 515 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                       ;
+
+  int unwind_mode = 0;
+  int do_walk = 1;
+
+  if (mode & 0x40000000)
+    do_walk = 0;
+  int bmode = mode & 0xffff;
+  int pseudo_context = 0;
+  if (bmode == 3 || bmode == 2)
+    {
+      bptr = arg;
+      context = (ucontext_t*) 
+# 527 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                             __builtin_alloca (
+# 527 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                             sizeof (ucontext_t)
+# 527 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                             )
+# 527 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                         ;
+      { context->uc_link = 
+# 528 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+     ((void *)0)
+# 528 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+     ; void *sp = __collector_getsp(); (((ucontext_t*)context)->uc_mcontext.gregs[
+# 528 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+     REG_RSP
+# 528 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+     ]) = (intptr_t)sp; (((ucontext_t*)context)->uc_mcontext.gregs[
+# 528 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+     REG_RBP
+# 528 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+     ]) = (intptr_t)__collector_getfp(); (((ucontext_t*)context)->uc_mcontext.gregs[
+# 528 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+     REG_RIP
+# 528 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+     ]) = (intptr_t)__collector_getpc(); context->uc_stack.ss_sp = sp; context->uc_stack.ss_size = 0x100000; };
+      unwind_mode |= bmode;
+    }
+  else if (bmode == 1)
+    {
+      context = (ucontext_t*) arg;
+      if (context == 
+# 534 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                    ((void *)0)
+# 534 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                        )
+ return (FrameInfo) 0;
+      if ((((ucontext_t*)context)->uc_mcontext.gregs[
+# 536 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+         REG_RSP
+# 536 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+         ]) == 0)
+ pseudo_context = 1;
+    }
+  else if (bmode == 5)
+    {
+      array = (CM_Array*) arg;
+      if (array == 
+# 542 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                  ((void *)0) 
+# 542 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                       || array->length <= 0)
+ return (FrameInfo) 0;
+    }
+  else
+    return (FrameInfo) 0;
+
+  int max_frame_size = ( 2 * sizeof(long) + 2 * sizeof(Stack_info) ) + ( ((max_native_nframes)+1) * sizeof(long) );
+  if (__collector_java_mode && __collector_java_asyncgetcalltrace_loaded && context && !pseudo_context)
+    max_frame_size += ( ((max_java_nframes)+1) * sizeof(long) * 2 + 16 );
+
+  Frame_packet *frpckt = 
+# 552 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                        __builtin_alloca (
+# 552 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                        sizeof (Frame_packet) + max_frame_size
+# 552 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                        )
+# 552 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                       ;
+  frpckt->type = FRAME_PCKT;
+  frpckt->hsize = sizeof (Frame_packet);
+
+  char *d = (char*) (frpckt + 1);
+  int size = max_frame_size;
+# 576 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+  if (context)
+    {
+      Stack_info *sinfo = (Stack_info*) d;
+      int sz = sizeof (Stack_info);
+      d += sz;
+      size -= sz;
+
+      if (omp_no_walk == 0)
+ do_walk = 1;
+
+      if (do_walk == 0)
+ unwind_mode |= 0x40000000;
+
+      int tmpsz = ((size)<(( ((max_native_nframes)+1) * sizeof(long) ))?(size):(( ((max_native_nframes)+1) * sizeof(long) )));
+      if (tmpsz > 0)
+ {
+   sz = stack_unwind (d, tmpsz, bptr, 
+# 592 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                     ((void *)0)
+# 592 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                         , context, unwind_mode);
+   d += sz;
+   size -= sz;
+ }
+      sinfo->kind = STACK_INFO;
+      sinfo->hsize = (d - (char*) sinfo);
+    }
+
+
+  if (array && array->length > 0)
+    {
+      Stack_info *sinfo = (Stack_info*) d;
+      int sz = sizeof (Stack_info);
+      d += sz;
+      size -= sz;
+      sz = array->length;
+      if (sz > size)
+ sz = size;
+      __collector_memcpy (d, array->bytes, sz);
+      d += sz;
+      size -= sz;
+      sinfo->kind = STACK_INFO;
+      sinfo->hsize = (d - (char*) sinfo);
+    }
+
+
+  frpckt->tsize = d - (char*) frpckt;
+  FrameInfo uid = compute_uid (frpckt);
+  return uid;
+}
+
+FrameInfo
+compute_uid (Frame_packet *frp)
+{
+  uint64_t idxs[LAST_INFO];
+  uint64_t uid = 801425552975190205ULL;
+  uint64_t idx = 13907816567264074199ULL;
+
+  Common_info *cinfo = (Common_info*) ((char*) frp + frp->hsize);
+  char *end = (char*) frp + frp->tsize;
+  for (;;)
+    {
+      if ((char*) cinfo >= end || cinfo->hsize == 0 ||
+   (char*) cinfo + cinfo->hsize > end)
+ break;
+
+
+      uint64_t uidt = 1;
+      uint64_t idxt = 1;
+      long *ptr = (long*) ((char*) cinfo + cinfo->hsize);
+      long *bnd = (long*) ((char*) cinfo + sizeof (Common_info));
+      ;
+      while (ptr > bnd)
+ {
+   long val = *(--ptr);
+   ;
+   uidt = (uidt + val) * 801425552975190205ULL;
+   idxt = (idxt + val) * 13907816567264074199ULL;
+   uid = (uid + val) * 801425552975190205ULL;
+   idx = (idx + val) * 13907816567264074199ULL;
+ }
+      if (cinfo->kind == STACK_INFO || cinfo->kind == JAVA_INFO)
+ {
+   cinfo->uid = uidt;
+   idxs[cinfo->kind] = idxt;
+ }
+      cinfo = (Common_info*) ((char*) cinfo + cinfo->hsize);
+    }
+  ;
+
+
+
+
+
+
+  int found1 = 0;
+  int idx1 = (int) ((idx >> 44) % 1048576);
+  if (UIDTable[idx1] == uid)
+    found1 = 1;
+  int found2 = 0;
+  int idx2 = (int) ((idx >> 24) % 1048576);
+  if (UIDTable[idx2] == uid)
+    found2 = 1;
+  int found3 = 0;
+  int idx3 = (int) ((idx >> 4) % 1048576);
+  if (UIDTable[idx3] == uid)
+    found3 = 1;
+  if (!found1)
+    UIDTable[idx1] = uid;
+  if (!found2)
+    UIDTable[idx2] = uid;
+  if (!found3)
+    UIDTable[idx3] = uid;
+
+  if (found1 || found2 || found3)
+    return (FrameInfo) uid;
+  frp->uid = uid;
+
+
+  cinfo = (Common_info*) ((char*) frp + frp->hsize);
+  for (;;)
+    {
+      if ((char*) cinfo >= end || cinfo->hsize == 0 ||
+   (char*) cinfo + cinfo->hsize > end)
+ break;
+      if (cinfo->kind == STACK_INFO || cinfo->kind == JAVA_INFO)
+ {
+   long *ptr = (long*) ((char*) cinfo + sizeof (Common_info));
+   long *bnd = (long*) ((char*) cinfo + cinfo->hsize);
+   uint64_t uidt = cinfo->uid;
+   uint64_t idxt = idxs[cinfo->kind];
+   int found = 0;
+   int first = 1;
+   while (ptr < bnd - 1)
+     {
+       int idx1 = (int) ((idxt >> 44) % 1048576);
+       if (UIDTable[idx1] == uidt)
+  {
+    found = 1;
+    break;
+  }
+       else if (first)
+  {
+    first = 0;
+    UIDTable[idx1] = uidt;
+  }
+       long val = *ptr++;
+       uidt = uidt * 92251691606677ULL - val;
+       idxt = idxt * 2075111ULL - val;
+     }
+   if (found)
+     {
+       char *d = (char*) ptr;
+       char *s = (char*) bnd;
+       if (!first)
+  {
+    int i;
+    for (i = 0; i<sizeof (uidt); i++)
+      {
+        *d++ = (char) uidt;
+        uidt = uidt >> 8;
+      }
+  }
+       int delta = s - d;
+       while (s < end)
+  *d++ = *s++;
+       cinfo->kind |= 0x80000000;
+       cinfo->hsize -= delta;
+       frp->tsize -= delta;
+       end -= delta;
+     }
+ }
+      cinfo = (Common_info*) ((char*) cinfo + cinfo->hsize);
+    }
+  __collector_write_packet (dhndl, (CM_Packet*) frp);
+  return (FrameInfo) uid;
+}
+
+FrameInfo
+__collector_getUID (CM_Array *arg, FrameInfo suid)
+{
+  if (arg->length % sizeof (long) != 0 ||
+      (long) arg->bytes % sizeof (long) != 0)
+    return (FrameInfo) - 1;
+  if (arg->length == 0)
+    return suid;
+
+  uint64_t uid = suid ? suid : 1;
+  uint64_t idx = suid ? suid : 1;
+  long *ptr = (long*) ((char*) arg->bytes + arg->length);
+  long *bnd = (long*) (arg->bytes);
+  while (ptr > bnd)
+    {
+      long val = *(--ptr);
+      uid = (uid + val) * 801425552975190205ULL;
+      idx = (idx + val) * 13907816567264074199ULL;
+    }
+
+
+
+
+
+
+  int found1 = 0;
+  int idx1 = (int) ((idx >> 44) % 1048576);
+  if (UIDTable[idx1] == uid)
+    found1 = 1;
+  int found2 = 0;
+  int idx2 = (int) ((idx >> 24) % 1048576);
+  if (UIDTable[idx2] == uid)
+    found2 = 1;
+  int found3 = 0;
+  int idx3 = (int) ((idx >> 4) % 1048576);
+  if (UIDTable[idx3] == uid)
+    found3 = 1;
+
+  if (!found1)
+    UIDTable[idx1] = uid;
+  if (!found2)
+    UIDTable[idx2] = uid;
+  if (!found3)
+    UIDTable[idx3] = uid;
+  if (found1 || found2 || found3)
+    return (FrameInfo) uid;
+
+  int sz = sizeof (Uid_packet) + arg->length;
+  if (suid)
+    sz += sizeof (suid);
+  Uid_packet *uidp = 
+# 800 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                    __builtin_alloca (
+# 800 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                    sz
+# 800 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                    )
+# 800 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                               ;
+  uidp->tsize = sz;
+  uidp->type = UID_PCKT;
+  uidp->flags = 0;
+  uidp->uid = uid;
+
+
+  ptr = (long*) (arg->bytes);
+  bnd = (long*) ((char*) arg->bytes + arg->length);
+  long *dst = (long*) (uidp + 1);
+  uint64_t uidt = uid;
+  uint64_t idxt = idx;
+  uint64_t luid = suid;
+
+  while (ptr < bnd)
+    {
+
+      long val = *ptr++;
+      *dst++ = val;
+
+      if ((bnd - ptr) > sizeof (uidt))
+ {
+   uidt = uidt * 92251691606677ULL - val;
+   idxt = idxt * 2075111ULL - val;
+   int idx1 = (int) ((idxt >> 44) % 1048576);
+   if (UIDTable[idx1] == uidt)
+     {
+       luid = uidt;
+       break;
+     }
+ }
+    }
+  if (luid)
+    {
+      char *d = (char*) dst;
+      for (int i = 0; i<sizeof (luid); i++)
+ {
+   *d++ = (char) luid;
+   luid = luid >> 8;
+ }
+      uidp->flags |= 0x80000000;
+      uidp->tsize = d - (char*) uidp;
+    }
+  __collector_write_packet (dhndl, (CM_Packet*) uidp);
+
+  return (FrameInfo) uid;
+}
+
+int
+__collector_getStackTrace (void *buf, int size, void *bptr, void *eptr, void *arg)
+{
+  if (arg == (void*) __collector_omp_stack_trace)
+    seen_omp = 1;
+  int do_walk = 1;
+  if (arg == 
+# 854 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+            ((void *)0) 
+# 854 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                 || arg == (void*) __collector_omp_stack_trace)
+    {
+      do_walk = (arg == (void*) __collector_omp_stack_trace && omp_no_walk) ? 0 : 1;
+      ucontext_t *context = (ucontext_t*) 
+# 857 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                         __builtin_alloca (
+# 857 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                         sizeof (ucontext_t)
+# 857 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                         )
+# 857 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                     ;
+      { context->uc_link = 
+# 858 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+     ((void *)0)
+# 858 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+     ; void *sp = __collector_getsp(); (((ucontext_t*)context)->uc_mcontext.gregs[
+# 858 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+     REG_RSP
+# 858 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+     ]) = (intptr_t)sp; (((ucontext_t*)context)->uc_mcontext.gregs[
+# 858 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+     REG_RBP
+# 858 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+     ]) = (intptr_t)__collector_getfp(); (((ucontext_t*)context)->uc_mcontext.gregs[
+# 858 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+     REG_RIP
+# 858 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+     ]) = (intptr_t)__collector_getpc(); context->uc_stack.ss_sp = sp; context->uc_stack.ss_size = 0x100000; };
+      arg = context;
+    }
+  int unwind_mode = 0;
+  if (do_walk == 0)
+    unwind_mode |= 0x40000000;
+  return stack_unwind (buf, size, bptr, eptr, arg, unwind_mode);
+}
+# 1431 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+# 1 "/usr/include/syscall.h" 1 3 4
+# 1 "/usr/include/x86_64-linux-gnu/sys/syscall.h" 1 3 4
+# 24 "/usr/include/x86_64-linux-gnu/sys/syscall.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/asm/unistd.h" 1 3 4
+# 20 "/usr/include/x86_64-linux-gnu/asm/unistd.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/asm/unistd_64.h" 1 3 4
+# 21 "/usr/include/x86_64-linux-gnu/asm/unistd.h" 2 3 4
+# 25 "/usr/include/x86_64-linux-gnu/sys/syscall.h" 2 3 4
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/syscall.h" 1 3 4
+# 30 "/usr/include/x86_64-linux-gnu/sys/syscall.h" 2 3 4
+# 1 "/usr/include/syscall.h" 2 3 4
+# 1432 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 2
+# 1480 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+struct AdvWalkContext
+{
+  unsigned char *pc;
+  unsigned long *sp;
+  unsigned long *sp_safe;
+  unsigned long *fp;
+  unsigned long *fp_sav;
+  unsigned long *fp_loc;
+  unsigned long rax;
+  unsigned long rdx;
+  unsigned long ra_sav;
+  unsigned long *ra_loc;
+  unsigned long regs[16];
+  int tidx;
+  uint32_t cval;
+};
+
+static unsigned long
+getRegVal (struct AdvWalkContext *cur, int r, int *undefRez)
+{
+  if (cur->regs[r] == 0)
+    {
+      if (r == 5)
+ {
+  
+                                                      ;
+   return (unsigned long) cur->fp;
+ }
+      *undefRez = 1;
+    }
+ 
+                                                             ;
+  return cur->regs[r];
+}
+
+static unsigned char *
+check_modrm (unsigned char *pc)
+{
+  unsigned char modrm = *pc++;
+  unsigned char mod = ((modrm)&0xc0);
+  if (mod == 0xc0)
+    return pc;
+  unsigned char regs = modrm & 0x07;
+  if (regs == 4)
+    {
+      if (mod == 0x40)
+ return pc + 2;
+      if (mod == 0x80)
+ return pc + 5;
+      return pc + 1;
+    }
+  if (mod == 0x0)
+    {
+      if (regs == 5)
+ pc += 4;
+    }
+  else if (mod == 0x40)
+    pc += 1;
+  else if (mod == 0x80)
+    pc += 4;
+  return pc;
+}
+
+static int
+read_int (unsigned char *pc, int w)
+{
+  if (w == 1)
+    return *((char *) pc);
+  if (w == 2)
+    return *(short*) pc;
+  return *(int*) pc;
+}
+
+
+enum
+{
+  RA_FAILURE = 0,
+  RA_SUCCESS,
+  RA_END_OF_STACK,
+  RA_SIGRETURN,
+  RA_RT_SIGRETURN
+};
+
+
+static const uint32_t RA_FROMFP = (uint32_t) - 1;
+static const uint32_t RA_EOSTCK = (uint32_t) - 2;
+# 1580 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+static int
+cache_get (struct WalkContext *wctx)
+{
+  unsigned long addr;
+  if (AddrTable_RA_FROMFP != 
+# 1584 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                            ((void *)0)
+# 1584 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                )
+    {
+      uint64_t idx = wctx->pc % 1048576;
+      addr = AddrTable_RA_FROMFP[ idx ];
+      if (addr == wctx->pc)
+ {
+   unsigned long *sp = 
+# 1590 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                      ((void *)0)
+# 1590 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                          ;
+   unsigned long fp = wctx->fp;
+
+   if (fp < wctx->sp || fp >= wctx->sbase - sizeof (*sp))
+     return RA_FAILURE;
+   sp = (unsigned long *) fp;
+   fp = *sp++;
+   unsigned long ra = *sp++;
+   unsigned long tbgn = wctx->tbgn;
+   unsigned long tend = wctx->tend;
+   if (ra < tbgn || ra >= tend)
+     if (!__collector_check_segment (ra, &tbgn, &tend, 0))
+       return RA_FAILURE;
+   unsigned long npc = adjust_ret_addr (ra, ra - tbgn, tend);
+   if (npc == 0)
+     return RA_FAILURE;
+   ;
+   wctx->pc = npc;
+   wctx->sp = (unsigned long) sp;
+   wctx->fp = fp;
+   wctx->tbgn = tbgn;
+   wctx->tend = tend;
+   return RA_SUCCESS;
+ }
+    }
+  if (
+# 1615 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+     ((void *)0) 
+# 1615 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+          == AddrTable_RA_EOSTCK)
+    return RA_FAILURE;
+  uint64_t idx = wctx->pc % 1048576;
+  addr = AddrTable_RA_EOSTCK[ idx ];
+  if (addr != wctx->pc)
+    return RA_FAILURE;
+  ;
+  return RA_END_OF_STACK;
+}
+
+
+
+
+static void
+cache_put (struct WalkContext *wctx, const uint32_t val)
+{
+  if (RA_FROMFP == val)
+    {
+
+      if (
+# 1634 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+         ((void *)0) 
+# 1634 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+              != AddrTable_RA_FROMFP)
+ {
+   uint64_t idx = wctx->pc % 1048576;
+   AddrTable_RA_FROMFP[ idx ] = wctx->pc;
+   if (
+# 1638 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+      ((void *)0) 
+# 1638 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+           != AddrTable_RA_EOSTCK)
+     if (AddrTable_RA_EOSTCK[ idx ] == wctx->pc)
+
+       AddrTable_RA_EOSTCK[ idx ] = 0;
+ }
+      return;
+    }
+  if (RA_EOSTCK == val)
+    {
+
+      if (
+# 1648 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+         ((void *)0) 
+# 1648 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+              != AddrTable_RA_EOSTCK)
+ {
+   uint64_t idx = wctx->pc % 1048576;
+   AddrTable_RA_EOSTCK[ idx ] = wctx->pc;
+   if (
+# 1652 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+      ((void *)0) 
+# 1652 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+           != AddrTable_RA_FROMFP)
+     {
+       if (AddrTable_RA_FROMFP[ idx ] == wctx->pc)
+
+  AddrTable_RA_FROMFP[ idx ] = 0;
+     }
+ }
+      return;
+    }
+}
+
+static int
+process_return_real (struct WalkContext *wctx, struct AdvWalkContext *cur, int cache_on)
+{
+  if ((unsigned long) cur->sp >= wctx->sbase ||
+      (unsigned long) cur->sp < wctx->sp)
+    {
+     
+                                 ;
+      return RA_FAILURE;
+    }
+
+  unsigned long ra;
+  if (cur->sp == cur->ra_loc)
+    {
+      ra = cur->ra_sav;
+      cur->sp++;
+    }
+  else if (cur->sp >= cur->sp_safe && (unsigned long) cur->sp < wctx->sbase)
+    ra = *cur->sp++;
+  else
+    {
+      ;
+      return RA_FAILURE;
+    }
+  if (ra == 0)
+    {
+      if (cache_on)
+ cache_put (wctx, RA_EOSTCK);
+      wctx->pc = ra;
+      wctx->sp = (unsigned long) cur->sp;
+      wctx->fp = (unsigned long) cur->fp;
+      ;
+      return RA_END_OF_STACK;
+    }
+
+  unsigned long tbgn = wctx->tbgn;
+  unsigned long tend = wctx->tend;
+  if (ra < tbgn || ra >= tend)
+    {
+      if (!__collector_check_segment (ra, &tbgn, &tend, 0))
+ {
+  
+                                 ;
+   return RA_FAILURE;
+ }
+    }
+
+  if (cur->cval == RA_FROMFP)
+    {
+      if (wctx->fp == (unsigned long) (cur->sp - 2))
+ {
+   if (cache_on)
+     cache_put (wctx, RA_FROMFP);
+ }
+      else
+ cur->cval = 0;
+    }
+
+  unsigned long npc = adjust_ret_addr (ra, ra - tbgn, tend);
+  if (npc == 0)
+    {
+      if (cur->cval == RA_FROMFP)
+ {
+
+   ;
+   wctx->pc = ra;
+ }
+      else
+ {
+   ;
+   return RA_FAILURE;
+ }
+    }
+  else
+    wctx->pc = npc;
+  wctx->sp = (unsigned long) cur->sp;
+  wctx->fp = (unsigned long) cur->fp;
+  wctx->tbgn = tbgn;
+  wctx->tend = tend;
+  return RA_SUCCESS;
+}
+
+static int
+process_return (struct WalkContext *wctx, struct AdvWalkContext *cur)
+{
+  return process_return_real (wctx, cur, 1);
+}
+
+static void
+omp_cache_put (unsigned long *cur_sp_safe, struct WalkContext * wctx_pc_save,
+        struct WalkContext *wctx, uint32_t val)
+{
+  if (omp_no_walk && (OmpCurCtxs == 
+# 1755 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                   ((void *)0) 
+# 1755 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                        || OmpCtxs == 
+# 1755 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                      ((void *)0) 
+# 1755 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                           || OmpVals == 
+# 1755 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                                         ((void *)0) 
+# 1755 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                              || OmpRAs == 
+# 1755 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                                                           ((void *)0)
+# 1755 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                                               ))
+    {
+      size_t sz = 65536 * sizeof (*OmpCurCtxs);
+      OmpCurCtxs = (struct WalkContext *) __collector_allocCSize (__collector_heap, sz, 1);
+      sz = 65536 * sizeof (*OmpCtxs);
+      OmpCtxs = (struct WalkContext *) __collector_allocCSize (__collector_heap, sz, 1);
+      sz = 65536 * sizeof (*OmpVals);
+      OmpVals = (uint32_t*) __collector_allocCSize (__collector_heap, sz, 1);
+      sz = 65536 * sizeof (*OmpRAs);
+      OmpRAs = (unsigned long*) __collector_allocCSize (__collector_heap, sz, 1);
+    }
+  if (OmpCurCtxs == 
+# 1766 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                   ((void *)0) 
+# 1766 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                        || OmpCtxs == 
+# 1766 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                      ((void *)0) 
+# 1766 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                           || OmpVals == 
+# 1766 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                         ((void *)0) 
+# 1766 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                              || OmpRAs == 
+# 1766 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                                           ((void *)0)
+# 1766 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                               )
+    return;
+# 1778 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+  unsigned long *sp = 
+# 1778 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                     ((void *)0)
+# 1778 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                         ;
+  unsigned long fp = wctx_pc_save->fp;
+  int from_fp = 0;
+  if (val == RA_END_OF_STACK)
+    {
+      sp = (unsigned long *) (wctx->sp);
+      sp--;
+      ;
+    }
+  else
+    {
+      if (fp < wctx_pc_save->sp || fp >= wctx_pc_save->sbase - sizeof (*sp))
+ {
+   sp = (unsigned long *) (wctx->sp);
+   sp--;
+   ;
+ }
+      else
+ {
+   ;
+   sp = (unsigned long *) fp;
+   from_fp = 1;
+ }
+    }
+
+  if (sp < cur_sp_safe || ((unsigned long) sp >= wctx->sbase))
+    return;
+
+  unsigned long ra = *sp++;
+  if (from_fp)
+    {
+      unsigned long tbgn = wctx_pc_save->tbgn;
+      unsigned long tend = wctx_pc_save->tend;
+      if (ra < tbgn || ra >= tend)
+ {
+   sp = (unsigned long *) (wctx->sp);
+   sp--;
+   ra = *sp++;
+ }
+    }
+
+  uint64_t idx1 = wctx_pc_save->pc * 13907816567264074199ULL;
+  uint64_t idx2 = (idx1 + val) * 13907816567264074199ULL;
+  uint64_t idx3 = (idx2 + val) * 13907816567264074199ULL;
+  uint64_t idx4 = (idx3 + val) * 13907816567264074199ULL;
+  OmpRAs [ idx4 % 65536 ] = 0;
+  OmpVals[ idx1 % 65536 ] = val;
+  __collector_memcpy (&(OmpCurCtxs[ idx2 % 65536 ]), wctx_pc_save, sizeof (struct WalkContext));
+  __collector_memcpy (&(OmpCtxs [ idx3 % 65536 ]), wctx, sizeof (struct WalkContext));
+  OmpRAs [ idx4 % 65536 ] = ra;
+
+
+
+
+  ;
+}
+# 1847 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+static int
+is_after_ret (unsigned char * npc)
+{
+  if (*npc != 0xe8)
+    return 0;
+  unsigned char * onpc = npc;
+  int ncall = 1;
+  int maxsteps = 10;
+  int mincalls = 3;
+  int steps = 0;
+  while (*(npc - 5) == 0xe8 && steps < maxsteps)
+    {
+      npc -= 5;
+      ncall++;
+      steps++;
+    }
+  if (*(npc - 1) != 0xc3 || *(npc - 2) != 0xc9)
+    return 0;
+  steps = 0;
+  while (*(onpc + 5) == 0xe8 && steps < maxsteps)
+    {
+      onpc += 5;
+      ncall++;
+      steps++;
+    }
+  if (ncall < mincalls)
+    return 0;
+  return 1;
+}
+
+static int
+find_i386_ret_addr (struct WalkContext *wctx, int do_walk)
+{
+  if (wctx->sp == 0)
+
+    return RA_FAILURE;
+
+
+  int retc = cache_get (wctx);
+  if (retc != RA_FAILURE)
+    return retc;
+
+
+  unsigned char opcode;
+  unsigned char extop;
+  unsigned char extop2;
+  unsigned char modrm;
+  int imm8;
+  int immv;
+  int reg;
+
+
+  unsigned char *targets[64];
+  int ntrg = 0;
+  targets[ntrg++] = (unsigned char*) wctx->pc;
+  targets[ntrg++] = (unsigned char*) - 1;
+
+  struct AdvWalkContext buf[16];
+  struct AdvWalkContext *cur = buf;
+  __collector_util_funcs.memset((void*) cur, 0, sizeof (*cur));
+
+  cur->pc = (unsigned char*) wctx->pc;
+  cur->sp = (unsigned long*) wctx->sp;
+  cur->sp_safe = cur->sp - 16;
+  cur->fp = (unsigned long*) wctx->fp;
+  cur->tidx = 1;
+  ;
+
+  int nctx = 1;
+  int cnt = 8192;
+# 1950 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+  int jmp_reg_switch_mode = 0;
+  int num_jmp_reg = 0;
+  int total_num_jmp_reg = 0;
+  struct AdvWalkContext * jmp_reg_ctx[2];
+  struct AdvWalkContext * jmp_reg_switch_ctx[2];
+  struct AdvWalkContext * jmp_reg_switch_backup_ctx = 
+# 1955 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                     ((void *)0)
+# 1955 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                         ;
+
+  int cur_jmp_reg_switch = 0;
+  int num_jmp_reg_switch = 0;
+  int jmp_reg_switch_case = 0;
+  unsigned char * jmp_reg_switch_pc = 
+# 1960 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                     ((void *)0)
+# 1960 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                         ;
+  unsigned char * jmp_reg_switch_pc_old = 
+# 1961 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                         ((void *)0)
+# 1961 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                             ;
+  unsigned char * jmp_reg_switch_base = 
+# 1962 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                       ((void *)0)
+# 1962 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                           ;
+  int max_jmp_reg_switch_case = 2;
+
+
+
+  int max_switch_pc_offset = 1024;
+
+  int expected_num_jmp_reg = 1;
+  int max_num_jmp_reg_seen = 4;
+
+
+  int save_ctx = 0;
+  struct WalkContext wctx_pc_save;
+  if (do_walk == 0)
+
+    __collector_memcpy (&wctx_pc_save, wctx, sizeof (struct WalkContext));
+
+startWalk:
+  if (do_walk == 0)
+    {
+      if (OmpCurCtxs == 
+# 1982 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                       ((void *)0) 
+# 1982 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                            || OmpCtxs == 
+# 1982 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                          ((void *)0) 
+# 1982 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                               || OmpVals == 
+# 1982 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                             ((void *)0) 
+# 1982 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                  || OmpRAs == 
+# 1982 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                                               ((void *)0)
+# 1982 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                                   )
+ {
+   do_walk = 1;
+   goto startWalk;
+ }
+
+      uint64_t idx = wctx->pc * 13907816567264074199ULL;
+      uint32_t val = OmpVals[idx % 65536];
+      idx = (idx + val) * 13907816567264074199ULL;
+
+
+      uint64_t idx4;
+      idx4 = (idx + val) * 13907816567264074199ULL;
+      idx4 = (idx4 + val) * 13907816567264074199ULL;
+      if (0 == OmpRAs[ idx4 % 65536 ])
+ goto checkFP;
+
+      struct WalkContext saved_ctx;
+      __collector_memcpy (&saved_ctx, &OmpCurCtxs[ idx % 65536 ], sizeof (struct WalkContext));
+      if (wctx->pc == saved_ctx.pc
+   && wctx->sp == saved_ctx.sp
+   && wctx->fp == saved_ctx.fp
+   && wctx->tbgn == saved_ctx.tbgn
+   && wctx->tend == saved_ctx.tend)
+ {
+   idx = (idx + val) * 13907816567264074199ULL;
+   unsigned long *sp = 
+# 2008 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                      ((void *)0)
+# 2008 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                          ;
+   unsigned long fp = wctx->fp;
+   int from_fp = 0;
+   if (val == RA_END_OF_STACK)
+     {
+       ;
+       __collector_memcpy (wctx, &OmpCtxs[ idx % 65536 ], sizeof (struct WalkContext));
+       return val;
+     }
+   else
+     {
+       if (fp < wctx->sp || fp >= wctx->sbase - sizeof (*sp))
+  {
+    ;
+    sp = (unsigned long *) (OmpCtxs[ idx % 65536 ].sp);
+    sp--;
+    if (sp < cur->sp_safe || (unsigned long) sp >= wctx->sbase)
+      {
+        goto checkFP;
+      }
+    unsigned long ra = *sp;
+    uint64_t idx2 = (idx + val) * 13907816567264074199ULL;
+    if (OmpRAs[ idx2 % 65536 ] == ra)
+      {
+        __collector_memcpy (wctx, &OmpCtxs[ idx % 65536 ], sizeof (struct WalkContext));
+        ;
+        return val;
+      }
+    ;
+    goto checkFP;
+  }
+       sp = (unsigned long *) fp;
+       from_fp = 1;
+     }
+
+   uint64_t idx2 = (idx + val) * 13907816567264074199ULL;
+   unsigned long ra = *sp++;
+   if (from_fp)
+     {
+       unsigned long tbgn = wctx->tbgn;
+       unsigned long tend = wctx->tend;
+       if (ra < tbgn || ra >= tend)
+  {
+    sp = (unsigned long *) (OmpCtxs[ idx % 65536 ].sp);
+    sp--;
+
+
+
+    if (sp < cur->sp_safe || (unsigned long) sp >= wctx->sbase)
+      goto checkFP;
+    else
+      ra = *sp;
+  }
+     }
+   if (OmpRAs[ idx2 % 65536 ] == ra)
+     {
+       ;
+       __collector_memcpy (wctx, &OmpCtxs[ idx % 65536 ], sizeof (struct WalkContext));
+       return val;
+     }
+ }
+      goto checkFP;
+    }
+  else
+    {
+      __collector_util_funcs.memset(jmp_reg_ctx, 0, 2 * sizeof (struct AdvWalkContext *));
+      __collector_util_funcs.memset(jmp_reg_switch_ctx, 0, 2 * sizeof (struct AdvWalkContext *));
+    }
+  while (cnt--)
+    {
+      if (nctx == 0 && (num_jmp_reg == expected_num_jmp_reg || jmp_reg_switch_mode == 1))
+ {
+   int i = 0;
+   if (num_jmp_reg == expected_num_jmp_reg)
+     jmp_reg_switch_mode = 0;
+  
+                                                                                       ;
+
+
+
+
+
+
+
+   if (jmp_reg_switch_mode == 0)
+     {
+       num_jmp_reg_switch = num_jmp_reg;
+       jmp_reg_switch_mode = 1;
+       for (i = 0; i < num_jmp_reg_switch; i++)
+  {
+    if (jmp_reg_switch_ctx[i] == 
+# 2098 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                ((void *)0)
+# 2098 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                    )
+      jmp_reg_switch_ctx[i] = (struct AdvWalkContext*) 
+# 2099 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                      __builtin_alloca (
+# 2099 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                      sizeof (*jmp_reg_switch_ctx[i])
+# 2099 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                      )
+# 2099 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                                              ;
+    if (jmp_reg_switch_ctx[i] != 
+# 2100 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                ((void *)0)
+# 2100 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                    )
+      {
+        __collector_memcpy (jmp_reg_switch_ctx[i], jmp_reg_ctx[i], sizeof (*jmp_reg_switch_ctx[i]));
+        cur_jmp_reg_switch = 0;
+        jmp_reg_switch_case = 0;
+      }
+  }
+       if (jmp_reg_switch_backup_ctx == 
+# 2107 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                       ((void *)0)
+# 2107 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                           )
+  {
+    jmp_reg_switch_backup_ctx = (struct AdvWalkContext*) 
+# 2109 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                        __builtin_alloca (
+# 2109 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                        sizeof (*jmp_reg_switch_backup_ctx)
+# 2109 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                        )
+# 2109 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                                                    ;
+    if (jmp_reg_switch_backup_ctx != 
+# 2110 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                    ((void *)0)
+# 2110 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                        )
+      __collector_memcpy (jmp_reg_switch_backup_ctx, cur, sizeof (*cur));
+    ;
+  }
+     }
+   if (jmp_reg_switch_mode == 1)
+     {
+       if (cur_jmp_reg_switch == num_jmp_reg_switch)
+  {
+    ;
+    if (jmp_reg_switch_backup_ctx != 
+# 2120 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                    ((void *)0)
+# 2120 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                        )
+      __collector_memcpy (cur, jmp_reg_switch_backup_ctx, sizeof (*cur));
+    int rc = process_return_real (wctx, cur, 0);
+    if (rc == RA_SUCCESS)
+      {
+        if (save_ctx)
+   omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, rc);
+        return rc;
+      }
+    break;
+  }
+       unsigned char *npc = jmp_reg_switch_ctx[cur_jmp_reg_switch]->pc;
+       if (jmp_reg_switch_case == 0)
+
+  npc = check_modrm (npc);
+       else if (jmp_reg_switch_pc != 
+# 2135 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                    ((void *)0)
+# 2135 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                        )
+  npc = jmp_reg_switch_pc;
+       else
+  {
+   
+                                              ;
+    break;
+  }
+       jmp_reg_switch_base = npc;
+       struct AdvWalkContext *new = buf + nctx;
+       nctx += 1;
+       __collector_memcpy (new, jmp_reg_switch_ctx[cur_jmp_reg_switch], sizeof (*new));
+       new->pc = npc;
+       cur = new;
+       jmp_reg_switch_pc = 
+# 2149 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                          ((void *)0)
+# 2149 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                              ;
+       jmp_reg_switch_case++;
+       if (jmp_reg_switch_case == max_jmp_reg_switch_case)
+  {
+    cur_jmp_reg_switch++;
+    jmp_reg_switch_case = 0;
+  }
+     }
+   num_jmp_reg = 0;
+ }
+      if (jmp_reg_switch_mode == 1)
+ {
+   unsigned long tbgn = wctx->tbgn;
+   unsigned long tend = wctx->tend;
+   if ((unsigned long) (cur->pc) < tbgn || (unsigned long) (cur->pc) >= tend)
+     {
+       ;
+       break;
+     }
+   if (jmp_reg_switch_base != 
+# 2168 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                             ((void *)0) 
+# 2168 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                  && cur->pc > jmp_reg_switch_base + max_switch_pc_offset)
+     {
+       ;
+       if (jmp_reg_switch_backup_ctx != 
+# 2171 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                       ((void *)0)
+# 2171 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                           )
+  __collector_memcpy (cur, jmp_reg_switch_backup_ctx, sizeof (*cur));
+       int rc = process_return_real (wctx, cur, 0);
+       if (rc == RA_SUCCESS)
+  {
+    if (save_ctx)
+      omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, rc);
+    return rc;
+  }
+       break;
+     }
+ }
+
+      if (nctx == 0)
+ break;
+
+      while (cur->pc > targets[cur->tidx])
+ cur->tidx += 1;
+      if (cur->pc == targets[cur->tidx])
+ {
+
+   if (jmp_reg_switch_mode == 0 || cur->pc != jmp_reg_switch_pc_old)
+     {
+       if (jmp_reg_switch_mode == 1 && nctx == 1 && jmp_reg_switch_pc == 
+# 2194 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                                        ((void *)0)
+# 2194 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                            )
+  {
+   
+                                                  ;
+    jmp_reg_switch_pc = cur->pc;
+    jmp_reg_switch_pc_old = jmp_reg_switch_pc;
+  }
+       ;
+       __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+       if (cur >= buf + nctx)
+  cur = buf;
+       continue;
+     }
+   if (jmp_reg_switch_mode == 1 && cur->pc == jmp_reg_switch_pc_old)
+     jmp_reg_switch_pc_old = 
+# 2208 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                            ((void *)0)
+# 2208 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                ;
+ }
+
+
+     
+
+
+
+                                                  ;
+      int v = 4;
+      int a = 4;
+
+
+      int R = 0;
+
+      int X = 0;
+      int B = 0;
+
+      int done = 0;
+      while (!done)
+ {
+   opcode = *cur->pc++;
+   switch (opcode)
+     {
+     case 0x66:
+       v = 2;
+       break;
+     case 0x67:
+       a = 2;
+       break;
+
+     case 0x40:
+     case 0x41:
+     case 0x42:
+     case 0x43:
+     case 0x44:
+     case 0x45:
+     case 0x46:
+     case 0x47:
+     case 0x48:
+     case 0x49:
+     case 0x4a:
+     case 0x4b:
+     case 0x4c:
+     case 0x4d:
+     case 0x4e:
+     case 0x4f:
+       B = (opcode & 0x1) ? 8 : 0;
+       X = (opcode & 0x2) ? 8 : 0;
+       R = (opcode & 0x4) ? 8 : 0;
+       if (opcode & 0x8)
+  v = 8;
+       opcode = *cur->pc++;
+       done = 1;
+       break;
+
+     default:
+       done = 1;
+       break;
+     }
+ }
+      int z = (v == 8) ? 4 : v;
+      switch (opcode)
+ {
+ case 0x0:
+ case 0x01:
+ case 0x02:
+ case 0x03:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x04:
+   cur->pc += 1;
+   break;
+ case 0x05:
+   cur->pc += z;
+   break;
+ case 0x06:
+   cur->sp -= 1;
+   break;
+ case 0x07:
+   cur->sp += 1;
+   if (cur->sp - 16 > cur->sp_safe)
+     cur->sp_safe = cur->sp - 16;
+   break;
+ case 0x08:
+ case 0x09:
+ case 0x0a:
+ case 0x0b:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x0c:
+   cur->pc += 1;
+   break;
+ case 0x0d:
+   cur->pc += z;
+   break;
+ case 0x0e:
+   cur->sp -= 1;
+   break;
+ case 0x0f:
+   extop = *cur->pc++;
+   switch (extop)
+     {
+     case 0x01:
+       extop2 = *cur->pc;
+       switch (extop2)
+  {
+  case 0xd5:
+  case 0xd6:
+    cur->pc++;
+    break;
+  default:
+    break;
+  }
+       break;
+     case 0x03:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x0b:
+      
+                                ;
+       __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+       break;
+     case 0x05:
+     case 0x34:
+       if (cur->rax == 
+# 2333 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                      60
+# 2333 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                               )
+  {
+   
+                             ;
+    __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+    break;
+  }
+       else if (cur->rax == 
+# 2340 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                           15
+# 2340 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                            )
+  {
+    if (jmp_reg_switch_mode == 1)
+      {
+       
+                                 ;
+        goto checkFP;
+      }
+    wctx->sp = (unsigned long) cur->sp;
+    if (save_ctx)
+      omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, RA_RT_SIGRETURN);
+    return RA_RT_SIGRETURN;
+  }
+# 2368 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+       while (*cur->pc == 0x90)
+  cur->pc++;
+       if (*cur->pc == 0xeb)
+  cur->pc += 2;
+       break;
+     case 0x0d:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x10:
+     case 0x11:
+     case 0x12:
+     case 0x13:
+     case 0x14:
+     case 0x15:
+     case 0x16:
+     case 0x17:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x18:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x1E:
+       cur->pc += 2;
+       break;
+     case 0x1f:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x28:
+     case 0x29:
+     case 0x2a:
+     case 0x2b:
+     case 0x2c:
+     case 0x2d:
+     case 0x2e:
+     case 0x2f:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x30:
+     case 0x31:
+     case 0x32:
+     case 0x33:
+       break;
+
+     case 0x38: case 0x3a:
+       extop2 = *cur->pc++;
+       cur->pc = check_modrm (cur->pc);
+
+
+       if (extop == 0x3a)
+  cur->pc++;
+       break;
+     case 0x40: case 0x41: case 0x42: case 0x43:
+     case 0x44: case 0x45: case 0x46: case 0x47:
+     case 0x48: case 0x49: case 0x4a: case 0x4b:
+     case 0x4c: case 0x4d: case 0x4e: case 0x4f:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x50: case 0x51: case 0x52: case 0x53:
+     case 0x54: case 0x55: case 0x56: case 0x57:
+     case 0x58: case 0x59: case 0x5a: case 0x5b:
+     case 0x5c: case 0x5d: case 0x5e: case 0x5f:
+     case 0x60: case 0x61: case 0x62: case 0x63:
+     case 0x64: case 0x65: case 0x66: case 0x67:
+     case 0x68: case 0x69: case 0x6a: case 0x6b:
+     case 0x6c: case 0x6d: case 0x6e: case 0x6f:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x70: case 0x71: case 0x72: case 0x73:
+       cur->pc = check_modrm (cur->pc) + 1;
+       break;
+     case 0x74: case 0x75: case 0x76:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x77:
+       break;
+     case 0x7c: case 0x7d: case 0x7e: case 0x7f:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x80: case 0x81: case 0x82: case 0x83:
+     case 0x84: case 0x85: case 0x86: case 0x87:
+     case 0x88: case 0x89: case 0x8a: case 0x8b:
+     case 0x8c: case 0x8d: case 0x8e: case 0x8f:
+       immv = read_int (cur->pc, z);
+       cur->pc += z;
+       if (nctx < (jmp_reg_switch_mode ? 3 : 16))
+  {
+    int tidx = 0;
+    unsigned char *npc = cur->pc + immv;
+    if ((unsigned long) npc < wctx->tbgn || (unsigned long) npc >= wctx->tend)
+      {
+       
+                                 ;
+        __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+        break;
+      }
+    if (is_after_ret (npc))
+      break;
+    while (npc > targets[tidx])
+      tidx += 1;
+    if (npc != targets[tidx])
+      {
+        if (ntrg < 64)
+   {
+     for (int i = 0; i < nctx; i++)
+       if (buf[i].tidx >= tidx)
+         buf[i].tidx++;
+
+
+     for (int i = ntrg; i > tidx; i--)
+       targets[i] = targets[i - 1];
+     ntrg += 1;
+     targets[tidx++] = npc;
+   }
+        else
+  
+                     ;
+        struct AdvWalkContext *new = buf + nctx;
+        nctx += 1;
+        __collector_memcpy (new, cur, sizeof (*new));
+        new->pc = npc;
+        new->tidx = tidx;
+        cur = new;
+        continue;
+      }
+  }
+       else
+ 
+                    ;
+       break;
+     case 0x90: case 0x91: case 0x92: case 0x93:
+     case 0x94: case 0x95: case 0x96: case 0x97:
+     case 0x98: case 0x99: case 0x9a: case 0x9b:
+     case 0x9c: case 0x9d: case 0x9e: case 0x9f:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0xa0:
+       cur->sp -= 1;
+       break;
+     case 0xa1:
+       cur->sp += 1;
+       if (cur->sp - 16 > cur->sp_safe)
+  cur->sp_safe = cur->sp - 16;
+       break;
+     case 0xa2:
+       break;
+     case 0xa3:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0xa4:
+       cur->pc = check_modrm (cur->pc);
+       cur->pc += 1;
+       break;
+     case 0xa5:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0xa8:
+       cur->sp -= 1;
+       break;
+     case 0xa9:
+       cur->sp += 1;
+       if (cur->sp - 16 > cur->sp_safe)
+  cur->sp_safe = cur->sp - 16;
+       break;
+     case 0xaa:
+       break;
+     case 0xab:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0xac:
+       cur->pc = check_modrm (cur->pc);
+       cur->pc += 1;
+       break;
+     case 0xad:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0xae:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0xaf:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0xb1:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0xb3:
+     case 0xb6:
+     case 0xb7:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0xba:
+       cur->pc = check_modrm (cur->pc);
+       cur->pc += 1;
+       break;
+     case 0xbb:
+     case 0xbc:
+     case 0xbd:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0xbe:
+     case 0xbf:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0xc0:
+     case 0xc1:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0xc2:
+       cur->pc = check_modrm (cur->pc);
+       cur->pc += 1;
+       break;
+     case 0xc3:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0xc6:
+       cur->pc = check_modrm (cur->pc);
+       cur->pc += 1;
+       break;
+     case 0xc7:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0xc8: case 0xc9: case 0xca: case 0xcb:
+     case 0xcc: case 0xcd: case 0xce: case 0xcf:
+       break;
+     case 0xd0: case 0xd1: case 0xd2: case 0xd3:
+     case 0xd4: case 0xd5: case 0xd6: case 0xd7:
+     case 0xd8: case 0xd9: case 0xda: case 0xdb:
+     case 0xdc: case 0xdd: case 0xde: case 0xdf:
+     case 0xe0: case 0xe1: case 0xe2: case 0xe3:
+     case 0xe4: case 0xe5: case 0xe6: case 0xe7:
+     case 0xe8: case 0xe9: case 0xea: case 0xeb:
+     case 0xec: case 0xed: case 0xee: case 0xef:
+     case 0xf0: case 0xf1: case 0xf2: case 0xf3:
+     case 0xf4: case 0xf5: case 0xf6: case 0xf7:
+     case 0xf8: case 0xf9: case 0xfa: case 0xfb:
+     case 0xfc: case 0xfd: case 0xfe: case 0xff:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     default:
+       if (jmp_reg_switch_mode == 1 && extop == 0x0b)
+ 
+                                                ;
+       else
+  {
+   
+                                                  ;
+    __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+  }
+       break;
+     }
+   break;
+ case 0x10:
+ case 0x11:
+ case 0x12:
+ case 0x13:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x14:
+   cur->pc += 1;
+   break;
+ case 0x15:
+   cur->pc += z;
+   break;
+ case 0x16:
+   cur->sp -= 1;
+   break;
+ case 0x17:
+   cur->sp += 1;
+   if (cur->sp - 16 > cur->sp_safe)
+     cur->sp_safe = cur->sp - 16;
+   break;
+ case 0x18:
+ case 0x19:
+ case 0x1a:
+ case 0x1b:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x1c:
+   cur->pc += 1;
+   break;
+ case 0x1d:
+   cur->pc += z;
+   break;
+ case 0x1e:
+   cur->sp -= 1;
+   break;
+ case 0x1f:
+   cur->sp += 1;
+   if (cur->sp - 16 > cur->sp_safe)
+     cur->sp_safe = cur->sp - 16;
+   break;
+ case 0x20:
+ case 0x21:
+ case 0x22:
+ case 0x23:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x24:
+   cur->pc += 1;
+   break;
+ case 0x25:
+   cur->pc += z;
+   break;
+ case 0x26:
+   break;
+ case 0x27:
+   break;
+ case 0x28:
+ case 0x29:
+ case 0x2a:
+ case 0x2b:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x2c:
+   cur->pc += 1;
+   break;
+ case 0x2d:
+   cur->pc += z;
+   break;
+ case 0x2e:
+   break;
+ case 0x2f:
+   break;
+ case 0x30:
+ case 0x31:
+ case 0x32:
+ case 0x33:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x34:
+   cur->pc += 1;
+   break;
+ case 0x35:
+   cur->pc += z;
+   break;
+ case 0x36:
+   break;
+ case 0x37:
+   break;
+ case 0x38:
+ case 0x39:
+ case 0x3a:
+ case 0x3b:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x3c:
+   cur->pc += 1;
+   break;
+ case 0x3d:
+   cur->pc += z;
+   break;
+ case 0x3e:
+   break;
+ case 0x3f:
+   break;
+# 2751 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+ case 0x50:
+ case 0x51:
+ case 0x52:
+ case 0x53:
+ case 0x54:
+ case 0x55:
+ case 0x56:
+ case 0x57:
+   cur->sp -= 1;
+   reg = (B|((opcode)&0x7));
+   if (reg == 5)
+     {
+# 2774 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+       if (cur->fp_loc == 
+# 2774 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                         ((void *)0)
+# 2774 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                             )
+  {
+    cur->fp_loc = cur->sp;
+    cur->fp_sav = cur->fp;
+  }
+     }
+   break;
+ case 0x58:
+ case 0x59:
+ case 0x5a:
+ case 0x5b:
+ case 0x5c:
+ case 0x5d:
+ case 0x5e:
+ case 0x5f:
+   reg = (B|((opcode)&0x7));
+   cur->regs[reg] = 0;
+   if ((((unsigned long) cur->sp) >= ((unsigned long) cur->sp_safe) && ((unsigned long) cur->sp) < (wctx->sbase)))
+     cur->regs[reg] = *cur->sp;
+  
+                                                   ;
+   if (reg == 2)
+     {
+       if (cur->sp >= cur->sp_safe &&
+    (unsigned long) cur->sp < wctx->sbase)
+  cur->rdx = *cur->sp;
+     }
+   else if (reg == 5)
+     {
+       if (cur->fp_loc == cur->sp)
+  {
+    cur->fp = cur->fp_sav;
+    cur->fp_loc = 
+# 2806 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                 ((void *)0)
+# 2806 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                     ;
+  }
+       else if (cur->sp >= cur->sp_safe &&
+         (unsigned long) cur->sp < wctx->sbase)
+  cur->fp = (unsigned long*) (*cur->sp);
+     }
+   else if (reg == 4)
+     {
+
+       if (cur->sp >= cur->sp_safe && (unsigned long) cur->sp < wctx->sbase)
+  {
+    unsigned long *nsp = (unsigned long*) (*cur->sp);
+    if (nsp >= cur->sp && nsp <= cur->fp)
+      {
+        cur->sp = nsp;
+      }
+    else
+      {
+       
+                           ;
+        goto checkFP;
+      }
+  }
+       else
+  {
+   
+                        ;
+    goto checkFP;
+  }
+       break;
+     }
+   cur->sp += 1;
+   if (cur->sp - 16 > cur->sp_safe)
+     {
+       cur->sp_safe = cur->sp - 16;
+     }
+   break;
+ case 0x60:
+   cur->sp -= 8;
+   break;
+ case 0x61:
+   cur->sp += 8;
+   if (cur->sp - 16 > cur->sp_safe)
+     cur->sp_safe = cur->sp - 16;
+   break;
+ case 0x62:
+   {
+     unsigned char *pc = cur->pc - 1;
+     int len = parse_x86_AVX_instruction (pc);
+     if (len < 4)
+       {
+  __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+       }
+     else
+       {
+  pc += len;
+  cur->pc = pc;
+       }
+   }
+   break;
+ case 0x63:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x64:
+ case 0x65:
+   break;
+ case 0x66:
+ case 0x67:
+   break;
+ case 0x68:
+   cur->sp = (unsigned long*) ((long) cur->sp - z);
+   cur->pc += z;
+   break;
+ case 0x69:
+   cur->pc = check_modrm (cur->pc);
+   cur->pc += z;
+   break;
+ case 0x6a:
+   cur->sp = (unsigned long*) ((long) cur->sp - v);
+   cur->pc += 1;
+   break;
+ case 0x6b:
+   cur->pc = check_modrm (cur->pc);
+   cur->pc += 1;
+   break;
+ case 0x6c: case 0x6d: case 0x6e: case 0x6f:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x70:
+ case 0x71:
+ case 0x72:
+ case 0x73:
+ case 0x74:
+ case 0x75:
+ case 0x76:
+ case 0x77:
+ case 0x78:
+ case 0x79:
+ case 0x7a:
+ case 0x7b:
+ case 0x7c:
+ case 0x7d:
+ case 0x7e:
+ case 0x7f:
+   imm8 = *(char*) cur->pc++;
+   if (nctx < (jmp_reg_switch_mode ? 3 : 16))
+     {
+       int tidx = 0;
+       unsigned char *npc = cur->pc + imm8;
+       if (is_after_ret (npc))
+  break;
+       while (npc > targets[tidx])
+  tidx += 1;
+       if (npc != targets[tidx])
+  {
+    if (ntrg < 64)
+      {
+        for (int i = 0; i < nctx; i++)
+   if (buf[i].tidx >= tidx)
+     buf[i].tidx++;
+
+
+        for (int i = ntrg; i > tidx; i--)
+   targets[i] = targets[i - 1];
+        ntrg += 1;
+        targets[tidx++] = npc;
+      }
+    else
+      ;
+    struct AdvWalkContext *new = buf + nctx;
+    nctx += 1;
+    __collector_memcpy (new, cur, sizeof (*new));
+    new->pc = npc;
+    new->tidx = tidx;
+    cur = new;
+    continue;
+  }
+     }
+   else
+     ;
+   break;
+ case 0x80:
+   cur->pc = check_modrm (cur->pc);
+   cur->pc += 1;
+   break;
+ case 0x81:
+   modrm = *cur->pc;
+   if (((modrm)&0xc0) == 0xc0 && (B|((modrm)&0x7)) == 4)
+     {
+       int immz = read_int (cur->pc + 1, z);
+       extop = (((modrm)>>3)&0x7);
+       if (extop == 0)
+  cur->sp = (unsigned long*) ((long) cur->sp + immz);
+       else if (extop == 4)
+  cur->sp = (unsigned long*) ((long) cur->sp & immz);
+       else if (extop == 5)
+  cur->sp = (unsigned long*) ((long) cur->sp - immz);
+       if (cur->sp - 16 > cur->sp_safe)
+  cur->sp_safe = cur->sp - 16;
+     }
+   cur->pc = check_modrm (cur->pc);
+   cur->pc += z;
+   break;
+ case 0x82:
+   cur->pc = check_modrm (cur->pc);
+   cur->pc += 1;
+   break;
+ case 0x83:
+   modrm = *cur->pc;
+   if (((modrm)&0xc0) == 0xc0 && (B|((modrm)&0x7)) == 4)
+     {
+       imm8 = (char) cur->pc[1];
+       extop = (((modrm)>>3)&0x7);
+       if (extop == 0)
+  cur->sp = (unsigned long*) ((long) cur->sp + imm8);
+       else if (extop == 4)
+    cur->sp = (unsigned long*) ((long) cur->sp & imm8);
+       else if (extop == 5)
+  cur->sp = (unsigned long*) ((long) cur->sp - imm8);
+       if (cur->sp - 16 > cur->sp_safe)
+  cur->sp_safe = cur->sp - 16;
+     }
+   cur->pc = check_modrm (cur->pc);
+   cur->pc += 1;
+   break;
+ case 0x84:
+ case 0x85:
+ case 0x86:
+ case 0x87:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x88:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x89:
+   modrm = *cur->pc;
+   if (((modrm)&0xc0) == 0xc0)
+     {
+       if ((B|((modrm)&0x7)) == 5 && (R|(((modrm)>>3)&0x7)) == 4)
+
+  cur->fp = cur->sp;
+       else if ((B|((modrm)&0x7)) == 4 && (R|(((modrm)>>3)&0x7)) == 5)
+  {
+    cur->sp = cur->fp;
+    if (cur->sp - 16 > cur->sp_safe)
+      cur->sp_safe = cur->sp - 16;
+    if (wctx->fp == (unsigned long) cur->sp)
+      cur->cval = RA_FROMFP;
+  }
+     }
+   else if (((modrm)&0xc0) == 0x80)
+     {
+       if ((B|((modrm)&0x7)) == 4 && (R|(((modrm)>>3)&0x7)) == 5)
+  {
+    if (cur->pc[1] == 0x24)
+      {
+        immv = read_int (cur->pc + 2, 4);
+        cur->fp_loc = (unsigned long*) ((char*) cur->sp + immv);
+        cur->fp_sav = cur->fp;
+      }
+  }
+     }
+   else if (((modrm)&0xc0) == 0x40)
+     {
+       if ((B|((modrm)&0x7)) == 4 && (R|(((modrm)>>3)&0x7)) == 2)
+  {
+    if (cur->pc[1] == 0x24 && cur->pc[2] == 0x0)
+      {
+        cur->ra_loc = cur->sp;
+        cur->ra_sav = cur->rdx;
+      }
+  }
+       else if ((B|((modrm)&0x7)) == 4 && (R|(((modrm)>>3)&0x7)) == 5)
+  {
+    if (cur->pc[1] == 0x24)
+      {
+        imm8 = ((char*) (cur->pc))[2];
+        cur->fp_loc = (unsigned long*) ((char*) cur->sp + imm8);
+        cur->fp_sav = cur->fp;
+      }
+  }
+     }
+   else if (((modrm)&0xc0) == 0x0)
+     {
+       if ((B|((modrm)&0x7)) == 4 && (R|(((modrm)>>3)&0x7)) == 5)
+  {
+    if (cur->pc[1] == 0x24)
+      {
+        cur->fp_loc = cur->sp;
+        cur->fp_sav = cur->fp;
+      }
+  }
+       else if ((B|((modrm)&0x7)) == 4 && (R|(((modrm)>>3)&0x7)) == 2)
+  {
+    if (cur->pc[1] == 0x24)
+      {
+        cur->ra_loc = cur->sp;
+        cur->ra_sav = cur->rdx;
+      }
+  }
+     }
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x8a:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x8b:
+   modrm = *cur->pc;
+   if (((modrm)&0xc0) == 0xc0)
+     {
+       if ((B|((modrm)&0x7)) == 4 && (R|(((modrm)>>3)&0x7)) == 5)
+
+  cur->fp = cur->sp;
+       else if ((B|((modrm)&0x7)) == 5 && (R|(((modrm)>>3)&0x7)) == 4)
+  {
+    cur->sp = cur->fp;
+    if (cur->sp - 16 > cur->sp_safe)
+      cur->sp_safe = cur->sp - 16;
+    if (wctx->fp == (unsigned long) cur->sp)
+      cur->cval = RA_FROMFP;
+  }
+     }
+   else if (((modrm)&0xc0) == 0x80)
+     {
+       if ((B|((modrm)&0x7)) == 4 && (R|(((modrm)>>3)&0x7)) == 5)
+  {
+    if (cur->pc[1] == 0x24)
+      {
+        immv = read_int (cur->pc + 2, 4);
+        unsigned long *ptr = (unsigned long*) ((char*) cur->sp + immv);
+        if (cur->fp_loc == ptr)
+   {
+     cur->fp = cur->fp_sav;
+     cur->fp_loc = 
+# 3099 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                  ((void *)0)
+# 3099 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                      ;
+   }
+        else if (ptr >= cur->sp_safe && (unsigned long) ptr < wctx->sbase)
+   cur->fp = (unsigned long*) (*ptr);
+      }
+  }
+     }
+   else if (((modrm)&0xc0) == 0x40)
+     {
+       if ((B|((modrm)&0x7)) == 4 && (R|(((modrm)>>3)&0x7)) == 5)
+  {
+    if (cur->pc[1] == 0x24)
+      {
+        imm8 = ((char*) (cur->pc))[2];
+        unsigned long *ptr = (unsigned long*) ((char*) cur->sp + imm8);
+        if (cur->fp_loc == ptr)
+   {
+     cur->fp = cur->fp_sav;
+     cur->fp_loc = 
+# 3117 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                  ((void *)0)
+# 3117 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                      ;
+   }
+        else if (ptr >= cur->sp_safe && (unsigned long) ptr < wctx->sbase)
+   cur->fp = (unsigned long*) (*ptr);
+      }
+  }
+     }
+   else if (((modrm)&0xc0) == 0x0)
+     {
+       if ((B|((modrm)&0x7)) == 4 && (R|(((modrm)>>3)&0x7)) == 5)
+  {
+    if (cur->pc[1] == 0x24)
+      {
+        if (cur->fp_loc == cur->sp)
+   {
+     cur->fp = cur->fp_sav;
+     cur->fp_loc = 
+# 3133 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                  ((void *)0)
+# 3133 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                      ;
+   }
+        else if (cur->sp >= cur->sp_safe &&
+          (unsigned long) cur->sp < wctx->sbase)
+   cur->fp = (unsigned long*) *cur->sp;
+      }
+  }
+     }
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x8c:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x8d:
+   modrm = *cur->pc;
+   if ((R|(((modrm)>>3)&0x7)) == 4)
+     {
+       unsigned char *pc = cur->pc;
+
+       cur->regs[4] = (unsigned long) cur->sp;
+       cur->regs[5] = (unsigned long) cur->fp;
+       cur->pc++;
+       int mod = (modrm >> 6) & 3;
+       int r_m = modrm & 7;
+       long val = 0;
+       int undefRez = 0;
+       if (mod == 0x3)
+  val = getRegVal (cur, (B|((modrm)&0x7)), &undefRez);
+       else if (r_m == 4)
+  {
+    int sib = *cur->pc++;
+    int scale = 1 << (sib >> 6);
+    int index = X | ((sib >> 3) & 7);
+    int base = B | (sib & 7);
+    if (mod == 0)
+      {
+        if ((base & 7) == 5)
+   {
+     if (index != 4)
+       val += getRegVal (cur, index, &undefRez) * scale;
+     val += read_int (cur->pc, 4);
+     cur->pc += 4;
+   }
+        else
+   {
+     val += getRegVal (cur, base, &undefRez);
+     if (index != 4)
+       val += getRegVal (cur, index, &undefRez) * scale;
+   }
+      }
+    else
+      {
+        val += getRegVal (cur, base, &undefRez);
+        if (index != 4)
+   val += getRegVal (cur, index, &undefRez) * scale;
+        if (mod == 1)
+   {
+     val += read_int (cur->pc, 1);
+     cur->pc++;
+   }
+        else
+   {
+     val += read_int (cur->pc, 4);
+     cur->pc += 4;
+   }
+      }
+  }
+       else if (mod == 0)
+  {
+    if (r_m == 5)
+      {
+        val += read_int (cur->pc, 4);
+        cur->pc += 4;
+      }
+    else
+      val += getRegVal (cur, (B|((modrm)&0x7)), &undefRez);
+  }
+       else
+  {
+    val += getRegVal (cur, (B|((modrm)&0x7)), &undefRez);
+    if (mod == 1)
+      {
+        val += read_int (cur->pc, 1);
+        cur->pc++;
+      }
+    else
+      {
+        val += read_int (cur->pc, 4);
+        cur->pc += 4;
+      }
+  }
+       if (undefRez)
+  {
+   
+                                                             ;
+    goto checkFP;
+  }
+       cur->regs[(R|(((modrm)>>3)&0x7))] = val;
+      
+
+                                                               ;
+       if (cur->pc != check_modrm (pc))
+ 
+
+                                     ;
+       if ((R|(((modrm)>>3)&0x7)) == 4)
+  {
+    if (!(((unsigned long) val) >= (wctx->sp) && ((unsigned long) val) < (wctx->sbase)))
+      {
+       
+
+                                                                ;
+        goto checkFP;
+      }
+    cur->sp = (unsigned long *) val;
+    if (cur->sp - 16 > cur->sp_safe)
+      cur->sp_safe = cur->sp - 16;
+  }
+     }
+   else
+     cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x8e:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0x8f:
+   cur->pc = check_modrm (cur->pc);
+   cur->sp += 1;
+   if (cur->sp - 16 > cur->sp_safe)
+     cur->sp_safe = cur->sp - 16;
+   break;
+ case 0x90:
+   break;
+ case 0x91:
+ case 0x92:
+ case 0x93:
+ case 0x94:
+ case 0x95:
+ case 0x96:
+ case 0x97:
+   break;
+ case 0x98:
+ case 0x99:
+   break;
+ case 0x9a:
+   if (jmp_reg_switch_mode == 1)
+     {
+       struct AdvWalkContext* tmpctx = (struct AdvWalkContext *) 
+# 3280 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                                __builtin_alloca (
+# 3280 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                sizeof (*cur)
+# 3280 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                                )
+# 3280 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                                      ;
+       __collector_memcpy (tmpctx, cur, sizeof (*cur));
+       int rc = process_return (wctx, tmpctx);
+       if (rc != RA_FAILURE)
+  {
+    if (save_ctx)
+      omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, rc);
+    return rc;
+  }
+     }
+   cur->pc += 2 + a;
+   break;
+ case 0x9b:
+ case 0x9c:
+ case 0x9d:
+ case 0x9e:
+ case 0x9f:
+   break;
+ case 0xa0:
+ case 0xa1:
+ case 0xa2:
+ case 0xa3:
+   cur->pc += a;
+   break;
+ case 0xa4:
+ case 0xa5:
+ case 0xa6:
+ case 0xa7:
+   break;
+ case 0xa8:
+   cur->pc += 1;
+   break;
+ case 0xa9:
+   cur->pc += z;
+   break;
+ case 0xaa:
+ case 0xab:
+ case 0xac:
+ case 0xad:
+ case 0xae:
+ case 0xaf:
+   break;
+ case 0xb0:
+ case 0xb1:
+ case 0xb2:
+ case 0xb3:
+ case 0xb4:
+ case 0xb5:
+ case 0xb6:
+ case 0xb7:
+   cur->pc += 1;
+   break;
+ case 0xb8:
+ case 0xb9:
+ case 0xba:
+ case 0xbb:
+ case 0xbc:
+ case 0xbd:
+ case 0xbe:
+ case 0xbf:
+   reg = (B|((opcode)&0x7));
+   if (reg == 0)
+     cur->rax = read_int (cur->pc, v);
+   cur->pc += v;
+   break;
+ case 0xc0:
+ case 0xc1:
+   cur->pc = check_modrm (cur->pc) + 1;
+   break;
+ case 0xc2:
+
+
+
+
+   {
+     immv = read_int (cur->pc, 2);
+     int rc = process_return (wctx, cur);
+     if (rc != RA_FAILURE)
+       {
+  if (jmp_reg_switch_mode == 1)
+    {
+      ;
+      goto checkFP;
+    }
+  wctx->sp += immv;
+  if (save_ctx)
+    omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, rc);
+  return rc;
+       }
+     ;
+     __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+   }
+   break;
+ case 0xc3:
+   {
+     int rc = process_return (wctx, cur);
+     if (rc != RA_FAILURE)
+       {
+  if (save_ctx)
+    omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, rc);
+  return rc;
+       }
+     if (jmp_reg_switch_mode == 1)
+       jmp_reg_switch_pc = cur->pc;
+     ;
+     __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+   }
+   break;
+ case 0xc4:
+   {
+     unsigned char *pc = cur->pc - 1;
+     int len = parse_x86_AVX_instruction (pc);
+     if (len < 3)
+       __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+     else
+       {
+  pc += len;
+  cur->pc = pc;
+       }
+   }
+   break;
+ case 0xc5:
+   {
+     unsigned char *pc = cur->pc - 1;
+     int len = parse_x86_AVX_instruction (pc);
+     if (len < 2)
+       __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+     else
+       {
+  pc += len;
+  cur->pc = pc;
+       }
+   }
+   break;
+ case 0xc6:
+   modrm = *cur->pc;
+   if (modrm == 0xf8)
+     cur->pc += 2;
+   else
+     cur->pc = check_modrm (cur->pc) + 1;
+   break;
+ case 0xc7:
+   modrm = *cur->pc;
+   if (modrm == 0xf8)
+     cur->pc += v + 1;
+   else
+     {
+       extop = (((modrm)>>3)&0x7);
+       if (extop != 0)
+  {
+    ;
+    goto checkFP;
+  }
+       if (((modrm)&0xc0) == 0xc0 && (B|((modrm)&0x7)) == 0)
+  cur->rax = read_int (cur->pc + 1, z);
+       cur->pc = check_modrm (cur->pc) + z;
+     }
+   break;
+ case 0xc8:
+   cur->pc += 3;
+   break;
+ case 0xc9:
+
+   cur->sp = cur->fp;
+
+   if (cur->fp_loc == cur->sp)
+     {
+       cur->fp = cur->fp_sav;
+       cur->fp_loc = 
+# 3448 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                    ((void *)0)
+# 3448 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                        ;
+     }
+   else if (cur->sp >= cur->sp_safe &&
+     (unsigned long) cur->sp < wctx->sbase)
+     {
+       cur->fp = (unsigned long*) (*cur->sp);
+       if (wctx->fp == (unsigned long) cur->sp)
+  cur->cval = RA_FROMFP;
+     }
+   cur->sp += 1;
+   if (cur->sp - 16 > cur->sp_safe)
+     cur->sp_safe = cur->sp - 16;
+   break;
+ case 0xca:
+   cur->pc += 2;
+   break;
+ case 0xcb:
+   break;
+ case 0xcc:
+   break;
+ case 0xcd:
+   if (*cur->pc == 0x80)
+     {
+       if (cur->rax == 
+# 3471 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                      60
+# 3471 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                               )
+  {
+    ;
+    __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+    break;
+  }
+       else if (cur->rax == 
+# 3477 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                           15
+# 3477 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                            )
+  {
+    if (jmp_reg_switch_mode == 1)
+      {
+       
+             ;
+        goto checkFP;
+      }
+    wctx->sp = (unsigned long) cur->sp;
+    if (save_ctx)
+      omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, RA_RT_SIGRETURN);
+    return RA_RT_SIGRETURN;
+  }
+# 3505 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+     }
+   cur->pc += 1;
+   break;
+ case 0xce:
+ case 0xcf:
+   break;
+ case 0xd0:
+ case 0xd1:
+ case 0xd2:
+ case 0xd3:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0xd4:
+   cur->pc += 1;
+   break;
+ case 0xd5:
+   cur->pc += 1;
+   break;
+ case 0xd6:
+   break;
+ case 0xd7:
+   cur->pc = check_modrm (cur->pc);
+   cur->pc++;
+   break;
+ case 0xd8:
+ case 0xd9:
+ case 0xda:
+ case 0xdb:
+ case 0xdc:
+ case 0xdd:
+ case 0xde:
+ case 0xdf:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0xe0:
+ case 0xe1:
+ case 0xe2:
+ case 0xe3:
+   imm8 = *(char*) cur->pc++;
+   if (nctx < (jmp_reg_switch_mode ? 3 : 16))
+     {
+       int tidx = 0;
+       unsigned char *npc = cur->pc + imm8;
+       if (is_after_ret (npc))
+  break;
+       while (npc > targets[tidx])
+  tidx += 1;
+       if (npc != targets[tidx])
+  {
+    if (ntrg < 64)
+      {
+        for (int i = 0; i < nctx; i++)
+   if (buf[i].tidx >= tidx)
+     buf[i].tidx++;
+
+        for (int i = ntrg; i > tidx; i--)
+   targets[i] = targets[i - 1];
+        ntrg += 1;
+        targets[tidx++] = npc;
+      }
+    else
+      ;
+    struct AdvWalkContext *new = buf + nctx;
+    nctx += 1;
+    __collector_memcpy (new, cur, sizeof (*new));
+    new->pc = npc;
+    new->tidx = tidx;
+    cur = new;
+    continue;
+  }
+     }
+   else
+     ;
+   break;
+ case 0xe4: case 0xe5:
+   cur->pc = check_modrm (cur->pc);
+   cur->pc++;
+   break;
+ case 0xe6: case 0xe7:
+   cur->pc++;
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0xec: case 0xed: case 0xee: case 0xef:
+   cur->pc = check_modrm (cur->pc);
+   break;
+ case 0xe8:
+   {
+     if (jmp_reg_switch_mode == 1)
+       {
+  struct AdvWalkContext* tmpctx = (struct AdvWalkContext *) 
+# 3594 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                           __builtin_alloca (
+# 3594 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                           sizeof (*cur)
+# 3594 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                           )
+# 3594 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                                 ;
+  __collector_memcpy (tmpctx, cur, sizeof (*cur));
+  int rc = process_return (wctx, tmpctx);
+  if (rc != RA_FAILURE)
+    {
+      if (save_ctx)
+        omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, rc);
+      return rc;
+    }
+       }
+     int immz = read_int (cur->pc, z);
+     if (immz == 0)
+
+       cur->sp -= 1;
+     cur->pc += z;
+   }
+   break;
+ case 0xe9:
+   {
+     int immz = read_int (cur->pc, z);
+     unsigned char *npc = cur->pc + z + immz;
+     if ((unsigned long) npc < wctx->tbgn || (unsigned long) npc >= wctx->tend)
+       {
+  ;
+  __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+  break;
+       }
+     int tidx = 0;
+     while (npc > targets[tidx])
+       tidx += 1;
+     if (npc != targets[tidx])
+       {
+  if (ntrg < 64)
+    {
+      for (int i = 0; i < nctx; i++)
+        if (buf[i].tidx >= tidx)
+   buf[i].tidx++;
+
+      for (int i = ntrg; i > tidx; i--)
+        targets[i] = targets[i - 1];
+      ntrg += 1;
+      targets[tidx++] = npc;
+    }
+  else
+    ;
+  cur->pc = npc;
+  cur->tidx = tidx;
+  continue;
+       }
+     else
+       {
+
+  ;
+  __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+       }
+   }
+   break;
+ case 0xeb:
+   {
+     imm8 = *(char*) cur->pc++;
+     int tidx = 0;
+     unsigned char *npc = cur->pc + imm8;
+     while (npc > targets[tidx])
+       tidx += 1;
+     if (npc != targets[tidx])
+       {
+  if (ntrg < 64)
+    {
+      for (int i = 0; i < nctx; i++)
+        if (buf[i].tidx >= tidx)
+   buf[i].tidx++;
+
+      for (int i = ntrg; i > tidx; i--)
+        targets[i] = targets[i - 1];
+      ntrg += 1;
+      targets[tidx++] = npc;
+    }
+  else
+    ;
+  cur->pc = npc;
+  cur->tidx = tidx;
+  continue;
+       }
+     else
+       {
+
+  ;
+  __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+       }
+   }
+   break;
+ case 0xf0:
+ case 0xf2:
+ case 0xf3:
+   break;
+ case 0xf4:
+   extop2 = *(cur->pc - 3);
+   if (extop2 == 0x90)
+     {
+
+       if (save_ctx)
+  omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, RA_END_OF_STACK);
+       ;
+       return RA_END_OF_STACK;
+     }
+
+
+   if (nctx > 1)
+     {
+       __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+       break;
+     }
+   if (cur->fp == 0)
+     {
+       if (jmp_reg_switch_mode == 1)
+  {
+    ;
+    goto checkFP;
+  }
+       cache_put (wctx, RA_EOSTCK);
+       wctx->pc = 0;
+       wctx->sp = 0;
+       wctx->fp = 0;
+       if (save_ctx)
+  omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, RA_END_OF_STACK);
+       ;
+       return RA_END_OF_STACK;
+     }
+   ;
+   goto checkFP;
+ case 0xf5:
+   break;
+ case 0xf6:
+   modrm = *cur->pc;
+   extop = (((modrm)>>3)&0x7);
+   cur->pc = check_modrm (cur->pc);
+   if (extop == 0x0)
+     cur->pc += 1;
+   break;
+ case 0xf7:
+   modrm = *cur->pc;
+   extop = (((modrm)>>3)&0x7);
+   cur->pc = check_modrm (cur->pc);
+   if (extop == 0x0)
+     cur->pc += z;
+   break;
+ case 0xf8:
+ case 0xf9:
+ case 0xfa:
+ case 0xfb:
+ case 0xfc:
+ case 0xfd:
+   break;
+ case 0xfe:
+   modrm = *cur->pc;
+   extop = (((modrm)>>3)&0x7);
+   switch (extop)
+     {
+     case 0x0:
+     case 0x1:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x7:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     default:
+      
+                   ;
+       __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+       break;
+     }
+   break;
+ case 0xff:
+   modrm = *cur->pc;
+   extop = (((modrm)>>3)&0x7);
+   switch (extop)
+     {
+     case 0x0:
+     case 0x1:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x2:
+       if (jmp_reg_switch_mode == 1)
+  {
+    struct AdvWalkContext* tmpctx = (struct AdvWalkContext *) 
+# 3778 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                             __builtin_alloca (
+# 3778 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                             sizeof (*cur)
+# 3778 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                             )
+# 3778 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                                   ;
+    __collector_memcpy (tmpctx, cur, sizeof (*cur));
+    int rc = process_return (wctx, tmpctx);
+    if (rc != RA_FAILURE)
+      {
+        if (save_ctx)
+   omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, rc);
+        return rc;
+      }
+  }
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x3:
+       if (jmp_reg_switch_mode == 1)
+  {
+    struct AdvWalkContext* tmpctx = (struct AdvWalkContext *) 
+# 3793 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                             __builtin_alloca (
+# 3793 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                             sizeof (*cur)
+# 3793 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                             )
+# 3793 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                                   ;
+    __collector_memcpy (tmpctx, cur, sizeof (*cur));
+    int rc = process_return (wctx, tmpctx);
+    if (rc != RA_FAILURE)
+      {
+        if (save_ctx)
+   omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, rc);
+        return rc;
+      }
+  }
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x4:
+
+
+
+
+
+       if (modrm == 0x25 ||
+    ((modrm)&0xc0) == 0x40 ||
+    ((modrm)&0xc0) == 0x80)
+  {
+    ;
+    int rc = process_return (wctx, cur);
+    if (rc != RA_FAILURE)
+      {
+        if (jmp_reg_switch_mode == 1 && total_num_jmp_reg < max_num_jmp_reg_seen)
+   {
+     ;
+     goto checkFP;
+   }
+        if (save_ctx)
+   omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, rc);
+        return rc;
+      }
+  }
+       else if (modrm != 0x24 )
+  {
+# 3839 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+    if (cur->pc[0] == 0xe2 && cur->pc[1] == 0x0f && cur->pc[2] == 0x0b)
+      {
+        int rc = process_return_real (wctx, cur, 0);
+        if (rc == RA_SUCCESS)
+   {
+     if (save_ctx)
+       omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, rc);
+     return rc;
+   }
+      }
+# 3872 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+    if (cur->pc[0] == 0xe7)
+      {
+
+        int found_nop = 0;
+        unsigned long long *boundary = 0;
+        switch ((((unsigned long) (cur->pc)) & 0xf))
+   {
+   case 0xb:
+     if (*((unsigned *) (cur->pc + 1)) == 0x00401f0f)
+       found_nop = 1;
+     boundary = (unsigned long long *) (cur->pc + 5);
+     break;
+   case 0xe:
+     if (cur->pc[1] == 0x90)
+       found_nop = 1;
+     boundary = (unsigned long long *) (cur->pc + 2);
+     break;
+   default:
+     break;
+   }
+
+
+        if (found_nop && *boundary == 0x000000000a00)
+   {
+     __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+     break;
+   }
+      }
+
+   
+                   ;
+    if (num_jmp_reg < expected_num_jmp_reg)
+      {
+        if (jmp_reg_ctx[num_jmp_reg] == 
+# 3905 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                       ((void *)0)
+# 3905 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                           )
+   jmp_reg_ctx[num_jmp_reg] = (struct AdvWalkContext *) 
+# 3906 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                       __builtin_alloca (
+# 3906 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                       sizeof (*cur)
+# 3906 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                       )
+# 3906 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                                             ;
+        if (jmp_reg_ctx[num_jmp_reg] != 
+# 3907 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                       ((void *)0)
+# 3907 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                           )
+   __collector_memcpy (jmp_reg_ctx[num_jmp_reg], cur, sizeof (*cur));
+      }
+    if (num_jmp_reg < expected_num_jmp_reg ||
+        (num_jmp_reg >= expected_num_jmp_reg &&
+         jmp_reg_ctx[expected_num_jmp_reg - 1] != 
+# 3912 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                                 ((void *)0) 
+# 3912 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                                      &&
+         cur->pc != jmp_reg_ctx[expected_num_jmp_reg - 1]->pc))
+      {
+        num_jmp_reg++;
+        total_num_jmp_reg++;
+      }
+    if (jmp_reg_switch_mode == 1 && total_num_jmp_reg >= max_num_jmp_reg_seen)
+      {
+        int rc = process_return_real (wctx, cur, 0);
+        if (rc == RA_SUCCESS)
+   {
+     if (save_ctx)
+       omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, rc);
+     return rc;
+   }
+      }
+  }
+       ;
+       __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+       break;
+     case 0x5:
+       cur->pc = check_modrm (cur->pc);
+       break;
+     case 0x6:
+       cur->pc = check_modrm (cur->pc);
+       cur->sp -= 1;
+       break;
+     case 0x7:
+       cur->pc = check_modrm (cur->pc);
+       if (jmp_reg_switch_mode == 1)
+  {
+    int rc = process_return_real (wctx, cur, 0);
+    if (rc == RA_SUCCESS)
+      {
+        if (save_ctx)
+   omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, rc);
+        return rc;
+      }
+  }
+       break;
+     default:
+      
+                         ;
+       __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+       break;
+     }
+   break;
+ default:
+  
+                             ;
+   __collector_memcpy (cur, buf + (--nctx), sizeof (*cur));
+   break;
+ }
+
+
+      if (++cur >= buf + nctx)
+ cur = buf;
+     
+                                                                                 ;
+    }
+
+checkFP:
+ 
+
+
+                                                                                     ;
+
+  if (jmp_reg_switch_mode == 1)
+    {
+      if (jmp_reg_switch_backup_ctx != 
+# 3981 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                      ((void *)0)
+# 3981 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                          )
+ __collector_memcpy (cur, jmp_reg_switch_backup_ctx, sizeof (*cur));
+      ;
+    }
+
+  unsigned long *cur_fp = cur->fp;
+  unsigned long *cur_sp = cur->sp;
+  if (do_walk == 0)
+    __collector_memcpy (&wctx_pc_save, wctx, sizeof (struct WalkContext));
+
+
+  if (cur->fp_loc)
+    cur->fp = cur->fp_sav;
+  cur->sp = cur->fp;
+  if ((unsigned long) cur->sp >= wctx->sbase ||
+      (unsigned long) cur->sp < wctx->sp)
+    {
+     
+
+                                                     ;
+      if (do_walk == 0)
+ {
+   cur->sp = cur_sp;
+   cur->fp = cur_fp;
+   do_walk = 1;
+   save_ctx = 1;
+   goto startWalk;
+ }
+      if (save_ctx)
+ omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, RA_FAILURE);
+      return RA_FAILURE;
+    }
+
+  unsigned long fp = *cur->sp++;
+  if (fp <= (unsigned long) cur->sp || fp >= wctx->sbase)
+    {
+     
+
+                                                              ;
+      if (do_walk == 0)
+ {
+   cur->sp = cur_sp;
+   cur->fp = cur_fp;
+   do_walk = 1;
+   save_ctx = 1;
+   goto startWalk;
+ }
+      if (save_ctx)
+ omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, RA_FAILURE);
+      return RA_FAILURE;
+    }
+
+  unsigned long ra = *cur->sp++;
+  if (ra == 0)
+    {
+      cache_put (wctx, RA_EOSTCK);
+      ;
+      if (save_ctx)
+ omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, RA_END_OF_STACK);
+      return RA_END_OF_STACK;
+    }
+
+  unsigned long tbgn = wctx->tbgn;
+  unsigned long tend = wctx->tend;
+  if (ra < tbgn || ra >= tend)
+    {
+
+      if (!__collector_check_segment (ra, &tbgn, &tend, 0))
+ {
+   ;
+   if (do_walk == 0)
+     {
+       cur->sp = cur_sp;
+       cur->fp = cur_fp;
+       do_walk = 1;
+       save_ctx = 1;
+       goto startWalk;
+     }
+   if (save_ctx)
+     omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, RA_FAILURE);
+   return RA_FAILURE;
+ }
+    }
+
+  unsigned long npc = adjust_ret_addr (ra, ra - tbgn, tend);
+  if (npc == 0)
+    {
+      ;
+      if (do_walk == 0)
+ {
+   cur->sp = cur_sp;
+   cur->fp = cur_fp;
+   do_walk = 1;
+   save_ctx = 1;
+   goto startWalk;
+ }
+      if (save_ctx)
+ omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, RA_FAILURE);
+      return RA_FAILURE;
+    }
+  wctx->pc = npc;
+  wctx->sp = (unsigned long) cur->sp;
+  wctx->fp = fp;
+  wctx->tbgn = tbgn;
+  wctx->tend = tend;
+
+  if (save_ctx)
+    {
+      omp_cache_put (cur->sp_safe, &wctx_pc_save, wctx, RA_SUCCESS);
+      ;
+    }
+  return RA_SUCCESS;
+}
+# 4102 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+unsigned long
+adjust_ret_addr (unsigned long ra, unsigned long segoff, unsigned long tend)
+{
+  unsigned long npc = 0;
+  int i = segoff < 8 ? segoff : 8;
+  for (; i > 1; i--)
+    {
+      unsigned char *ptr = (unsigned char*) ra - i;
+      int z = 4;
+      int a = 4;
+      int done = 0;
+      int bVal;
+      while (!done)
+ {
+   bVal = getByteInstruction (ptr);
+   if (bVal < 0)
+     return 0;
+   switch (bVal)
+     {
+     case 0x26:
+     case 0x36:
+
+       ptr += 1;
+       break;
+
+     case 0x64:
+     case 0x65:
+       bVal = getByteInstruction (ptr + 1);
+       if (bVal < 0)
+  return 0;
+       if (bVal == 0xe8)
+
+        done = 1;
+       else
+  ptr += 1;
+       break;
+     case 0x66:
+       z = 2;
+       ptr += 1;
+       break;
+     case 0x67:
+       a = 2;
+       ptr += 1;
+       break;
+     default:
+       done = 1;
+       break;
+     }
+ }
+
+      bVal = getByteInstruction (ptr);
+      if (bVal < 0)
+ return 0;
+      if (bVal >= 0x40 && bVal <= 0x4f)
+ {
+   if (bVal & 0x8)
+     z = 4;
+   ptr += 1;
+ }
+
+      int opcode = getByteInstruction (ptr);
+      if (opcode < 0)
+ return 0;
+      ptr++;
+      switch (opcode)
+ {
+ case 0xe8:
+   ptr += z;
+   break;
+ case 0x9a:
+   ptr += 2 + a;
+   break;
+ case 0xff:
+   {
+     int extop = (((*ptr)>>3)&0x7);
+     if (extop == 2 || extop == 3)
+       ptr = check_modrm (ptr);
+   }
+   break;
+ default:
+   continue;
+ }
+      if ((unsigned long) ptr == ra)
+ {
+   npc = ra - i;
+   break;
+ }
+    }
+  if (npc == 0)
+    {
+      unsigned char * ptr = (unsigned char *) ra;
+# 4211 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+      if (ra + 8 < tend && getByteInstruction (ptr) == 0x48
+   && getByteInstruction (ptr + 7) == 0x0f
+   && getByteInstruction (ptr + 8) == 0x05)
+
+ {
+   npc = ra;
+ }
+    }
+  if (npc == 0 && __collector_java_mode
+      && __collector_java_asyncgetcalltrace_loaded)
+    {
+      unsigned char * ptr = (unsigned char *) ra;
+# 4265 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+      if (ra - 19 >= (ra - segoff) && *ptr == 0x48 && ((*(ptr + 1) == 0x8b && *(ptr + 2) == 0x65) || (*(ptr + 1) == 0x83 && *(ptr + 2) == 0xec))
+   && *(ptr - 2) == 0xeb
+   && *(ptr - 5) == 0xc1 && *(ptr - 4) == 0xe1
+   && *(ptr - 9) == 0x48 && *(ptr - 8) == 0x8b && *(ptr - 7) == 0x5d
+   && *(ptr - 11) == 0xf7 && *(ptr - 10) == 0xd1
+   && *(ptr - 15) == 0x41 && *(ptr - 14) == 0x8b && *(ptr - 13) == 0x4d
+   && *(ptr - 19) == 0x41 && *(ptr - 18) == 0xff)
+ npc = ra - 19;
+
+
+      if (npc == 0
+   && ra - 4 >= (ra - segoff)
+   && *(ptr - 4) == 0x41
+   && *(ptr - 3) == 0xff
+   && *(ptr - 2) == 0x24
+   && *(ptr - 1) == 0xda)
+ npc = ra - 4;
+
+    }
+
+  return npc;
+}
+
+
+
+
+
+
+static int
+parse_x86_AVX_instruction (unsigned char *pc)
+{
+# 4350 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+  int len = 0;
+  disassemble_info dis_info;
+  dis_info.arch = bfd_arch_i386;
+  dis_info.mach = (1 << 3);
+  dis_info.flavour = bfd_target_unknown_flavour;
+  dis_info.endian = BFD_ENDIAN_UNKNOWN;
+  dis_info.endian_code = dis_info.endian;
+  dis_info.octets_per_byte = 1;
+  dis_info.disassembler_needs_relocs = 0;
+  dis_info.fprintf_func = fprintf_func;
+  dis_info.fprintf_styled_func = fprintf_styled_func;
+  dis_info.stream = 
+# 4361 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                   ((void *)0)
+# 4361 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                       ;
+  dis_info.disassembler_options = 
+# 4362 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                                 ((void *)0)
+# 4362 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                                     ;
+  dis_info.read_memory_func = read_memory_func;
+  dis_info.memory_error_func = memory_error_func;
+  dis_info.print_address_func = print_address_func;
+  dis_info.symbol_at_address_func = symbol_at_address_func;
+  dis_info.symbol_is_valid = symbol_is_valid;
+  dis_info.display_endian = BFD_ENDIAN_UNKNOWN;
+  dis_info.symtab = 
+# 4369 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                   ((void *)0)
+# 4369 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                       ;
+  dis_info.symtab_size = 0;
+  dis_info.buffer_vma = 0;
+  dis_info.buffer = pc;
+  dis_info.buffer_length = 8;
+
+  disassembler_ftype disassemble = print_insn_i386;
+  if (disassemble == 
+# 4376 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                    ((void *)0)
+# 4376 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                        )
+    {
+      ;
+      return 0;
+    }
+  len = disassemble (0, &dis_info);
+  ;
+  return len;
+}
+# 4402 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+int
+stack_unwind (char *buf, int size, void *bptr, void *eptr, ucontext_t *context, int mode)
+{
+  long *lbuf = (long*) buf;
+  int lsize = size / sizeof (long);
+  int ind = 0;
+  int do_walk = 1;
+  int extra_frame = 0;
+  if (mode & 0x40000000)
+    do_walk = 0;
+  if ((mode & 0xffff) == 2)
+    extra_frame = 1;
+
+
+
+
+
+
+  struct WalkContext wctx;
+  wctx.pc = (((ucontext_t*)context)->uc_mcontext.gregs[
+# 4421 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+           REG_RIP
+# 4421 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+           ]);
+  wctx.sp = (((ucontext_t*)context)->uc_mcontext.gregs[
+# 4422 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+           REG_RSP
+# 4422 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+           ]);
+  wctx.fp = (((ucontext_t*)context)->uc_mcontext.gregs[
+# 4423 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+           REG_RBP
+# 4423 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+           ]);
+  wctx.ln = (unsigned long) context->uc_link;
+  unsigned long *sbase = (unsigned long*) __collector_tsd_get_by_key (unwind_key);
+  if (sbase && *sbase > wctx.sp)
+    wctx.sbase = *sbase;
+  else
+    {
+      wctx.sbase = wctx.sp + 0x100000;
+      if (wctx.sbase < wctx.sp)
+ wctx.sbase = (unsigned long) - 1;
+    }
+
+  __collector_check_segment (wctx.pc, &wctx.tbgn, &wctx.tend, 0);
+
+  for (;;)
+    {
+      if (ind >= lsize || wctx.pc == 0)
+ break;
+      if (bptr != 
+# 4441 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                 ((void *)0) 
+# 4441 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                      && extra_frame && wctx.sp <= (unsigned long) bptr && ind < 2)
+ {
+   lbuf[0] = wctx.pc;
+   if (ind == 0)
+     {
+       ind++;
+       if (ind >= lsize)
+  break;
+     }
+ }
+      if (bptr == 
+# 4451 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                 ((void *)0) 
+# 4451 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                      || wctx.sp > (unsigned long) bptr)
+ {
+   lbuf[ind++] = wctx.pc;
+   if (ind >= lsize)
+     break;
+ }
+
+      for (;;)
+ {
+   if (eptr != 
+# 4460 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+              ((void *)0) 
+# 4460 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                   && wctx.sp >= (unsigned long) eptr)
+     {
+       ind = ind >= 2 ? ind - 2 : 0;
+       goto exit;
+     }
+   int ret = find_i386_ret_addr (&wctx, do_walk);
+   ;
+   if (ret == RA_FAILURE)
+     {
+
+       goto exit;
+     }
+
+   if (ret == RA_END_OF_STACK)
+     goto exit;
+# 4516 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+   if (ret == RA_RT_SIGRETURN)
+     {
+       ucontext_t *ncontext = (ucontext_t*) wctx.sp;
+       wctx.pc = (((ucontext_t*)ncontext)->uc_mcontext.gregs[
+# 4519 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                REG_RIP
+# 4519 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                ]);
+       if (!__collector_check_segment (wctx.pc, &wctx.tbgn, &wctx.tend, 0))
+  {
+
+    goto exit;
+  }
+       unsigned long nsp = (((ucontext_t*)ncontext)->uc_mcontext.gregs[
+# 4525 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                          REG_RSP
+# 4525 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                          ]);
+
+       if (nsp <= wctx.sp || nsp > wctx.sp + sizeof (ucontext_t) + 1024)
+  {
+
+    goto exit;
+  }
+       wctx.sp = nsp;
+       wctx.fp = (((ucontext_t*)ncontext)->uc_mcontext.gregs[
+# 4533 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+                REG_RBP
+# 4533 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                ]);
+       break;
+     }
+
+   if (bptr != 
+# 4537 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+              ((void *)0) 
+# 4537 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                   && extra_frame && wctx.sp <= (unsigned long) bptr && ind < 2)
+     {
+       lbuf[0] = wctx.pc;
+       if (ind == 0)
+  {
+    ind++;
+    if (ind >= lsize)
+      break;
+  }
+     }
+   if (bptr == 
+# 4547 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c" 3 4
+              ((void *)0) 
+# 4547 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+                   || wctx.sp > (unsigned long) bptr)
+     {
+       lbuf[ind++] = wctx.pc;
+       if (ind >= lsize)
+  goto exit;
+     }
+ }
+    }
+
+exit:
+# 4565 "/doner/binutils/binutils-515f23e/gprofng/libcollector/unwind.c"
+  ;
+  if (ind >= lsize)
+    {
+      ind = lsize - 1;
+      lbuf[ind++] = (unsigned long) ((uint64_t)(-2));
+    }
+  return ind * sizeof (long);
+}

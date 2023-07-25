@@ -1,0 +1,1255 @@
+29.dummy.o.i 28.027.dummy.o.i 27.026.tif_unix.o.i 26.025.tif_zip.o.i 25.024.tif_write.o.i 24.023.tif_warning.o.i 23.022.tif_version.o.i 22.021.tif_tile.o.i 21.020.tif_thunder.o.i 20.01f.tif_swab.o.i 1f.01e.tif_strip.o.i 1e.01d.tif_read.o.i 1d.01c.tif_print.o.i 1c.01b.tif_predict.o.i 1b.01a.tif_pixarlog.o.i 1a.019.tif_packbits.o.i 19.018.tif_open.o.i 18.017.tif_ojpeg.o.i 17.016.tif_next.o.i 16.015.tif_lzw.o.i 15.014.tif_lzma.o.i 14.013.tif_luv.o.i 13.012.tif_jpeg_12.o.i 12.011.tif_jpeg.o.i 11.010.tif_jbig.o.i 10.00f.tif_getimage.o.i 0f.00e.tif_flush.o.i 0e.00d.tif_fax3sm.o.i 0d.00c.tif_fax3.o.i 0c.00b.tif_extension.o.i 0b.00a.tif_error.o.i 0a.009.tif_dumpmode.o.i 09.008.tif_dirwrite.o.i 08.007.tif_dirread.o.i 07.006.tif_dirinfo.o.i 06.005.tif_dir.o.i 05.004.tif_compress.o.i 04.003.tif_color.o.i 03.002.tif_codec.o.i 02.001.tif_close.o.i 01.000.tif_aux.o.i 00.tiff2ps.o.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Invalid lhs at tif_zip.c:102
+Invalid lhs at tif_zip.c:129
+Warning: stmtexpr  tif_zip.c:102
+Warning: stmtexpr 
+tif_zip.c:129
+Warning: stmtexpr Invalid lhs at tif_zip.c:135
+ tif_zip.c:135
+Warning: stmtexpr 
+tif_zip.c:155
+Invalid lhs at tif_zip.c:155
+Warning: stmtexpr Invalid lhs at tif_zip.c:156
+ tif_zip.c:156
+Warning: stmtexpr 
+tif_zip.c:162
+Invalid lhs at tif_zip.c:162
+Warning: stmtexpr Invalid lhs at tif_zip.c:209
+ tif_zip.c:209
+Warning: stmtexpr 
+tif_zip.c:234
+Invalid lhs at tif_zip.c:234
+Warning: stmtexpr Invalid lhs at tif_zip.c:239
+ tif_zip.c:239
+Warning: stmtexpr 
+tif_zip.c:261
+Invalid lhs at tif_zip.c:261
+Warning: stmtexpr Invalid lhs at tif_zip.c:262
+ tif_zip.c:262
+Warning: stmtexpr 
+tif_zip.c:266
+Invalid lhs at tif_zip.c:266
+Warning: stmtexpr Invalid lhs at tif_zip.c:332
+UnexposedExpr at tif_zip.c:360
+UnexposedExpr at tif_zip.c:383
+ tif_zip.c:332
+Warning: stmtexpr 
+tif_zip.c:401
+Invalid lhs at tif_zip.c:401
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at tif_write.c:686
+ tif_write.c:686
+Warning: stmtexpr 
+tif_write.c:724
+Invalid lhs at tif_write.c:724
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at tif_swab.c:40
+ tif_swab.c:40
+Warning: stmtexpr 
+tif_swab.c:51
+Invalid lhs at tif_swab.c:51
+Warning: stmtexpr Invalid lhs at tif_swab.c:63
+ tif_swab.c:63
+Warning: stmtexpr 
+tif_swab.c:77
+Invalid lhs at tif_swab.c:77
+Warning: stmtexpr Invalid lhs at tif_swab.c:109
+ tif_swab.c:109
+Warning: stmtexpr 
+tif_swab.c:126
+Invalid lhs at tif_swab.c:126
+Warning: stmtexpr Invalid lhs at tif_swab.c:145
+ tif_swab.c:145
+Warning: stmtexpr 
+tif_swab.c:157
+Invalid lhs at tif_swab.c:157
+Warning: stmtexpr Invalid lhs at tif_swab.c:174
+ tif_swab.c:174
+Warning: stmtexpr 
+tif_swab.c:188
+Invalid lhs at tif_swab.c:188
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at tif_read.c:71
+ tif_read.c:71
+Warning: stmtexpr 
+tif_read.c:101
+Invalid lhs at tif_read.c:101
+Warning: stmtexpr Invalid lhs at tif_read.c:129
+ tif_read.c:129
+Warning: stmtexpr 
+tif_read.c:156
+Invalid lhs at tif_read.c:156
+Warning: stmtexpr Invalid lhs at tif_read.c:395
+ tif_read.c:395
+Warning: stmtexpr 
+tif_read.c:725
+Invalid lhs at tif_read.c:725
+Warning: stmtexpr Invalid lhs at tif_read.c:959
+ tif_read.c:959
+Warning: stmtexpr 
+tif_read.c:1100
+Invalid lhs at tif_read.c:1100
+Warning: stmtexpr Invalid lhs at tif_read.c:1108
+ tif_read.c:1108
+Warning: stmtexpr 
+tif_read.c:1116
+Invalid lhs at tif_read.c:1116
+Warning: stmtexpr Invalid lhs at tif_read.c:1124
+WARN: type not found
+WARN: type not found
+ tif_read.c:1124
+Warning: stmtexpr 
+tif_print.c:600
+Invalid lhs at tif_print.c:600
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at tif_predict.c:456
+ tif_predict.c:456
+Warning: stmtexpr 
+tif_predict.c:457
+Invalid lhs at tif_predict.c:457
+Warning: stmtexpr Invalid lhs at tif_predict.c:458
+ tif_predict.c:458
+Warning: stmtexpr 
+tif_predict.c:478
+Invalid lhs at tif_predict.c:478
+Warning: stmtexpr Invalid lhs at tif_predict.c:479
+ tif_predict.c:479
+Warning: stmtexpr 
+tif_predict.c:483
+Invalid lhs at tif_predict.c:483
+Warning: stmtexpr Invalid lhs at tif_predict.c:490
+ tif_predict.c:490
+Warning: stmtexpr 
+tif_predict.c:683
+Invalid lhs at tif_predict.c:683
+Warning: stmtexpr Invalid lhs at tif_predict.c:684
+ tif_predict.c:684
+Warning: stmtexpr 
+tif_predict.c:685
+Invalid lhs at tif_predict.c:685
+Warning: stmtexpr Invalid lhs at tif_predict.c:703
+ tif_predict.c:703
+Warning: stmtexpr 
+tif_predict.c:704
+Invalid lhs at tif_predict.c:704
+Warning: stmtexpr Invalid lhs at tif_predict.c:705
+ tif_predict.c:705
+Warning: stmtexpr 
+tif_predict.c:723
+Invalid lhs at tif_predict.c:723
+Warning: stmtexpr Invalid lhs at tif_predict.c:754
+ tif_predict.c:754
+Warning: stmtexpr 
+tif_predict.c:755
+Invalid lhs at tif_predict.c:755
+UnexposedExpr at tif_predict.c:759
+Warning: stmtexpr Invalid lhs at tif_predict.c:774
+ tif_predict.c:774
+Warning: stmtexpr 
+tif_predict.c:775
+Invalid lhs at tif_predict.c:775
+UnexposedExpr at tif_predict.c:779
+Warning: stmtexpr Invalid lhs at tif_predict.c:811
+ tif_predict.c:811
+Warning: stmtexpr 
+tif_predict.c:852
+Invalid lhs at tif_predict.c:852
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at tif_pixarlog.c:679
+ tif_pixarlog.c:679
+Warning: stmtexpr 
+tif_pixarlog.c:727
+Invalid lhs at tif_pixarlog.c:727
+Warning: stmtexpr Invalid lhs at tif_pixarlog.c:729
+ tif_pixarlog.c:729
+Warning: stmtexpr 
+tif_pixarlog.c:776
+Invalid lhs at tif_pixarlog.c:776
+Warning: stmtexpr Invalid lhs at tif_pixarlog.c:778
+ tif_pixarlog.c:778
+Warning: stmtexpr 
+tif_pixarlog.c:890
+Invalid lhs at tif_pixarlog.c:890
+Warning: stmtexpr Invalid lhs at tif_pixarlog.c:929
+ tif_pixarlog.c:929
+Warning: stmtexpr 
+tif_pixarlog.c:931
+Invalid lhs at tif_pixarlog.c:931
+Warning: stmtexpr Invalid lhs at tif_pixarlog.c:1169
+ tif_pixarlog.c:1169
+Warning: stmtexpr 
+tif_pixarlog.c:1239
+Invalid lhs at tif_pixarlog.c:1239
+Warning: stmtexpr Invalid lhs at tif_pixarlog.c:1268
+UnexposedExpr at tif_pixarlog.c:1304
+UnexposedExpr at tif_pixarlog.c:1315
+UnexposedExpr at tif_pixarlog.c:1364
+UnexposedExpr at tif_pixarlog.c:1367
+ tif_pixarlog.c:1268
+Warning: stmtexpr 
+tif_pixarlog.c:1387
+Invalid lhs at tif_pixarlog.c:1387
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at tif_open.c:93
+ tif_open.c:93
+Warning: stmtexpr 
+tif_open.c:94
+Invalid lhs at tif_open.c:94
+Warning: stmtexpr Invalid lhs at tif_open.c:95
+ tif_open.c:95
+Warning: stmtexpr 
+tif_open.c:96
+Invalid lhs at tif_open.c:96
+Warning: stmtexpr Invalid lhs at tif_open.c:97
+ tif_open.c:97
+Warning: stmtexpr 
+tif_open.c:98
+Invalid lhs at tif_open.c:98
+Warning: stmtexpr Invalid lhs at tif_open.c:99
+ tif_open.c:99
+Warning: stmtexpr 
+tif_open.c:100
+Invalid lhs at tif_open.c:100
+Warning: stmtexpr Invalid lhs at tif_open.c:101
+ tif_open.c:101
+Warning: stmtexpr 
+tif_open.c:112
+Invalid lhs at tif_open.c:112
+Warning: stmtexpr Invalid lhs at tif_open.c:449
+WARN: type not found
+WARN: type not found
+ tif_open.c:449
+Warning: stmtexpr 
+tif_ojpeg.c:425
+Invalid lhs at tif_ojpeg.c:425
+UnexposedExpr at tif_ojpeg.c:489
+UnexposedExpr at tif_ojpeg.c:492
+UnexposedExpr at tif_ojpeg.c:497
+UnexposedExpr at tif_ojpeg.c:498
+UnexposedExpr at tif_ojpeg.c:501
+UnexposedExpr at tif_ojpeg.c:502
+UnexposedExpr at tif_ojpeg.c:505
+UnexposedExpr at tif_ojpeg.c:506
+UnexposedExpr at tif_ojpeg.c:509
+UnexposedExpr at tif_ojpeg.c:510
+UnexposedExpr at tif_ojpeg.c:513
+UnexposedExpr at tif_ojpeg.c:516
+UnexposedExpr at tif_ojpeg.c:537
+UnexposedExpr at tif_ojpeg.c:540
+UnexposedExpr at tif_ojpeg.c:544
+UnexposedExpr at tif_ojpeg.c:545
+UnexposedExpr at tif_ojpeg.c:550
+UnexposedExpr at tif_ojpeg.c:559
+UnexposedExpr at tif_ojpeg.c:565
+UnexposedExpr at tif_ojpeg.c:574
+UnexposedExpr at tif_ojpeg.c:580
+UnexposedExpr at tif_ojpeg.c:589
+UnexposedExpr at tif_ojpeg.c:595
+UnexposedExpr at tif_ojpeg.c:598
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:617
+ tif_ojpeg.c:617
+Warning: stmtexpr 
+tif_ojpeg.c:829
+Invalid lhs at tif_ojpeg.c:829
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:877
+ tif_ojpeg.c:877
+Warning: stmtexpr 
+tif_ojpeg.c:899
+Invalid lhs at tif_ojpeg.c:899
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:997
+ tif_ojpeg.c:997
+Warning: stmtexpr 
+tif_ojpeg.c:1048
+Invalid lhs at tif_ojpeg.c:1048
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:1110
+ tif_ojpeg.c:1110
+Warning: stmtexpr 
+tif_ojpeg.c:1111
+Invalid lhs at tif_ojpeg.c:1111
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:1112
+ tif_ojpeg.c:1112
+Warning: stmtexpr 
+tif_ojpeg.c:1113
+Invalid lhs at tif_ojpeg.c:1113
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:1193
+ tif_ojpeg.c:1193
+Warning: stmtexpr 
+tif_ojpeg.c:1194
+Invalid lhs at tif_ojpeg.c:1194
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:1253
+ tif_ojpeg.c:1253
+Warning: stmtexpr 
+tif_ojpeg.c:1355
+Invalid lhs at tif_ojpeg.c:1355
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:1710
+ tif_ojpeg.c:1710
+Warning: stmtexpr 
+tif_ojpeg.c:1953
+Invalid lhs at tif_ojpeg.c:1953
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:1954
+ tif_ojpeg.c:1954
+Warning: stmtexpr 
+tif_ojpeg.c:1955
+Invalid lhs at tif_ojpeg.c:1955
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:1956
+ tif_ojpeg.c:1956
+Warning: stmtexpr 
+tif_ojpeg.c:2025
+Invalid lhs at tif_ojpeg.c:2025
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:2040
+ tif_ojpeg.c:2040
+Warning: stmtexpr 
+tif_ojpeg.c:2049
+Invalid lhs at tif_ojpeg.c:2049
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:2073
+ tif_ojpeg.c:2073
+Warning: stmtexpr 
+tif_ojpeg.c:2082
+Invalid lhs at tif_ojpeg.c:2082
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:2110
+ tif_ojpeg.c:2110
+Warning: stmtexpr 
+tif_ojpeg.c:2133
+Invalid lhs at tif_ojpeg.c:2133
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:2203
+ tif_ojpeg.c:2203
+Warning: stmtexpr 
+tif_ojpeg.c:2251
+Invalid lhs at tif_ojpeg.c:2251
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:2271
+ tif_ojpeg.c:2271
+Warning: stmtexpr 
+tif_ojpeg.c:2272
+Invalid lhs at tif_ojpeg.c:2272
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:2307
+ tif_ojpeg.c:2307
+Warning: stmtexpr 
+tif_ojpeg.c:2308
+Invalid lhs at tif_ojpeg.c:2308
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:2342
+ tif_ojpeg.c:2342
+Warning: stmtexpr 
+tif_ojpeg.c:2371
+Invalid lhs at tif_ojpeg.c:2371
+Warning: stmtexpr Invalid lhs at tif_ojpeg.c:2386
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ tif_ojpeg.c:2386
+Warning: stmtexpr 
+tif_lzw.c:229
+Invalid lhs at tif_lzw.c:229
+Warning: stmtexpr Invalid lhs at tif_lzw.c:267
+ tif_lzw.c:267
+Warning: stmtexpr 
+tif_lzw.c:375
+Invalid lhs at tif_lzw.c:375
+Warning: stmtexpr Invalid lhs at tif_lzw.c:376
+ tif_lzw.c:376
+Warning: stmtexpr 
+tif_lzw.c:543
+Invalid lhs at tif_lzw.c:543
+Warning: stmtexpr Invalid lhs at tif_lzw.c:606
+ tif_lzw.c:606
+Warning: stmtexpr 
+tif_lzw.c:750
+Invalid lhs at tif_lzw.c:750
+Warning: stmtexpr Invalid lhs at tif_lzw.c:798
+ tif_lzw.c:798
+Warning: stmtexpr 
+tif_lzw.c:817
+Invalid lhs at tif_lzw.c:817
+Warning: stmtexpr Invalid lhs at tif_lzw.c:898
+ tif_lzw.c:898
+Warning: stmtexpr 
+tif_lzw.c:996
+Invalid lhs at tif_lzw.c:996
+Warning: stmtexpr Invalid lhs at tif_lzw.c:1102
+ tif_lzw.c:1102
+Warning: stmtexpr 
+tif_lzw.c:1120
+Invalid lhs at tif_lzw.c:1120
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at tif_lzma.c:114
+ tif_lzma.c:114
+Warning: stmtexpr 
+tif_lzma.c:137
+Invalid lhs at tif_lzma.c:137
+Warning: stmtexpr Invalid lhs at tif_lzma.c:171
+ tif_lzma.c:171
+Warning: stmtexpr 
+tif_lzma.c:172
+Invalid lhs at tif_lzma.c:172
+Warning: stmtexpr Invalid lhs at tif_lzma.c:234
+ tif_lzma.c:234
+Warning: stmtexpr 
+tif_lzma.c:254
+Invalid lhs at tif_lzma.c:254
+Warning: stmtexpr Invalid lhs at tif_lzma.c:277
+ tif_lzma.c:277
+Warning: stmtexpr 
+tif_lzma.c:278
+Invalid lhs at tif_lzma.c:278
+Warning: stmtexpr Invalid lhs at tif_lzma.c:345
+UnexposedExpr at tif_lzma.c:370
+UnexposedExpr at tif_lzma.c:396
+ tif_lzma.c:345
+Warning: stmtexpr 
+tif_lzma.c:416
+Invalid lhs at tif_lzma.c:416
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at tif_luv.c:198
+ tif_luv.c:198
+Warning: stmtexpr 
+tif_luv.c:199
+Invalid lhs at tif_luv.c:199
+Warning: stmtexpr Invalid lhs at tif_luv.c:271
+ tif_luv.c:271
+Warning: stmtexpr 
+tif_luv.c:272
+Invalid lhs at tif_luv.c:272
+Warning: stmtexpr Invalid lhs at tif_luv.c:331
+ tif_luv.c:331
+Warning: stmtexpr 
+tif_luv.c:333
+Invalid lhs at tif_luv.c:333
+Warning: stmtexpr Invalid lhs at tif_luv.c:404
+ tif_luv.c:404
+Warning: stmtexpr 
+tif_luv.c:425
+Invalid lhs at tif_luv.c:425
+Warning: stmtexpr Invalid lhs at tif_luv.c:452
+ tif_luv.c:452
+Warning: stmtexpr 
+tif_luv.c:453
+Invalid lhs at tif_luv.c:453
+Warning: stmtexpr Invalid lhs at tif_luv.c:545
+ tif_luv.c:545
+Warning: stmtexpr 
+tif_luv.c:546
+Invalid lhs at tif_luv.c:546
+Warning: stmtexpr Invalid lhs at tif_luv.c:602
+ tif_luv.c:602
+Warning: stmtexpr 
+tif_luv.c:603
+Invalid lhs at tif_luv.c:603
+Warning: stmtexpr Invalid lhs at tif_luv.c:694
+ tif_luv.c:694
+Warning: stmtexpr 
+tif_luv.c:714
+Invalid lhs at tif_luv.c:714
+Warning: stmtexpr Invalid lhs at tif_luv.c:1285
+ tif_luv.c:1285
+Warning: stmtexpr 
+tif_luv.c:1286
+Invalid lhs at tif_luv.c:1286
+Warning: stmtexpr Invalid lhs at tif_luv.c:1385
+ tif_luv.c:1385
+Warning: stmtexpr 
+tif_luv.c:1386
+Invalid lhs at tif_luv.c:1386
+Warning: stmtexpr Invalid lhs at tif_luv.c:1571
+ tif_luv.c:1571
+Warning: stmtexpr 
+tif_luv.c:1596
+Invalid lhs at tif_luv.c:1596
+UnexposedExpr at tif_luv.c:1618
+UnexposedExpr at tif_luv.c:1658
+UnexposedExpr at tif_luv.c:1679
+Warning: stmtexpr Invalid lhs at tif_luv.c:1697
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Invalid lhs at tif_jpeg.c:258
+Invalid lhs at tif_jpeg.c:272
+Invalid lhs at tif_jpeg.c:278
+Invalid lhs at tif_jpeg.c:284
+Invalid lhs at tif_jpeg.c:290
+Invalid lhs at tif_jpeg.c:297
+Invalid lhs at tif_jpeg.c:303
+Invalid lhs at tif_jpeg.c:324
+Invalid lhs at tif_jpeg.c:330
+Invalid lhs at tif_jpeg.c:368
+Invalid lhs at tif_jpeg.c:374
+Invalid rhs at tif_jpeg.c:476
+Invalid rhs at tif_jpeg.c:561
+ tif_luv.c:1697
+Warning: stmtexpr 
+tif_jpeg.c:902
+Invalid lhs at tif_jpeg.c:902
+Warning: stmtexpr Invalid lhs at tif_jpeg.c:972
+ tif_jpeg.c:972
+Warning: stmtexpr 
+tif_jpeg.c:973
+Invalid lhs at tif_jpeg.c:973
+Warning: stmtexpr Invalid lhs at tif_jpeg.c:1017
+ tif_jpeg.c:1017
+Warning: stmtexpr 
+tif_jpeg.c:1024
+Invalid lhs at tif_jpeg.c:1024
+Warning: stmtexpr Invalid lhs at tif_jpeg.c:1590
+ tif_jpeg.c:1590
+Warning: stmtexpr 
+tif_jpeg.c:1591
+Invalid lhs at tif_jpeg.c:1591
+Warning: stmtexpr Invalid lhs at tif_jpeg.c:1745
+ tif_jpeg.c:1745
+Warning: stmtexpr 
+tif_jpeg.c:1752
+Invalid lhs at tif_jpeg.c:1752
+Warning: stmtexpr Invalid lhs at tif_jpeg.c:1883
+ tif_jpeg.c:1883
+Warning: stmtexpr 
+tif_jpeg.c:1965
+Invalid lhs at tif_jpeg.c:1965
+Warning: stmtexpr Invalid lhs at tif_jpeg.c:2075
+ tif_jpeg.c:2075
+Warning: stmtexpr 
+tif_jpeg.c:2132
+Invalid lhs at tif_jpeg.c:2132
+UnexposedExpr at tif_jpeg.c:2136
+UnexposedExpr at tif_jpeg.c:2141
+UnexposedExpr at tif_jpeg.c:2146
+UnexposedExpr at tif_jpeg.c:2149
+UnexposedExpr at tif_jpeg.c:2159
+Warning: stmtexpr Invalid lhs at tif_jpeg.c:2185
+UnexposedExpr at tif_jpeg.c:2189
+UnexposedExpr at tif_jpeg.c:2190
+UnexposedExpr at tif_jpeg.c:2193
+UnexposedExpr at tif_jpeg.c:2196
+UnexposedExpr at tif_jpeg.c:2199
+ tif_jpeg.c:2185
+Warning: stmtexpr 
+tif_jpeg.c:2212
+Invalid lhs at tif_jpeg.c:2212
+Warning: stmtexpr Invalid lhs at tif_jpeg.c:2306
+WARN: type not found
+WARN: type not found
+Invalid lhs at tif_jbig.c:56
+Invalid rhs at tif_jbig.c:56
+ tif_jpeg.c:2306
+Warning: stmtexpr 
+tif_jbig.c:129
+Invalid lhs at tif_jbig.c:129
+Invalid lhs at tif_jbig.c:162
+Invalid rhs at tif_jbig.c:162
+Warning: stmtexpr Invalid lhs at tif_jbig.c:183
+WARN: type not found
+WARN: type not found
+ tif_jbig.c:183
+Warning: stmtexpr 
+tif_getimage.c:2771
+Invalid lhs at tif_getimage.c:2771
+Warning: stmtexpr Invalid lhs at tif_getimage.c:2793
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ tif_getimage.c:2793
+Warning: stmtexpr 
+tif_fax3.c:152
+Invalid lhs at tif_fax3.c:152
+Warning: stmtexpr Invalid lhs at tif_fax3.c:453
+ tif_fax3.c:453
+Warning: stmtexpr 
+tif_fax3.c:609
+Invalid lhs at tif_fax3.c:609
+Warning: stmtexpr Invalid lhs at tif_fax3.c:652
+ tif_fax3.c:652
+Warning: stmtexpr 
+tif_fax3.c:657
+Invalid lhs at tif_fax3.c:657
+Warning: stmtexpr Invalid lhs at tif_fax3.c:663
+ tif_fax3.c:663
+Warning: stmtexpr 
+tif_fax3.c:671
+Invalid lhs at tif_fax3.c:671
+Warning: stmtexpr Invalid lhs at tif_fax3.c:704
+ tif_fax3.c:704
+Warning: stmtexpr 
+tif_fax3.c:713
+Invalid lhs at tif_fax3.c:713
+Warning: stmtexpr Invalid lhs at tif_fax3.c:728
+ tif_fax3.c:728
+Warning: stmtexpr 
+tif_fax3.c:1123
+Invalid lhs at tif_fax3.c:1123
+Warning: stmtexpr Invalid lhs at tif_fax3.c:1165
+ tif_fax3.c:1165
+Warning: stmtexpr 
+tif_fax3.c:1166
+Invalid lhs at tif_fax3.c:1166
+UnexposedExpr at tif_fax3.c:1170
+UnexposedExpr at tif_fax3.c:1173
+UnexposedExpr at tif_fax3.c:1178
+UnexposedExpr at tif_fax3.c:1183
+UnexposedExpr at tif_fax3.c:1186
+UnexposedExpr at tif_fax3.c:1189
+UnexposedExpr at tif_fax3.c:1192
+Warning: stmtexpr Invalid lhs at tif_fax3.c:1212
+UnexposedExpr at tif_fax3.c:1216
+UnexposedExpr at tif_fax3.c:1219
+UnexposedExpr at tif_fax3.c:1223
+UnexposedExpr at tif_fax3.c:1226
+UnexposedExpr at tif_fax3.c:1229
+UnexposedExpr at tif_fax3.c:1232
+ tif_fax3.c:1212
+Warning: stmtexpr 
+tif_fax3.c:1245
+Invalid lhs at tif_fax3.c:1245
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at tif_extension.c:103
+ tif_extension.c:103
+Warning: stmtexpr 
+tif_extension.c:106
+Invalid lhs at tif_extension.c:106
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at tif_dumpmode.c:55
+WARN: type not found
+WARN: type not found
+ tif_dumpmode.c:55
+Warning: stmtexpr 
+tif_dirwrite.c:655
+Invalid lhs at tif_dirwrite.c:655
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:656
+ tif_dirwrite.c:656
+Warning: stmtexpr 
+tif_dirwrite.c:657
+Invalid lhs at tif_dirwrite.c:657
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:667
+ tif_dirwrite.c:667
+Warning: stmtexpr 
+tif_dirwrite.c:668
+Invalid lhs at tif_dirwrite.c:668
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:669
+ tif_dirwrite.c:669
+Warning: stmtexpr 
+tif_dirwrite.c:678
+Invalid lhs at tif_dirwrite.c:678
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:679
+ tif_dirwrite.c:679
+Warning: stmtexpr 
+tif_dirwrite.c:680
+Invalid lhs at tif_dirwrite.c:680
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:690
+ tif_dirwrite.c:690
+Warning: stmtexpr 
+tif_dirwrite.c:691
+Invalid lhs at tif_dirwrite.c:691
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:692
+ tif_dirwrite.c:692
+Warning: stmtexpr 
+tif_dirwrite.c:699
+Invalid lhs at tif_dirwrite.c:699
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:777
+ tif_dirwrite.c:777
+Warning: stmtexpr 
+tif_dirwrite.c:823
+Invalid lhs at tif_dirwrite.c:823
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:1882
+ tif_dirwrite.c:1882
+Warning: stmtexpr 
+tif_dirwrite.c:1883
+Invalid lhs at tif_dirwrite.c:1883
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:1913
+ tif_dirwrite.c:1913
+Warning: stmtexpr 
+tif_dirwrite.c:1920
+Invalid lhs at tif_dirwrite.c:1920
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:1936
+ tif_dirwrite.c:1936
+Warning: stmtexpr 
+tif_dirwrite.c:1952
+Invalid lhs at tif_dirwrite.c:1952
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:1960
+ tif_dirwrite.c:1960
+Warning: stmtexpr 
+tif_dirwrite.c:1970
+Invalid lhs at tif_dirwrite.c:1970
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:1971
+ tif_dirwrite.c:1971
+Warning: stmtexpr 
+tif_dirwrite.c:1993
+Invalid lhs at tif_dirwrite.c:1993
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:1994
+ tif_dirwrite.c:1994
+Warning: stmtexpr 
+tif_dirwrite.c:2004
+Invalid lhs at tif_dirwrite.c:2004
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:2014
+ tif_dirwrite.c:2014
+Warning: stmtexpr 
+tif_dirwrite.c:2015
+Invalid lhs at tif_dirwrite.c:2015
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:2037
+ tif_dirwrite.c:2037
+Warning: stmtexpr 
+tif_dirwrite.c:2038
+Invalid lhs at tif_dirwrite.c:2038
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:2061
+ tif_dirwrite.c:2061
+Warning: stmtexpr 
+tif_dirwrite.c:2062
+Invalid lhs at tif_dirwrite.c:2062
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:2063
+ tif_dirwrite.c:2063
+Warning: stmtexpr 
+tif_dirwrite.c:2086
+Invalid lhs at tif_dirwrite.c:2086
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:2087
+ tif_dirwrite.c:2087
+Warning: stmtexpr 
+tif_dirwrite.c:2088
+Invalid lhs at tif_dirwrite.c:2088
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:2098
+ tif_dirwrite.c:2098
+Warning: stmtexpr 
+tif_dirwrite.c:2099
+Invalid lhs at tif_dirwrite.c:2099
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:2137
+ tif_dirwrite.c:2137
+Warning: stmtexpr 
+tif_dirwrite.c:2183
+Invalid lhs at tif_dirwrite.c:2183
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:2253
+ tif_dirwrite.c:2253
+Warning: stmtexpr 
+tif_dirwrite.c:2254
+Invalid lhs at tif_dirwrite.c:2254
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:2278
+ tif_dirwrite.c:2278
+Warning: stmtexpr 
+tif_dirwrite.c:2279
+Invalid lhs at tif_dirwrite.c:2279
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:2289
+ tif_dirwrite.c:2289
+Warning: stmtexpr 
+tif_dirwrite.c:2290
+Invalid lhs at tif_dirwrite.c:2290
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:2299
+ tif_dirwrite.c:2299
+Warning: stmtexpr 
+tif_dirwrite.c:2300
+Invalid lhs at tif_dirwrite.c:2300
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:2301
+ tif_dirwrite.c:2301
+Warning: stmtexpr 
+tif_dirwrite.c:2315
+Invalid lhs at tif_dirwrite.c:2315
+Warning: stmtexpr Invalid lhs at tif_dirwrite.c:2349
+WARN: type not found
+WARN: type not found
+ tif_dirwrite.c:2349
+Warning: stmtexpr 
+tif_dirread.c:792
+Invalid lhs at tif_dirread.c:792
+Warning: stmtexpr Invalid lhs at tif_dirread.c:2858
+ tif_dirread.c:2858
+Warning: stmtexpr 
+tif_dirread.c:2859
+Invalid lhs at tif_dirread.c:2859
+Warning: stmtexpr Invalid lhs at tif_dirread.c:2860
+ tif_dirread.c:2860
+Warning: stmtexpr 
+tif_dirread.c:2885
+Invalid lhs at tif_dirread.c:2885
+Warning: stmtexpr Invalid lhs at tif_dirread.c:2886
+ tif_dirread.c:2886
+Warning: stmtexpr 
+tif_dirread.c:2887
+Invalid lhs at tif_dirread.c:2887
+Warning: stmtexpr Invalid lhs at tif_dirread.c:2888
+ tif_dirread.c:2888
+Warning: stmtexpr 
+tif_dirread.c:2917
+Invalid lhs at tif_dirread.c:2917
+Warning: stmtexpr Invalid lhs at tif_dirread.c:2918
+ tif_dirread.c:2918
+Warning: stmtexpr 
+tif_dirread.c:2919
+Invalid lhs at tif_dirread.c:2919
+Warning: stmtexpr Invalid lhs at tif_dirread.c:2928
+ tif_dirread.c:2928
+Warning: stmtexpr 
+tif_dirread.c:2929
+Invalid lhs at tif_dirread.c:2929
+Warning: stmtexpr Invalid lhs at tif_dirread.c:2930
+ tif_dirread.c:2930
+Warning: stmtexpr 
+tif_dirread.c:3285
+Invalid lhs at tif_dirread.c:3285
+Warning: stmtexpr Invalid lhs at tif_dirread.c:3347
+ tif_dirread.c:3347
+Warning: stmtexpr 
+tif_dirread.c:3388
+Invalid lhs at tif_dirread.c:3388
+Warning: stmtexpr Invalid lhs at tif_dirread.c:3537
+ tif_dirread.c:3537
+Warning: stmtexpr 
+tif_dirread.c:4205
+Invalid lhs at tif_dirread.c:4205
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4471
+ tif_dirread.c:4471
+Warning: stmtexpr 
+tif_dirread.c:4728
+Invalid lhs at tif_dirread.c:4728
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4729
+ tif_dirread.c:4729
+Warning: stmtexpr 
+tif_dirread.c:4730
+Invalid lhs at tif_dirread.c:4730
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4739
+ tif_dirread.c:4739
+Warning: stmtexpr 
+tif_dirread.c:4788
+Invalid lhs at tif_dirread.c:4788
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4789
+ tif_dirread.c:4789
+Warning: stmtexpr 
+tif_dirread.c:4801
+Invalid lhs at tif_dirread.c:4801
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4802
+ tif_dirread.c:4802
+Warning: stmtexpr 
+tif_dirread.c:4814
+Invalid lhs at tif_dirread.c:4814
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4815
+ tif_dirread.c:4815
+Warning: stmtexpr 
+tif_dirread.c:4827
+Invalid lhs at tif_dirread.c:4827
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4828
+ tif_dirread.c:4828
+Warning: stmtexpr 
+tif_dirread.c:4840
+Invalid lhs at tif_dirread.c:4840
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4841
+ tif_dirread.c:4841
+Warning: stmtexpr 
+tif_dirread.c:4853
+Invalid lhs at tif_dirread.c:4853
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4854
+ tif_dirread.c:4854
+Warning: stmtexpr 
+tif_dirread.c:4866
+Invalid lhs at tif_dirread.c:4866
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4867
+ tif_dirread.c:4867
+Warning: stmtexpr 
+tif_dirread.c:4879
+Invalid lhs at tif_dirread.c:4879
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4880
+ tif_dirread.c:4880
+Warning: stmtexpr 
+tif_dirread.c:4901
+Invalid lhs at tif_dirread.c:4901
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4902
+ tif_dirread.c:4902
+Warning: stmtexpr 
+tif_dirread.c:4927
+Invalid lhs at tif_dirread.c:4927
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4928
+ tif_dirread.c:4928
+Warning: stmtexpr 
+tif_dirread.c:4949
+Invalid lhs at tif_dirread.c:4949
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4950
+ tif_dirread.c:4950
+Warning: stmtexpr 
+tif_dirread.c:4971
+Invalid lhs at tif_dirread.c:4971
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4972
+ tif_dirread.c:4972
+Warning: stmtexpr 
+tif_dirread.c:4993
+Invalid lhs at tif_dirread.c:4993
+Warning: stmtexpr Invalid lhs at tif_dirread.c:4994
+ tif_dirread.c:4994
+Warning: stmtexpr 
+tif_dirread.c:5020
+Invalid lhs at tif_dirread.c:5020
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5021
+ tif_dirread.c:5021
+Warning: stmtexpr 
+tif_dirread.c:5042
+Invalid lhs at tif_dirread.c:5042
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5043
+ tif_dirread.c:5043
+Warning: stmtexpr 
+tif_dirread.c:5064
+Invalid lhs at tif_dirread.c:5064
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5065
+ tif_dirread.c:5065
+Warning: stmtexpr 
+tif_dirread.c:5086
+Invalid lhs at tif_dirread.c:5086
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5087
+ tif_dirread.c:5087
+Warning: stmtexpr 
+tif_dirread.c:5108
+Invalid lhs at tif_dirread.c:5108
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5109
+ tif_dirread.c:5109
+Warning: stmtexpr 
+tif_dirread.c:5130
+Invalid lhs at tif_dirread.c:5130
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5131
+ tif_dirread.c:5131
+Warning: stmtexpr 
+tif_dirread.c:5152
+Invalid lhs at tif_dirread.c:5152
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5153
+ tif_dirread.c:5153
+Warning: stmtexpr 
+tif_dirread.c:5174
+Invalid lhs at tif_dirread.c:5174
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5175
+ tif_dirread.c:5175
+Warning: stmtexpr 
+tif_dirread.c:5196
+Invalid lhs at tif_dirread.c:5196
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5197
+ tif_dirread.c:5197
+Warning: stmtexpr 
+tif_dirread.c:5213
+Invalid lhs at tif_dirread.c:5213
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5214
+ tif_dirread.c:5214
+Warning: stmtexpr 
+tif_dirread.c:5230
+Invalid lhs at tif_dirread.c:5230
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5231
+ tif_dirread.c:5231
+Warning: stmtexpr 
+tif_dirread.c:5247
+Invalid lhs at tif_dirread.c:5247
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5248
+ tif_dirread.c:5248
+Warning: stmtexpr 
+tif_dirread.c:5264
+Invalid lhs at tif_dirread.c:5264
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5265
+ tif_dirread.c:5265
+Warning: stmtexpr 
+tif_dirread.c:5281
+Invalid lhs at tif_dirread.c:5281
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5282
+ tif_dirread.c:5282
+Warning: stmtexpr 
+tif_dirread.c:5298
+Invalid lhs at tif_dirread.c:5298
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5299
+ tif_dirread.c:5299
+Warning: stmtexpr 
+tif_dirread.c:5315
+Invalid lhs at tif_dirread.c:5315
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5316
+ tif_dirread.c:5316
+Warning: stmtexpr 
+tif_dirread.c:5332
+Invalid lhs at tif_dirread.c:5332
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5333
+ tif_dirread.c:5333
+Warning: stmtexpr 
+tif_dirread.c:5349
+Invalid lhs at tif_dirread.c:5349
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5350
+ tif_dirread.c:5350
+Warning: stmtexpr 
+tif_dirread.c:5366
+Invalid lhs at tif_dirread.c:5366
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5367
+ tif_dirread.c:5367
+Warning: stmtexpr 
+tif_dirread.c:5381
+Invalid lhs at tif_dirread.c:5381
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5441
+ tif_dirread.c:5441
+Warning: stmtexpr 
+tif_dirread.c:5442
+Invalid lhs at tif_dirread.c:5442
+Warning: stmtexpr Invalid lhs at tif_dirread.c:5443
+ tif_dirread.c:5443
+Warning: stmtexpr 
+tif_dirread.c:5512
+Invalid lhs at tif_dirread.c:5512
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+UnexposedExpr at tif_dir.c:100
+UnexposedExpr at tif_dir.c:103
+UnexposedExpr at tif_dir.c:183
+UnexposedExpr at tif_dir.c:186
+UnexposedExpr at tif_dir.c:189
+UnexposedExpr at tif_dir.c:192
+UnexposedExpr at tif_dir.c:216
+UnexposedExpr at tif_dir.c:237
+UnexposedExpr at tif_dir.c:240
+UnexposedExpr at tif_dir.c:243
+UnexposedExpr at tif_dir.c:249
+UnexposedExpr at tif_dir.c:256
+UnexposedExpr at tif_dir.c:284
+UnexposedExpr at tif_dir.c:294
+UnexposedExpr at tif_dir.c:297
+UnexposedExpr at tif_dir.c:301
+UnexposedExpr at tif_dir.c:303
+UnexposedExpr at tif_dir.c:307
+UnexposedExpr at tif_dir.c:309
+UnexposedExpr at tif_dir.c:312
+UnexposedExpr at tif_dir.c:318
+UnexposedExpr at tif_dir.c:324
+UnexposedExpr at tif_dir.c:330
+UnexposedExpr at tif_dir.c:333
+UnexposedExpr at tif_dir.c:336
+UnexposedExpr at tif_dir.c:342
+UnexposedExpr at tif_dir.c:343
+UnexposedExpr at tif_dir.c:346
+UnexposedExpr at tif_dir.c:347
+UnexposedExpr at tif_dir.c:351
+UnexposedExpr at tif_dir.c:352
+UnexposedExpr at tif_dir.c:353
+UnexposedExpr at tif_dir.c:360
+UnexposedExpr at tif_dir.c:367
+UnexposedExpr at tif_dir.c:378
+UnexposedExpr at tif_dir.c:389
+UnexposedExpr at tif_dir.c:395
+UnexposedExpr at tif_dir.c:406
+UnexposedExpr at tif_dir.c:423
+UnexposedExpr at tif_dir.c:427
+UnexposedExpr at tif_dir.c:428
+UnexposedExpr at tif_dir.c:438
+UnexposedExpr at tif_dir.c:441
+UnexposedExpr at tif_dir.c:442
+UnexposedExpr at tif_dir.c:447
+UnexposedExpr at tif_dir.c:452
+UnexposedExpr at tif_dir.c:455
+UnexposedExpr at tif_dir.c:456
+UnexposedExpr at tif_dir.c:465
+Warning: stmtexpr Invalid lhs at tif_dir.c:553
+UnexposedExpr at tif_dir.c:554
+UnexposedExpr at tif_dir.c:555
+UnexposedExpr at tif_dir.c:559
+UnexposedExpr at tif_dir.c:569
+UnexposedExpr at tif_dir.c:571
+UnexposedExpr at tif_dir.c:607
+UnexposedExpr at tif_dir.c:608
+UnexposedExpr at tif_dir.c:617
+ tif_dir.c:553
+Warning: stmtexpr 
+tif_dir.c:621
+Invalid lhs at tif_dir.c:621
+UnexposedExpr at tif_dir.c:627
+UnexposedExpr at tif_dir.c:633
+UnexposedExpr at tif_dir.c:639
+UnexposedExpr at tif_dir.c:645
+UnexposedExpr at tif_dir.c:652
+UnexposedExpr at tif_dir.c:658
+UnexposedExpr at tif_dir.c:665
+UnexposedExpr at tif_dir.c:671
+UnexposedExpr at tif_dir.c:679
+UnexposedExpr at tif_dir.c:685
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+UnexposedExpr at tif_dir.c:877
+UnexposedExpr at tif_dir.c:895
+UnexposedExpr at tif_dir.c:898
+UnexposedExpr at tif_dir.c:901
+UnexposedExpr at tif_dir.c:904
+UnexposedExpr at tif_dir.c:907
+UnexposedExpr at tif_dir.c:910
+UnexposedExpr at tif_dir.c:913
+UnexposedExpr at tif_dir.c:916
+UnexposedExpr at tif_dir.c:919
+UnexposedExpr at tif_dir.c:922
+UnexposedExpr at tif_dir.c:925
+UnexposedExpr at tif_dir.c:928
+UnexposedExpr at tif_dir.c:931
+UnexposedExpr at tif_dir.c:935
+UnexposedExpr at tif_dir.c:944
+UnexposedExpr at tif_dir.c:949
+UnexposedExpr at tif_dir.c:958
+UnexposedExpr at tif_dir.c:962
+UnexposedExpr at tif_dir.c:965
+UnexposedExpr at tif_dir.c:968
+UnexposedExpr at tif_dir.c:971
+UnexposedExpr at tif_dir.c:974
+UnexposedExpr at tif_dir.c:977
+UnexposedExpr at tif_dir.c:980
+UnexposedExpr at tif_dir.c:981
+UnexposedExpr at tif_dir.c:984
+UnexposedExpr at tif_dir.c:985
+UnexposedExpr at tif_dir.c:988
+UnexposedExpr at tif_dir.c:989
+UnexposedExpr at tif_dir.c:990
+UnexposedExpr at tif_dir.c:995
+UnexposedExpr at tif_dir.c:1000
+UnexposedExpr at tif_dir.c:1003
+UnexposedExpr at tif_dir.c:1008
+UnexposedExpr at tif_dir.c:1009
+UnexposedExpr at tif_dir.c:1012
+UnexposedExpr at tif_dir.c:1015
+UnexposedExpr at tif_dir.c:1018
+UnexposedExpr at tif_dir.c:1023
+UnexposedExpr at tif_dir.c:1026
+UnexposedExpr at tif_dir.c:1029
+UnexposedExpr at tif_dir.c:1032
+UnexposedExpr at tif_dir.c:1037
+UnexposedExpr at tif_dir.c:1040
+UnexposedExpr at tif_dir.c:1043
+UnexposedExpr at tif_dir.c:1044
+UnexposedExpr at tif_dir.c:1047
+UnexposedExpr at tif_dir.c:1050
+UnexposedExpr at tif_dir.c:1051
+UnexposedExpr at tif_dir.c:1054
+UnexposedExpr at tif_dir.c:1056
+UnexposedExpr at tif_dir.c:1057
+UnexposedExpr at tif_dir.c:1061
+UnexposedExpr at tif_dir.c:1064
+UnexposedExpr at tif_dir.c:1103
+UnexposedExpr at tif_dir.c:1105
+UnexposedExpr at tif_dir.c:1106
+UnexposedExpr at tif_dir.c:1114
+UnexposedExpr at tif_dir.c:1115
+UnexposedExpr at tif_dir.c:1123
+Warning: stmtexpr Invalid lhs at tif_dir.c:1127
+UnexposedExpr at tif_dir.c:1131
+UnexposedExpr at tif_dir.c:1136
+UnexposedExpr at tif_dir.c:1141
+UnexposedExpr at tif_dir.c:1146
+UnexposedExpr at tif_dir.c:1152
+UnexposedExpr at tif_dir.c:1157
+UnexposedExpr at tif_dir.c:1163
+UnexposedExpr at tif_dir.c:1168
+UnexposedExpr at tif_dir.c:1175
+UnexposedExpr at tif_dir.c:1180
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ tif_dir.c:1127
+Warning: stmtexpr 
+tif_dir.c:1705
+Invalid lhs at tif_dir.c:1705
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+UnexposedExpr at tif_aux.c:182
+UnexposedExpr at tif_aux.c:185
+UnexposedExpr at tif_aux.c:188
+UnexposedExpr at tif_aux.c:191
+UnexposedExpr at tif_aux.c:194
+UnexposedExpr at tif_aux.c:197
+UnexposedExpr at tif_aux.c:200
+UnexposedExpr at tif_aux.c:203
+UnexposedExpr at tif_aux.c:206
+UnexposedExpr at tif_aux.c:209
+UnexposedExpr at tif_aux.c:212
+UnexposedExpr at tif_aux.c:221
+UnexposedExpr at tif_aux.c:224
+UnexposedExpr at tif_aux.c:228
+UnexposedExpr at tif_aux.c:229
+UnexposedExpr at tif_aux.c:232
+UnexposedExpr at tif_aux.c:235
+UnexposedExpr at tif_aux.c:238
+UnexposedExpr at tif_aux.c:239
+UnexposedExpr at tif_aux.c:242
+UnexposedExpr at tif_aux.c:247
+UnexposedExpr at tif_aux.c:250
+UnexposedExpr at tif_aux.c:253
+UnexposedExpr at tif_aux.c:256
+UnexposedExpr at tif_aux.c:262
+UnexposedExpr at tif_aux.c:266
+UnexposedExpr at tif_aux.c:267
+UnexposedExpr at tif_aux.c:270
+UnexposedExpr at tif_aux.c:281
+UnexposedExpr at tif_aux.c:290
+UnexposedExpr at tif_aux.c:292
+UnexposedExpr at tif_aux.c:293
+UnexposedExpr at tif_aux.c:299
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+
+Front-end completes: 1.314769

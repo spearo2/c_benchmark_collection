@@ -1,21 +1,133 @@
-src/libsndfile_la-sndfile.o.i src/libsndfile_la-flac.o.i src/common.o.i
+src/windows.o.i src/vox_adpcm.o.i src/ulaw.o.i src/strings.o.i src/pcm.o.i src/ogg.o.i src/ms_adpcm.o.i src/libsndfile_la-xi.o.i src/libsndfile_la-wve.o.i src/libsndfile_la-wavlike.o.i src/libsndfile_la-wav.o.i src/libsndfile_la-w64.o.i src/libsndfile_la-voc.o.i src/libsndfile_la-txw.o.i src/libsndfile_la-svx.o.i src/libsndfile_la-sndfile.o.i src/libsndfile_la-sds.o.i src/libsndfile_la-sd2.o.i src/libsndfile_la-rx2.o.i src/libsndfile_la-rf64.o.i src/libsndfile_la-raw.o.i src/libsndfile_la-pvf.o.i src/libsndfile_la-paf.o.i src/libsndfile_la-ogg_vorbis.o.i src/libsndfile_la-ogg_speex.o.i src/libsndfile_la-ogg_pcm.o.i src/libsndfile_la-ogg_opus.o.i src/libsndfile_la-nist.o.i src/libsndfile_la-mpc2k.o.i src/libsndfile_la-mat5.o.i src/libsndfile_la-mat4.o.i src/libsndfile_la-macos.o.i src/libsndfile_la-ircam.o.i src/libsndfile_la-htk.o.i src/libsndfile_la-g72x.o.i src/libsndfile_la-flac.o.i src/libsndfile_la-dwd.o.i src/libsndfile_la-caf.o.i src/libsndfile_la-avr.o.i src/libsndfile_la-au.o.i src/libsndfile_la-aiff.o.i src/interleave.o.i src/ima_oki_adpcm.o.i src/ima_adpcm.o.i src/id3.o.i src/gsm610.o.i src/float32.o.i src/file_io.o.i src/dwvw.o.i src/double64.o.i src/dither.o.i src/common.o.i src/command.o.i src/chunk.o.i src/chanmap.o.i src/cart.o.i src/broadcast.o.i src/audio_detect.o.i src/alaw.o.i src/alac.o.i programs/sndfile-salvage.o.i programs/sndfile-play.o.i programs/sndfile-metadata-set.o.i programs/sndfile-metadata-get.o.i programs/sndfile-interleave.o.i programs/sndfile-info.o.i programs/sndfile-deinterleave.o.i programs/sndfile-convert.o.i programs/sndfile-concat.o.i programs/sndfile-cmp.o.i programs/common.o.i
 
 
 
 --------------------------------------------------------------------------------
 Front-end begins...
 --------------------------------------------------------------------------------
-Warning: stmtexpr  sndfile.c:328
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr  wav.c:1486
+Warning: stmtexpr  w64.c:310
 Warning: stmtexpr 
-sndfile.c:1372
+sndfile.c:328
+Invalid lhs at sndfile.c:328
+Warning: stmtexpr  sndfile.c:1372
+Warning: stmtexpr 
+sndfile.c:2627
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr  sd2.c:523
 Warning: stmtexpr WARN: type not found
 WARN: type not found
-Invalid lhs at sndfile.c:328
+WARN: type not found
+WARN: type not found
+
+sd2.c:541
+Warning: stmtexpr WARN: type not found
 WARN: type not found
 WARN: type not found
 WARN: type not found
 WARN: type not found
- sndfile.c:2627
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ rf64.c:883
+Warning: stmtexpr 
+caf.c:813
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ caf.c:1029
+Warning: stmtexpr 
+aiff.c:1021
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ aiff.c:1962
+Warning: stmtexpr 
+ima_oki_adpcm.c:95
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ ima_oki_adpcm.c:113
 Warning: stmtexpr 
 common.c:63
 WARN: type not found
@@ -83,7 +195,58 @@ WARN: type not found
 WARN: type not found
 WARN: type not found
 WARN: type not found
+WARN: type not found
+WARN: type not found
+ common.c:1268
+Warning: stmtexpr 
+command.c:372
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Unknown expr OffsetOfExpr at cart.c:36
+Unknown expr OffsetOfExpr at cart.c:70
+Unknown expr OffsetOfExpr at cart.c:71
+Warning: stmtexpr 
+cart.c:94
+WARN: type not found
+WARN: type not found
+Unknown expr OffsetOfExpr at broadcast.c:36
+Unknown expr OffsetOfExpr at broadcast.c:69
+Unknown expr OffsetOfExpr at broadcast.c:71
+Warning: stmtexpr 
+broadcast.c:103
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr 
+common.c:337
 
-common.c:1268
-
-Front-end completes: 0.245617
+Front-end completes: 3.966617

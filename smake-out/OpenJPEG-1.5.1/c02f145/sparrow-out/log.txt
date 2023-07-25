@@ -1,33 +1,96 @@
-applications/codec/j2k_to_image-opj_getopt.o.i applications/codec/j2k_to_image-j2k_to_image.o.i applications/codec/j2k_to_image-index.o.i applications/codec/j2k_to_image-convert.o.i applications/codec/j2k_to_image-color.o.i applications/codec/j2k_dump-opj_getopt.o.i applications/codec/j2k_dump-j2k_dump.o.i applications/codec/j2k_dump-index.o.i applications/codec/image_to_j2k-opj_getopt.o.i applications/codec/image_to_j2k-index.o.i applications/codec/image_to_j2k-image_to_j2k.o.i applications/codec/image_to_j2k-convert.o.i
+openjpeg.c
 
 
 
 --------------------------------------------------------------------------------
 Front-end begins...
 --------------------------------------------------------------------------------
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
-WARN: type not found
 
-Front-end completes: 0.361156
+Front-end completes: 0.208633
+
+
+
+--------------------------------------------------------------------------------
+Graph construction begins...
+--------------------------------------------------------------------------------
+WARN: too large global array initialization (1024) @ t1_luts.h:3
+
+#nodes all    : 20586
+#unreachable  : 451
+
+Graph construction completes: 0.307787
+
+
+
+--------------------------------------------------------------------------------
+Pre-processing begins...
+--------------------------------------------------------------------------------
+#functions all  : 354
+#referred       : 188
+{_G_,allocate_buffers,bio_bytein,bio_create,bio_destroy,bio_getbit,bio_inalign,bio_init_dec,bio_numbytes,bio_read,cio_bytein,cio_getbp,cio_numbytesleft,cio_read,cio_seek,cio_skip,cio_tell,color_sycc_to_rgb,decode_help_display,error_callback,fprintf,fread,free_color_data,get_file_format,get_next_file,get_num_images,imagetobmp,imagetopgx,imagetopnm,imagetoraw,imagetotga,info_callback,int_ceildiv,int_ceildivpow2,int_clamp,int_floordivpow2,int_floorlog2,int_max,int_min,j2k_create_decompress,j2k_dec_mstab_lookup,j2k_decode,j2k_decode_jpt_stream,j2k_destroy_decompress,j2k_read_coc,j2k_read_cod,j2k_read_com,j2k_read_cox,j2k_read_crg,j2k_read_eoc,j2k_read_plm,j2k_read_plt,j2k_read_poc,j2k_read_ppm,j2k_read_ppt,j2k_read_qcc,j2k_read_qcd,j2k_read_qcx,j2k_read_rgn,j2k_read_siz,j2k_read_soc,j2k_read_sod,j2k_read_sot,j2k_read_tlm,j2k_read_unk,j2k_setup_decoder,jp2_apply_cdef,jp2_apply_pclr,jp2_create_decompress,jp2_destroy_decompress,jp2_free_pclr,jp2_read_boxhdr,jp2_read_bpcc,jp2_read_cdef,jp2_read_cmap,jp2_read_colr,jp2_read_ftyp,jp2_read_ihdr,jp2_read_jp,jp2_read_jp2c,jp2_read_jp2h,jp2_read_pclr,jp2_read_struct,jp2_setup_decoder,jpt_init_msg_header,jpt_read_VBAS_info,jpt_read_msg_header,jpt_reinit_msg_header,load_images,main,memcpy,memset,mqc_bytein,mqc_create,mqc_decode,mqc_destroy,mqc_init_dec,mqc_lpsexchange,mqc_mpsexchange,mqc_renormd,mqc_resetstates,mqc_setstate,opj_cio_close,opj_cio_open,opj_clock,opj_create_decompress,opj_decode,opj_decode_with_info,opj_destroy_cstr_info,opj_destroy_decompress,opj_event_msg,opj_getopt_long,opj_image_create0,opj_image_destroy,opj_jp2_decode,opj_set_default_decoder_parameters,opj_set_event_mgr,opj_setup_decoder,opj_version,parse_cmdline_decoder,pi_create_decode,pi_destroy,pi_next,pi_next_cprl,pi_next_lrcp,pi_next_pcrl,pi_next_rlcp,pi_next_rpcl,printf,raw_create,raw_decode,raw_destroy,raw_init_dec,sprintf,strcat,strcpy,strncpy,sycc420_to_rgb,sycc422_to_rgb,sycc444_to_rgb,sycc_to_rgb,t1_create,t1_dec_clnpass,t1_dec_clnpass_step,t1_dec_clnpass_step_partial,t1_dec_clnpass_step_vsc,t1_dec_refpass_mqc,t1_dec_refpass_mqc_vsc,t1_dec_refpass_raw,t1_dec_refpass_step_mqc,t1_dec_refpass_step_mqc_vsc,t1_dec_refpass_step_raw,t1_dec_sigpass_mqc,t1_dec_sigpass_mqc_vsc,t1_dec_sigpass_raw,t1_dec_sigpass_step_mqc,t1_dec_sigpass_step_mqc_vsc,t1_dec_sigpass_step_raw,t1_decode_cblk,t1_decode_cblks,t1_destroy,t1_getctxno_mag,t1_getctxno_sc,t1_getctxno_zc,t1_getspb,t1_updateflags,t2_create,t2_decode_packet,t2_decode_packets,t2_destroy,t2_getcommacode,t2_getnumpasses,t2_init_seg,tcd_create,tcd_decode_tile,tcd_destroy,tcd_free_decode,tcd_free_decode_tile,tcd_malloc_decode,tcd_malloc_decode_tile,tga_writeheader,tgt_create,tgt_decode,tgt_destroy,tgt_reset,vsnprintf,warning_callback,write_index_file}
+#unreferred     : 166
+{atof,atoi,atol,atoll,bcopy,bio_byteout,bio_flush,bio_init_enc,bio_putbit,bio_write,bmptoimage,bsearch,bzero,check_EPHuse,cio_byteout,cio_write,dprintf,explicit_bzero,feof_unlocked,ferror_unlocked,fgetc_unlocked,fgets,fix_mul,fputc_unlocked,fread_unlocked,get_num_max_tile_parts,get_ushort,getchar,getchar_unlocked,has_prec,int_abs,int_floorlog2___20,j2k_add_mhmarker,j2k_add_tlmarker,j2k_calculate_tp,j2k_convert_progression_order,j2k_create_compress,j2k_destroy_compress,j2k_encode,j2k_get_num_tp,j2k_setup_encoder,j2k_write_coc,j2k_write_cod,j2k_write_com,j2k_write_cox,j2k_write_eoc,j2k_write_poc,j2k_write_qcc,j2k_write_qcd,j2k_write_qcx,j2k_write_rgn,j2k_write_siz,j2k_write_soc,j2k_write_sod,j2k_write_sot,j2k_write_tlm,jp2_create_compress,jp2_destroy_compress,jp2_setup_encoder,jp2_write_bpcc,jp2_write_colr,jp2_write_ftyp,jp2_write_ihdr,jp2_write_jp,jp2_write_jp2c,jp2_write_jp2h,mbstowcs,memmove,mqc_bypass_enc,mqc_bypass_flush_enc,mqc_bypass_init_enc,mqc_byteout,mqc_codelps,mqc_codemps,mqc_encode,mqc_erterm_enc,mqc_flush,mqc_init_enc,mqc_numbytes,mqc_renorme,mqc_reset_enc,mqc_restart_enc,mqc_restart_init_enc,mqc_segmark_enc,mqc_setbits,opj_create_compress,opj_destroy_compress,opj_encode,opj_encode_with_info,opj_getopt,opj_image_create,opj_jp2_encode,opj_set_default_encoder_parameters,opj_setup_encoder,pgxtoimage,pi_create_encode,pi_initialise_encode,pnmtoimage,ptsname_r,putchar,putchar_unlocked,raw_numbytes,rawtoimage,read_pnm_header,readuchar,readuint,readushort,realpath,reset_options_reading,skip_idf,skip_int,skip_white,snprintf,stpncpy,strncat,t1_enc_clnpass,t1_enc_clnpass_step,t1_enc_refpass,t1_enc_refpass_step,t1_enc_sigpass,t1_enc_sigpass_step,t1_encode_cblk,t1_encode_cblks,t1_getnmsedec_ref,t1_getnmsedec_sig,t1_getwmsedec,t2_encode_packet,t2_encode_packets,t2_putcommacode,t2_putnumpasses,tcd_dump,tcd_encode_tile,tcd_free_encode,tcd_init_encode,tcd_makelayer,tcd_makelayer_fixed,tcd_malloc_encode,tcd_rateallocate,tcd_rateallocate_fixed,tga_readheader,tgatoimage,tgt_encode,tgt_setvalue,tolower,toupper,vdprintf,vfprintf,vprintf,vsprintf,wcstombs,wctomb,write_cidx,write_cptr,write_fidx,write_iptr,write_mainmhix,write_manf,write_phix,write_phixfaix,write_ppix,write_ppixfaix,write_prxy,write_thix,write_tilemhix,write_tpix,write_tpixfaix}
+#recursive      : 0
+
+Pre-processing completes: 0.043324
+To inline : []
+Excluded variable-arguments functions : []
+Excluded recursive functions : []
+Excluded too large functions : []
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis begins...
+--------------------------------------------------------------------------------
+#iteration : 21
+mem size : 3116
+
+#functions all  : 188
+#reachable      : 188
+#unreachable    : 0
+#recursive      : 0
+
+Pre-analysis completes: 1.075828
+#Procs : 188
+#Nodes : 11030
+
+
+
+--------------------------------------------------------------------------------
+Itv Sparse Analysis begins...
+--------------------------------------------------------------------------------
+live memory : 45 MB
+#global variables = 377 (12.0%)
+#local variables  = 2099 (66.6%)
+#allocsite        = 676 (21.5%)
+#fields           = 439 (14.0%)
+#total abstract locations  = 3152
+#flow-sensitive abstract locations  = 3152
+Access Analysis begins...
+Access Analysis completes: 0.145410
+Def-use graph construction begins...
+draw intra-procedural edges
+draw inter-procedural edges
+Def-use graph construction completes: 0.362191
+live memory : 57 MB
+#Nodes in def-use graph : 9105
+#Locs on def-use graph : 164179
+Workorder computation begins...
+Workorder computation completes: 2.833744
+Fixpoint iteration with widening begins...
+
+#iteration in widening : 37017
+Fixpoint iteration with widening completes: 1.210969
+
+
+
+--------------------------------------------------------------------------------
+Generate Alarm Report begins...
+--------------------------------------------------------------------------------
+
+Generate Alarm Report completes: 0.020426
+
+Itv Sparse Analysis completes: 4.634277
+Finished properly.
+6.525663

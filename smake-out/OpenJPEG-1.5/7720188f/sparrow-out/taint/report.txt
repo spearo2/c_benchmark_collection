@@ -1,0 +1,59 @@
+= Alarms =
+1. color.c:94 {sycc444_to_rgb} UnProven
+  malloc(SizeOf(int )*((unsigned long )max)) @sycc444_to_rgb-15010:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+2. color.c:95 {sycc444_to_rgb} UnProven
+  malloc(SizeOf(int )*((unsigned long )max)) @sycc444_to_rgb-15011:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+3. color.c:96 {sycc444_to_rgb} UnProven
+  malloc(SizeOf(int )*((unsigned long )max)) @sycc444_to_rgb-15012:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+4. color.c:127 {sycc422_to_rgb} UnProven
+  malloc(SizeOf(int )*((unsigned long )max)) @sycc422_to_rgb-15069:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+5. color.c:128 {sycc422_to_rgb} UnProven
+  malloc(SizeOf(int )*((unsigned long )max)) @sycc422_to_rgb-15070:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+6. color.c:129 {sycc422_to_rgb} UnProven
+  malloc(SizeOf(int )*((unsigned long )max)) @sycc422_to_rgb-15071:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+7. color.c:174 {sycc420_to_rgb} UnProven
+  malloc(SizeOf(int )*((unsigned long )max)) @sycc420_to_rgb-15147:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+8. color.c:175 {sycc420_to_rgb} UnProven
+  malloc(SizeOf(int )*((unsigned long )max)) @sycc420_to_rgb-15148:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+9. color.c:176 {sycc420_to_rgb} UnProven
+  malloc(SizeOf(int )*((unsigned long )max)) @sycc420_to_rgb-15149:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+10. j2k.c:560 {j2k_read_siz} UnProven
+  malloc(((unsigned long )(*cp.tw**cp.th))*SizeOf(opj_tcp_t )) @j2k_read_siz-8562:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+11. j2k.c:566 {j2k_read_siz} UnProven
+  malloc(((unsigned long )(*cp.tw**cp.th))*SizeOf(int )) @j2k_read_siz-8583:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+12. j2k.c:604 {j2k_read_siz} UnProven
+  malloc(((unsigned long )(*cp.tw**cp.th))*SizeOf(unsigned char *)) @j2k_read_siz-8622:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+13. j2k.c:605 {j2k_read_siz} UnProven
+  malloc(((unsigned long )(*cp.tw**cp.th))*SizeOf(int )) @j2k_read_siz-8623:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+14. j2k.c:620 {j2k_read_siz} UnProven
+  malloc(((unsigned long )(*cp.tw**cp.th))*SizeOf(opj_tile_info_t )) @j2k_read_siz-8624:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+15. j2k.c:1535 {j2k_read_sod} UnProven
+  malloc(((unsigned long )(*(*j2k.tile_len+curtileno)+len))*SizeOf(unsigned char )) @j2k_read_sod-9714:  size = bot, source = main-11436 @ j2k_to_image.c:514 UnProven
+16. jp2.c:391 {jp2_apply_pclr} UnProven
+  malloc(((unsigned long )(*(old_comps+((int )cmp)).w**(old_comps+((int )cmp)).h))*SizeOf(int )) @jp2_apply_pclr-7442:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+17. pi.c:505 {pi_create_decode} UnProven
+  malloc(((unsigned long )(((*image.numcomps*maxres)**tcp.numlayers)*maxprec))*SizeOf(short )) @pi_create_decode-6099:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+18. t1.c:1118 {allocate_buffers} UnProven
+  malloc(((unsigned long )datasize)*SizeOf(int )) @allocate_buffers-5061:  size = [4, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+19. t1.c:1131 {allocate_buffers} UnProven
+  malloc(((unsigned long )flagssize)*SizeOf(flag_t )) @allocate_buffers-5062:  size = [2, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+20. tcd.c:622 {tcd_malloc_decode} UnProven
+  malloc(((unsigned long )(*cp.tw**cp.th))*SizeOf(opj_tcd_tile_t )) @tcd_malloc_decode-2268:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+21. tcd.c:797 {tcd_malloc_decode_tile} UnProven
+  malloc(((unsigned long )(*res.pw**res.ph))*SizeOf(opj_tcd_precinct_t )) @tcd_malloc_decode_tile-2486:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+22. tcd.c:820 {tcd_malloc_decode_tile} UnProven
+  malloc(((unsigned long )(*prc.cw**prc.ch))*SizeOf(opj_tcd_cblk_dec_t )) @tcd_malloc_decode_tile-2494:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+23. tcd.c:1370 {tcd_decode_tile} UnProven
+  malloc(((unsigned long )(*cstr_info.numlayers*numprec))*SizeOf(opj_packet_info_t )) @tcd_decode_tile-3208:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+24. tcd.c:1400 {tcd_decode_tile} UnProven
+  malloc(((unsigned long )(((*tilec.x1-*tilec.x0)*(*tilec.y1-*tilec.y0))+3))*SizeOf(int )) @tcd_decode_tile-3215:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+25. tcd.c:1486 {tcd_decode_tile} UnProven
+  malloc(((unsigned long )(*imagec.w**imagec.h))*SizeOf(int )) @tcd_decode_tile-3216:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+26. tgt.c:74 {tgt_create} UnProven
+  malloc(((unsigned long )*tree.numnodes)*SizeOf(opj_tgt_node_t )) @tgt_create-1184:  size = [0, +oo], source = main-11436 @ j2k_to_image.c:514 UnProven
+
+#queries                 : 26
+#queries mod alarm point : 26
+#proven                  : 0
+#unproven                : 26
+#bot-involved            : 0

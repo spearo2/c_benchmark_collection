@@ -1,4 +1,4 @@
-src/xi.o.i src/wve.o.i src/windows.o.i src/wav_w64.o.i src/wav.o.i src/w64.o.i src/vox_adpcm.o.i src/voc.o.i src/ulaw.o.i src/txw.o.i src/svx.o.i src/strings.o.i src/sndfile.o.i src/sds.o.i src/sd2.o.i src/rx2.o.i src/rf64.o.i src/raw.o.i src/pvf.o.i src/pcm.o.i src/paf.o.i src/ogg_vorbis.o.i src/ogg_speex.o.i src/ogg_pcm.o.i src/ogg_opus.o.i src/ogg.o.i src/nist.o.i src/ms_adpcm.o.i src/mpc2k.o.i src/mat5.o.i src/mat4.o.i src/macos.o.i src/macbinary3.o.i src/ircam.o.i src/interleave.o.i src/ima_oki_adpcm.o.i src/ima_adpcm.o.i src/id3.o.i src/htk.o.i src/gsm610.o.i src/g72x.o.i src/float32.o.i src/flac.o.i src/file_io.o.i src/dwvw.o.i src/dwd.o.i src/double64.o.i src/dither.o.i src/common.o.i src/command.o.i src/chunk.o.i src/chanmap.o.i src/cart.o.i src/caf.o.i src/broadcast.o.i src/avr.o.i src/audio_detect.o.i src/au.o.i src/alaw.o.i src/alac.o.i src/aiff.o.i
+src/xi.o.i src/wve.o.i src/windows.o.i src/wav_w64.o.i src/wav.o.i src/w64.o.i src/vox_adpcm.o.i src/voc.o.i src/ulaw.o.i src/txw.o.i src/svx.o.i src/strings.o.i src/sndfile.o.i src/sds.o.i src/sd2.o.i src/rx2.o.i src/rf64.o.i src/raw.o.i src/pvf.o.i src/pcm.o.i src/paf.o.i src/ogg_vorbis.o.i src/ogg_speex.o.i src/ogg_pcm.o.i src/ogg_opus.o.i src/ogg.o.i src/nist.o.i src/ms_adpcm.o.i src/mpc2k.o.i src/mat5.o.i src/mat4.o.i src/macos.o.i src/macbinary3.o.i src/ircam.o.i src/interleave.o.i src/ima_oki_adpcm.o.i src/ima_adpcm.o.i src/id3.o.i src/htk.o.i src/gsm610.o.i src/g72x.o.i src/float32.o.i src/flac.o.i src/file_io.o.i src/dwvw.o.i src/dwd.o.i src/double64.o.i src/dither.o.i src/common.o.i src/command.o.i src/chunk.o.i src/chanmap.o.i src/cart.o.i src/caf.o.i src/broadcast.o.i src/avr.o.i src/audio_detect.o.i src/au.o.i src/alaw.o.i src/alac.o.i src/aiff.o.i regtest/sndfile-regtest.o.i regtest/database.o.i regtest/checksum.o.i programs/sndfile-salvage.o.i programs/sndfile-play.o.i programs/sndfile-metadata-set.o.i programs/sndfile-metadata-get.o.i programs/sndfile-interleave.o.i programs/sndfile-info.o.i programs/sndfile-deinterleave.o.i programs/sndfile-convert.o.i programs/sndfile-concat.o.i programs/sndfile-cmp.o.i programs/common.o.i examples/sndfile-to-text.o.i examples/sfprocess.o.i examples/make_sine.o.i examples/list_formats.o.i examples/generate.o.i
 
 
 
@@ -216,7 +216,47 @@ WARN: type not found
 WARN: type not found
 WARN: type not found
 Warning: stmtexpr  aiff.c:949
-Warning: stmtexpr 
-aiff.c:1772
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
 
-Front-end completes: 3.421603
+aiff.c:1772
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+
+common.c:333
+
+Front-end completes: 4.628648

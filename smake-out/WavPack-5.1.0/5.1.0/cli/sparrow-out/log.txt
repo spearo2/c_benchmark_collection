@@ -1,0 +1,73 @@
+wvunpack-wvunpack.o.i wvunpack-wave64.o.i wvunpack-utils.o.i wvunpack-riff.o.i wvunpack-md5.o.i wvunpack-dsf.o.i wvunpack-dsdiff.o.i wvunpack-caff.o.i wvtag-wvtag.o.i wvtag-utils.o.i wvtag-import_id3.o.i wvgain-wvgain.o.i wvgain-utils.o.i wavpack-wavpack.o.i wavpack-wave64.o.i wavpack-utils.o.i wavpack-riff.o.i wavpack-md5.o.i wavpack-import_id3.o.i wavpack-dsf.o.i wavpack-dsdiff.o.i wavpack-caff.o.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+
+Front-end completes: 0.786836

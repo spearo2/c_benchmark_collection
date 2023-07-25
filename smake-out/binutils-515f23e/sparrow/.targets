@@ -1,0 +1,3 @@
+gdbserver/gdbreplay
+gdbserver/gdbserver
+gdbserver/libinproctrace.so

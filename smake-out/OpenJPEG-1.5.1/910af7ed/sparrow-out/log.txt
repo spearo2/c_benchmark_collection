@@ -1,4 +1,4 @@
-libopenjpeg/libopenjpeg_la-j2k.o.i libopenjpeg/libopenjpeg_la-j2k_lib.o.i
+applications/codec/.libs/j2k_to_image/1b.016.libopenjpeg_la-tpix_manager.o.i applications/codec/.libs/j2k_to_image/1a.015.libopenjpeg_la-thix_manager.o.i applications/codec/.libs/j2k_to_image/19.014.libopenjpeg_la-ppix_manager.o.i applications/codec/.libs/j2k_to_image/18.013.libopenjpeg_la-phix_manager.o.i applications/codec/.libs/j2k_to_image/17.012.libopenjpeg_la-cidx_manager.o.i applications/codec/.libs/j2k_to_image/16.011.libopenjpeg_la-tgt.o.i applications/codec/.libs/j2k_to_image/15.010.libopenjpeg_la-tcd.o.i applications/codec/.libs/j2k_to_image/14.00f.libopenjpeg_la-t2.o.i applications/codec/.libs/j2k_to_image/13.00e.libopenjpeg_la-t1.o.i applications/codec/.libs/j2k_to_image/12.00d.libopenjpeg_la-raw.o.i applications/codec/.libs/j2k_to_image/11.00c.libopenjpeg_la-pi.o.i applications/codec/.libs/j2k_to_image/10.00b.libopenjpeg_la-openjpeg.o.i applications/codec/.libs/j2k_to_image/0f.00a.libopenjpeg_la-mqc.o.i applications/codec/.libs/j2k_to_image/0d.008.libopenjpeg_la-jpt.o.i applications/codec/.libs/j2k_to_image/0c.007.libopenjpeg_la-jp2.o.i applications/codec/.libs/j2k_to_image/0b.006.libopenjpeg_la-j2k_lib.o.i applications/codec/.libs/j2k_to_image/0a.005.libopenjpeg_la-j2k.o.i applications/codec/.libs/j2k_to_image/09.004.libopenjpeg_la-image.o.i applications/codec/.libs/j2k_to_image/08.003.libopenjpeg_la-event.o.i applications/codec/.libs/j2k_to_image/06.001.libopenjpeg_la-cio.o.i applications/codec/.libs/j2k_to_image/05.000.libopenjpeg_la-bio.o.i applications/codec/.libs/j2k_to_image/04.j2k_to_image-j2k_to_image.o.i applications/codec/.libs/j2k_to_image/03.j2k_to_image-index.o.i applications/codec/.libs/j2k_to_image/02.j2k_to_image-convert.o.i applications/codec/.libs/j2k_to_image/01.j2k_to_image-opj_getopt.o.i applications/codec/.libs/j2k_to_image/00.j2k_to_image-color.o.i applications/codec/image_to_j2k-opj_getopt.o.i applications/codec/image_to_j2k-index.o.i applications/codec/image_to_j2k-image_to_j2k.o.i applications/codec/image_to_j2k-convert.o.i
 
 
 
@@ -7,14 +7,99 @@ Front-end begins...
 --------------------------------------------------------------------------------
 WARN: type not found
 WARN: type not found
-Invalid lhs at j2k.c:433
-Invalid lhs at j2k.c:435
-Warning: stmtexpr  j2k.c:433
-Warning: stmtexpr  j2k.c:435
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Invalid lhs at tcd.c:1506
+Invalid lhs at tcd.c:1507
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr  tcd.c:1506
 Warning: stmtexpr 
-j2k.c:1687
-Invalid lhs at j2k.c:1687
+tcd.c:1507
+Warning: stmtexpr Invalid lhs at t2.c:350
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ t2.c:350
+Warning: stmtexpr Invalid lhs at jp2.c:784
+WARN: type not found
+WARN: type not found
 WARN: type not found
 WARN: type not found
 
-Front-end completes: 0.103665
+jp2.c:784
+Warning: stmtexpr Invalid lhs at j2k.c:433
+ j2k.c:433
+Warning: stmtexpr Invalid lhs at j2k.c:435
+
+j2k.c:435
+Warning: stmtexpr Invalid lhs at j2k.c:1687
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ j2k.c:1687
+Warning: stmtexpr Invalid lhs at cio.c:110
+
+cio.c:110
+Warning: stmtexpr Invalid lhs at cio.c:118
+ cio.c:118
+Warning: stmtexpr Invalid lhs at cio.c:145
+
+cio.c:145
+Warning: stmtexpr Invalid lhs at cio.c:191
+ cio.c:191
+Warning: stmtexpr Invalid lhs at cio.c:193
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+
+cio.c:193
+
+Front-end completes: 1.110901

@@ -1,0 +1,375 @@
+./.libs/sndfile-convert/5a.058.windows.o.i ./.libs/sndfile-convert/59.057.vox_adpcm.o.i ./.libs/sndfile-convert/58.056.ulaw.o.i ./.libs/sndfile-convert/57.055.strings.o.i ./.libs/sndfile-convert/56.054.pcm.o.i ./.libs/sndfile-convert/55.053.ogg.o.i ./.libs/sndfile-convert/54.052.ms_adpcm.o.i ./.libs/sndfile-convert/53.051.interleave.o.i ./.libs/sndfile-convert/52.050.ima_oki_adpcm.o.i ./.libs/sndfile-convert/51.04f.ima_adpcm.o.i ./.libs/sndfile-convert/50.04e.id3.o.i ./.libs/sndfile-convert/4f.04d.gsm610.o.i ./.libs/sndfile-convert/4e.04c.float32.o.i ./.libs/sndfile-convert/4d.04b.file_io.o.i ./.libs/sndfile-convert/4c.04a.dwvw.o.i ./.libs/sndfile-convert/4b.049.double64.o.i ./.libs/sndfile-convert/4a.048.dither.o.i ./.libs/sndfile-convert/49.047.common.o.i ./.libs/sndfile-convert/48.046.command.o.i ./.libs/sndfile-convert/47.045.chunk.o.i ./.libs/sndfile-convert/46.044.chanmap.o.i ./.libs/sndfile-convert/45.043.cart.o.i ./.libs/sndfile-convert/44.042.broadcast.o.i ./.libs/sndfile-convert/43.041.audio_detect.o.i ./.libs/sndfile-convert/42.040.alaw.o.i ./.libs/sndfile-convert/41.03f.alac.o.i ./.libs/sndfile-convert/40.03e.matrix_enc.o.i ./.libs/sndfile-convert/3f.03d.matrix_dec.o.i ./.libs/sndfile-convert/3e.03c.dp_enc.o.i ./.libs/sndfile-convert/3d.03b.dp_dec.o.i ./.libs/sndfile-convert/3c.03a.alac_encoder.o.i ./.libs/sndfile-convert/3b.039.alac_decoder.o.i ./.libs/sndfile-convert/3a.038.ag_enc.o.i ./.libs/sndfile-convert/39.037.ag_dec.o.i ./.libs/sndfile-convert/38.036.ALACBitUtilities.o.i ./.libs/sndfile-convert/37.035.g72x.o.i ./.libs/sndfile-convert/36.034.g723_40.o.i ./.libs/sndfile-convert/35.033.g723_24.o.i ./.libs/sndfile-convert/34.032.g723_16.o.i ./.libs/sndfile-convert/33.031.g721.o.i ./.libs/sndfile-convert/32.030.table.o.i ./.libs/sndfile-convert/31.02f.short_term.o.i ./.libs/sndfile-convert/30.02e.rpe.o.i ./.libs/sndfile-convert/2f.02d.preprocess.o.i ./.libs/sndfile-convert/2e.02c.lpc.o.i ./.libs/sndfile-convert/2d.02b.long_term.o.i ./.libs/sndfile-convert/2c.02a.gsm_option.o.i ./.libs/sndfile-convert/2b.029.gsm_encode.o.i ./.libs/sndfile-convert/2a.028.gsm_destroy.o.i ./.libs/sndfile-convert/29.027.gsm_decode.o.i ./.libs/sndfile-convert/28.026.gsm_create.o.i ./.libs/sndfile-convert/27.025.decode.o.i ./.libs/sndfile-convert/26.024.code.o.i ./.libs/sndfile-convert/25.023.add.o.i ./.libs/sndfile-convert/24.022.ogg_opus.o.i ./.libs/sndfile-convert/23.021.ogg_pcm.o.i ./.libs/sndfile-convert/22.020.ogg_speex.o.i ./.libs/sndfile-convert/21.01f.ogg_vorbis.o.i ./.libs/sndfile-convert/20.01e.rf64.o.i ./.libs/sndfile-convert/1f.01d.mpc2k.o.i ./.libs/sndfile-convert/1e.01c.xi.o.i ./.libs/sndfile-convert/1d.01b.wav.o.i ./.libs/sndfile-convert/1c.01a.wav_w64.o.i ./.libs/sndfile-convert/1b.019.w64.o.i ./.libs/sndfile-convert/1a.018.wve.o.i ./.libs/sndfile-convert/19.017.voc.o.i ./.libs/sndfile-convert/18.016.txw.o.i ./.libs/sndfile-convert/17.015.svx.o.i ./.libs/sndfile-convert/16.014.sds.o.i ./.libs/sndfile-convert/15.013.sd2.o.i ./.libs/sndfile-convert/14.012.rx2.o.i ./.libs/sndfile-convert/13.011.raw.o.i ./.libs/sndfile-convert/12.010.pvf.o.i ./.libs/sndfile-convert/11.00f.paf.o.i ./.libs/sndfile-convert/10.00e.nist.o.i ./.libs/sndfile-convert/0f.00d.mat5.o.i ./.libs/sndfile-convert/0e.00c.mat4.o.i ./.libs/sndfile-convert/0d.00b.macos.o.i ./.libs/sndfile-convert/0c.00a.macbinary3.o.i ./.libs/sndfile-convert/0b.009.ircam.o.i ./.libs/sndfile-convert/0a.008.htk.o.i ./.libs/sndfile-convert/09.007.g72x.o.i ./.libs/sndfile-convert/08.006.flac.o.i ./.libs/sndfile-convert/07.005.dwd.o.i ./.libs/sndfile-convert/06.004.caf.o.i ./.libs/sndfile-convert/05.003.avr.o.i ./.libs/sndfile-convert/04.002.au.o.i ./.libs/sndfile-convert/03.001.aiff.o.i ./.libs/sndfile-convert/02.000.sndfile.o.i ./.libs/sndfile-convert/01.common.o.i ./.libs/sndfile-convert/00.sndfile-convert.o.i sndfile-convert.o.i
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+UnexposedExpr at common.c:113
+UnexposedExpr at common.c:127
+UnexposedExpr at common.c:180
+UnexposedExpr at common.c:213
+UnexposedExpr at common.c:257
+UnexposedExpr at common.c:263
+UnexposedExpr at common.c:291
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+UnexposedExpr at common.c:588
+UnexposedExpr at common.c:594
+UnexposedExpr at common.c:600
+UnexposedExpr at common.c:611
+UnexposedExpr at common.c:622
+UnexposedExpr at common.c:633
+UnexposedExpr at common.c:656
+UnexposedExpr at common.c:666
+UnexposedExpr at common.c:677
+UnexposedExpr at common.c:695
+UnexposedExpr at common.c:709
+UnexposedExpr at common.c:710
+UnexposedExpr at common.c:717
+UnexposedExpr at common.c:727
+UnexposedExpr at common.c:734
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+UnexposedExpr at common.c:939
+UnexposedExpr at common.c:946
+UnexposedExpr at common.c:958
+UnexposedExpr at common.c:964
+UnexposedExpr at common.c:975
+UnexposedExpr at common.c:985
+UnexposedExpr at common.c:996
+UnexposedExpr at common.c:1007
+UnexposedExpr at common.c:1017
+UnexposedExpr at common.c:1040
+UnexposedExpr at common.c:1041
+UnexposedExpr at common.c:1047
+UnexposedExpr at common.c:1048
+UnexposedExpr at common.c:1067
+UnexposedExpr at common.c:1074
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr  ima_oki_adpcm.c:95
+Warning: stmtexpr 
+ima_oki_adpcm.c:113
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+
+command.c:372
+Unknown expr OffsetOfExpr at cart.c:36
+Unknown expr OffsetOfExpr at cart.c:70
+Unknown expr OffsetOfExpr at cart.c:71
+Warning: stmtexpr 
+cart.c:94
+WARN: type not found
+WARN: type not found
+Unknown expr OffsetOfExpr at broadcast.c:36
+Unknown expr OffsetOfExpr at broadcast.c:69
+Unknown expr OffsetOfExpr at broadcast.c:71
+Warning: stmtexpr 
+broadcast.c:103
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Unknown expr OffsetOfExpr at alac_decoder.c:90
+Unknown expr OffsetOfExpr at alac_decoder.c:95
+Unknown expr OffsetOfExpr at alac_decoder.c:96
+Unknown expr OffsetOfExpr at alac_decoder.c:97
+Unknown expr OffsetOfExpr at alac_decoder.c:98
+Unknown expr OffsetOfExpr at alac_decoder.c:99
+Unknown expr OffsetOfExpr at alac_decoder.c:100
+Unknown expr OffsetOfExpr at alac_decoder.c:101
+Unknown expr OffsetOfExpr at alac_decoder.c:102
+Unknown expr OffsetOfExpr at alac_decoder.c:103
+Unknown expr OffsetOfExpr at alac_decoder.c:104
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr 
+rpe.c:244
+Invalid lhs at rpe.c:244
+Warning: stmtexpr Invalid lhs at rpe.c:245
+ rpe.c:245
+Warning: stmtexpr Invalid lhs at rpe.c:287
+
+rpe.c:287
+Warning: stmtexpr Invalid lhs at rpe.c:291
+ rpe.c:291
+Warning: stmtexpr Invalid lhs at rpe.c:294
+
+rpe.c:294
+Warning: stmtexpr Invalid lhs at rpe.c:317
+ rpe.c:317
+Warning: stmtexpr Invalid lhs at rpe.c:318
+
+rpe.c:318
+Warning: stmtexpr Invalid lhs at rpe.c:325
+ rpe.c:325
+Warning: stmtexpr Invalid lhs at rpe.c:357
+
+rpe.c:357
+Warning: stmtexpr Invalid lhs at rpe.c:365
+ rpe.c:365
+Warning: stmtexpr Invalid lhs at rpe.c:369
+
+rpe.c:369
+Warning: stmtexpr Invalid lhs at rpe.c:395
+WARN: type not found
+WARN: type not found
+ rpe.c:395
+Warning: stmtexpr Invalid lhs at preprocess.c:56
+
+preprocess.c:56
+Warning: stmtexpr Invalid lhs at preprocess.c:57
+ preprocess.c:57
+Warning: stmtexpr 
+preprocess.c:73
+Invalid lhs at preprocess.c:73
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at lpc.c:50
+ lpc.c:50
+Warning: stmtexpr Invalid lhs at lpc.c:135
+
+lpc.c:135
+Warning: stmtexpr Invalid lhs at lpc.c:189
+ lpc.c:189
+Warning: stmtexpr Invalid lhs at lpc.c:192
+
+lpc.c:192
+Warning: stmtexpr Invalid lhs at lpc.c:216
+ lpc.c:216
+Warning: stmtexpr Invalid lhs at lpc.c:218
+
+lpc.c:218
+Warning: stmtexpr Invalid lhs at lpc.c:259
+ lpc.c:259
+Warning: stmtexpr Invalid lhs at lpc.c:264
+
+lpc.c:264
+Warning: stmtexpr Invalid lhs at lpc.c:267
+ lpc.c:267
+Warning: stmtexpr Invalid lhs at lpc.c:273
+WARN: type not found
+WARN: type not found
+
+lpc.c:273
+Warning: stmtexpr Invalid lhs at long_term.c:505
+ long_term.c:505
+Warning: stmtexpr 
+long_term.c:512
+Invalid lhs at long_term.c:512
+Warning: stmtexpr Invalid lhs at long_term.c:602
+ long_term.c:602
+Warning: stmtexpr 
+long_term.c:605
+Invalid lhs at long_term.c:605
+Warning: stmtexpr Invalid lhs at long_term.c:891
+ long_term.c:891
+Warning: stmtexpr 
+long_term.c:891
+Invalid lhs at long_term.c:891
+Warning: stmtexpr Invalid lhs at long_term.c:891
+ long_term.c:891
+Warning: stmtexpr 
+long_term.c:892
+Invalid lhs at long_term.c:892
+Warning: stmtexpr Invalid lhs at long_term.c:892
+ long_term.c:892
+Warning: stmtexpr 
+long_term.c:892
+Invalid lhs at long_term.c:892
+Warning: stmtexpr Invalid lhs at long_term.c:937
+ long_term.c:937
+Warning: stmtexpr 
+long_term.c:946
+Invalid lhs at long_term.c:946
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr Invalid lhs at add.c:56
+ add.c:56
+Warning: stmtexpr Invalid lhs at add.c:135
+
+add.c:135
+Warning: stmtexpr Invalid lhs at add.c:224
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ add.c:224
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+
+wav.c:2042
+Warning: stmtexpr  sd2.c:570
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+
+sd2.c:588
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+ caf.c:798
+Warning: stmtexpr 
+aiff.c:949
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+ aiff.c:1772
+Warning: stmtexpr Invalid lhs at sndfile.c:320
+
+sndfile.c:320
+Warning: stmtexpr  sndfile.c:1306
+Warning: stmtexpr 
+sndfile.c:2382
+WARN: type not found
+WARN: type not found
+Warning: stmtexpr WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+
+common.c:333
+
+Front-end completes: 3.733219

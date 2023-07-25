@@ -1,4 +1,4 @@
-j2k.i pi.i bio.i
+thread.i tgt.i tcd.i t2.i sparse_array.i pi.i opj_malloc.i opj_getopt.i opj_dump.i opj_clock.i openjpeg.i mqc.i jp2.i j2k.i invert.i index.i image.i ht_dec.i function_list.i event.i converttif.i convert.i convertbmp.i color.i cio.i bio.i
 
 
 
@@ -8,5 +8,34 @@ Front-end begins...
 WARN: type not found
 WARN: type not found
 WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
+WARN: type not found
 
-Front-end completes: 0.728144
+Front-end completes: 1.721034
